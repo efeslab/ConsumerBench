@@ -1,0 +1,23 @@
+SERVER_PID=546771
+01:18:39-556440 INFO     Starting Text generation web UI                        
+01:18:39-607402 INFO     Loading "facebook_opt-1.3b"                            
+01:18:39-873144 INFO     TRANSFORMERS_PARAMS=                                   
+{'low_cpu_mem_usage': True, 'torch_dtype': torch.float16}
+
+01:18:41-299434 INFO     Loaded "facebook_opt-1.3b" in 1.69 seconds.            
+01:18:41-302182 INFO     LOADER: "Transformers"                                 
+01:18:41-302683 INFO     TRUNCATION LENGTH: 2048                                
+01:18:41-303103 INFO     INSTRUCTION TEMPLATE: "Alpaca"                         
+01:18:41-303552 INFO     Loading the extension "openai"                         
+01:18:41-365229 INFO     OpenAI-compatible API URL:                             
+                                                                                
+                         http://127.0.0.1:5000                                  
+                                                                                
+
+Running on local URL:  http://127.0.0.1:7860
+
+Output generated in 1.37 seconds (146.39 tokens/s, 200 tokens, context 9, seed 1692060114)
+Output generated in 0.48 seconds (188.85 tokens/s, 90 tokens, context 103, seed 118524177)
+Output generated in 0.26 seconds (193.87 tokens/s, 50 tokens, context 103, seed 2067728805)
+Output generated in 1.03 seconds (194.92 tokens/s, 200 tokens, context 103, seed 1359987824)
+Output generated in 0.53 seconds (194.14 tokens/s, 102 tokens, context 103, seed 1698174305)

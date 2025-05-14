@@ -1,0 +1,42 @@
+Task chatbot execution time: 2126.9356 seconds
+
+Execution times for each node:
+Node chatbot_0:
+  Execution time: 51.0896 seconds
+  Success: False
+Node chatbot_1:
+  Execution time: 30.0002 seconds
+  Success: True
+Node chatbot_2:
+  Execution time: 191.5575 seconds
+  Success: True
+Node chatbot_3:
+  Execution time: 182.7403 seconds
+  Success: True
+Node chatbot_4:
+  Execution time: 185.4500 seconds
+  Success: True
+Node chatbot_5:
+  Execution time: 382.0287 seconds
+  Success: True
+Node chatbot_6:
+  Execution time: 302.7158 seconds
+  Success: True
+Node chatbot_7:
+  Execution time: 211.7906 seconds
+  Success: True
+Node chatbot_8:
+  Execution time: 178.9118 seconds
+  Success: True
+Node chatbot_9:
+  Execution time: 164.0814 seconds
+  Success: True
+Node chatbot_10:
+  Execution time: 246.5697 seconds
+  Success: True
+Node chatbot_11:
+  Execution time: 0.0001 seconds
+  Success: True
+
+Task chatbot results:
+[None, {'ttft': 1.5661187171936035, 'tpot': 0.28433578968048095, 'itl': 0.299996976852417}, {'ttft': 162.6079421043396, 'tpot': 0.28949121236801145, 'itl': 1.9155706334114075}, {'ttft': 155.6879062652588, 'tpot': 0.2705194282531738, 'itl': 1.8273984909057617}, {'ttft': 156.89651012420654, 'tpot': 0.2855313968658447, 'itl': 1.8544964981079102}, {'ttft': 354.5649425983429, 'tpot': 0.2746336817741394, 'itl': 3.8202831077575685}, {'ttft': 275.5326888561249, 'tpot': 0.27182822465896606, 'itl': 3.027155113220215}, {'ttft': 184.4716637134552, 'tpot': 0.27318610429763795, 'itl': 2.11790274143219}, {'ttft': 151.6091287136078, 'tpot': 0.27302337884902955, 'itl': 1.7891146659851074}, {'ttft': 136.75151824951172, 'tpot': 0.27329418420791624, 'itl': 1.6408093667030335}, {'ttft': 219.94007778167725, 'tpot': 0.26629278659820554, 'itl': 2.4656935644149782}, True]

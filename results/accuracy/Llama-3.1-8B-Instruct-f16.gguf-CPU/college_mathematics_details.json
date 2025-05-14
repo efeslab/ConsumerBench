@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "college_mathematics",
+    "question": "Let k be the number of real solutions of the equation e^x + x - 2 = 0 in the interval [0, 1], and let n be the number of real solutions that are not in [0, 1]. Which of the following is true?",
+    "choices": [
+      "k = 0 and n = 1",
+      "k = 1 and n = 0",
+      "k = n = 1",
+      "k > 1"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Up to isomorphism, how many additive abelian groups G of order 16 have the property that x + x + x + x = 0 for each x in G ?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Suppose P is the set of polynomials with coefficients in Z_5 and degree less than or equal to 7. If the operator D sends p(x) in P to its derivative p\u2032(x), what are the dimensions of the null space n and range r of D?",
+    "choices": [
+      "n = 1 and r = 6",
+      "n = 1 and r = 7",
+      "n = 2 and r = 5",
+      "n = 2 and r = 6"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "The shortest distance from the curve xy = 8 to the origin is",
+    "choices": [
+      "4",
+      "8",
+      "16",
+      "2sqrt(2)"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "There are 25 suitcases, 5 of which are damaged. Three suitcases are selected at random. What is the probability that exactly 2 are damaged?",
+    "choices": [
+      "2/69",
+      "1/30",
+      "2/23",
+      "12/125"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Let (Z_{10} , +, x) be the ring of integers modulo 10, and let S be the subset of Z_{10} represented by {0, 2, 4, 6, 8}. Which of the following statements is FALSE?",
+    "choices": [
+      "(S, +, x) is closed under addition modulo 10.",
+      "(S, +, x) is closed under multiplication modulo 10.",
+      "(S, +, x) has an identity under addition modulo 10.",
+      "(S, +, x) has no identity under multiplication modulo 10."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "A ladder 9 meters in length is leaning against a vertical wall on level ground. As the bottom end of the ladder is moved away from the wall at a constant rate of 2 meters per second, the top end slides downward along the wall. How fast, in meters per second, will the top end of the ladder be sliding downward at the moment the top end is 3 meters above the ground?",
+    "choices": [
+      "12*sqrt(2)",
+      "6*sqrt(2)",
+      "4*sqrt(2)",
+      "1/(2*sqrt(2))"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Consider a segment of length 10. Points A and B are chosen randomly such that A and B divide the segment into three smaller segments. What is the probability that the three smaller segments could form the sides of a triangle?",
+    "choices": [
+      "0",
+      "10%",
+      "25%",
+      "50%"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Let V be a finite-dimensional real vector space and let P be a linear transformation of V such that P^2 = P. Which of the following must be true?\nI. P is invertible.\nII. P is diagonalizable.\nIII. P is either the identity transformation or the zero transformation.",
+    "choices": [
+      "None",
+      "I only",
+      "II only",
+      "III only"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Which of the following is true?",
+    "choices": [
+      "Every compact space is complete",
+      "Every complete space is compact",
+      "Neither (a) nor (b).",
+      " Both (a) and (b)."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "A discrete graph is complete if there is an edge connecting any pair of vertices. How many edges does a complete graph with 10 vertices have?",
+    "choices": [
+      "10",
+      "20",
+      "25",
+      "45"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Suppose X is a discrete random variable on the set of positive integers such that for each positive integer n, the probability that X = n is 1/2^n. If Y is a random variable with the same probability distribution and X and Y are independent, what is the probability that the value of at least one of the variables X and Y is greater than 3 ?",
+    "choices": [
+      "1/64",
+      "15/64",
+      "1/4",
+      "3/8"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Let V and W be 4-dimensional subspaces of a 7-dimensional vector space X. Which of the following CANNOT be the dimension of the subspace V intersect W?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "A large class is to be divided into teams and each student must be a member of exactly one team. However, each student dislikes three of their classmates. Dislike between students need not be mutual. If the teams do not need to be equally sized, how many must be created so that no student is the teammate of someone they dislike?",
+    "choices": [
+      "4",
+      "7",
+      "10",
+      "13"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Sofia and Tess will each randomly choose one of the 10 integers from 1 to 10. What is the probability that neither integer chosen will be the square of the other?",
+    "choices": [
+      "0.64",
+      "0.72",
+      "0.81",
+      "0.95"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "college_mathematics",
+    "question": "Let K be a nonempty subset of R^n, where n > 1. Which of the following statements must be true?\nI. If K is compact, then every continuous real-valued function defined on K is bounded.\nII. If every continuous real-valued function defined on K is bounded, then K is compact.\nIII. If K is compact, then K is connected.",
+    "choices": [
+      "I only",
+      "II only",
+      "III only",
+      "I and II only"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A."
+  }
+]

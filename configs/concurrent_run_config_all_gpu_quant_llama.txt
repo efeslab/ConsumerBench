@@ -1,0 +1,24 @@
+chatbot:
+    server_model = /home/cc/models/Llama-3.1-8B-Instruct-GGUF/Meta-Llama-3.1-8B-Instruct-Q6_K.gguf
+    client_model = openai/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF
+    num_requests = 10
+    device = gpu
+    mps = 33
+
+deep_research:
+    server_model = /home/cc/models/Llama-3.1-8B-Instruct-GGUF/Meta-Llama-3.1-8B-Instruct-Q6_K.gguf
+    client_model = openai/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF
+    num_requests = 3
+    device = gpu
+    mps = 33
+
+live_captions:
+    num_requests = 5
+    device = gpu
+    mps = 33
+
+imagegen:
+    server_model = /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
+    num_requests = 10
+    device = gpu
+    mps = 33

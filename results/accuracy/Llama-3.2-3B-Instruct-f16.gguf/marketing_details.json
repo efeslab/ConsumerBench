@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "marketing",
+    "question": "This is a hierarchy of effects or sequential model used to explain how advertising works:",
+    "choices": [
+      "ADD.",
+      "AIDA.",
+      "PESTLE.",
+      "SWOT."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "marketing",
+    "question": " _____________is an important element in the communication process. It recognizes that successful communications are more likely to be achieved if the source and the receiver understand each other.",
+    "choices": [
+      "The realm of understanding.",
+      "Personal selling.",
+      "Noise.",
+      "Feedback."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "marketing",
+    "question": "In the history of marketing, when did the production period end?",
+    "choices": [
+      "In the late 1800s.",
+      "In the early 1900s.",
+      "In the 1920s.",
+      "After the end of the Second World War."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "marketing",
+    "question": "The extent to which a service envelops a product varies according to a number of factors. Which of the following is NOT one of the factors?",
+    "choices": [
+      "The level of tangibility associated with the type of product.",
+      "Performance-value.",
+      "Variations in supply and demand.",
+      "The way in which the service is delivered."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "marketing",
+    "question": "The owners of independent gasoline stations in a community meet secretly and agree to keep their prices high to protect their profitability. If their plan is discovered and they are charged with a crime, they could be",
+    "choices": [
+      "found guilty under the Sherman Antitrust Act and face prison time",
+      "found guilty under the Magnuson-Moss Warranty Act and face large fines",
+      "found guilty under the Adamson Act and face prison time and fines",
+      "found not guilty because retailers are allowed to set their own price levels"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "marketing",
+    "question": " The term 'marketing mix' describes:",
+    "choices": [
+      "A composite analysis of all environmental factors inside and outside the firm.",
+      "A series of business decisions that aid in selling a product.",
+      "The relationship between a firm's marketing strengths and its business weaknesses.",
+      "A blending of four strategic elements to satisfy specific target markets."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "marketing",
+    "question": "__________ have the potential to control the type and flow of information to the organization and the members of the DMU.",
+    "choices": [
+      "Gatekeepers.",
+      "Buyers.",
+      "Users.",
+      "Initiators."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "marketing",
+    "question": " An imbalance between a consumer's actual and desired state in which recognition that a gap or problem needs resolving is called:",
+    "choices": [
+      "Motive development.",
+      "An attitude.",
+      "A self-concept.",
+      "Product evaluation."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "marketing",
+    "question": " Which of the following is not an element of the marketing mix?",
+    "choices": [
+      "Promotion.",
+      "Product.",
+      "Target market.",
+      "Pricing."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "marketing",
+    "question": " Providing free samples of perfumes (scent) in magazines is an example of which of the following?",
+    "choices": [
+      "Classical conditioning.",
+      "Operant conditioning.",
+      "Social learning.",
+      "Behavioural learning."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "marketing",
+    "question": "Why is market segmentation carried out?",
+    "choices": [
+      "To break down large markets into smaller markets.",
+      "To provide an opportunity to surpass competitors.",
+      "By grouping together customers with similar needs, it provides a commercially viable method of serving these customers.",
+      "To allow the achievement of greater market share."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "marketing",
+    "question": " There are three main types of buying situations in an organization, referred to by Robinson, Faris, and Wind (1967) as _____________.",
+    "choices": [
+      "Repeat purchases.",
+      "Buyphases.",
+      "Buyclasses.",
+      "Tenders."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "marketing",
+    "question": "Where the winning bidder obtains an unprofitable contract that he/she is duty bound to deliver because their bid price was set so low, this is known as:",
+    "choices": [
+      "Winner's curse.",
+      "Winner's price.",
+      "Winner's reward.",
+      "Loss-leader pricing."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "marketing",
+    "question": "This allows us to determine how the quantity of an offering relates to the price at which it is offered:",
+    "choices": [
+      "Price bundling.",
+      "Price elasticity.",
+      "Price inelasticity.",
+      "Price inflation."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "marketing",
+    "question": " ________________ occur(s) where there is no prior history of exchange and no future exchanges are expected between a buyer and seller.",
+    "choices": [
+      "Relationship marketing.",
+      "Service mix.",
+      "Market exchanges.",
+      "Service failure."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "marketing",
+    "question": "A method of marketing by electronic mail wherein the recipient of the message has consented to receive it is called:",
+    "choices": [
+      "Search marketing.",
+      "Internet advertising.",
+      "Permission-based email marketing.",
+      "Social web marketing."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  }
+]

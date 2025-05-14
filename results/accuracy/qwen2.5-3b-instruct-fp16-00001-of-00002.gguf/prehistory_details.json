@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "prehistory",
+    "question": "Unlike most other early civilizations, Minoan culture shows little evidence of:",
+    "choices": [
+      "trade.",
+      "warfare.",
+      "the development of a common religion.",
+      "conspicuous consumption by elites."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "prehistory",
+    "question": "The greatest Egyptian pyramids at Giza were built:",
+    "choices": [
+      "as burial monuments for the pharaoh Khufu, Khufu's son Khafre, and Khufu's grandson Menkaure.",
+      "by slaves who were coerced and worked under the threat of death, as described in the book of Exodus of the Old Testament.",
+      "in the construction frenzy of the 6th dynasty.",
+      "all of the above."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "prehistory",
+    "question": "When anatomically modern humans first arrived in the Middle East, who did they encounter?",
+    "choices": [
+      "Neandertals, the evolutionary descendants of the premodern human inhabitants of Europe and Asia",
+      "Homo erectus, the evolutionary descendants of the premodern human inhabitants of Europe and Asia",
+      "Homo sapiens, who had evolved independently in Asia and arrived there by 200,000 years ago",
+      "All of the above"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "prehistory",
+    "question": "The \u201cLion Man\u201d from Hohlenstein-Stadel cave is an example of:",
+    "choices": [
+      "mobiliary art.",
+      "long-distance trade of exotic raw materials.",
+      "parietal art.",
+      "a Venus figurine."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "prehistory",
+    "question": "At its peak, the palace at Knossos is thought to have had over _________ rooms.",
+    "choices": [
+      "100",
+      "500",
+      "1,000",
+      "5,000"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "prehistory",
+    "question": "The Hopewell were complex rank societies, but they were not a state. Hopewell culture lacked all of the following elements EXCEPT:",
+    "choices": [
+      "formal government",
+      "monumental earthworks",
+      "urban centers",
+      "a permanent military"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "prehistory",
+    "question": "Markings found on the mud-bricks of Huaca del Sol are probably:",
+    "choices": [
+      "instructions for the builders written there by the engineers.",
+      "random scratches and not a meaningful script or written language.",
+      "intended to identify the local group that had produced them.",
+      "simple arithmetic performed by carpenters on the building site."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "prehistory",
+    "question": "The 30 upright stones at Stonehenge are called _______; the horizontal stones are _________.",
+    "choices": [
+      "legumes, sarsens",
+      "lintels, stelae",
+      "sarsens, lintels",
+      "trilithon, tholoi"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "prehistory",
+    "question": "The secondarily altricial condition of modern human babies may have been an evolutionary solution, in that:",
+    "choices": [
+      "the brain size of hominids had not grown for more than a million years, making it difficult for babies to walk.",
+      "it allowed for bipedalism and independence from the mother at an earlier age.",
+      "it allowed for subsequent growth of the brain, since bipedalism had resulted in a narrowed birth canal in the female pelvis.",
+      "it allowed for growth of the brain to nearly adult size prior to birth, since bipedalism had resulted in a wider birth canal in the female pelvis."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "prehistory",
+    "question": "Research on C3 and C4 pathways indicates that changes in plant communities were associated with a transition in the diets of ancient hominids from:",
+    "choices": [
+      "species focused on grasses to nuts and fruits.",
+      "meat to fruits and vegetables.",
+      "fruits and vegetables to fish.",
+      "nuts and fruits to species more focused on grasses."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "prehistory",
+    "question": "Which of the following is evidence of new uses for plants during the Middle Stone Age?",
+    "choices": [
+      "the use of seeds as a natural insecticide in Altamira cave in southwestern Europe",
+      "plant materials such as flowers in Aurignacian burials in southern France",
+      "plant material lining the floor of Sibudu Cave in South Africa",
+      "the use of wood in the Gravettian tradition to make spear-throwers and canoes"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "prehistory",
+    "question": "That modern Africans do not possess any Neandertal DNA indicates that:",
+    "choices": [
+      "Gene flow between Neandertals and anatomically modern humans must have occurred before Neandertals migrated out of Africa.",
+      "Gene flow between Neandertals and anatomically modern humans occurred after anatomically modern humans migrated out of Africa.",
+      "Neandertals who lived in Africa did not interbreed with anatomically modern humans, but must have followed them when they migrated out of Africa.",
+      "Interbreeding between anatomically modern humans and Neandertals never occurred."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "prehistory",
+    "question": "Toward the end of the Pleistocene, between 28,000 and 18,000 years ago, worldwide sea level was much lower than present day, resulting in the exposure of a landmass east of Siberia called __________. This period is called the _______.",
+    "choices": [
+      "Beringia; Late Beringian Period",
+      "Sundaland; McKenzie Maximum",
+      "Beringia; Late Glacial Maximum",
+      "Wallacea; Late Laurentide Period"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "prehistory",
+    "question": "Which archaeological method is best for identifying large-scale land modifications?",
+    "choices": [
+      "test pits",
+      "ground-penetrating radar",
+      "aerial photography",
+      "proton magnetometers"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "prehistory",
+    "question": "What designation for a pottery style was eventually applied to an entire cultural complex that moved across the Pacific?",
+    "choices": [
+      "Clovis",
+      "Nenana Complex",
+      "Lapita",
+      "Micronesian Pottery Tradition"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "prehistory",
+    "question": "What is one of the differences between simple foragers and complex foragers?",
+    "choices": [
+      "Complex foragers employ irrigation technology.",
+      "Complex foragers rely on a wider range of food sources.",
+      "Complex foragers are more highly mobile.",
+      "Complex foragers focus on a few highly productive resources."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B"
+  }
+]

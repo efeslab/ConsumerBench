@@ -1,0 +1,5 @@
+live_captions:
+    num_requests = 10
+    device = gpu
+    # device = cpu
+    mps = 100

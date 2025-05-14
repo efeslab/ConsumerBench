@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "virology",
+    "question": "How many human polyomaviruses are known at present?",
+    "choices": [
+      "100",
+      "1",
+      "10",
+      "unknown"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "virology",
+    "question": "AIDS activism in the U.S. resulted in:",
+    "choices": [
+      "Food and Drug Administration reforms",
+      "Easier access to investigational drugs",
+      "Changes in the way medicine was practiced in the U.S.",
+      "All of the above"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "virology",
+    "question": "Globally, the most deaths are caused by:",
+    "choices": [
+      "Respiratory infections",
+      "Diarrheal diseases",
+      "Malaria",
+      "Tuberculosis"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "virology",
+    "question": "What happens during the 'incubation period'?",
+    "choices": [
+      "The virus is cleared from the body by the immune system",
+      "Virus replication happens at an intracellular level",
+      "This period commonly lasts for a few days",
+      "This period commonly lasts for a few hours"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "virology",
+    "question": "Newborn infants in countries with limited access to safe water and low levels of education should be:",
+    "choices": [
+      "Exclusively formula fed for six months",
+      "Exclusively breast fed for six months",
+      "Should receive both breast milk and other foods as tolerated in the first 6",
+      "months"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "virology",
+    "question": "Achieving effective change in a community is usually dependent on which of the following segments of society?",
+    "choices": [
+      "Innovators",
+      "Early adapters",
+      "Middle adapters",
+      "Late adapters"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "virology",
+    "question": "\u201cContingency management\u201d is\u201d:",
+    "choices": [
+      "A strategy of last resort for reducing high-risk behaviors",
+      "Paying drug users for negative urine specimens",
+      "Paying sex workers to use condoms",
+      "Paying drug users to use condoms"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "virology",
+    "question": "Typical clinical symptoms following infection with astroviruses include which of the following?",
+    "choices": [
+      "Acute pneumonia",
+      "Gastroenteritis in children",
+      "Hepatitis",
+      "rashes"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "virology",
+    "question": "Which of the following is the most special characteristic of the adaptive immune system?",
+    "choices": [
+      "Antibodies",
+      "T cells",
+      "Memory T cells",
+      "Clonal expansion of pre-existing antibodies and/or T cells"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "virology",
+    "question": "Chemotherapy is now an option for clinical care of patients. Typical drug regimens now include which of the following?",
+    "choices": [
+      "Interferon and ribavirin",
+      "Lamivudine and ribavirin",
+      "Combinations of adefovir and entecavir and/or tenofovir (DAA)",
+      "Interferons alone"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "virology",
+    "question": "There were no new cases of Ebola virus in the United States from January 1, 1997 through January 1, 1998. Which of the following epidemiologic terms does this statement describe?",
+    "choices": [
+      "Incidence",
+      "Lifetime expectancy",
+      "Lifetime prevalence",
+      "Period prevalence"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "virology",
+    "question": "How were retroviruses discovered?",
+    "choices": [
+      "In chickens as Rous sarcoma",
+      "In humans as HTLV-1",
+      "In mice causing leukaemia",
+      "In cats causing leukaemia"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "virology",
+    "question": "Most surveillance systems use which of the following study designs?",
+    "choices": [
+      "Cohort",
+      "Serial cross-sectional",
+      "Mortality",
+      "Syndromic"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "virology",
+    "question": "Polio can be eradicated by which of the following?",
+    "choices": [
+      "Attention to sewage control and hygiene",
+      "Killed polio vaccine",
+      "Live polio vaccine",
+      "Combination of the killed and live vaccines."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "virology",
+    "question": "Public health ethics is:",
+    "choices": [
+      "Patient-centered",
+      "Population-centered",
+      "Subject-centered",
+      "Must respect the rights of individuals"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "virology",
+    "question": "How many people globally are currently infected with hepatitis B?",
+    "choices": [
+      "350 million",
+      "2 billion",
+      "100,000",
+      "1 million"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  }
+]

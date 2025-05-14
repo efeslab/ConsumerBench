@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "philosophy",
+    "question": "Aesthetics deals with objects that are_____.",
+    "choices": [
+      "essential to our existence",
+      "unimportant to most people",
+      "not essential to our existence",
+      "rarely viewed"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about aesthetics. The question is asking what kind of objects"
+  },
+  {
+    "subject": "philosophy",
+    "question": "For Socrates, an unexamined life is a tragedy because it results in grievous harm to _____.",
+    "choices": [
+      "the state",
+      "the justice system",
+      "the body",
+      "the soul"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about Socrates and why an un"
+  },
+  {
+    "subject": "philosophy",
+    "question": "According to Kant, nothing can be called \u201cgood\u201d without qualification except _____.",
+    "choices": [
+      "right action",
+      "good consequences",
+      "happiness",
+      "a good will"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user is asking about Kant's view on what"
+  },
+  {
+    "subject": "philosophy",
+    "question": "Plato's view is that true beauty is _____.",
+    "choices": [
+      "found in everyday objects",
+      "nonexistent",
+      "everywhere in the natural world",
+      "not of this world"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about Plato's view on true beauty. The options are"
+  },
+  {
+    "subject": "philosophy",
+    "question": "In Aristotle\u2019s terminology, incontinence is when:",
+    "choices": [
+      "one does not know that one\u2019s actions are wrong.",
+      "one knows that one\u2019s actions are wrong, but does them anyway.",
+      "one knows that one\u2019s feelings are inappropriate, and does not act on them.",
+      "one does the right action, but for the wrong reason."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about Aristotle's incontinence. So, the question"
+  },
+  {
+    "subject": "philosophy",
+    "question": "Nagel claims that most skeptical arguments:",
+    "choices": [
+      "are the result of applying arbitrarily stringent standards.",
+      "are based on linguistic confusions.",
+      "are logically self-refuting.",
+      "grow from the consistent application of ordinary standards."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user is asking about Nagel's view on"
+  },
+  {
+    "subject": "philosophy",
+    "question": "Rawls conceives of the original contract as one to:",
+    "choices": [
+      "enter a particular society.",
+      "set up a particular form of government.",
+      "establish the principles of justice for the basic structure of society.",
+      "establish the content of morality."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about Rawls and the original contract. I remember that"
+  },
+  {
+    "subject": "philosophy",
+    "question": "According to Singer, compliance with his principle requires:",
+    "choices": [
+      "modest changes to our personal habits, but not to our society as a whole.",
+      "modest changes to our personal habits, as well as to society.",
+      "drastic changes to our personal habits, but not to our society.",
+      "drastic changes to both our personal habits and to our society."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user is asking about Singer's principle and what"
+  },
+  {
+    "subject": "philosophy",
+    "question": "For Socrates, the soul is harmed by lack of _____.",
+    "choices": [
+      "knowledge",
+      "wealth",
+      "community",
+      "courage"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question about Socrates and the soul. The question is asking"
+  },
+  {
+    "subject": "philosophy",
+    "question": "According to Kant, morality requires us to:",
+    "choices": [
+      "perform the action that leads to the greatest total happiness.",
+      "act only on maxims that we can will to become universal laws.",
+      "behave only in such a way as a perfectly virtuous person would behave.",
+      "place the interests of others above the interests of ourselves."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user is asking about Kant's view on morality"
+  },
+  {
+    "subject": "philosophy",
+    "question": "According to Gauthier, the basis of morality is:",
+    "choices": [
+      "maximizing the utility of all sentient beings.",
+      "God\u2019s commands.",
+      "the agreement of rational persons choosing the terms of their interaction.",
+      "the purposive order of nature."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about Gauthier's view on"
+  },
+  {
+    "subject": "philosophy",
+    "question": "Anscombe claims that it is not profitable to do moral philosophy until we have an adequate philosophy of:",
+    "choices": [
+      "religion.",
+      "physics.",
+      "psychology.",
+      "art."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about Anscombe's view on the"
+  },
+  {
+    "subject": "philosophy",
+    "question": "Mill claims that one of the strongest objections to utilitarianism is drawn from the idea of:",
+    "choices": [
+      "duty.",
+      "justice.",
+      "virtue.",
+      "supererogation."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user is asking about Mill's view on the"
+  },
+  {
+    "subject": "philosophy",
+    "question": "Berkeley asserts that existing and perceiving are _____.",
+    "choices": [
+      "one and the same thing",
+      "both nonexistent",
+      "two distinct things",
+      "imaginary"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question about Berkeley. The question is asking what Berkeley asserts about"
+  },
+  {
+    "subject": "philosophy",
+    "question": "According to Rawls, the term \u201cjustice as fairness\u201d conveys the idea that the principles of justice are agreed to in an initial position that is _____.",
+    "choices": [
+      "rational",
+      "artificial",
+      "constitutional",
+      "fair"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about Rawls and \"justice as fairness.\" The question"
+  },
+  {
+    "subject": "philosophy",
+    "question": "Berkeley believes that sensible things cannot exist except in _____.",
+    "choices": [
+      "a mind",
+      "absolute existence",
+      "material substance",
+      "a material universe"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question about Berkeley. The question is asking what Berkeley believes about"
+  }
+]

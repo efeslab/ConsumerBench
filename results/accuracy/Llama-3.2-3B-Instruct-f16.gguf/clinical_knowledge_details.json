@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "clinical_knowledge",
+    "question": "What size of cannula would you use in a patient who needed a rapid blood transfusion (as of 2020 medical knowledge)?",
+    "choices": [
+      "18 gauge.",
+      "20 gauge.",
+      "22 gauge.",
+      "24 gauge."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "I'll answer the remaining questions.\n\nQuestion: What size of cannula would you use in a patient"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "The key attribute in successful marathon running is:",
+    "choices": [
+      "strength.",
+      "power.",
+      "stride length.",
+      "stamina."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "I'll answer the remaining questions.\n\nQuestion: The key attribute in successful marathon running is:\nA:"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Which of the following is the commonest cause of dementia in the UK?",
+    "choices": [
+      "Alzheimer's disease.",
+      "Cerebrovascular (stroke) disease.",
+      "Lewy body dementia.",
+      "HIV infection."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "I'll answer the last question.\n\nThe correct choice is A"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Which of the following is NOT a symptom of anaphylaxis?",
+    "choices": [
+      "Stridor.",
+      "Bradycardia.",
+      "Severe wheeze.",
+      "Rash."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "In what situation are closed pouches applied?",
+    "choices": [
+      "The patient has a semi-formed or liquid output.",
+      "The patient has a colostomy.",
+      "In the immediate post-operative period.",
+      "The patient has a urostomy."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "I'll answer the last question.\n\nAnswer: The correct choice is A"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "With an increasing number of sprints the:",
+    "choices": [
+      "anaerobic contribution progressively increases.",
+      "pH of the muscle falls below 6.0.",
+      "blood glucose concentration falls below 3 mmol/L.",
+      "relative contribution of aerobic metabolism increases."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "I'll answer the remaining questions.\n\n Question: With an increasing number of sprints the:\nA:"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Which of the following is true in diplopia?",
+    "choices": [
+      "Diplopia can never occur if one eye is covered",
+      "The outer image is always the false image",
+      "A fourth nerve palsy occurs when the patient looks upwards",
+      "A sixth nerve palsy causes a divergent squint"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "I'll answer the remaining questions.\n\nQuestion: Which of the following is true in diplopia?"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Sodium bicarbonate ingestion improves middle distance running performance by:",
+    "choices": [
+      "elevating the pH and buffering capacity of the extracellular fluid allowing a faster efflux of hydrogen ions from muscle.",
+      "reducing the pH and buffering capacity of the extracellular fluid allowing a faster efflux of hydrogen ions from muscle.",
+      "elevating the pH and buffering capacity of the extracellular fluid allowing a faster influx of hydrogen ions into muscle.",
+      "elevating the pre-exercise muscle pH."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "I'll answer the remaining questions.\n\nQuestion: Sodium bicarbonate ingestion improves middle distance running performance by:"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Codons are composed of:",
+    "choices": [
+      "triplet sequences of nucleotide bases in mRNA or DNA .",
+      "quadruplet sequences of nucleotide bases in mRNA or DNA.",
+      "triplet sequences of amino acids in polypeptide chains.",
+      "triplet sequences of deoxyribose sugars in DNA."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "I'll answer the remaining questions.\n\nQuestion: Codons are composed of:\nA: triplet sequences of"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Fatty acids are transported into the mitochondria bound to:",
+    "choices": [
+      "thiokinase.",
+      "coenzyme A (CoA).",
+      "acetyl-CoA.",
+      "carnitine."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Which of the answers below best indicates the compatible blood types that can be given to a person with a blood group B (rhesus negative)?",
+    "choices": [
+      "Blood type AB (rhesus negative), blood type B, and blood type O (rhesus negative).",
+      "Blood type B (rhesus positive) and blood type O (rhesus positive).",
+      "Blood type B (rhesus negative) and blood type O (rhesus negative).",
+      "Blood type B (rhesus negative) only."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "I'll answer the last question.\n\nThe correct choice is C"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Which of the following is true of a lower motor neurone lesion in the arm?",
+    "choices": [
+      "It leads to increased tone in the arm (hypertonia)",
+      "Fasciculations are never seen",
+      "The reflexes are brisk",
+      "An ulna nerve palsy is an example of a lower motor neurone lesion"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "I'll answer the remaining questions.\n\nQuestion: Which of the following is true of a lower motor neur"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Which of the following statements is false?",
+    "choices": [
+      "Ammonia is produced in repeated high intensity exercise.",
+      "Muscle lactate accumulation does not begin until at least 5 seconds of intermittent muscle contractions have taken place.",
+      "Muscle phosphocreatine depletion begins in the first few seconds of high intensity exercise.",
+      "With an increasing number of repeated sprints the rate of accumulation of lactate in muscle declines."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "I'll answer the remaining questions.\n\nQuestion: Which of the following statements is false?\nA: Am"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Glycogen breakdown in muscle initially results in the formation of:",
+    "choices": [
+      "glucose.",
+      "glucose-1-phosphate.",
+      "glucose-6-phosphate.",
+      "glucose-1,6-diphosphate."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "The two principal contractile proteins found in skeletal muscle are:",
+    "choices": [
+      "actin and troponin.",
+      "actin and myosin.",
+      "troponin and tropomyosin.",
+      "myosin and tropomyosin."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "I'll answer the remaining question.\n\nThe correct choice is B"
+  },
+  {
+    "subject": "clinical_knowledge",
+    "question": "Which one of the following represents a IIIrd cranial nerve palsy and is a neurosurgical emergency?",
+    "choices": [
+      "Unilateral constricted pupil.",
+      "Bilateral constricted pupils.",
+      "Unilateral fixed dilated pupil.",
+      "Oval shaped pupils."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "I'll wait for the next question to provide the answer.\n\nPlease go ahead and provide the next question"
+  }
+]

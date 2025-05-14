@@ -1,0 +1,61 @@
+chatbot1:
+    server_model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 4
+    device: gpu
+    type: chatbot
+    mps: 100
+
+chatbot2:
+    server_model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 3
+    device: gpu
+    type: chatbot
+    mps: 100
+
+deep_research:
+    server_model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 1
+    device: gpu
+    type: deep_research
+    mps: 100
+
+imagegen1:
+    server_model: /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
+    num_requests: 10
+    device: gpu
+    type: imagegen
+    mps: 100
+
+lv:
+    num_requests: 1
+    device: gpu
+    client_command_file: /home/cc/datasets/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
+    mps: 100
+    type: live_captions  
+
+workflows:
+    transcript:
+        uses: lv
+        background: true
+    
+    related_research:
+        uses: deep_research
+        background: true
+
+    ideas_for_image:
+        uses: chatbot1
+
+    generate_image_1:
+        uses: imagegen1
+        depend_on: ["ideas_for_image"]
+
+    generate_image_2:
+        uses: imagegen1
+        depend_on: ["generate_image_1"]
+
+    refine_research:
+        uses: chatbot2
+        depend_on: ["related_research"]

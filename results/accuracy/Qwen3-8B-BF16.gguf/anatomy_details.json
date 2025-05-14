@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "anatomy",
+    "question": "A lesion causing compression of the facial nerve at the stylomastoid foramen will cause ipsilateral",
+    "choices": [
+      "paralysis of the facial muscles.",
+      "paralysis of the facial muscles and loss of taste.",
+      "paralysis of the facial muscles, loss of taste and lacrimation.",
+      "paralysis of the facial muscles, loss of taste, lacrimation and decreased salivation."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about a lesion compressing the facial"
+  },
+  {
+    "subject": "anatomy",
+    "question": "A \"dished face\" profile is often associated with",
+    "choices": [
+      "a protruding mandible due to reactivation of the condylar cartilage by acromegaly.",
+      "a recessive maxilla due to failure of elongation of the cranial base.",
+      "an enlarged frontal bone due to hydrocephaly.",
+      "defective development of the maxillary air sinus."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about a \"dished face\""
+  },
+  {
+    "subject": "anatomy",
+    "question": "Which of the following best describes the structure that collects urine in the body?",
+    "choices": [
+      "Bladder",
+      "Kidney",
+      "Ureter",
+      "Urethra"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's see. The question is asking which structure collects urine in the body."
+  },
+  {
+    "subject": "anatomy",
+    "question": "Which of the following structures is derived from ectomesenchyme?",
+    "choices": [
+      "Motor neurons",
+      "Skeletal muscles",
+      "Melanocytes",
+      "Sweat glands"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking which structure is derived from ect"
+  },
+  {
+    "subject": "anatomy",
+    "question": "Which of the following describes the cluster of blood capillaries found in each nephron in the kidney?",
+    "choices": [
+      "Afferent arteriole",
+      "Glomerulus",
+      "Loop of Henle",
+      "Renal pelvis"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking about the cluster of blood cap"
+  },
+  {
+    "subject": "anatomy",
+    "question": "A patient suffers a broken neck with damage to the spinal cord at the level of the sixth cervical vertebra.",
+    "choices": [
+      "They will be unable to breathe without life support.",
+      "They will only be able to breathe quietly.",
+      "It is impossible to predict an effect on breathing.",
+      "Breathing will be unaffected."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The patient has a broken neck with spinal cord damage"
+  },
+  {
+    "subject": "anatomy",
+    "question": "Which of the following anatomical regions of abdomen lies just distal to the sternum?",
+    "choices": [
+      "Epigastric",
+      "Hypochondriac",
+      "Hypogastric",
+      "Lumbar"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking which anatomical region of the"
+  },
+  {
+    "subject": "anatomy",
+    "question": "Which of the following best describes the human body's defense mechanism against environmental bacteria?",
+    "choices": [
+      "Hair in the nose",
+      "Mucous membranes",
+      "Osteoblasts",
+      "Saliva"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking about the human body's defense"
+  },
+  {
+    "subject": "anatomy",
+    "question": "The palatine processes begin to fuse at",
+    "choices": [
+      "six weeks post-fertilization.",
+      "eight weeks post-fertilization.",
+      "ten weeks post-fertilization.",
+      "twelve weeks post-fertilization."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about when the palatine processes"
+  },
+  {
+    "subject": "anatomy",
+    "question": "Primary motor cortex activity results in",
+    "choices": [
+      "bilateral contraction of antigravity limb muscles.",
+      "bilateral contraction of limb musculature.",
+      "contraction of ipsilateral limb musculature.",
+      "contraction of contralateral limb musculature."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about the primary motor cortex and its"
+  },
+  {
+    "subject": "anatomy",
+    "question": "You notice that your patient's submandibular lymph nodes are enlarged. You would look for potential infection sites in the",
+    "choices": [
+      "hard palate.",
+      "hard palate and upper lip.",
+      "hard palate, upper lip and upper central incisor.",
+      "hard palate, upper lip, upper central incisor and lower first molar."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The patient has enlarged submandibular lymph nodes"
+  },
+  {
+    "subject": "anatomy",
+    "question": "A patient suffers damage to the orbit in a road traffic incident resulting in damage to the third cranial nerve. Which of the following signs will be present?",
+    "choices": [
+      "Pupillary constriction and a medial strabismus",
+      "Pupillary dilatation and a medial strabismus",
+      "Pupillary constriction and a lateral strabismus",
+      "Pupillary dilatation and a lateral strabismus"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The patient has damage to the third cranial nerve"
+  },
+  {
+    "subject": "anatomy",
+    "question": "Which of the following statements is true of the temporomandibular joint?",
+    "choices": [
+      "It has an articular disc of hyaline cartilage",
+      "Its articular surfaces are covered by hyaline cartilage",
+      "Proprioceptive information is carried by the chorda tympani and deep temporal nerves",
+      "Proprioceptive information is carried by the masseteric and auriculotemporal nerves."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about the temporomandibular joint (TMJ"
+  },
+  {
+    "subject": "anatomy",
+    "question": "Laryngoscopic examination of the vocal folds after suspected recurrent laryngeal nerve damage usually shows that the vocal fold on the injured side is tensed and in an intermediate position between adduction and abduction. This is because",
+    "choices": [
+      "cricothyroid muscle is still functional but the interarytenoid muscles are fully active.",
+      "cricothyroid muscle is still functional but the interarytenoids are weak.",
+      "cricothyroid muscle is paralyzed but the interarytenoids are fully active.",
+      "cricothyroid muscle is paralyzed but the interarytenoids are weak."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about laryngoscopic findings after"
+  },
+  {
+    "subject": "anatomy",
+    "question": "Which one of the following statements about the growth of the mandible is correct?",
+    "choices": [
+      "The mental symphysis closes at about 1 year postnatally",
+      "The condylar growth cartilage ceases activity at puberty",
+      "The ossification centre appears about 8 weeks I.U.L medial to Meckel's cartilage",
+      "The functional matrix acting on the angle of the mandible is the lateral pterygoid muscle"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question about the growth of the mandible. The options are"
+  },
+  {
+    "subject": "anatomy",
+    "question": "Which of the following statements is true of the pupillary light reflex?",
+    "choices": [
+      "Its efferent limb is carried in the optic nerve",
+      "It is mediated by the inferior colliculi in the midbrain",
+      "It is a consensual reflex",
+      "Its afferent limb is carried in the oculomotor nerve"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about the pupillary light reflex. The options are A"
+  }
+]

@@ -1,0 +1,23 @@
+SERVER_PID=546482
+no module 'xformers'. Processing without...
+no module 'xformers'. Processing without...
+No module 'xformers'. Proceeding without it.
+Loading weights [ffef7a279d] from /home/rohan/os-llm/stable-diffusion-webui/models/stable-diffusion-3.5-large/sd3.5_large.safetensors
+Startup time: 5.0s (import torch: 2.7s, import gradio: 0.5s, setup paths: 0.4s, initialize shared: 0.3s, other imports: 0.3s, load scripts: 0.3s, lora_script.py: 0.5s).
+Creating model from config: /home/rohan/os-llm/stable-diffusion-webui/configs/sd3-inference.yaml
+Applying attention optimization: Doggettx... done.
+Model loaded in 5.7s (load weights from disk: 0.4s, create model: 1.0s, apply weights to model: 3.8s, calculate empty prompt: 0.3s).
+
+Total progress:   0%|          | 0/30 [00:00<?, ?it/s][A
+Total progress:  13%|█▎        | 4/30 [00:00<00:00, 29.80it/s][A
+Total progress:  23%|██▎       | 7/30 [00:00<00:00, 25.42it/s][A
+Total progress:  33%|███▎      | 10/30 [00:00<00:00, 24.65it/s][A
+Total progress:  47%|████▋     | 14/30 [00:00<00:00, 26.88it/s][A
+Total progress:  57%|█████▋    | 17/30 [00:00<00:00, 27.61it/s][A
+Total progress:  67%|██████▋   | 20/30 [00:00<00:00, 28.01it/s][A
+Total progress:  77%|███████▋  | 23/30 [00:00<00:00, 28.02it/s][A
+Total progress:  87%|████████▋ | 26/30 [00:00<00:00, 28.42it/s][A
+Total progress:  97%|█████████▋| 29/30 [00:01<00:00, 28.63it/s][A
+Total progress: 100%|██████████| 30/30 [00:01<00:00, 28.63it/s][ATotal progress: 100%|██████████| 30/30 [00:01<00:00, 25.39it/s]
+INFO:     127.0.0.1:55910 - "POST /sdapi/v1/txt2img HTTP/1.1" 200 OK
+Interrupted with signal 2 in <frame at 0x7f0c6b7a7440, file '/home/rohan/os-llm/stable-diffusion-webui/venv/lib/python3.10/site-packages/uvicorn/server.py', line 330, code capture_signals>

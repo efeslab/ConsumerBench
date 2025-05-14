@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "human_aging",
+    "question": "The study of older adults and aging is referred to as",
+    "choices": [
+      "Gerontology",
+      "Geropsychiatry",
+      "Geriatrics",
+      "Gero-education"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "human_aging",
+    "question": "Which of the following factors is associated with a decreased risk of Alzheimer's?",
+    "choices": [
+      "Being African or Hispanic American",
+      "Eating fish",
+      "A lower level of education",
+      "Being married"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "human_aging",
+    "question": "The docility hypothesis is that",
+    "choices": [
+      "Those with low capabilities are more vulnerable to environmental demands",
+      "Those who experience high environmental demands become more docile",
+      "Those who experience high environmental demands become less docile",
+      "Those with less capability are less vulnerable to environmental demands"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "human_aging",
+    "question": "Normal memory seems to be improved by",
+    "choices": [
+      "Aerobic exercise",
+      "Taking acetylcholine",
+      "Taking gingko",
+      "Increasing social contacts"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "human_aging",
+    "question": "The perspective that development is embedded in history means that",
+    "choices": [
+      "Change can always occur regardless of age",
+      "Sociocultural conditions must always be considered",
+      "Development in any particular areas (e.g., social) is tied to development in other areas (e.g., cognitive)",
+      "Some characteristics change with age while others do not"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "human_aging",
+    "question": "The answer \"both play an important role\" is clearly applicable to the question of",
+    "choices": [
+      "Nature vs. nurture",
+      "Mechanistic vs organismic",
+      "Continuity vs. discontinuity",
+      "All of these questions"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "human_aging",
+    "question": "Which of the following does NOT usually occur to the lens of the eye as one grows older?",
+    "choices": [
+      "It becomes thicker",
+      "It yellows",
+      "It becomes clouded",
+      "It fills with fluid"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "human_aging",
+    "question": "The houses of the future may allow you to operate virtually everything in the house from a central terminal; such a house is already in production and is referred to as",
+    "choices": [
+      "Technohouse",
+      "Compuhouse",
+      "Futurehouse",
+      "Smarthouse"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "human_aging",
+    "question": "The reaction time difference between younger and older adults is reduced when older adults",
+    "choices": [
+      "Practice regular aerobic exercise",
+      "Lift weights on a regular schedule",
+      "Consume large quantities of vitamins",
+      "Practice Tai chi"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "human_aging",
+    "question": "A major difference between programmed and unprogrammed theories of senescence is that programmed theories",
+    "choices": [
+      "Attribute senescence only to environmental factors",
+      "Are far too difficulty to test",
+      "Claim that senescence follows a predetermined plan",
+      "Rely too heavily on computer models"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "human_aging",
+    "question": "One reason that older adults show high levels of optimism is that",
+    "choices": [
+      "Many pessimists die at a younger age",
+      "They do not really know what is going on",
+      "This may be a warning sign for dementia",
+      "Our measures have low validity"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "human_aging",
+    "question": "Bu is often late for appointments but says it's because she had more important things on her mind. This is an example of which coping strategy?",
+    "choices": [
+      "Immunization",
+      "Accommodation",
+      "Avoidance",
+      "Assimilation"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "human_aging",
+    "question": "Which of the following is most strongly associated with loss of bone density?",
+    "choices": [
+      "Genetic factors",
+      "Lifestyle factors like not exercising",
+      "Hormonal factors such as loss of estrogen",
+      "Cohort factors"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "human_aging",
+    "question": "That super sweet iced tea that your grandmother gives you might be that way because she",
+    "choices": [
+      "Has lost a lot of sweet taste buds and cannot taste sweetness as well anymore",
+      "Is a member of that cohort that really enjoys sweets",
+      "Is trying to get you to be a little sweeter than you have been in the past",
+      "Has experienced damage in her parietal lobe where sweet sensations are directed"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "human_aging",
+    "question": "A shortage of these two vitamins can produce symptoms that mimic dementia:",
+    "choices": [
+      "A and C",
+      "B6 and B12",
+      "B6 and D",
+      "B12 and E"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "human_aging",
+    "question": "Which of the following is one of McAdam's levels of personality?",
+    "choices": [
+      "Control",
+      "Identity",
+      "Generativity",
+      "Assimilation"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  }
+]

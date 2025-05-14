@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "us_foreign_policy",
+    "question": "What is the structure of the United Nations Security Council?",
+    "choices": [
+      "5 permanent members with veto power, 10 rotating members with no veto power",
+      "5 permanent members and 10 rotating members, all with veto power",
+      "10 permanent members with veto power, and 5 rotating members without veto power",
+      "15 permanent members with veto power"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "What was the significance of the Gulf of Tonkin resolution?",
+    "choices": [
+      "It allowed the US to intensify its involvement in Vietnam",
+      "It illustrated the influence of public opinion on US foreign policy",
+      "It enhanced Congressional control over the Vietnam War",
+      "It curtailed US involvement in Vietnam"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "Which is not a nonstate actor that poses a threat to the United States?",
+    "choices": [
+      "Terrorists",
+      "Organized crime",
+      "Drug traffickers",
+      "China"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "Who was the first American president to visit communist China?",
+    "choices": [
+      "Richard Nixon",
+      "George H. W. Bush",
+      "Jimmy Carter",
+      "Ronald Reagan"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "The Strategic Arms Reduction Treaty was the first accord",
+    "choices": [
+      "on nuclear weapons signed between the United States and the Soviet Union.",
+      "cutting conventional arms in Europe.",
+      "to be rejected by the U.S. Senate.",
+      "mandating the elimination of many long-range nuclear missiles."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "What were the implications of the Cold War for American exceptionalism?",
+    "choices": [
+      "It ended the influence of American exceptionalism entirely",
+      "Exceptionalism was enhanced by America's status as the 'leader of the free world'",
+      "The extension of American power globally challenged core assumptions of exceptionalism",
+      "Both b and c"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "Why did Franklin D. Roosevelt initially favour an 'isolationist' stance on the part of the US during the 1930s?",
+    "choices": [
+      "He believed that internal reform rather than international negotiation was the key to economic regeneration of the US",
+      "He believed that German domination of Europe would be in US interests",
+      "He always favoured isolationism",
+      "All of the above"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "What was the 'New Populism'?",
+    "choices": [
+      "A strand of neo-isolationist sentiment",
+      "A strand of internationalist sentiment",
+      "An expression of American cultural superiority",
+      "Increased incorporation of public opinion in foreign policy making"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "How did World War I shift economic power from Europe to the United States?",
+    "choices": [
+      "The war reduced European population levels below that of the United States",
+      "The United States seized German resources after the war",
+      "European countries paid the United States for assistance",
+      "The United States became a creditor country and financial centre, with European war spending boosting the US economy"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "In American government, the power to declare war rests with",
+    "choices": [
+      "the president of the United States.",
+      "the secretary of defense.",
+      "the chairman of the Joint Chiefs of Staff.",
+      "Congress."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "How did the Cold War context shape US perceptions of the Third World?",
+    "choices": [
+      "The US ignored the Third World",
+      "Local developments were viewed through a geopolitical lens",
+      "The US unreservedly supported decolonization",
+      "None of the above"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "What was unique about the NATO intervention in Kosovo?",
+    "choices": [
+      "It was the first time the US became involved in the Balkans",
+      "It was the first time NATO used military force",
+      "It was the first war won by airpower alone",
+      "It was the first war to employ 'smart weapons'"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "What, according to Systemic theories, is the primary determinant of a state's foreign policy?",
+    "choices": [
+      "The character of a state's leader",
+      "The distribution of power in the international system",
+      "The distribution of power within a state's governmental system",
+      "A state's political ideology"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "Why is there so much uncertainty over which states have nuclear weapons?",
+    "choices": [
+      "Leaders have incentives to lie",
+      "If leaders revealed their programs, they would be more likely to be attacked",
+      "Leaders will not always grant foreign monitors access to their nuclear programs",
+      "ALL of the above"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "Within American politics, the power to accord official recognition to other countries belongs to",
+    "choices": [
+      "the Senate.",
+      "the president.",
+      "the Secretary of State.",
+      "the chairman of the Joint Chiefs."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "What did the Moscow Treaty on Strategic Offensive Reductions do?",
+    "choices": [
+      "Required the United States and Russia to demobilize their armies",
+      "Required the United States and Russia to dismantle a significant number of their nuclear weapons",
+      "Prohibited the acquisition of new military bases",
+      "Prohibited short-range nuclear weapons"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  }
+]

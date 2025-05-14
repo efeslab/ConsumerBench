@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "sociology",
+    "question": "Mass-society theory suggests that:",
+    "choices": [
+      "the content of the media is determined by market forces",
+      "the subordinate classes are dominated by the ideology of the ruling class",
+      "the media manipulate 'the masses' as vulnerable, passive consumers",
+      "audiences make selective interpretations of media messages"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about Mass-society theory. I"
+  },
+  {
+    "subject": "sociology",
+    "question": "The ecological approach to urban sociology involved studying:",
+    "choices": [
+      "how social groups colonized different areas of the city and competed for resources",
+      "the forms of wildlife and natural habitats that could be found on the edges of the city",
+      "the way in which people organized collective protests about environmental issues",
+      "how men and women used the city's public spaces differently"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about the ecological approach to urban sociology"
+  },
+  {
+    "subject": "sociology",
+    "question": "Becker proclaimed that cannabis use was:",
+    "choices": [
+      "increasing throughout all sections of youth in the 1970s",
+      "learned gradually through the social processes of a deviant career",
+      "a dangerous pastime that young people should not be allowed to pursue",
+      "not as enjoyable as other sociologists had suggested"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user is asking about Becker's view on cannabis"
+  },
+  {
+    "subject": "sociology",
+    "question": "The middle classes that developed over the nineteenth century were:",
+    "choices": [
+      "an urban set, involved in civic bodies and voluntary associations",
+      "too diverse to have a strong sense of class consciousness",
+      "often involved in 'white collar' work",
+      "all of the above"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about the middle classes that developed in"
+  },
+  {
+    "subject": "sociology",
+    "question": "Technological forms of surveillance have made it easier to:",
+    "choices": [
+      "access and exchange 'private' information about consumers",
+      "reduce prison overcrowding by the use of electronic tagging",
+      "monitor employees' activities at work",
+      "all of the above"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about technological forms of surveillance making it"
+  },
+  {
+    "subject": "sociology",
+    "question": "The concept of gemeinschaft developed by Ferdinand T\u00f6nnies describes basically the same relational characteristics as",
+    "choices": [
+      "organic solidarity",
+      "mechanical solidarity",
+      "gesellschaft",
+      "anomie"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user is asking about the concept of \"G"
+  },
+  {
+    "subject": "sociology",
+    "question": "There was a growth in income inequality in the 1980s because:",
+    "choices": [
+      "rates of income tax increased equally for all occupational groups",
+      "there were more professional jobs available but not enough people to fill them",
+      "the price of consumer goods rose at a higher rate than earnings",
+      "growing unemployment made more people dependent on welfare benefits"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about why there was a growth in"
+  },
+  {
+    "subject": "sociology",
+    "question": "If a deviant act is 'normalized', it is:",
+    "choices": [
+      "recognised as breaking an important norm of behaviour",
+      "seen a temporary aberration from an otherwise 'normal' character",
+      "the first step in establishing a deviant career",
+      "attributed to the person's genetic or anatomical make up"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about what it means for a dev"
+  },
+  {
+    "subject": "sociology",
+    "question": "In the debate about the 'managerial revolution', John Scott (1997) argued that:",
+    "choices": [
+      "owners still exercised control through groups of shareholders and interlocking directorships",
+      "ownership and management were becoming increasingly separate functions",
+      "the techniques of scientific management were overly bureaucratic and inefficient",
+      "managers were becoming dissatisfied with their working conditions and planned to overthrow the owners of businesses"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question. The topic is the 'managerial revolution' and"
+  },
+  {
+    "subject": "sociology",
+    "question": "Marxist feminists explain patriarchy in terms of:",
+    "choices": [
+      "a lack of equal rights and opportunities for men and women",
+      "sex classes, through which men oppress women economically, politically and sexually",
+      "women's domestic labour being exploited by the capitalist economy",
+      "the dual systems of capitalism and male domination"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about Marxist feminists and how they explain"
+  },
+  {
+    "subject": "sociology",
+    "question": "Which of the following was not defined by Giddens (1998) as part of New Labour's 'third way':",
+    "choices": [
+      "the democratization of the family",
+      "putting an end to privatization",
+      "positive welfare: 'a hand up, not a hand-out'",
+      "the strengthening of civil society"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user is asking which option was not defined by"
+  },
+  {
+    "subject": "sociology",
+    "question": "Anti-psychiatrists like Laing & Esterson believed that:",
+    "choices": [
+      "Psychiatry was an out-moded form of treatment and should be replaced by alternative therapies like aromatherapy and kinesiology",
+      "Mental illnesses were biological in origin, so there was no point in studying 'the mind' as experienced by the patient",
+      "Psychiatrists were agents of capitalism who tried to instill ruling class ideology into their patients",
+      "Behaviour that seemed bizarre could be seen as a reasonable response to disturbed patterns of family interaction"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about anti-psychiatrists like"
+  },
+  {
+    "subject": "sociology",
+    "question": "Butler & Stokes (1969) suggested that working class support for the Labour Party arose from:",
+    "choices": [
+      "socialization into working class families and communities",
+      "rational calculation of self-interest",
+      "issue-based concerns about culture and lifestyle",
+      "false consciousness and the acceptance of hegemonic values"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about Butler and Stokes (19"
+  },
+  {
+    "subject": "sociology",
+    "question": "In contemporary societies, social institutions are:",
+    "choices": [
+      "highly specialized, interrelated sets of social practices",
+      "disorganized social relations in a postmodern world",
+      "virtual communities in cyberspace",
+      "no longer relevant to sociology"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about contemporary societies and social institutions."
+  },
+  {
+    "subject": "sociology",
+    "question": "The term 'emotion work' (Hochschild 1983) refers to:",
+    "choices": [
+      "the techniques used to consciously manage and present emotions that are deemed appropriate for public settings of interaction",
+      "the work done by psychologists, counselors and therapists to help clients with mental and emotional problems",
+      "experiences such as grieving and falling in love, which demand a lot of emotional energy from a person",
+      "the way in which increasing levels of risk and anxiety have made us think more reflexively about our self-identities"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question about 'emotion work' by Hochschild. The"
+  },
+  {
+    "subject": "sociology",
+    "question": "When sociologists study the structure of layers in society and people's movement between them, they call this:",
+    "choices": [
+      "social stratification",
+      "social control",
+      "social conflict",
+      "social solidarity"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about what sociologists call the study"
+  }
+]

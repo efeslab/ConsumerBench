@@ -1,0 +1,12 @@
+[COMMAND]
+curl http://127.0.0.1:5004/v1/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "Once upon a time there was a",
+    "min_tokens": 200,
+    "max_tokens": 200,
+    "temperature": 1,
+    "top_p": 0.9,
+    "seed": 80500,
+    "stream": true
+  }'

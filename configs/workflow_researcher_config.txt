@@ -1,0 +1,33 @@
+chatbot:
+    server_model = /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    # server_model = /home/cc/models/Llama-3.1-8B-Instruct-GGUF/Llama-3.1-8B-Instruct-f16.gguf
+    client_model = openai/meta-llama/Llama-3.2-3B-Instruct
+    # client_model = openai/meta-llama/Llama-3.1-8B-Instruct
+    # device = gpu
+    device = cpu
+    mps = 100
+
+imagegen:
+    server_model = /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
+    # server_model = /home/cc/models/stable-diffusion-3.5-large
+    device = gpu
+    # device = cpu
+    mps = 50
+
+live_captions:
+    device = gpu
+    # device = cpu
+    mps = 50
+
+Workflow:
+live_captions
+chatbot
+chatbot
+deep_research
+chatbot
+chatbot
+imagegen
+chatbot
+chatbot
+chatbot
+chatbot

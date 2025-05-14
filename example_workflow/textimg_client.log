@@ -1,0 +1,71 @@
+[COMMAND]
+curl http://0.0.0.0:7861/sdapi/v1/txt2img \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "batch_size": 1,
+  "cfg_scale": 7,
+  "denoising_strength": 0,
+  "enable_hr": false,
+  "eta": 0,
+  "firstphase_height": 0,
+  "firstphase_width": 0,
+  "height": 64,
+  "n_iter": 1,
+  "negative_prompt": "",
+  "prompt": "two faces",
+  "restore_faces": false,
+  "s_churn": 0,
+  "s_noise": 1,
+  "s_tmax": 0,
+  "s_tmin": 0,
+  "sampler_index": "Euler a",
+  "seed": -1,
+  "seed_resize_from_h": -1,
+  "seed_resize_from_w": -1,
+  "steps": 200,
+  "styles": [],
+  "subseed": -1,
+  "subseed_strength": 0,
+  "tiling": false,
+  "width": 64,
+  "override_settings": {
+    "sd_model_checkpoint": "Anything-V3.0-pruned",
+    "CLIP_stop_at_last_layers": 2
+  }
+}'
+
+[COMMAND]
+curl http://0.0.0.0:7861/sdapi/v1/txt2img \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "batch_size": 1,
+  "cfg_scale": 7,
+  "denoising_strength": 0,
+  "enable_hr": false,
+  "eta": 0,
+  "firstphase_height": 0,
+  "firstphase_width": 0,
+  "height": 64,
+  "n_iter": 1,
+  "negative_prompt": "",
+  "prompt": "test test test test test",
+  "restore_faces": false,
+  "s_churn": 0,
+  "s_noise": 1,
+  "s_tmax": 0,
+  "s_tmin": 0,
+  "sampler_index": "Euler a",
+  "seed": -1,
+  "seed_resize_from_h": -1,
+  "seed_resize_from_w": -1,
+  "steps": 30,
+  "styles": [],
+  "subseed": -1,
+  "subseed_strength": 0,
+  "tiling": false,
+  "width": 64,
+  "override_settings": {
+    "sd_model_checkpoint": "Anything-V3.0-pruned",
+    "CLIP_stop_at_last_layers": 2
+  }
+}'

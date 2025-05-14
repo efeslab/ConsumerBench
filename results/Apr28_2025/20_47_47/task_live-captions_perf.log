@@ -1,0 +1,21 @@
+Task live-captions execution time: 256.8662 seconds
+
+Execution times for each node:
+Node live-captions_0:
+  Execution time: 9.2071 seconds
+  Success: True
+Node live-captions_1:
+  Execution time: 93.0033 seconds
+  Success: True
+Node live-captions_2:
+  Execution time: 94.9991 seconds
+  Success: True
+Node live-captions_3:
+  Execution time: 58.5370 seconds
+  Success: True
+Node live-captions_4:
+  Execution time: 1.1197 seconds
+  Success: True
+
+Task live-captions results:
+[-1, {'total time': 92.99913001060486, 'processing time_chunk_0': 3.60786, 'processing time_chunk_1': 6.616482, 'processing time_chunk_2': 6.216288, 'processing time_chunk_3': 12.632631, 'processing time_chunk_4': 19.643295, 'processing time_chunk_5': 20.044052, 'processing time_chunk_6': 20.345288, 'processing time_chunk_7': 20.854975, 'processing time_chunk_8': 21.356098, 'processing time_chunk_9': 30.880584, 'processing time_chunk_10': 30.681396, 'processing time_chunk_11': 30.682973, 'processing time_chunk_12': 30.990924, 'processing time_chunk_13': 31.593767, 'processing time_chunk_14': 31.305536, 'processing time_chunk_15': 32.908873, 'processing time_chunk_16': 32.005462, 'processing time_chunk_17': 31.503134, 'processing time_chunk_18': 31.193526, 'processing time_chunk_19': 31.292583, 'processing time_chunk_20': 31.491572, 'processing time_chunk_21': 31.991486, 'processing time_chunk_22': 32.792093, 'processing time_chunk_23': 33.592603, 'processing time_chunk_24': 33.090892, 'processing time_chunk_25': 32.98926, 'processing time_chunk_26': 32.987925, 'processing time_chunk_27': 33.187728, 'processing time_chunk_28': 33.480232, 'processing time_chunk_29': 34.08045}, {'total time': 94.99739861488342, 'processing time_chunk_0': 1.603786, 'processing time_chunk_1': 0.902154, 'processing time_chunk_2': 3.308408, 'processing time_chunk_3': 2.807264, 'processing time_chunk_4': 2.506347, 'processing time_chunk_5': 6.316302, 'processing time_chunk_6': 10.527451, 'processing time_chunk_7': 18.848989, 'processing time_chunk_8': 28.172638, 'processing time_chunk_9': 28.573292, 'processing time_chunk_10': 28.974155, 'processing time_chunk_11': 29.675388, 'processing time_chunk_12': 29.274443, 'processing time_chunk_13': 29.475187, 'processing time_chunk_14': 29.575303, 'processing time_chunk_15': 29.986634, 'processing time_chunk_16': 30.486703, 'processing time_chunk_17': 31.187279, 'processing time_chunk_18': 31.086807, 'processing time_chunk_19': 31.086195, 'processing time_chunk_20': 31.185498, 'processing time_chunk_21': 29.982131, 'processing time_chunk_22': 30.481731, 'processing time_chunk_23': 30.982022, 'processing time_chunk_24': 31.582846, 'processing time_chunk_25': 32.583771, 'processing time_chunk_26': 33.484838, 'processing time_chunk_27': 34.686509, 'processing time_chunk_28': 36.389429, 'processing time_chunk_29': 36.388208}, {'total time': 58.53118014335632, 'processing time_chunk_0': 8.019849, 'processing time_chunk_1': 7.116763, 'processing time_chunk_2': 6.115451, 'processing time_chunk_3': 5.212767, 'processing time_chunk_4': 4.311266, 'processing time_chunk_5': 3.408157, 'processing time_chunk_6': 2.606333, 'processing time_chunk_7': 1.70352, 'processing time_chunk_8': 0.801665, 'processing time_chunk_9': 0.501115, 'processing time_chunk_10': 0.000226, 'processing time_chunk_11': 0.000256, 'processing time_chunk_12': 0.000252, 'processing time_chunk_13': 0.000253, 'processing time_chunk_14': 0.000251, 'processing time_chunk_15': 0.000253, 'processing time_chunk_16': 0.000249, 'processing time_chunk_17': 0.000255, 'processing time_chunk_18': 0.000247, 'processing time_chunk_19': 0.000258, 'processing time_chunk_20': 0.000249, 'processing time_chunk_21': 0.000254, 'processing time_chunk_22': 0.000259, 'processing time_chunk_23': 0.000248, 'processing time_chunk_24': 0.000258, 'processing time_chunk_25': 0.000249, 'processing time_chunk_26': 0.000252, 'processing time_chunk_27': 0.000256, 'processing time_chunk_28': 0.000255, 'processing time_chunk_29': 0.000275}, True]

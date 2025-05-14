@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nIn order to make the title of this discourse generally intelligible, I have translated the term \"Protoplasm,\" which is the scientific name of the substance of which I am about to speak, by the words \"the physical basis of life.\" I suppose that, to many, the idea that there is such a thing as a physical basis, or matter, of life may be novel\u2014so widely spread is the conception of life as something which works through matter. \u2026 Thus the matter of life, so far as we know it (and we have no right to speculate on any other), breaks up, in consequence of that continual death which is the condition of its manifesting vitality, into carbonic acid, water, and nitrogenous compounds, which certainly possess no properties but those of ordinary matter.\nThomas Henry Huxley, \"The Physical Basis of Life,\" 1868\nFrom the passage, one may infer that Huxley argued that \"life\" was",
+    "choices": [
+      "a force that works through matter",
+      "essentially a philosophical notion",
+      "merely a property of a certain kind of matter",
+      "a supernatural phenomenon"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The passage is from Thomas Henry Huxley's"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nRead the the following quotation to answer questions.\nThe various modes of worship which prevailed in the Roman world were all considered by the people as equally true; by the philosopher as equally false; and by the magistrate as equally useful.\nEdward Gibbon, The Decline and Fall of the Roman Empire, 1776\u20131788\nGibbon's interpretation of the state of religious worship in ancient Rome could be summarized as",
+    "choices": [
+      "In ancient Rome, religious worship was decentralized and tended to vary with one's social position.",
+      "In ancient Rome, religious worship was the source of much social tension and turmoil.",
+      "In ancient Rome, religious worship was homogeneous and highly centralized.",
+      "In ancient Rome, religious worship was revolutionized by the introduction of Christianity."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question. The user provided a quote from Edward Gibbon's"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nThe following quote is from Voltaire in response to the 1755 Lisbon earthquake.\nMy dear sir, nature is very cruel. One would find it hard to imagine how the laws of movement cause such frightful disasters in the best of possible worlds. A hundred thousand ants, our fellows, crushed all at once in our ant-hill, and half of them perishing, no doubt in unspeakable agony, beneath the wreckage from which they cannot be drawn. Families ruined all over Europe, the fortune of a hundred businessmen, your compatriots, swallowed up in the ruins of Lisbon. What a wretched gamble is the game of human life! What will the preachers say, especially if the palace of the Inquisition is still standing? I flatter myself that at least the reverend father inquisitors have been crushed like others. That ought to teach men not to persecute each other, for while a few holy scoundrels burn a few fanatics, the earth swallows up one and all.\n\u2014Voltaire, in a letter, 1755\nThe ideas expressed by Voltaire, above, best illustrate which of the following characteristics of Enlightenment intellectuals?",
+    "choices": [
+      "Many were accomplished scientists, who added important pieces to human understanding of the universe.",
+      "They utilized new methods of communicating their ideas, such as salons and inexpensive printed pamphlets.",
+      "Most rejected religion altogether and adopted atheism as the only credo of a rational man.",
+      "Many believed that the new scientific discoveries justified a more tolerant and objective approach to social and cultural issues."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user provided a quote from Voltaire responding to"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nRead the following memoir.\nNot only did he expect all persons of distinction to be in continual attendance at Court, but he was quick to notice the absence of those of inferior degree; at his lever, his couches, his meals, in the gardens of Versailles (the only place where the courtiers in general were allowed to follow him), he used to cast his eyes to right and left; nothing escaped him[;] he saw everybody. If anyone habitually living at Court absented himself he insisted on knowing the reason; those who came there only for flying visits had also to give a satisfactory explanation; anyone who seldom or never appeared there was certain to incur his displeasure. If asked to bestow a favor on such persons he would reply haughtily: \"I do not know him\"; of such as rarely presented themselves he would say, \"He is a man I never see\"; and from these judgments there was no appeal.\nNo one understood better than Louis XIV the art of enhancing the value of a favor by his manner of bestowing it; he knew how to make the most of a word, a smile, even of a glance.\nHe loved splendor, magnificence, and profusion in all things, and encouraged similar tastes in his Court; to spend money freely on equipages and buildings, on feasting and at cards, was a sure way to gain his favor, perhaps to obtain the honor of a word from him. Motives of policy had something to do with this; by making expensive habits the fashion, and, for people in a certain position, a necessity, he compelled his courtiers to live beyond their income, and gradually reduced them to depend on his bounty for the means of subsistence.\n\u2014Duke Saint-Simon, Memoirs of Louis XIV and His Court and His Regency, c. 1750\nWhich of the following is the best explanation of the bias found in the document above?",
+    "choices": [
+      "The duke, as a member of the French nobility, is sympathetic to King Louis.",
+      "The duke, as a member of the French nobility, is biased against the king because of his suppression of the nobility.",
+      "The duke, as a member of the French nobility, supported the extension of the administrative, financial, military, and religious control of the central state over the French population.",
+      "The duke, as a member of the French nobility, supported King Louis's preservation of the aristocracy's social position and legal privileges, while he removed their power."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, the passage is from Duke Saint-Simon"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nFor the catastrophe of 1914 the Germans are responsible. \u2026 Germany, in this matter, was unfortunate enough to allow herself (in spite of her skill at dissimulation) to be betrayed into an excess of candour by her characteristic tendency to go to extremes. Deutschland \u00fcber alles. Germany above everything! \u2026 There you have the ultimate framework of an old but childish race.\nGeorges Clemenceau, Grandeur and Misery of Victory, 1930\nFrom the passage, one may infer that Clemenceau believed",
+    "choices": [
+      "that the lyrics from the popular song Deutschland \u00fcber alles (which eventually became the German national anthem) were the reason Germany started the war",
+      "that the lyrics from the popular song Deutschland \u00fcber alles (which eventually became the German national anthem) were evidence of Germany's aggressive attitude",
+      "that the reason Germany lost the war was that it was betrayed from within",
+      "that Germany provided the ultimate framework for modern warfare"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The passage is from Georges Clemenceau's \""
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nIn Russia there was nothing going on well, and [Souvarine] was in despair over the news he had received. His old companions were all turning to the politicians; the famous Nihilists who made Europe tremble-sons of village priests, of the lower middle class, of tradesmen-could not rise above the idea of national liberation, and seemed to believe that the world would be delivered-when they had killed their despot&\u2026\n\"Foolery! They'll never get out of it with their foolery.\"\nThen, lowering his voice still more, in a few bitter words he described his old dream of fraternity. He had renounced his rank and his fortune; he had gone among workmen, only in the hope of seeing at last the foundation of a new society of labour in common. All the sous in his pockets had long gone to the urchins of the settlement; he had been as tender as a brother with the colliers, smiling at their suspicion, winning them over by his quiet workmanlike ways and his dislike of chattering. But decidedly the fusion had not taken place.\nHis voice changed, his eyes grew bright, he fixed them on \u00e9tienne, directly addressing him:\n\"Now, do you understand that? These hatworkers at Marseilles who have won the great lottery prize of a hundred thousand francs have gone off at once and invested it, declaring that they are going to live without doing anything! Yes, that is your idea, all of you French workmen; you want to unearth a treasure in order to devour it alone afterwards in some lazy, selfish corner. You may cry out as much as you like against the rich, you haven't got courage enough to give back to the poor the money that luck brings you. You will never be worthy of happiness as long as you own anything, and your hatred of the bourgeois proceeds solely from an angry desire to be bourgeois yourselves in their place.\"\n\u00e9mile Zola, French writer, Germinal, 1885\nA nineteenth-century Russian historian evaluating this passage would probably be most interested in",
+    "choices": [
+      "the Russian interest in French culture",
+      "the spirit of camaraderie amongst the miners",
+      "the sense of continual class struggle",
+      "the need for noblesse oblige"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, the passage is from Zola's \""
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nFlorence is more beautiful and five hundred forty years older than your Venice. \u2026 We have round about us thirty thousand estates, owned by nobleman and merchants, citizens and craftsman, yielding us yearly bread and meat, wine and oil, vegetables and cheese, hay and wood, to the value of nine thousand ducats in cash. \u2026 We have two trades greater than any four of yours in Venice put together\u2014the trades wool and silk. \u2026 Our beautiful Florence contains within the city \u2026 two hundred seventy shops belonging to the wool merchant's guild, from whence their wares are sent to Rome and the Marches, Naples and Sicily, Constantinople \u2026 and the whole of Turkey. It contains also eighty-three rich and splendid warehouses of the silk merchant's guild.\nBenedetto Dei, \"Letter to a Venetian,\" 1472\nFrom the passage, one may argue that wealth in Renaissance Italy was measured in",
+    "choices": [
+      "the size of landed estates",
+      "the number of estates owned by an individual",
+      "the monetary value of goods",
+      "the amount of gold held"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The passage is from Benedetto Dei's letter"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nThe pair of excerpts below is written by explorer Christopher Columbus and the Dominican Bishop of Chiapas, Mexico, Bartholomew de las Casas.\nSource 1\nIndians would give whatever the seller required. . . . Thus they bartered, like idiots, cotton and gold for fragments of bows, glasses, bottles, and jars; which I forbad as being unjust, and myself gave them many beautiful and acceptable articles which I had brought with me, taking nothing from them in return; I did this in order that I might the more easily conciliate them, that they might be led to become Christians, and be inclined to entertain a regard for the King and Queen, our Princes and all Spaniards, and that I might induce them to take an interest in seeking out, and collecting and delivering to us such things as they possessed in abundance, but which we greatly needed.\n\u2014Christopher Columbus: letter to Raphael Sanchez, 1493\nSource 2\nIt was upon these gentle lambs . . . that from the very first day they clapped eyes on them the Spanish fell like ravening wolves upon the fold, or like tigers and savage lions who have not eaten meat for days. The pattern established at the outset has remained unchanged to this day, and the Spaniards still do nothing save tear the natives to shreds, murder them and inflict upon them untold misery, suffering and distress, tormenting, harrying and persecuting them mercilessly. We shall in due course describe some of the many ingenious methods of torture they have invented and refined for this purpose, but one can get some idea of the effectiveness of their methods from the figures alone. When the Spanish first journeyed there, the indigenous population of the island of Hispaniola stood at some three million; today only two hundred survive. Their reason for killing and destroying such an infinite number of souls is that the Christians have an ultimate aim, which is to acquire gold, and to swell themselves with riches in a very brief time and thus rise to a high estate disproportionate to their merits.\n\u2014Bartholomew de las Casas: A Short Account of the Destruction of the Indies, 1542\nWhich of the following would best account for the differences between the interactions of the Spaniards and the natives as described in the two accounts?",
+    "choices": [
+      "De las Casas was exaggerating to support the start of African slavery.",
+      "Columbus was biased in favor of himself in his writings.",
+      "Columbus's men were nicer to the natives than were later expeditions.",
+      "De las Casas wanted the Spanish to leave the Americas."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, the user is asking about the differences between"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nRead the the following petition to answer questions.\nThe Scribbling-Machines have thrown thousands of your petitioners out of employ, whereby they are brought into great distress, and are not able to procure a maintenance for their families, and deprived them of the opportunity of bringing up their children to labour. \u2026 The number of Scribbling-Machines extending about seventeen miles south-west of Leeds exceed all belief, being no less than one hundred and seventy! And as each machine will do as much work in twelve hours, as ten men can in that time do by hand, \u2026 [And, as the machines do] as much work in one day as would otherwise employ twenty men, \u2026 [a] full four thousand men are left to shift for a living how they can, and must of course fall to the Parish, if not timely relieved. \u2026 How are those men, thus thrown out of employ to provide for their families; and what are they to put their children apprentice to, that the rising generation may have something to keep them at work, in order that they may not be like vagabonds strolling about in idleness? \u2026 Many more evils we could enumerate, but we would hope, that the sensible part of mankind, who are not biased by interest, must see the dreadful tendency of their continuance; a depopulation must be the consequence; trade being then lost, the landed interest will have no other satisfaction but that of being last devoured.\nLeeds Woolen Workers Petition, 1786\nThis document can be used as evidence for",
+    "choices": [
+      "the spread of revolutionary ideas among the British working class in the eighteenth century",
+      "the rise of the Luddite movement in Britain in the eighteenth century",
+      "the replacing of traditional laborers by machines in the industrialization of Britain in the eighteenth century",
+      "an increase in the use of child labor in eighteenth-century Britain"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user provided a document from the Leeds Woolen"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nFlorence is more beautiful and five hundred forty years older than your Venice. \u2026 We have round about us thirty thousand estates, owned by nobleman and merchants, citizens and craftsman, yielding us yearly bread and meat, wine and oil, vegetables and cheese, hay and wood, to the value of nine thousand ducats in cash. \u2026 We have two trades greater than any four of yours in Venice put together\u2014the trades wool and silk. \u2026 Our beautiful Florence contains within the city \u2026 two hundred seventy shops belonging to the wool merchant's guild, from whence their wares are sent to Rome and the Marches, Naples and Sicily, Constantinople \u2026 and the whole of Turkey. It contains also eighty-three rich and splendid warehouses of the silk merchant's guild.\nBenedetto Dei, \"Letter to a Venetian,\" 1472\nThe passage may be used as evidence for the existence of which of the following Renaissance cultural characteristics?",
+    "choices": [
+      "Pride in the mastery of the military arts",
+      "Chivalry",
+      "Civic pride",
+      "Patronage of the arts"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The passage is from Benedetto Dei's letter"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nThe assumption by a government of the office of Reliever-general to the poor is necessarily forbidden by the principle that a government cannot rightly do anything more than protect. In demanding from a citizen contributions for the mitigation of distress \u2026 the state is \u2026 reversing its function. \u2026 To enforce the fundamental law\u2014to take care that every man has freedom to do all that he wills, provided he infringes not the equal freedom of any other man. \u2026 [But that] is quite a separate thing from insuring him satisfaction. \u2026\nThe poverty of the incapable, the distresses that come upon the imprudent, the starvation of the idle, and those shoulderings aside of the weak by the strong \u2026 are the decrees of a large, farseeing benevolence. \u2026 When regarded not separately, but in connection with the interests of universal humanity, these harsh fatalities are seen to be full of the highest beneficence.\nHerbert Spencer, Social Statistics: Survival of the Fittest Applied to Humankind, 1851\nFrom the passage, one may infer that Spencer advocated which social philosophy?",
+    "choices": [
+      "Utopian socialism",
+      "Social conservatism",
+      "Romanticism",
+      "Social Darwinism"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The passage is from Herbert Spencer, and the question"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nRead the following governmental regulation.\nPress Law\nSo long as this decree shall remain in force no publication which appears in the form of daily issues, or as a serial not exceeding twenty sheets of printed matter, shall go to press in any state of the union without the previous knowledge and approval of the state officials. Writings which do not belong to one of the above-mentioned classes shall be treated according to the laws now in force, or which may be enacted, in the individual states of the union. . . . Each state of the union is responsible, not only to the state against which the offense is directly committed, but to the whole Confederation, for every publication appearing under its supervision in which the honor or security of other states is infringed or their constitution or administration attacked. . . .\n\u2014Carlsbad Resolutions adopted by the Germanic States, 1819\nThe Carlsbad Resolutions were another of Metternich's schemes, like the Concert of Europe, which aimed to accomplish which of the following?",
+    "choices": [
+      "Establish control of European states by democracy in the tradition of the Enlightenment.",
+      "Suppress all voices in government other than his own and control all aspects of his citizens' lives.",
+      "Suppress all nationalist revolutions across the continent.",
+      "Suppress all speech but that of monarchs and the churches that they approve of."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The user provided a passage about the Carlsbad"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nIn Russia there was nothing going on well, and [Souvarine] was in despair over the news he had received. His old companions were all turning to the politicians; the famous Nihilists who made Europe tremble-sons of village priests, of the lower middle class, of tradesmen-could not rise above the idea of national liberation, and seemed to believe that the world would be delivered-when they had killed their despot&\u2026\n\"Foolery! They'll never get out of it with their foolery.\"\nThen, lowering his voice still more, in a few bitter words he described his old dream of fraternity. He had renounced his rank and his fortune; he had gone among workmen, only in the hope of seeing at last the foundation of a new society of labour in common. All the sous in his pockets had long gone to the urchins of the settlement; he had been as tender as a brother with the colliers, smiling at their suspicion, winning them over by his quiet workmanlike ways and his dislike of chattering. But decidedly the fusion had not taken place.\nHis voice changed, his eyes grew bright, he fixed them on \u00e9tienne, directly addressing him:\n\"Now, do you understand that? These hatworkers at Marseilles who have won the great lottery prize of a hundred thousand francs have gone off at once and invested it, declaring that they are going to live without doing anything! Yes, that is your idea, all of you French workmen; you want to unearth a treasure in order to devour it alone afterwards in some lazy, selfish corner. You may cry out as much as you like against the rich, you haven't got courage enough to give back to the poor the money that luck brings you. You will never be worthy of happiness as long as you own anything, and your hatred of the bourgeois proceeds solely from an angry desire to be bourgeois yourselves in their place.\"\n\u00e9mile Zola, French writer, Germinal, 1885\nThe radical movement known as anarchism, alluded to in the first paragraph, had been related to all of the following EXCEPT",
+    "choices": [
+      "the International Workingman's Association",
+      "Pierre-Joseph Proudhon",
+      "the Congress of Vienna",
+      "the Paris Commune"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, the passage is from Zola's \""
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nRead the documents below.\nSource 1\nIf then by the Use of Machines, the Manufacture of Cotton, an Article which we import, and are supplied with from other Countries, and which can everywhere be procured on equal Terms, has met with such amazing Success, may not greater Advantages be reasonably expected from cultivating to the utmost the Manufacture of Wool, the Produce of our own Island, an Article in Demand in all Countries, almost the universal Clothing of Mankind?\nIn the Manufacture of Woollens, the Scribbling Mill, the Spinning Frame, and the Fly Shuttle, have reduced manual Labour nearly One third, and each of them at its-first Introduction carried an Alarm to the Work People, yet each has contributed to advance the Wages and to increase the Trade, so that if an Attempt was now made to deprive us of the Use of them, there is no Doubt, but every Person engaged in the Business, would exert himself to defend them.\n\u2014Statement by the Cloth Merchants of Leeds, 1791\nSource 2\nCome, cropper lads of high renown,\nWho love to drink good ale that's brown,\nAnd strike each haughty tyrant down,\nWith hatchet, pike, and gun!\nOh, the cropper lads for me,\nThe gallant lads for me,\nWho with lusty stroke,\nThe shear frames broke,\nThe cropper lads for me!\nWhat though the specials still advance,\nAnd soldiers nightly round us prance;\nThe cropper lads still lead the dance,\nWith hatchet, pike, and gun!\nOh, the cropper lads for me,\nThe gallant lads for me,\nWho with lusty stroke\nThe shear frames broke,\nThe cropper lads for me!\n\u2014Luddite Song, The Cropper's Song, c. 1812\nWhich of the following economic theories is Source 1 above referencing in support of the expansion and use of machines?",
+    "choices": [
+      "Laissez-faire capitalism",
+      "Mercantilism",
+      "Industrialization",
+      "Bullionism"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, the user provided two sources and is asking"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\n\"A specter is haunting Europe-the specter of Communism. All the powers of old Europe have entered into a holy alliance to exorcise this specter; Pope and Czar, Metternich and Guizot, French radicals and German police spies.\nTwo things result from this fact.\nI. Communism is already acknowledged by all European powers to be in itself a power.\nII. It is high time that Communists should openly, in the face of the whole world, publish their views, their aims, their tendencies, and meet this nursery tale of the Specter of Communism with a Manifesto of the party itself.\"\nKarl Marx and Friedrich Engels, The Communist Manifesto, 1848\nIn this passage, Marx and Engels seem to be chiefly preoccupied with",
+    "choices": [
+      "provoking fear to drive their readers to action",
+      "attacking the extreme communists who threatened to sink the entire movement",
+      "demonstrating the understanding of the others in point of fact",
+      "explaining the reasons for debunking opponents of communism"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The passage is from The Communist Manifesto by Marx"
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "This question refers to the following information.\nAs with a Commander of the Army, or leader of any enterprise, so it is with the mistress of the house. Her spirit will be seen through the whole establishment; and just in proportion as she performs her duties intelligently and thoroughly, so will her domestics follow in her path. Of all of those acquirements, which more particularly belong to the feminine character, there are none which take a higher rank, in our estimation, than such as enter into a knowledge of household duties; for on these are perpetually dependent the happiness, comfort, and well-being of the family.\nIsabella Beeton, Book of Household Management, 1861\nFrom the passage, one may infer that the subject of Beeton's book was",
+    "choices": [
+      "the role of women in army regiments",
+      "the running of a school for domestic servants",
+      "the running of a school for girls",
+      "the role of a woman in running her own domestic household"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The passage is from Isabella Beeton's \""
+  }
+]

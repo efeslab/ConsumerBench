@@ -1,0 +1,6 @@
+chatbot:
+    server_model = /home/cc/models/Qwen2.5-3B-Instruct-GGUF/qwen2.5-3b-instruct-fp16-00001-of-00002.gguf
+    client_model = openai/Qwen/Qwen2.5-3B-Instruct-GGUF
+    num_requests = 10
+    device = cpu
+    mps = 100

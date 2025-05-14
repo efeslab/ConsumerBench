@@ -1,0 +1,13 @@
+live_captions:
+    num_requests = 1
+    device = gpu
+    # device = cpu
+    mps = 100
+
+imagegen:
+    server_model = /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
+    # server_model = /home/cc/models/stable-diffusion-3.5-large
+    num_requests = 5
+    device = gpu
+    # device = cpu
+    mps = 100

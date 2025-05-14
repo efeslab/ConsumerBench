@@ -1,0 +1,49 @@
+chatbot1:
+    server_model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 1
+    device: gpu
+    type: chatbot
+    mps: 100
+
+chatbot_long:
+    server_model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 4
+    device: gpu
+    type: chatbot
+    mps: 100
+
+imagegen1:
+    server_model: /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
+    num_requests: 4
+    device: gpu
+    type: imagegen
+    mps: 100
+
+lv:
+    num_requests: 1
+    device: gpu
+    mps: 100
+    type: live_captions
+
+workflows:
+    chat_summary:
+        uses: chatbot1
+    
+    chat_summary2:
+        uses: chatbot_long
+        depend_on: ["chat_summary"]
+
+    chat_another:
+        uses: chatbot_long
+        depend_on: ["chat_summary"]
+
+    image_gen:
+        uses: imagegen1
+        depend_on: ["chat_summary"]
+
+    start_captions:
+        uses: lv
+        background: true
+        depend_on: ["image_gen"]

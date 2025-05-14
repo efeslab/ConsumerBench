@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "high_school_statistics",
+    "question": "The weight of an aspirin tablet is 300 milligrams according to the bottle label. An FDA investigator weighs a simple random sample of seven tablets, obtains weights of 299, 300, 305, 302, 299, 301, and 303, and runs a hypothesis test of the manufacturer's claim. Which of the following gives the P-value of this test?",
+    "choices": [
+      "P(t > 1.54) with df = 6",
+      "2P(t > 1.54) with df = 6",
+      "P(t > 1.54) with df = 7",
+      "2P(t > 1.54) with df = 7"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question step by step. The problem is about hypothesis testing for"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "The waiting times for a new roller coaster ride are normally distributed with a mean of 35 minutes and a standard deviation of 10 minutes. If there are 150,000 riders the first summer, which of the following is the shortest time interval associated with 100,000 riders?",
+    "choices": [
+      "0 to 31.7 minutes",
+      "31.7 to 39.3 minutes",
+      "25.3 to 44.7 minutes",
+      "25.3 to 35 minutes"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question step by step. The problem is about finding the shortest"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "All of the following statements are true for all discrete random variables except for which one?",
+    "choices": [
+      "The possible outcomes must all be numerical.",
+      "The possible outcomes must be mutually exclusive.",
+      "The mean (expected value) always equals the sum of the products obtained by multiplying each value by its corresponding probability.",
+      "Approximately 95% of the outcomes will be within two standard deviations of the mean."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about identifying which statement is not true"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "Which of the following is a true statement about hypothesis testing?",
+    "choices": [
+      "If there is sufficient evidence to reject a null hypothesis at the 10% level, then there is sufficient evidence to reject it at the 5% level.",
+      "Whether to use a one- or a two-sided test is typically decided after the data are gathered.",
+      "If a hypothesis test is conducted at the 1% level, there is a 1% chance of rejecting the null hypothesis.",
+      "The power of a test concerns its ability to detect an alternative hypothesis."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question step by step. The question is about hypothesis testing,"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "An outlier is an observation that",
+    "choices": [
+      "is seen more frequently than the other observations in the data set",
+      "is seen less frequently than the other observations in the data set",
+      "is always smaller than the other observations in the data set",
+      "is significantly different from the other observations in the data set"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about outliers. The question is asking what defines an outlier"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "The principal of a school is interested in estimating the average income per family of her students. She selects a random sample of students and collects information about their family income. A 95 percent confidence interval computed from this data for the mean income per family is ($35,095, $45,005). Which of the following provides the best interpretation of this confidence interval?",
+    "choices": [
+      "95 percent of the students in her school are from families whose income is between $35,095 and $45,005.",
+      "There is a 95% probability that the families of all the students in this school have an income of between $35,095 and $45,005.",
+      "If we were to take another sample of the same size and compute a 95 percent confidence interval, we would have a 95% chance of getting the interval ($35,095, $45,005).",
+      "There is a 95% probability that the mean income per family in the school is between $35,095 and $45,005."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this confidence interval question. The principal wants to estimate the average family"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "Researchers are conducting an experiment using a significance level of 0.05. The null hypothesis is, in fact, false. If they modify their experiment to use twice as many experimental units for each treatment, which of the following would be true?",
+    "choices": [
+      "The probability of a Type I error and the probability of a Type II error would both decrease.",
+      "The probability of a Type I error and the power would both increase.",
+      "The probability of a Type II error and the power would both increase.",
+      "The probability of a Type I error would stay the same and the power would increase."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, the researchers are doing an experiment with a"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "The mean height of adult men is 70 inches, with a standard deviation of four inches. The mean height of adult women is 66 inches, with a standard deviation of three inches. Between a man with a height of 74 inches and a woman with a height of 70 inches, who is more unusually tall within his or her respective sex?",
+    "choices": [
+      "It cannot be determined, because the mean heights for the two groups are different.",
+      "It cannot be determined, because the standard deviations of the heights for the two groups are different.",
+      "The man, because he is 74 inches tall and the woman is only 70 inches tall.",
+      "The woman, because her height is 1.33 standard deviations above the mean height of all women, whereas the man\u2019s height is only one standard deviation above the mean height of all men."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question step by step. The question is asking who is more"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "Which of the following is not true about t-distributions?",
+    "choices": [
+      "There are different t-distributions for different values of df (degrees of freedom).",
+      "t-distributions are bell-shaped and symmetric.",
+      "t-distributions always have mean 0 and standard deviation 1.",
+      "t-distributions are more spread out than the normal distribution."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about t-distributions. The question is asking which statement"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "To study the effect of alcohol on reaction time, subjects were randomly selected and given three beers to consume. Their reaction time to a simple stimulus was measured before and after drinking the alcohol. Which of the following is a correct statement?",
+    "choices": [
+      "This study was an observational study.",
+      "Lack of blocking makes this a poorly designed study.",
+      "The placebo effect is irrelevant in this type of study.",
+      "This study was an experiment in which the subjects were used as their own controls."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, the question is about a study on the"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "Which of these statements correctly explains bias?",
+    "choices": [
+      "It describes a process that creates estimates that are too high on average or too low on average.",
+      "It describes a process that results in a sample that does not represent the population.",
+      "It describes a lack of randomization in the sampling process.",
+      "It describes a sample that is not representative of the population."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question about bias. The options are A, B, C"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "A company that produces facial tissues continually monitors tissue strength. If the mean strength from sample data drops below a specified level, the production process is halted and the machinery inspected. Which of the following would result from a Type I error?",
+    "choices": [
+      "Halting the production process when sufficient customer complaints are received.",
+      "Halting the production process when the tissue strength is below specifications.",
+      "Halting the production process when the tissue strength is within specifications.",
+      "Allowing the production process to continue when the tissue strength is below specifications."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, the company is monitoring tissue strength. If"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "The longevity of people living in a certain locality has a standard deviation of 14 years. What is the mean longevity if 30% of the people live longer than 75 years? Assume a normal distribution for life spans.",
+    "choices": [
+      "75 - 0.30(14)",
+      "75 + 0.30(14)",
+      "75 - 0.4756(14)",
+      "75 - 0.5244(14)"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question step by step. The problem states that the longevity of"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "Changing from a 90% confidence interval estimate for a population proportion to a 99% confidence interval estimate, with all other things being equal,",
+    "choices": [
+      "increases the interval size by 9%.",
+      "decreases the interval size by 9%.",
+      "increases the interval size by 57%.",
+      "decreases the interval size by 57%."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, the question is about changing from a"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "Which of the following is a binomial random variable?",
+    "choices": [
+      "The number of tosses before a \"5\" appears when tossing a fair die.",
+      "The number of points a hockey team receives in 10 games, where two points are awarded for wins, one point for ties, and no points for losses.",
+      "The number of hearts out of five cards randomly drawn from a deck of 52 cards, without replacement.",
+      "The number of motorists not wearing seat belts in a random sample of five drivers."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking which of the options is a"
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "If all the other variables remain constant, which of the following will increase the power of a hypothesis test? I.Increasing the sample size. II.Increasing the significance level. III.Increasing the probability of a Type II error.",
+    "choices": [
+      "I only",
+      "II only",
+      "III only",
+      "I and II"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question step by step. The question is about increasing the power"
+  }
+]

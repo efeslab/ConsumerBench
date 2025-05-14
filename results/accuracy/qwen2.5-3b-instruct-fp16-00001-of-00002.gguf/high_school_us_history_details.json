@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"The far-reaching, the boundless future will be the era of American greatness. In its magnificent domain of space and time, the nation of many nations is destined to manifest to mankind the excellence of divine principles; to establish on earth the noblest temple ever dedicated to the worship of the Most High\u2014the Sacred and the True. Its floor shall be a hemisphere\u2014its roof the firmament of the star-studded heavens, and its congregation a Union of many Republics, comprising hundreds of happy millions, calling, owning no man master, but governed by God's natural and moral law of equality, the law of brotherhood\u2014of 'peace and good will amongst men.'\"\nJohn L. O'Sullivan, \"The Great Nation of Futurity,\" 1839\nBy what means did the United States take possession of the Oregon Territory?",
+    "choices": [
+      "The United States was granted the territory in a postwar treaty with France.",
+      "The United States bought it from the Native Americans who lived there.",
+      "U.S. settlers were the first to arrive in the region; they claimed it for their country.",
+      "Great Britain ceded it to the United States as part of a negotiated treaty."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The passage describes a vision of the United States as a future great nation, with the Oregon Territory being"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\nBECAUSE no People can be truly happy, though under the greatest Enjoyment of Civil Liberties, if abridged of the Freedom of their Consciences, as to their Religious Profession and Worship: And Almighty God being the only Lord of Conscience, Father of Lights and Spirits; and the Author as well as Object of all divine Knowledge, Faith and Worship, who only doth enlighten the Minds, and persuade and convince the Understanding of People, I do hereby grant and declare, That no Person or Persons, inhabiting in this Province or Territories, who shall confess and acknowledge One almighty God, the Creator, Upholder and Ruler of the World; and profess him or themselves obliged to live quietly under the Civil Government, shall be in any Case molested or prejudiced, in his or their Person or Estate, because of his or their conscientious Persuasion or Practice, nor be compelled to frequent or maintain any religious Worship, Place or Ministry, contrary to his or their Mind.\u2026\n\u2014William Penn, Charter of Privileges Granted by William Penn,\nesq. to the Inhabitants of Pennsylvania and Territories, October 28, 1701\nBecause of Penn's Charter of Privileges, Pennsylvania became",
+    "choices": [
+      "one of the most religiously diverse colonies in British America.",
+      "one of the least religiously diverse colonies in America.",
+      "notorious for witch hunting and popular superstition.",
+      "known for its hostility to traditional religious practices."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A: one of the most religiously diverse colonies in British America.\n\nWilliam Penn"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"We conclude that, in the field of public education, the doctrine of \"separate but equal\" has no place. Separate educational facilities are inherently unequal. Therefore, we hold that the plaintiffs and others similarly situated for whom the actions have been brought are, by reason of the segregation complained of, deprived of the equal protection of the laws guaranteed by the Fourteenth Amendment.\"\nBrown v. Board of Education, 1954\nDesegregation of schools was, in part, a response to unfulfilled promises from which of the following initiatives?",
+    "choices": [
+      "The Great Society",
+      "The Square Deal",
+      "The New Deal",
+      "Reconstruction"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D: Reconstruction\n\nThe Brown v. Board of Education decision, which declared state"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"Since the foundations of the American commonwealth were laid in colonial times over 300 years ago, vigorous complaint and more or less bitter persecution have been aimed at newcomers to our shores. Also the congressional reports of about 1840 are full of abuse of English, Scotch, Welsh immigrants as paupers, criminals, and so forth. Old citizens in Detroit of Irish and German descent have told me of the fierce tirades and propaganda directed against the great waves of Irish and Germans who came over from 1840 on for a few decades to escape civil, racial, and religious persecution in their native lands. The \"Know-Nothings,\" lineal ancestors of the Ku-Klux Klan, bitterly denounced the Irish and Germans as mongrels, scum, foreigners, and a menace to our institutions, much as other great branches of the Caucasian race of glorious history and antecedents are berated to-day\u2026.But to-day it is the Italians, Spanish, Poles, Jews, Greeks, Russians, Balkanians, and so forth, who are the racial lepers\u2026..In this bill we find racial discrimination at its worst\u2014a deliberate attempt to go back 84 years in our census taken every 10 years so that a blow may be aimed at peoples of eastern and southern Europe, particularly at our recent allies in the Great War\u2014Poland and Italy.\"\nRobert H. Clancy, Congressional Record, 68th Congress, 1st Session, 1924\nWhich one of the following legislative acts is most closely an example of nativism?",
+    "choices": [
+      "The Wagner Act of 1935",
+      "The Alien and Sedition Acts of 1798",
+      "The Espionage Act of 1917",
+      "The Immigration and Nationality Act of 1965"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B: The Alien and Sedition Acts of 1798\n\nThe"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\nNow, we have organized a society, and we call it \"Share Our Wealth Society,\" a society with the motto \"Every Man a King.\"\u2026\nWe propose to limit the wealth of big men in the country. There is an average of $15,000 in wealth to every family in America. That is right here today.\nWe do not propose to divide it up equally. We do not propose a division of wealth, but we do propose to limit poverty that we will allow to be inflicted on any man's family. We will not say we are going to try to guarantee any equality \u2026 but we do say that one third of the average is low enough for any one family to hold, that there should be a guarantee of a family wealth of around $5,000; enough for a home, an automobile, a radio, and the ordinary conveniences, and the opportunity to educate their children.\u2026\nWe will have to limit fortunes. Our present plan is that we will allow no man to own more than $50,000,000. We think that with that limit we will be able to carry out the balance of the program.\n\u2014Senator Huey P. Long of Louisiana, Radio Address, February 23, 1934\nPresident Franklin D. Roosevelt responded to political challenges like that of Senator Long by doing which of the following?",
+    "choices": [
+      "Announcing that he would not run for re-election",
+      "Launching the Second New Deal, a series of legislative acts including Social Security",
+      "Diverting people's attention by allowing the Japanese to bomb Pearl Harbor",
+      "Urging Congress to cut taxes and deregulate the economy"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B: Launching the Second New Deal, a series of legislative acts including Social"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"I was once a tool of oppression\nAnd as green as a sucker could be\nAnd monopolies banded together\nTo beat a poor hayseed like me.\n\"The railroads and old party bosses\nTogether did sweetly agree;\nAnd they thought there would be little trouble\nIn working a hayseed like me. . . .\"\n\u2014\"The Hayseed\"\nThe song, and the movement that it was connected to, highlight which of the following developments in the broader society in the late 1800s?",
+    "choices": [
+      "Corruption in government\u2014especially as it related to big business\u2014energized the public to demand increased popular control and reform of local, state, and national governments.",
+      "A large-scale movement of struggling African American and white farmers, as well as urban factory workers, was able to exert a great deal of leverage over federal legislation.",
+      "The two-party system of the era broke down and led to the emergence of an additional major party that was able to win control of Congress within ten years of its founding.",
+      "Continued skirmishes on the frontier in the 1890s with American Indians created a sense of fear and bitterness among western farmers."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The song \"The Hayseed\" and the movement it was connected to highlight the corruption in government and"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"Some men look at constitutions with sanctimonious reverence, and deem them like the ark of the covenant, too sacred to be touched. They ascribe to the men of the preceding age a wisdom more than human, and suppose what they did to be beyond amendment\u2026.But I know also, that laws and institutions must go hand in hand with the progress of the human mind. As that becomes more developed, more enlightened, as new discoveries are made, new truths disclosed, and manners and opinions change with the change of circumstances, institutions must advance also, and keep pace with the times.\"\nThomas Jefferson, 1816\nWhich of the following statements is most accurate regarding the existence of political parties in the early United States?",
+    "choices": [
+      "After the drafting of the Constitution, continued debates about states' rights and competing economic interests led to the formation of political parties, such as the Federalists and the Democratic-Republicans.",
+      "Although Washington warned against the influence of political parties, he reluctantly accepted the endorsement of the Federalist party.",
+      "Political parties did not exist until the War of 1812, when Federalists asserted control over foreign policies with France and Britain.",
+      "Two major political parties dominated early presidential elections until John Quincy Adams founded the Whig party in 1824."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A.\n\nThomas Jefferson's statement reflects a view that political institutions and laws should evolve"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\nAt a meeting of working girls held at Hull House during a strike in a large shoe factory, the discussions made it clear that the strikers who had been most easily frightened, and therefore the first to capitulate, were naturally those girls who were paying board and were afraid of being put out if they fell too far behind. After a recital of a case of peculiar hardship one of them exclaimed: \"Wouldn't it be fine if we had a boarding club of our own, and then we could stand behind each other in a time like this?\" After that events moved quickly. We \u2026 discussed all the difficulties and fascinations of such an undertaking, and on the first of May, 1891, two comfortable apartments near Hull House were rented and furnished. The Settlement was responsible for the furniture and paid the first month's rent, but beyond that the members managed the club themselves.\u2026 At the end of the third year the club occupied all of the six apartments which the original building contained, and numbered fifty members.\n\u2014Jane Addams, Twenty Years at Hull House, 1912\nA settlement house worker was most likely to be motivated by which of the following?",
+    "choices": [
+      "The Social Gospel",
+      "Social Darwinism",
+      "Communism",
+      "The support of an urban political machine"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A: The Social Gospel\n\nJane Addams, the founder of Hull House,"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"Lincoln was strongly anti-slavery, but he was not an abolitionist or a Radical Republican and never claimed to be one. He made a sharp distinction between his frequently reiterated personal wish that 'all men everywhere could be free' and his official duties as a legislator, congressman, and president in a legal and constitutional system that recognized the South's right to property in slaves. Even after issuing the Emancipation Proclamation he continued to declare his preference for gradual abolition. While his racial views changed during the Civil War, he never became a principled egalitarian in the manner of abolitionists such as Frederick Douglass or Wendell Phillips or Radical Republicans like Charles Sumner.\"\n\u2014Eric Foner, The Fiery Trial, 2010\nHow did President Lincoln's issuance of the Emancipation Proclamation alter the course of the Civil War?",
+    "choices": [
+      "The war came to a swift conclusion because the Proclamation made the Confederacy realize the futility of their cause.",
+      "The war grew in scope because the Proclamation caused Great Britain to join the fight on the side of the Union.",
+      "President Jefferson Davis of the Confederacy vowed massive resistance to any Union effort to free the slaves.",
+      "The war aims of the United States were no longer exclusively focused on the preservation of the Union."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D.\n\nPresident Lincoln's issuance of the Emancipation Proclamation altered the course"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"Yesterday, December 7, 1941\u2014a date which will live in infamy\u2014the United States of America was suddenly and deliberately attacked by naval and air forces of the Empire of Japan. The United States was at peace with that nation and, at the solicitation of Japan, was still in conversation with its Government and its Emperor looking toward the maintenance of peace in the Pacific. Indeed, one hour after Japanese air squadrons had commenced bombing\u2026the Japanese Ambassador to the United States and his colleague delivered to the Secretary of State a formal reply to a recent American message. While this reply stated that it seemed useless to continue the existing diplomatic negotiations, it contained no threat or hint of war or armed attack\u2026.The attack yesterday\u2026has caused severe damage to American naval and military forces. Very many American lives have been lost. In addition American ships have been reported torpedoed on the high seas\u2026.As Commander-in-Chief of the Army and Navy, I have directed that all measures be taken for our defense.\"\nPresident Franklin D. Roosevelt, radio address, December 8, 1941\nWhich of the following statements best characterizes the economic consequences of the declaration of war described above?",
+    "choices": [
+      "Decreased trade with Asian nations precipitated economic recession in both the United States and Europe.",
+      "The war-ravaged condition of Asia and Europe allowed the United States to emerge as one of the most prosperous nations on Earth.",
+      "Cold War tensions isolated the economies of both the Soviet Union and the United States, leading to economic struggle for both nations.",
+      "Japan was subsequently required to pay reparations to the United States, forcing it into a prolonged depression."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B: The war-ravaged condition of Asia and Europe allowed the United States"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"If any person or persons shall, from and after the passing of this act, by force and violence, take and carry away, or cause to be taken or carried away, and shall, by fraud or false pretense, seduce, or cause to be seduced, or shall attempt so to take, carry away or seduce, any negro or mulatto, from any part or parts of this commonwealth, to any other place or places whatsoever, out of this commonwealth, with a design and intention of selling and disposing of, or of causing to be sold, or of keeping and detaining, or of causing to be kept and detained, such negro or mulatto, as a slave or servant for life, or for any term whatsoever, every such person or persons, his or their aiders or abettors, shall on conviction thereof, in any court of this commonwealth having competent jurisdiction, be deemed guilty of a felony.\"\n\u2014Excerpt from Pennsylvania law, 1826\nThe passage and implementation of this Pennsylvania law reflected an ongoing conflict between",
+    "choices": [
+      "rural and urban interests.",
+      "federal law and state law.",
+      "those who favored gradual emancipation and those who favored immediate emancipation.",
+      "supporters and opponents of government regulation of commerce."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The passage reflects an ongoing conflict between C: those who favored gradual emancipation and those who favored immediate"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"The far-reaching, the boundless future will be the era of American greatness. In its magnificent domain of space and time, the nation of many nations is destined to manifest to mankind the excellence of divine principles; to establish on earth the noblest temple ever dedicated to the worship of the Most High\u2014the Sacred and the True. Its floor shall be a hemisphere\u2014its roof the firmament of the star-studded heavens, and its congregation a Union of many Republics, comprising hundreds of happy millions, calling, owning no man master, but governed by God's natural and moral law of equality, the law of brotherhood\u2014of 'peace and good will amongst men.'\"\nJohn L. O'Sullivan, \"The Great Nation of Futurity,\" 1839\nWhich of the following best states the principle described above?",
+    "choices": [
+      "Colonists were destined to leave the British Empire because of the distance between the New World and England.",
+      "Women are biologically predestined to lives of child rearing and domestic labor.",
+      "America's expansion to the West Coast was inevitable and divinely sanctioned.",
+      "The abolition of slavery in the United States was certain to come about because slavery was immoral."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The principle described in John L. O'Sullivan's statement is best captured by option C: America"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"I observe the great and wonderful mistake, both our own and our fathers, as to the civil powers of this world, acting in spiritual matters. I have read\u2026the last will and testament of the Lord Jesus over many times, and yet I cannot find by one tittle of that testament that if He had been pleased to have accepted of a temporal crown and government that ever He would have put forth the least finger of temporal or civil power in the matters of His spiritual affairs and Kingdom. Hence must it lamentably be against the testimony of Christ Jesus for the civil state to impose upon the souls of the people a religion, a worship, a ministry, oaths (in religious and civil affairs), tithes, times, days, marryings, and buryings in holy ground\u2026\"\nRoger Williams, The Hireling Ministry None of Christ's, 1652\nThe Puritans believed that the freedom to practice religion should be extended to",
+    "choices": [
+      "Puritans only",
+      "all Protestants only",
+      "all Christians only",
+      "all Jews and Christians only"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The passage indicates that Roger Williams is arguing against the imposition of religious practices by the civil state on the"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\nTonight, the daughter of a woman whose highest goal was a future for her children talks to our nation's oldest political party about a future for us all. Tonight, the daughter of working Americans tells all Americans that the future is within our reach, if we're willing to reach for it. Tonight, the daughter of an immigrant from Italy has been chosen to run for (vice) president in the new land my father came to love.\u2026 Americans want to live by the same set of rules. But under this administration, the rules are rigged against too many of our people. It isn't right that every year the share of taxes paid by individual citizens is going up, while the share paid by large corporations is getting smaller and smaller.\u2026 It isn't right that young couples question whether to bring children into a world of 50,000 nuclear warheads. That isn't the vision for which Americans have struggled for more than two centuries.\u2026 Tonight, we reclaim our dream. We're going to make the rules of American life work for all Americans again.\u2026 The issue is not what America can do for women, but what women can do for America.\n\u2014Geraldine Ferraro, Vice Presidential Nomination Acceptance Address, July 19, 1984\nThe ideas expressed in the passage above would most directly have strengthened which of the following during the 1980s?",
+    "choices": [
+      "Opposition to the administration's arms buildup",
+      "Efforts to deregulate many industries",
+      "Efforts to reform the welfare system",
+      "Support for the administration's cold war policies"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The passage expresses a vision of a more inclusive and equitable America, particularly for women and working Americans."
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\nI appeal to any white man to say, if ever he entered Logan's cabin hungry, and he gave him not meat: if ever he came cold and naked, and he clothed him not? During the course of the last long and bloody war, Logan remained idle in his cabin, an advocate for peace. Such was my love for the whites, that my countrymen pointed as they passed, and said, \"Logan is the friend of the white man.\" I had even thought to have lived with you but for the injuries of one man. Colonel Cresap, the last spring, in cold blood and unprovoked; murdered all the relations of Logan, not even sparing my women and children. There runs not a drop of my blood in the veins of any living creature. This called on me for revenge. I have sought it: I have killed many; I have fully glutted my vengeance. For my country, I rejoice at the beams of peace. But do not harbor a thought that mine is the joy of fear. Logan never felt fear. He will not turn on his heel to save his life. Who is there to mourn for Logan? Not one.\n\u2014Address attributed to Logan, an Indian leader, 1774\nWhich of the following best expresses the perspective of Logan in the passage above?",
+    "choices": [
+      "Logan believes the expansion of British settlements must be stopped",
+      "Logan laments the loss of his family",
+      "Logan opposes a new peace treaty",
+      "Logan believes that Indians need to find strength in unity"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The passage expresses Logan's perspective of seeking revenge for the murder of his family and friends by Colonel Cres"
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\nThose who came before us made certain that this country rode the first waves of the industrial revolutions, the first waves of modern invention, and the first wave of nuclear power, and this generation does not intend to flounder in the backwash of the coming age of space. We mean to be a part of it\u2014we mean to lead it. For the eyes of the world now look into space, to the moon, and the planets beyond, and we have vowed that we shall not see it governed by a hostile flag of conquest, but by a banner of freedom and peace. We have vowed that we shall not see space filled with weapons of mass destruction, but with instruments of knowledge and understanding.\u2026 We choose to go to the moon. We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.\n\u2014John F. Kennedy, September 12, 1962\nKennedy's speech most directly led to which of the following?",
+    "choices": [
+      "The Vietnam War",
+      "The Mutually Assured Destruction (MAD) nuclear strategy",
+      "The Apollo space program",
+      "The Great Society social programs"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C: The Apollo space program\n\nKennedy's speech announcing the goal of landing"
+  }
+]

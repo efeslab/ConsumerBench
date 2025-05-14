@@ -1,0 +1,10 @@
+imagegen1:
+    server_model: /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
+    num_requests: 3
+    device: gpu
+    type: imagegen
+    mps: 100
+
+workflows:
+    generate_image:
+        uses: imagegen1 

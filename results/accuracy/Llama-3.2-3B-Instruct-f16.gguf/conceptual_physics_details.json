@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "conceptual_physics",
+    "question": "A 10-N force at an angle 45\u00b0 above the horizontal has a horizontal component of about",
+    "choices": [
+      "7 N",
+      "5 N",
+      "10 N",
+      "12 N"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "A completely submerged object always displaces its own",
+    "choices": [
+      "weight of fluid.",
+      "volume of fluid.",
+      "density of fluid.",
+      "All of these."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "When a diver points a flashlight upward toward the surface of the water at an angle 20\u00b0 from the normal, the beam of light",
+    "choices": [
+      "totally internally reflects",
+      "passes into the air above",
+      "is absorbed",
+      "None of these"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "According to four-dimensional geometry, the angles of a triangle add to 180\u00b0",
+    "choices": [
+      "always.",
+      "sometimes.",
+      "never.",
+      "on planet Earth only."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "A voltage will be induced in a wire loop when the magnetic field within that loop",
+    "choices": [
+      "changes",
+      "aligns with the electric field",
+      "is at right angles to the electric field",
+      "converts to magnetic energy"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "Among these colors, the one that has the most energy per photon is",
+    "choices": [
+      "red",
+      "yellow-green",
+      "blue",
+      "violet"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "According to general relativity,",
+    "choices": [
+      "mass distorts spacetime.",
+      "gravity affects clocks.",
+      "light can\u2019t escape from a black hole.",
+      "All of these."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "A step-up transformer in an electric circuit can step up",
+    "choices": [
+      "voltage",
+      "energy",
+      "Both of these",
+      "Neither of these"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "Spectral lines of the elements are",
+    "choices": [
+      "chaotic",
+      "ordered",
+      "positioned by amplitude",
+      "in phase"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "A wave transfers",
+    "choices": [
+      "amplitude",
+      "wavelength",
+      "frequency",
+      "energy"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "Immediately after two separated charged particles are released from rest, both increase in acceleration. The sign of charge of the particles is therefore",
+    "choices": [
+      "the same",
+      "opposite",
+      "Either of these",
+      "Need more information"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "The surface of planet Earth loses energy to outer space due mostly to",
+    "choices": [
+      "conduction",
+      "convection",
+      "radiation",
+      "radioactivity"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "In a series circuit, if the current in one lamp is 2 A, the current in the lamp next to it is",
+    "choices": [
+      "half, 1 A",
+      "2 A",
+      "Depends on which lamp is closer to the battery",
+      "Not enough information to say"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "As a blinking light source approaching you gains speed, you see the frequency of flashes",
+    "choices": [
+      "increase.",
+      "decrease.",
+      "remain unchanged.",
+      "None of these."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "In the absence of air resistance a ball of mass m is tossed upward to reach a height of 20 m. At the 10-m position half way up the net force on the ball is",
+    "choices": [
+      "2mg",
+      "mg",
+      "mg/2",
+      "mg/4"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "Pumice is a volcanic rock that floats in water. The density of pumice compared with that of water is",
+    "choices": [
+      "less.",
+      "equal.",
+      "greater.",
+      "none because it sinks."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A"
+  }
+]

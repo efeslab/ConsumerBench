@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "nutrition",
+    "question": "Which foods tend to be consumed in lower quantities in Wales and Scotland (as of 2020)?\n",
+    "choices": [
+      "Meat",
+      "Confectionary",
+      "Fruits and vegetables",
+      "Potatoes"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "nutrition",
+    "question": "In which one of the following circumstances will the prevalence of a disease in the population increase, all else being constant?\n",
+    "choices": [
+      "If the incidence rate of the disease falls.",
+      "If survival time with the disease increases.",
+      "If recovery of the disease is faster.",
+      "If the population in which the disease is measured increases."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Which of the following statements is correct?\n",
+    "choices": [
+      "The flavonoid class comprises flavonoids and isoflavonoids.",
+      "The digestibility and bioavailability of isoflavones in soya food products are not changed by processing.",
+      "\u00df-Carotene and lycopene can both act as provitamin A.",
+      "Carotenoids and flavonoids both belong to the polyphenol class."
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "nutrition",
+    "question": "What are the main causes of the obesity epidemic?\n",
+    "choices": [
+      "Increased energy quantity/density and a more sedentary life-style",
+      "Decreased leisure time activity",
+      "Changes in genetic profiles",
+      "None of the options given is correct"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Which vitamin is a major lipid-soluble antioxidant in cell membranes?\n",
+    "choices": [
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin K"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Which of the following contributes to vitamin B12 deficiency in older adults?\n",
+    "choices": [
+      "Reduced secretion of intrinsic factor",
+      "Atrophic gastritis",
+      "Helicobacter pylori infection",
+      "All of the above"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Obesity increases the risk of endometrial cancer. Which hormone is thought to mediate this effect?\n",
+    "choices": [
+      "Testosterone",
+      "Oestrogen",
+      "Insulin-like growth factor-1",
+      "Thyroxine"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Which vitamin is required for calcium absorption from the small intestine?\n",
+    "choices": [
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin K"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Which of the following statements about the metabolic demand for amino acids is correct?\n",
+    "choices": [
+      "The metabolic demand is supplied only from the diet,",
+      "The metabolic demand is to maintain protein turnover.",
+      "The metabolic demand involves consumption of amino-acids by a number of irreversible pathways and these are either obligatory or adaptive.",
+      "The metabolic demand is a fixed amount"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Which of the following statements about human amino acid requirements in human nutrition is correct?\n",
+    "choices": [
+      "The amino acid requirements determined for adults is assumed to be the requirement pattern for all ages.",
+      "The amino acid requirements determined for adults is assumed to be the requirements for maintenance for all ages.",
+      "The amino acid pattern of breast milk is assumed to be the requirement pattern for all children.",
+      "The amino acid pattern of human tissue protein is assumed to be the requirement patterns for infants and young children."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "nutrition",
+    "question": "A food additive is considered to be safe when:\n",
+    "choices": [
+      "No evidence of human toxicity has been observed over the period of its use",
+      "Estimated Daily Intake (EDI) from its presence in food is less than its ADI",
+      "Its toxic effects are observed only at doses 100x the EDI",
+      "Its benefits outweigh its risks"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Which of the following statements is true:\n",
+    "choices": [
+      "Childhood stunting before 24 months of age affects short term cognitive performance",
+      "Childhood stunting before 24 months of age affects long term cognitive performance",
+      "Neither of the statements are correct",
+      "Both of the statements are correct"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "nutrition",
+    "question": "What role do women play in food security?\n",
+    "choices": [
+      "Their main role is preparing meals.",
+      "They play a central role as producers of food, managers of natural resources, income earners and caretakers of household nutrition.",
+      "They weed the fields, but never plough or plant them, as only men are strong enough for those activities.",
+      "Their efforts focus mainly on vegetable gardens and chickens; men are involved with cereal crops and larger livestock."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "nutrition",
+    "question": "The following amino acids are all essential components of the diet:\n",
+    "choices": [
+      "leucine, methionine and threonine",
+      "proline, tyrosine and serine",
+      "valine, glycine and arginine",
+      "leucine, cysteine and glycine"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Which single statement about fat digestion and absorption is correct?\n",
+    "choices": [
+      "Absorption of fatty acids in the intestine occurs mainly through FABP and FAT/CD36 transport proteins in the enterocytes of the distal duodenum",
+      "After absorption, medium chain triglycerides (MCT) enter the lymphatic system, whereas long chain triglycerides enter the portal blood system.",
+      "The products of partial digestion of triglycerides (triacylglycerols) can form mixed micelles with pancreatic cholesterol and phospholipids and this increases absorption",
+      "Triglycerides (triacylglycerols) must be emulsified and digested before the fatty acids can be transported"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "nutrition",
+    "question": "Which fatty acids found in plasma phospholipids are associated with reduced cardiovascular mortality?\n",
+    "choices": [
+      "Palmitic acid (16:0)",
+      "Long chain (=20 carbons) saturated and n-3 polyunsaturated fatty acids",
+      "\u00e1-linolenic acid (18:3)",
+      "Stearic acid (18:0)"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  }
+]

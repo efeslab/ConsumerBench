@@ -1,0 +1,21 @@
+Task deep-research execution time: 6536.0563 seconds
+
+Execution times for each node:
+Node deep-research_0:
+  Execution time: 51.0981 seconds
+  Success: True
+Node deep-research_1:
+  Execution time: 2050.7279 seconds
+  Success: True
+Node deep-research_2:
+  Execution time: 1870.0168 seconds
+  Success: True
+Node deep-research_3:
+  Execution time: 2562.4797 seconds
+  Success: True
+Node deep-research_4:
+  Execution time: 1.7339 seconds
+  Success: True
+
+Task deep-research results:
+[True, {'total time': 2050.727417230606}, {'total time': 1870.0165338516235}, {'total time': 2562.4792959690094}, True]

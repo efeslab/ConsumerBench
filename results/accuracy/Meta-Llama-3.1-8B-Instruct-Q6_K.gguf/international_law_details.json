@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "international_law",
+    "question": "Which State ordinarily exercises jurisdiction in respect of crimes committed on board vessels?",
+    "choices": [
+      "The coastal State",
+      "The flag State",
+      "All States enjoy such jurisdiction",
+      "The International Tribunal for the Law of the Sea"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "international_law",
+    "question": "What is the meaning of justiciability?",
+    "choices": [
+      "Justiciability refers to the possibility of enforcement of a particular right by the relevant rights holders",
+      "Justiciability refers to the just nature or cause of a particular right",
+      "Justiciability refers to the courts' assessment of whether the non-enforcement of a particular rights conforms to principles of justice",
+      "Justiciability refers to the obligation of a State to enforce a particular Right"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "international_law",
+    "question": "In what way is Responsibility to Protect (R2P) different from humanitarian intervention?",
+    "choices": [
+      "R2P is essentially the same as humanitarian intervention",
+      "R2P requires a call for assistance by the State in distress",
+      "R2P is less arbitrary because it requires some UNSC input and its primary objective is to avert a humanitarian crisis",
+      "R2P always involves armed force, whereas humanitarian intervention does not"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "international_law",
+    "question": "What is the 'Lotus principle'?",
+    "choices": [
+      "The so-called Lotus principle is that 'restrictions upon the independence of States cannot therefore be presumed', or, as it has been construed, 'whatever is not prohibited is permitted in international law'",
+      "The so-called Lotus principle is that States are free to choose the Court that they will submit their disputes",
+      "The so-called Lotus principle is that States are not prohibited to assert their enforcement jurisdiction on the high seas",
+      "The so-called Lotus principle is that customary law derives from the combination of State practice and opinio juris"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "international_law",
+    "question": "Which of these statements best describes the UK Constitution?",
+    "choices": [
+      "The UK Constitution's only source of power is that of the sovereign",
+      "The UK Constitution gives the judiciary the power to overturn acts of parliament",
+      "The UK Constitution is uncodified and can be found in a number of sources",
+      "The UK Constitution is based on a Bill of Rights"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "international_law",
+    "question": "What is the obligation of the peaceful settlement of disputes?",
+    "choices": [
+      "It is an obligation of result, that is, States are under a strict obligation to resolve their disputes as soon as possible",
+      "It is an obligation of conduct, ie States have an obligation to try to resolve their disputes through peaceful means. This does not entail an obligation to resolve their disputes",
+      "It is a peremptory norm of international law and all States have a legal interest to safeguard its application in any given dispute",
+      "It is an obligation which concerns solely international courts and tribunals"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "international_law",
+    "question": "Which one of the following statements is false?",
+    "choices": [
+      "Protocol 14 changed the committee that hears admissibility cases from a three judge to a one judge formation",
+      "Protocol 14 added a new criterion for admissibility",
+      "Protocol 14 abolished the Commission of Human Rights",
+      "Protocol 14 extended the judicial term of office for the European Court of Human Rights"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "international_law",
+    "question": "Which is a 'rock' under the UN Convention of the Law of the Sea (UNCLOS)?",
+    "choices": [
+      "Rocks are the islands that are less than 10 square miles",
+      "Rocks are the islands that do not have any maritime zone",
+      "Rocks are the islands which cannot sustain human habitation or economic life of their own and according to article 121 (3) have no Exclusive Economic Zone or continental shelf.",
+      "Rocks are the small islands that can sustain human habitation"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "international_law",
+    "question": "What is the meaning of international legal personality?",
+    "choices": [
+      "It means that only States are considered subjects of international law",
+      "It means having rights and duties under international law and a capacity to enforce these by or against the relevant actor",
+      "It means that an entity may challenge the authority of States",
+      "It is a term that is meant to denote legal, as opposed, to physical persons under international law"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "international_law",
+    "question": "Which of the following is a treaty-based human rights mechanism?",
+    "choices": [
+      "The UN Human Rights Committee",
+      "The UN Human Rights Council",
+      "The UN Universal Periodic Review",
+      "The UN special mandates"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  },
+  {
+    "subject": "international_law",
+    "question": "The UN Vienna Declaration 1993 declared that",
+    "choices": [
+      "Third generation rights are of primary importance",
+      "Civil and political rights are core rights",
+      "All types of rights are indivisible, interrelated and interdependent",
+      "Social and economic rights are non-enforceable"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "international_law",
+    "question": "What is the principal source of immunity in respect of international organisations (IOs)?",
+    "choices": [
+      "The principal source of immunity for IOs is the UN Charter",
+      "The principal sources of immunity for IOs are headquarters agreements and multilateral treaties providing specific immunities",
+      "The principal source of immunity for IOs is customary law",
+      "The principal source of immunity for IOs is the Vienna Convention on Diplomatic Immunities"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "international_law",
+    "question": "Is there any hierarchy or priority among States under international law?",
+    "choices": [
+      "Yes, the States that were the founding members of the United Nations are vested with more powers and authority",
+      "Yes, the Permanent Five Members of the UN Security Council (UK, USA, France, Russia, China) are in a superior position than the other States",
+      "No, all States are considered equal as sovereign States (the principle of sovereign equality, enshrined in article 2, para 1 UN Charter)",
+      "Whether there will be any hierarchy among States is a matter of each international organization to decide"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C."
+  },
+  {
+    "subject": "international_law",
+    "question": "What is the declaratory theory of recognition?",
+    "choices": [
+      "Recognition is determinate for the existence of statehood",
+      "Recognition is simply declaratory of statehood but not determinate",
+      "Recognition is merely a declaration of interest",
+      "Recognition requires a declaration by the newly-created State"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B."
+  },
+  {
+    "subject": "international_law",
+    "question": "What is the function of \"standard-setting in human rights diplomacy?",
+    "choices": [
+      "Standard-setting means putting forward binding legal standards",
+      "Standard-setting means merely proposing binding legal standards",
+      "Standard-setting means putting forward non-binding legal standards",
+      "Standard-setting means setting certain standards of conduct in human rights treaties"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D."
+  },
+  {
+    "subject": "international_law",
+    "question": "What dimension did the Kadi judgment introduce with respect to the incorporation of UN Security Council resolutions?",
+    "choices": [
+      "The Kadi judgment demanded that UNSC resolutions are construed in accordance with human rights",
+      "The Kadi judgment demanded that all UNSC resolutions be incorporated without any further implementing legislation",
+      "The Kadi judgment required that important UNSC resolutions be transformed and not merely incorporated",
+      "The Kadi judgment claimed that UNSC resolutions are not binding if they violate human rights"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "The correct choice is A."
+  }
+]

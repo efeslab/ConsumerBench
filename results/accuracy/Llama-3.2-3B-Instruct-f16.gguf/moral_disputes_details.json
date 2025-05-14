@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "moral_disputes",
+    "question": " Just war theory's principle of military necessity belongs to",
+    "choices": [
+      "jus in bello.",
+      "jus ad bellum.",
+      "moral nihilism.",
+      "all of the above"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " According to Mill, censoring speech that is possibly true",
+    "choices": [
+      "violates human dignity.",
+      "fails a prima facie duty of honesty.",
+      "is tantamount to asserting that you are infallible.",
+      "is a risk worth taking of the speech is dangerous enough."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " West argues that feminist rhetoric has",
+    "choices": [
+      "obscures the harms of noncoerced, consensual sex by implying that because what is coerced is bad what is noncoerced is good.",
+      "obscures the harms of rape by equating all sex with nonconsensual sex.",
+      "by not acknowledging a distinction between what is good and what noncoerced, has led to the acknowledgement of the harms of consensual sex.",
+      "All of the above"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "D",
+    "is_correct": false,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " According to Mill, the value of a particular pleasure depends on",
+    "choices": [
+      "its quantity alone.",
+      "its quality alone.",
+      "both its quantity and its quality.",
+      "neither its quantity nor its quality."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " According to Carruthers, whenever someone is required to act in a certain way toward an animal for the sake of the animal, what explains that fact are facts about",
+    "choices": [
+      "the animal.",
+      "the wider effects on human beings.",
+      "both A and B",
+      "neither A nor B"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "C",
+    "is_correct": false,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " What does SCNT stand for, as used in the discussion on cloning?",
+    "choices": [
+      "skin cell nuclear transfer",
+      "stem cell nuclear transmission",
+      "somatic cell nuclear transfer",
+      "none of the above"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " Velleman worries that, by offering a patient the option of euthanasia,",
+    "choices": [
+      "we allow the patient to harm him- or herself.",
+      "we force doctors to harm the patient.",
+      "we harm the patient's family.",
+      "we harm the patient."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " Nathanson supports which of the following kinds of retributivism?",
+    "choices": [
+      "preventive",
+      "proportional",
+      "equality",
+      "retaliatory"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "B",
+    "is_correct": true,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " Carruthers approaches questions about the moral standing of nonhuman animals from the perspective of which of the following moral theories?",
+    "choices": [
+      "consequentialism",
+      "Kantianism",
+      "virtue ethics",
+      "contractualism"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " In Gardiner's analysis, which of the following is a characteristic of the climate change problem?",
+    "choices": [
+      "institutional adequacy",
+      "dispersion of causes and effects",
+      "fragmentation of agency",
+      "all of the above"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " What is the \"intergenerational storm\" of climate change?",
+    "choices": [
+      "the problem of massive world overpopulation over generations.",
+      "the problem that the bad effects of current carbon dioxide emissions will fall largely on future generations.",
+      "the problem that the compounding effects of greenhouse gas emissions require the current generation to, in effect, cooperate with future generations.",
+      "the problem that countries are possibly biased toward the interests of the current generation, which largely benefits from carbon dioxide emissions."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " Hourdequin argues that one flaw of consequentialist calculation is that",
+    "choices": [
+      "it fails to reconcile prima facie duties.",
+      "it can run counter to a person's being able to integrate her commitments at various levels.",
+      "it can run counter to the idea that persons are atomistic and individually rational actors.",
+      "it fails to recognize that possibility that the persons are best understood in relation to one another."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "I'll answer the remaining questions:\n\nQuestion:  Hourdequin argues that one flaw of consequentialist"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " Dershowitz discusses the hypothetical case where the hijacked planes of 9/11 must be shot down to argue that important decisions like these",
+    "choices": [
+      "often have to be made quickly and without immediate authorization.",
+      "should be made with visibility and accountability by the highest-level officials.",
+      "have no objective answer.",
+      "none of the above"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "The correct choice is A"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " Baxter argues that we should view our treatment of the environment as a matter of various trade-offs whose aim is",
+    "choices": [
+      "to minimize damage incurred by all individual living beings.",
+      "to minimize the suffering of all sentient creatures.",
+      "to promote the functional integrity of ecosystems.",
+      "to promote human welfare."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "D",
+    "is_correct": true,
+    "full_response": "The correct choice is D"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " Which of the following is an example of a value-based moral theory?",
+    "choices": [
+      "consequentialism",
+      "virtue ethics",
+      "both A and B",
+      "neither A nor B"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "B",
+    "is_correct": false,
+    "full_response": "The correct choice is B"
+  },
+  {
+    "subject": "moral_disputes",
+    "question": " Kass worries that cloned individuals:",
+    "choices": [
+      "will be seen as curiosities.",
+      "will be scrutinized in relation to the person they are clones of.",
+      "both of the above",
+      "none of the above"
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "C",
+    "is_correct": true,
+    "full_response": "The correct choice is C"
+  }
+]

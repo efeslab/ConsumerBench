@@ -1,0 +1,226 @@
+[
+  {
+    "subject": "high_school_microeconomics",
+    "question": "Marginal revenue equals marginal cost at the point where",
+    "choices": [
+      "total revenue is greater than total cost at its greatest distance",
+      "total revenue is equal to total cost",
+      "marginal product is at its highest point",
+      "total product is at its highest point"
+    ],
+    "correct_answer": "A",
+    "predicted_answer": "A",
+    "is_correct": true,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking where marginal revenue equals marginal cost"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "The price of labor is $2, and the price of capital is $1. The marginal product of labor is 200, and the marginal product of capital is 50. What should the firm do?",
+    "choices": [
+      "Increase capital and decrease labor so that the marginal product of capital falls and the marginal product of labor rises.",
+      "Increase capital and decrease labor so that the marginal product of capital rises and the marginal product of labor falls.",
+      "Decrease capital and increase labor so that the marginal product of capital rises and the marginal product of labor falls.",
+      "Decrease capital and increase labor so that the marginal product of capital falls and the marginal product of labor rises."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The firm is using labor and capital, and they"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "At a Nash equilibrium,",
+    "choices": [
+      "the supply curve intersects the demand curve",
+      "neither party has an incentive to deviate from his or her strategy",
+      "the marginal revenue curve intersects the marginal cost curve",
+      "the equilibrium is unstable and each party would like to switch strategies"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about Nash equilibrium. I remember from"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "You are told that the cross-price elasticity between goods X and Y is +2.0. This means that",
+    "choices": [
+      "goods X and Y are normal goods.",
+      "goods X and Y are inferior goods.",
+      "goods X and Y are complementary goods.",
+      "goods X and Y are substitute goods."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The cross-price elasticity between goods X and Y is"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "An externality",
+    "choices": [
+      "causes the equilibrium price to be artificially high",
+      "causes the equilibrium price to be artificially low",
+      "exists when markets cannot reach equilibrium",
+      "results in an equilibrium that does not maximize the total benefit to society"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question about externalities. The options are A through D."
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "What is one reason why the government discourages collusion between large firms in the same industry?",
+    "choices": [
+      "Collusive output levels tend to increase, driving the price above competitive levels.",
+      "Consumer surplus falls as the price is driven downward.",
+      "Collusive output levels tend to decrease, driving the price down to competitive levels.",
+      "Joint profit maximization costs society consumer surplus as the price rises above competitive levels."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about why the government discourages collusion"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "Which of the following illustrates the demand curve facing an oligopolist when rival firms follow a price decrease but not a price increase?",
+    "choices": [
+      "Perfectly horizontal demand curve.",
+      "Highly inelastic demand curve.",
+      "Highly elastic demand curve.",
+      "A demand curve consisting of two discontinuous segments."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about the demand curve facing an olig"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "Which of the following is not the basis for a wage differential?",
+    "choices": [
+      "Higher risk job.",
+      "Investment in human capital.",
+      "Increase in production of SUVs.",
+      "Racial discrimination."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking which of the options is not"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "Patents, control of resources, economies of scale, and exclusive licenses are",
+    "choices": [
+      "all requirements for price discrimination",
+      "required in order for a firm to earn short-run profits",
+      "all sources of elastic demand",
+      "all barriers to entry"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking about patents, control of resources"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "The industry that makes plastic army figures uses a small fraction of the plastic demanded for all purposes. On this basis, we can conclude that the army-figures industry is most likely a(n)",
+    "choices": [
+      "increasing-cost industry",
+      "constant-cost industry",
+      "decreasing-cost industry",
+      "profit-making industry"
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about the plastic army figures industry using"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "Which of the following is most likely an example of production inputs that can be adjusted in the long run, but not in the short run?",
+    "choices": [
+      "Amount of wood used to make a desk.",
+      "Number of pickles put on a sandwich.",
+      "The size of a McDonald\u2019s kitchen.",
+      "Number of teacher\u2019s assistants in local high schools."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking which of the options is an"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "The apple market is in equilibrium. Suppose we observe that apple growers are using more pesticides to increase apple production. At the same time, we hear that the price of pears, a substitute for apples, is rising. Which of the following is a reasonable prediction for the new price and quantity of apples?",
+    "choices": [
+      "Price rises, but quantity is ambiguous.",
+      "Price falls, but quantity is ambiguous.",
+      "Price is ambiguous, but quantity rises.",
+      "Price is ambiguous, but quantity falls."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question step by step. The scenario is about the apple market"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "Which of the following is most likely to result in a shift to the right in the demand curve for orange juice?",
+    "choices": [
+      "A bumper crop of oranges in Florida",
+      "A decrease in the price of Tang",
+      "Expectations of lower future prices for orange juice",
+      "Expectations of higher future income among juice drinkers"
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking which option is most likely to"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "Which of the following statements is accurate in regard to a perfectly competitive firm?",
+    "choices": [
+      "Demand is downward-sloping.",
+      "The demand curve lies above the marginal revenue curve.",
+      "Price is determined by the equilibrium in the entire market.",
+      "Average revenue differs from price."
+    ],
+    "correct_answer": "C",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is about a perfectly competitive firm. The"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "Economists use the term \"capital\" to mean",
+    "choices": [
+      "money.",
+      "plant and equipment.",
+      "where the central government is located.",
+      "the center of the economy."
+    ],
+    "correct_answer": "B",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. The question is asking what economists mean by the term"
+  },
+  {
+    "subject": "high_school_microeconomics",
+    "question": "Ray and Dorothy can both cook and can both pull weeds in the garden on a Saturday afternoon. For every hour of cooking, Ray can pull 50 weeds and Dorothy can pull 100 weeds. Based on this information,",
+    "choices": [
+      "Ray pulls weeds, since he has absolute advantage in cooking.",
+      "Dorothy pulls weeds, since she has absolute advantage in cooking.",
+      "Dorothy cooks, since she has comparative advantage in cooking.",
+      "Ray cooks, since he has comparative advantage in cooking."
+    ],
+    "correct_answer": "D",
+    "predicted_answer": "A",
+    "is_correct": false,
+    "full_response": "<think>\nOkay, let's tackle this question. So, Ray and Dorothy can both cook and pull"
+  }
+]
