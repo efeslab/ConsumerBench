@@ -3,10 +3,10 @@
 	url = git@github.com:efeslab/smolagents.git
 [submodule "applications/llama.cpp"]
 	path = applications/llama.cpp
-	url = git@github.com:rohankadekodi/llama.cpp.git
+	url = git@github.com:efeslab/llama.cpp.git
 [submodule "applications/stable-diffusion-webui"]
 	path = applications/stable-diffusion-webui
 	url = git@github.com:AUTOMATIC1111/stable-diffusion-webui.git
 [submodule "applications/whisper_streaming"]
 	path = applications/whisper_streaming
-	url = git@github.com:rohankadekodi/whisper_streaming.git
+	url = git@github.com:efeslab/whisper_streaming.git
