@@ -63,8 +63,12 @@ def parse_dcgm_output(file_path, start_time = None):
 
 def create_plots(timestamps, sm_active, sm_occupied, memory_bandwidth, output_file=None):
     """Create the two subplots with the parsed data."""
-    fig, (ax1) = plt.subplots(1, 1, figsize=(12, 5))
     
+    plt.rcParams.update({'font.size': 22})
+
+    # fig, (ax1) = plt.subplots(1, 1, figsize=(9, 4))
+    # for MPS and no MPS
+    fig, (ax1) = plt.subplots(1, 1, figsize=(6, 3))
     # Style settings
     plt.style.use('ggplot')
     
@@ -75,28 +79,34 @@ def create_plots(timestamps, sm_active, sm_occupied, memory_bandwidth, output_fi
     memory_color = '#2196F3'      # Blue
     
     # Plot GPU Throughput
-    ax1.fill_between(timestamps, sm_active, color=sm_active_color, linewidth=2)
-    ax1.fill_between(timestamps, sm_occupied, color=sm_occupied_color, linewidth=2)
-    ax1.set_title('GPU Compute Throughput', fontsize=16)
+    ax1.fill_between(timestamps, sm_active, color=sm_active_color, linewidth=2, label='SMACT (Reserved SMs)')
+    ax1.fill_between(timestamps, sm_occupied, color=sm_occupied_color, linewidth=2, label='SMOCC (Occupied SMs)')
+    # ax1.set_title('GPU Compute Throughput')
     # ax1.set_ylabel('Throughput % (SMACT × SMOCC × 100)', fontsize=14)
-    ax1.set_ylabel('Throughput % (SMACT, SMOCC)', fontsize=14)
+    # ax1.set_ylabel('GPU Utilization (%)')
+    # For MPS and no MPS
+    ax1.set_ylabel('GPU Util (%)')
     ax1.grid(True, linestyle='--', alpha=0.7)
     ax1.set_ylim(0, 100)  # Set y-axis limits to 0-100%
+    ax1.set_xlabel('Time (s)')
     
     # Find average and max for annotations
-    gpu_throughput = np.array(sm_active) * np.array(sm_occupied) / 100
+    # gpu_throughput = np.array(sm_active) * np.array(sm_occupied) / 100
+    gpu_throughput = np.array(sm_occupied)
     avg_throughput = np.mean(gpu_throughput)
     max_throughput = np.max(gpu_throughput)
-    ax1.axhline(y=avg_throughput, color='black', linestyle='--', alpha=0.7, 
-                label=f'Avg: {avg_throughput:.2f}')
-    ax1.axhline(y=max_throughput, color='black', linestyle='--', alpha=0.7, 
-                label=f'Max: {max_throughput:.2f}')
+    # ax1.axhline(y=avg_throughput, color='black', linestyle='--', alpha=0.7)
+    # ax1.axhline(y=max_throughput, color='black', linestyle='--', alpha=0.7)
     
     # Add text annotation for max and average
-    ax1.text(timestamps[-1] * 0.02, max_throughput * 0.95, 
-             f'Max: {max_throughput:.2f}', fontsize=12)
-    ax1.text(timestamps[-1] * 0.02, avg_throughput * 1.05, 
-             f'Avg: {avg_throughput:.2f}', fontsize=12)
+    # ax1.text(timestamps[-1] * 0.02, max_throughput * 0.92,
+    #          f'Max: {max_throughput:.2f}', fontsize=18, color='blue')
+    # ax1.text(timestamps[-1] * 0.02, avg_throughput * 1.08,
+    #          f'Avg: {avg_throughput:.2f}', fontsize=18, color='blue')
+
+    # ax1.legend(loc='upper center', frameon=False, bbox_to_anchor=(0.5, 1.20), ncol=2, fontsize=18)
+    # for MPS and no MPS
+    ax1.legend(loc='upper center', frameon=False, bbox_to_anchor=(0.5, 1.4), ncol=1, fontsize=22)
         
     # Format both axes
     # for ax in [ax1, ax2]:
@@ -125,7 +135,9 @@ def main():
     args = parser.parse_args()
     
     if args.start_time:
-        start_time = datetime.strptime(args.start_time, '%Y-%m-%d_%H:%M:%S')    
+        start_time = datetime.strptime(args.start_time, '%Y-%m-%d_%H:%M:%S')
+    else:
+        start_time = None
 
     # Parse the data
     timestamps, sm_active, sm_occupied, memory_bandwidth = parse_dcgm_output(args.input_file, start_time)

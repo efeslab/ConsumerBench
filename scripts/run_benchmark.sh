@@ -50,7 +50,7 @@ cat ${RESULTS_DIR}/config.json | jq
 if [ $NSIGHT -eq 1 ]; then
     echo "Running with Nsight Systems profiling..."
     #nsys profile --cuda-memory-usage=true --force-overwrite=true --trace=cuda,nvtx,osrt --gpu-metrics-devices=all --event-sample=system-wide --cpu-core-events='1' --event-sampling-interval=200 --cpuctxsw=system-wide -o memory_report --export=sqlite python3 -u /home/cc/os-llm/benchmark_v2.py --benchmark all --config $CONFIG_FILE --results $RESULTS_DIR
-    nsys profile --cuda-memory-usage=true --force-overwrite=true --trace=cuda,nvtx,osrt --gpu-metrics-devices=all -o memory_report --export=sqlite python3 -u ${BASE_DIR}/benchmark_v2.py --benchmark workflow --config $CONFIG_FILE --results $RESULTS_DIR --start_time $start_time
+    nsys profile --delay=50 --duration=60 --cuda-memory-usage=true --force-overwrite=true --trace=cuda,nvtx,osrt --gpu-metrics-devices=all -o memory_report --export=sqlite python3 -u ${BASE_DIR}/benchmark_v2.py --benchmark workflow --config $CONFIG_FILE --results $RESULTS_DIR --start_time $start_time
 
     if [ $? -ne 0 ]; then
         echo "Benchmark failed!"
@@ -81,6 +81,10 @@ else
     tmux new-session -d sudo python3 ${SCRIPTS_DIR}/record_power_usage.py -o ${RESULTS_DIR}/power_data.csv -s ${start_time}
     power_pid=`pgrep -fo record_power`
 
+    echo "--------------------------------"
+    echo "Result directory":
+    echo "$RESULTS_DIR"
+    echo "--------------------------------"
     python3 -u ${BASE_DIR}/benchmark_v2.py --benchmark workflow --config $CONFIG_FILE --results $RESULTS_DIR --start_time $start_time
     # Check if the benchmark was successful
     if [ $? -ne 0 ]; then
@@ -134,12 +138,12 @@ done
 python3 /home/cc/os-llm/scripts/overall_benchmark_output.py ${RESULTS_DIR}/overall_perf.log
     
 # Remove csv files
-sudo rm ${RESULTS_DIR}/cpu_usage.log
-sudo rm ${RESULTS_DIR}/memory-bw.csv
-sudo rm ${RESULTS_DIR}/gpu_utilization.log
-sudo rm ${RESULTS_DIR}/cpu_memory_util.csv
-sudo rm ${RESULTS_DIR}/gpu_memory_util.csv
-sudo rm ${RESULTS_DIR}/power_data.csv
+# sudo rm ${RESULTS_DIR}/cpu_usage.log
+# sudo rm ${RESULTS_DIR}/memory-bw.csv
+# sudo rm ${RESULTS_DIR}/gpu_utilization.log
+# sudo rm ${RESULTS_DIR}/cpu_memory_util.csv
+# sudo rm ${RESULTS_DIR}/gpu_memory_util.csv
+# sudo rm ${RESULTS_DIR}/power_data.csv
 
 echo "Benchmark completed successfully!"
 echo "Results are saved in $RESULTS_DIR"

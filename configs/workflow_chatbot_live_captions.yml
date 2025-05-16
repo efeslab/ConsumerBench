@@ -4,7 +4,7 @@ chat1:
     server_model: /home/cc/models/Llama-3.1-8B-Instruct-GGUF/Llama-3.1-8B-Instruct-f16.gguf
     client_model: openai/meta-llama/Llama-3.1-8B-Instruct
     num_requests: 30
-    device: gpu
+    device: cpu
     type: chatbot
     mps: 100
 
@@ -14,9 +14,20 @@ lv:
     mps: 100
     type: live_captions
 
+sleep:
+    num_requests: 1
+    device: gpu
+    mps: 100
+    type: sleep
+
+
 workflows:
     chat_summary:
         uses: chat1
-    
+
+    sleep1:
+        uses: sleep
+
     start_captions:
         uses: lv
+        depend_on: ["sleep1"]

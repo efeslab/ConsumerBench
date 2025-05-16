@@ -4,10 +4,10 @@ chat1:
     # server_model: /home/cc/models/Llama-3.1-8B-Instruct-GGUF/Llama-3.1-8B-Instruct-f16.gguf
     # client_model: openai/meta-llama/Llama-3.1-8B-Instruct
     num_requests: 50
-    device: gpu
+    device: cpu
     type: chatbot
     # mps: 33
 
 workflows:
     chat_summary:
-        uses: chat1 
+        uses: chat1

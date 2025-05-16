@@ -18,6 +18,7 @@ from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 from diffusers import StableDiffusion3Pipeline
 import sys
 from datetime import datetime
+import nvtx
 
 
 sys.path.append("/home/cc/os-llm/scripts")
@@ -401,14 +402,13 @@ class DAGScheduler:
                             print("Deep research task is pending, executing cleanup node")
                             task = self.tasks[pending_tasks[0]]
                             # execute the last node of deep research which is cleanup
-                            executor.submit(execute_node, f"deep-research_{len(task.node_map)-1}")
+                            executor.submit(execute_node, f"{pending_tasks[0]}_{len(task.node_map)-1}")
                             task.update_total_time()
                             print(f"Task {task.task_id} completed and result written to file.")
                             task.write_results()
                             print(f"Node {completed_node_id} completed with result: {result}")
                             pending_tasks.remove(task.task_id)
                             break
-
                         continue
                     
                     # Process completed futures and submit new tasks
@@ -534,7 +534,7 @@ def util_run_server_script_check_log(script_path: str, stdout_log_path: str, std
     """Run a script and check log files for startup indicators"""
     server_pid = -1
     max_wait = 120  # Maximum seconds to wait
-    log_dir = "/home/cc/os-llm/server_logs"
+    log_dir = os.path.join(globals.get_results_dir(), "server_logs")
     os.makedirs(log_dir, exist_ok=True)
 
     stdout_log = os.path.join(log_dir, f"{stdout_log_path}_{api_port}.log")
@@ -637,9 +637,25 @@ def setup_llamacpp_server(**kwargs):
             mps=mps
         )
 
+        # print("Pushing NVTX range 'Main'")
+        # try:
+        #     nvtx.push_range("Main")
+        #     print("NVTX push successful")
+        # except Exception as e:
+        #     print(f"NVTX push error: {e}")
+        #     sys.exit(1)
+
+
 
 def cleanup_llamacpp_server(**kwargs):
     # return True
+    # print("Popping Main range")
+    # try:
+    #     nvtx.pop_range()
+    #     print("Main NVTX pop successful")
+    # except Exception as e:
+    #     print(f"Main NVTX pop error: {e}")
+
 
     global model_refcount, model_refcount_lock
 
@@ -674,7 +690,7 @@ def run_deep_research_dataset(api_port, model):
 
     # select one random prompt from the dataset
     deep_research_prompt = random.sample(globals.deep_research_prompts, 1)
-    log_dir = "/home/cc/os-llm/client_logs"
+    log_dir = os.path.join(globals.get_results_dir(), "client_logs")
     os.makedirs(log_dir, exist_ok=True)
     stdout_log = os.path.join(log_dir, f"deep_research_client_stdout_{api_port}.log")
     stderr_log = os.path.join(log_dir, f"deep_research_client_stderr_{api_port}.log")
@@ -714,52 +730,148 @@ def run_deep_research(**kwargs):
 # Define example functions for a simple benchmark
 
 # ====== text2image ========
+# def setup_imagegen(**kwargs):
+#     global global_vars
+
+#     model = kwargs.get('model', "/mnt/tmpfs/models/stable-diffusion-3.5-large")
+#     device = kwargs.get('device', "gpu")
+#     mps = kwargs.get('mps', 100)
+
+#     # print("Pushing NVTX range 'Main'")
+#     # try:
+#     #     nvtx.push_range("Main")
+#     #     print("NVTX push successful")
+#     # except Exception as e:
+#     #     print(f"NVTX push error: {e}")
+#     #     sys.exit(1)
+
+#     if device == "gpu":
+#         # Set environment variable for MPS
+#         os.environ["CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"] = str(mps)
+#         global_vars['imagegen_pipeline'] = StableDiffusion3Pipeline.from_pretrained(
+#             model,
+#             text_encoder_3=None,
+#             tokenizer_3=None,
+#             torch_dtype=torch.float16
+#         )
+#         global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cuda")
+#     else:
+#         global_vars['imagegen_pipeline'] = StableDiffusion3Pipeline.from_pretrained(
+#             model,
+#             text_encoder_3=None,
+#             tokenizer_3=None
+#         )
+#         global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cpu")
+
+
+# def run_imagegen_prompt(prompt):
+#     global global_vars
+
+#     end_time = None
+
+#     nvtx.mark("[Imagegen request Start]")
+#     start_time = time.time()
+
+#     image = global_vars['imagegen_pipeline'](
+#         prompt,
+#         num_inference_steps=28,
+#         guidance_scale=3.5,
+#     ).images[0]
+
+#     end_time = time.time()
+#     nvtx.mark("[Imagegen request End]")
+
+#     result = {
+#         "total time": end_time - start_time,
+#     }
+#     print(result)
+#     return result
+
+# With CUDA Graph
+
 def setup_imagegen(**kwargs):
     global global_vars
 
     model = kwargs.get('model', "/mnt/tmpfs/models/stable-diffusion-3.5-large")
     device = kwargs.get('device', "gpu")
     mps = kwargs.get('mps', 100)
+    fixed_prompt = globals.get_next_imagegen_prompt()
 
     if device == "gpu":
-        # Set environment variable for MPS
         os.environ["CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"] = str(mps)
-        global_vars['imagegen_pipeline'] = StableDiffusion3Pipeline.from_pretrained(
+        pipe = StableDiffusion3Pipeline.from_pretrained(
             model,
             text_encoder_3=None,
             tokenizer_3=None,
             torch_dtype=torch.float16
-        )
-        global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cuda")
+        ).to("cuda")
+
+        # Warm-up and graph capture
+        pipe(prompt=fixed_prompt, num_inference_steps=28, guidance_scale=3.5)  # warm-up
+
+        torch.cuda.empty_cache()
+        torch.cuda.synchronize()
+
+        graph = torch.cuda.CUDAGraph()
+        static_output = None
+
+        with torch.cuda.graph(graph):
+            static_output = pipe(prompt=fixed_prompt, num_inference_steps=28, guidance_scale=3.5)
+
+        # Save all to global_vars
+        global_vars['imagegen_pipeline'] = pipe
+        global_vars['imagegen_cuda_graph'] = graph
+        global_vars['imagegen_output'] = static_output
+        global_vars['imagegen_prompt'] = fixed_prompt
     else:
-        global_vars['imagegen_pipeline'] = StableDiffusion3Pipeline.from_pretrained(
+        pipe = StableDiffusion3Pipeline.from_pretrained(
             model,
             text_encoder_3=None,
             tokenizer_3=None
-        )
-        global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cpu")
-
-
+        ).to("cpu")
+        global_vars['imagegen_pipeline'] = pipe
 
 def run_imagegen_prompt(prompt):
     global global_vars
 
-    end_time = None
-    start_time = time.time()
+    if (
+        'imagegen_cuda_graph' in global_vars
+        and prompt == global_vars.get('imagegen_prompt')
+    ):
+        nvtx.mark("[Imagegen request Start]")
+        torch.cuda.synchronize()
+        start_time = time.time()
 
-    image = global_vars['imagegen_pipeline'](
-        prompt,
-        num_inference_steps=28,
-        guidance_scale=3.5,
-    ).images[0]
+        global_vars['imagegen_cuda_graph'].replay()
 
-    end_time = time.time()        
-    
-    result = {
-        "total time": end_time - start_time,
-    }
-    print(result)
-    return result
+        torch.cuda.synchronize()
+        end_time = time.time()
+        nvtx.mark("[Imagegen request End]")
+
+        print({"total time": end_time - start_time})
+        return {
+            "total time": end_time - start_time,
+            "image": global_vars['imagegen_output'].images[0]
+        }
+
+    else:
+        # Fallback to normal pipeline execution
+        nvtx.mark("[Imagegen request Start]")
+        start_time = time.time()
+        image = global_vars['imagegen_pipeline'](
+            prompt,
+            num_inference_steps=28,
+            guidance_scale=3.5,
+        ).images[0]
+        end_time = time.time()
+        nvtx.mark("[Imagegen request End]")
+
+        print({"total time": end_time - start_time})
+        return {
+            "total time": end_time - start_time,
+            "image": image
+        }
+
 
 
 def run_imagegen_command_file(filename):
@@ -778,7 +890,8 @@ def run_imagegen_dataset():
     global imagegen_prompts
 
     # select one random prompt from the dataset
-    imagegen_prompt = random.sample(globals.imagegen_prompts, 1)
+    imagegen_prompt = globals.get_next_imagegen_prompt()
+    logging.info(f"Imagegen prompt: {imagegen_prompt}")
     result = run_imagegen_prompt(imagegen_prompt)
 
     return result
@@ -797,8 +910,25 @@ def run_imagegen(**kwargs):
     return result
 
 def cleanup_imagegen(**kwargs):
+    # print("Popping Main range")
+    # try:
+    #     nvtx.pop_range()
+    #     print("Main NVTX pop successful")
+    # except Exception as e:
+    #     print(f"Main NVTX pop error: {e}")
     return True
 
+
+# ====== Nothing ========
+
+def nothing_function(**kwargs):
+    # This function does nothing
+    return True
+
+def sleep_function(**kwargs):
+    # This function sleeps for 1 second
+    time.sleep(60)
+    return True
 
 # ====== Live Captions =======
 def setup_whisper():
@@ -889,7 +1019,7 @@ def run_whisper_online_command_file(api_port, wav_file_path):
     print(f"Running whisper-online (ephemeral app) on {wav_file_path}...")
     end_time = None
 
-    log_dir = "/home/cc/os-llm/client_logs"
+    log_dir = os.path.join(globals.get_results_dir(), "client_logs")
     os.makedirs(log_dir, exist_ok=True)
     stdout_log = os.path.join(log_dir, f"whisper_online_stdout_{api_port}.log")
     stderr_log = os.path.join(log_dir, f"whisper_online_stderr_{api_port}.log")
@@ -1059,15 +1189,18 @@ def run_textgen_dataset(api_port):
     start_time = time.time()
 
     # select one random prompt from the dataset
-    # textgen_prompts = random.sample(textgen_prompts, 1)
-    textgen_prompts = globals.textgen_prompts[:1]
+    # textgen_prompts = random.sample(globals.textgen_prompts, 1, seed=141293)
+    textgen_prompts = [globals.get_next_textgen_prompt()]
+    logging.info(f"Textgen prompt: {textgen_prompts}")
+    # textgen_prompts = globals.textgen_prompts[:1]
     
     for prompt in textgen_prompts:
         payload = {
             "prompt": prompt,
             # "min_tokens": 200,
-            "max_tokens": 100,
-            "temperature": 1,
+            # "max_tokens": 100,
+            "max_tokens": 215,
+            "temperature": 0,
             "top_p": 0.9,
             "seed": 141293,
             "stream": True
@@ -1136,7 +1269,10 @@ def run_textgen(**kwargs):
     if filename is not None:
         result = run_textgen_command_file(filename, api_port)
     else:
+        nvtx.mark("[Chatbot request Start]")
         result = run_textgen_dataset(api_port)
+        nvtx.mark("[Chatbot request End]")
+
 
     return result
 
@@ -1524,7 +1660,7 @@ def parse_config_file(file_path, app_dicts):
 
 def set_default_args(args = None):
     """Sets default arguments for the tasks. If args are not provided, it uses the default values."""
-    config_args = {"chatbot_args": {}, "deep_research_args": {}, "imagegen_args": {}, "live_captions_args": {}}
+    config_args = {"chatbot_args": {}, "deep_research_args": {}, "imagegen_args": {}, "live_captions_args": {}, "sleep_args": {}}
 
     if args and args.config:
         # Load the config file and override default arguments
@@ -1535,6 +1671,7 @@ def set_default_args(args = None):
         config_args["deep_research_args"] = {}
         config_args["imagegen_args"] = {}
         config_args["live_captions_args"] = {}
+        config_args["sleep_args"] = {}
 
         # Set default arguments for each task
         config_args["chatbot_args"]["num_requests"] = 10
@@ -1564,12 +1701,12 @@ def set_default_args(args = None):
         workflow = []
 
 
-    return config_args["chatbot_args"], config_args["deep_research_args"], config_args["imagegen_args"], config_args["live_captions_args"], workflow
+    return config_args["chatbot_args"], config_args["deep_research_args"], config_args["imagegen_args"], config_args["live_captions_args"], config_args["sleep_args"], workflow
     # return config_args["chatbot_args"], config_args["deep_research_args"], config_args["imagegen_args"], config_args["live_captions_args"]
 
 # Create a benchmark
 def create_concurrent_benchmark(args):
-    chatbot_args, deep_research_args, imagegen_args, live_captions_args, workflow = set_default_args(args)
+    chatbot_args, deep_research_args, imagegen_args, live_captions_args, sleep_args, workflow = set_default_args(args)
     chatbot_task = None
     chatbot_dag = None
     deep_research_task = None

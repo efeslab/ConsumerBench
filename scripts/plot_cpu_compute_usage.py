@@ -119,7 +119,8 @@ def parse_cpu_output(file_path, start_time = None):
 
 def create_plots(timestamps_cpu, cpu_throughput, timestamps_mem, memory_bandwidth, output_file=None):
     """Create the two subplots with the parsed data."""
-    fig, (ax1) = plt.subplots(1, 1, figsize=(12, 5))
+    plt.rcParams.update({'font.size': 18})
+    fig, (ax1) = plt.subplots(1, 1, figsize=(8, 5))
     
     # Style settings
     plt.style.use('ggplot')
@@ -130,10 +131,11 @@ def create_plots(timestamps_cpu, cpu_throughput, timestamps_mem, memory_bandwidt
     
     # Plot GPU Throughput
     ax1.fill_between(timestamps_cpu, cpu_throughput, color=throughput_color, linewidth=2)
-    ax1.set_title('CPU Compute Throughput', fontsize=16)
-    ax1.set_ylabel('Throughput (%)', fontsize=14)
+    # ax1.set_title('CPU Utilization (%)', fontsize=16)
+    ax1.set_ylabel('CPU Utilization (%)')
     ax1.grid(True, linestyle='--', alpha=0.7)
     ax1.set_ylim(0, 100)  # Set y-axis limits to 0-100%
+    ax1.set_xlabel('Time (s)')
     
     # Find average and max for annotations
     avg_throughput = np.mean(cpu_throughput)
@@ -144,10 +146,12 @@ def create_plots(timestamps_cpu, cpu_throughput, timestamps_mem, memory_bandwidt
                 label=f'Avg: {avg_throughput:.2f}')
     
     # Add text annotation for max and average
-    ax1.text(timestamps_cpu[-1] * 0.02, max_throughput * 0.95, 
-             f'Max: {max_throughput:.2f}', fontsize=12)
-    ax1.text(timestamps_cpu[-1] * 0.02, avg_throughput * 1.05, 
-             f'Avg: {avg_throughput:.2f}', fontsize=12)
+    ax1.text(timestamps_cpu[-1] * 0.02, max_throughput * 0.92,
+             f'Max: {max_throughput:.2f}', fontsize=18, color='black')
+    ax1.text(timestamps_cpu[-1] * 0.02, avg_throughput * 1.08,
+             f'Avg: {avg_throughput:.2f}', fontsize=18, color='black')
+
+    # ax1.legend(loc='upper left')
         
     # # Format both axes
     # for ax in [ax1, ax2]:

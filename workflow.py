@@ -23,6 +23,9 @@ from benchmark_v2 import (
     setup_whisper_online,
     run_whisper_online,
     cleanup_whisper_online,
+    # sleep func
+    nothing_function,
+    sleep_function,
 
     # shadow func
     shadow_function
@@ -35,6 +38,7 @@ NODE_TYPE_CONFIG_MAPPING_INDEX = {
     "deep_research": 1,
     "imagegen":      2,
     "live_captions":  3,
+    "sleep":         4
 }
 
 class WorkflowUnit:
@@ -141,6 +145,13 @@ class Workflow:
                 "run_func": run_whisper_online,
                 "cleanup_func": cleanup_whisper_online,
                 "api_port": 5050,
+            }
+        elif node_type == "sleep":
+            node_defaults_args = {
+                **node_defaults_args,
+                "setup_func": nothing_function,
+                "run_func": sleep_function,
+                "cleanup_func": nothing_function,
             }
 
         return {**node_defaults_args, **node_config}

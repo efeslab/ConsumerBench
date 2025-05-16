@@ -1,0 +1,22 @@
+chat1:
+    server_model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 10
+    device: gpu
+    type: chatbot
+    mps: 100
+
+deep1:
+    server_model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 1
+    device: gpu
+    type: deep_research
+    mps: 100
+
+workflows:
+    chat_summary:
+        uses: chat1
+
+    deep_sunmary:
+        uses: deep1

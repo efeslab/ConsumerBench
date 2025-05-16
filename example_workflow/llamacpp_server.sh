@@ -41,12 +41,15 @@ if [ "$device" == "gpu" ]; then
     # The actual GPU device number should be set to match your configuration
     export CUDA_VISIBLE_DEVICES=0
 
-    # stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 128000 -nkvo &
+    # nsys profile --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true --python-backtrace=cuda --cudabacktrace=true build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 -nkvo &
+    # nsys profile --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true --python-backtrace=cuda --cudabacktrace=true build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 &
+    # nsys profile --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true --python-backtrace=cuda
+    build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 128000 -nkvo &
     # stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 &
-    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 &
+    # stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 -c 64000 --parallel 8 &
 else
     export CUDA_VISIBLE_DEVICES=""
-    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 0 --parallel 8 &
+    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 0 --parallel 8 -c 4096 &
 fi
 
 export CUDA_VISIBLE_DEVICES=0

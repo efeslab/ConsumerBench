@@ -1,11 +1,11 @@
 imagegen1:
     server_model: /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
     # server_model: CompVis/stable-diffusion-v1-4
-    num_requests: 10
-    device: gpu
+    num_requests: 50
+    device: cpu
     type: imagegen
     mps: 100
 
 workflows:
     generate_image:
-        uses: imagegen1 
+        uses: imagegen1
