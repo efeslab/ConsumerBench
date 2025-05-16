@@ -104,15 +104,15 @@ To modify Service Level Objectives (SLOs):
 ### Exclusive Execution
 | Application | Config |
 |-------------|--------|
-| Chatbot | `configs/workflow_chatbot.yml` |
-| LiveCaptions | `configs/workflow_whisper.yml` |
-| ImageGen | `configs/workflow_imagegen.yml` |
+| Chatbot | [`configs/workflow_chatbot.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_chatbot.yml) |
+| LiveCaptions | [`configs/workflow_live_captions.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_live_captions.yml) |
+| ImageGen | [`configs/workflow_imagegen.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_imagegen.yml) |
 
 > **CPU-only:** Change `device` from "gpu" to "cpu" in the configs.
 
 ### Concurrent Execution
-- **Greedy allocation:** `configs/workflow_chatbot_imagegen_livecaptions.yml`
-- **GPU partitioning:** `configs/workflow_chatbot_imagegen_livecaptions_mps.yml`
+- **Greedy allocation:** [`configs/workflow_chatbot_imagegen_livecaptions.yml`]()
+- **GPU partitioning:** [`configs/workflow_chatbot_imagegen_livecaptions_mps.yml`]()
 
 ### Model Sharing (Inference Server)
 - **Config:** `configs/workflow_chatbot_deepresearch.yml`
