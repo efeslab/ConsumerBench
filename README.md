@@ -94,10 +94,10 @@ This script collects:
 Results are saved in the `results` directory with timestamps. PDF plots are automatically generated.
 
 To modify Service Level Objectives (SLOs):
-- Chatbot: `scripts/parse-results-chatbot-log.py`
-- DeepResearch: `scripts/parse-results-deepresearch-log.py`
-- ImageGen: `scripts/parse-results-imagegen-log.py`
-- LiveCaptions: `scripts/parse-results-whisper-log.py`
+- Chatbot: [`scripts/parse-results-chatbot-log.py`](https://github.com/efeslab/ConsumerBench/blob/master/scripts/parse-results-chatbot-log.py)
+- DeepResearch: [`scripts/parse-results-deepresearch-log.py`](https://github.com/efeslab/ConsumerBench/blob/master/scripts/parse-results-deepresearch-log.py)
+- ImageGen: [`scripts/parse-results-imagegen-log.py`](https://github.com/efeslab/ConsumerBench/blob/master/scripts/parse-results-imagegen-log.py)
+- LiveCaptions: [`scripts/parse-results-whisper-log.py`](https://github.com/efeslab/ConsumerBench/blob/master/scripts/parse-results-whisper-log.py)
 
 ## 📝 Experiment Configurations
 
@@ -111,13 +111,13 @@ To modify Service Level Objectives (SLOs):
 > **CPU-only:** Change `device` from "gpu" to "cpu" in the configs.
 
 ### Concurrent Execution
-- **Greedy allocation:** [`configs/workflow_chatbot_imagegen_livecaptions.yml`]()
-- **GPU partitioning:** [`configs/workflow_chatbot_imagegen_livecaptions_mps.yml`]()
+- **Greedy allocation:** [`configs/workflow_chatbot_imagegen_live_captions.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_chatbot_imagegen_live_captions.yml)
+- **GPU partitioning:** [`configs/workflow_chatbot_imagegen_live_captions_mps.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_chatbot_imagegen_live_captions_mps.yml)
 
 ### Model Sharing (Inference Server)
-- **Config:** `configs/workflow_chatbot_deepresearch.yml`
-- Edit `example_workflow/llamacpp_server.sh` to add `-c 128000 -nkvo` for Chatbot-KVCache-CPU
+- **Config:** [`configs/workflow_chatbot_deep_research.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_chatbot_deep_research.yml)
+- Edit [`example_workflow/llamacpp_server.sh`](https://github.com/efeslab/ConsumerBench/blob/master/example_workflow/llamacpp_server.sh) to add `-c 128000 -nkvo` for Chatbot-KVCache-CPU
 
 ### End-to-End User Workflow
-- **Greedy allocation:** `configs/workflow_content_creation.yml`
-- **GPU partitioning:** `configs/workflow_content_creation_mps.yml`
+- **Greedy allocation:** [`configs/workflow_content_creation.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_content_creation.yml)
+- **GPU partitioning:** [`configs/workflow_content_creation_mps.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_content_creation_mps.yml)
