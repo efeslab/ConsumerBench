@@ -70,6 +70,8 @@ Follow the README in each application directory for specific installation instru
 
 ## 📊 Running Benchmarks
 
+Note: Please change the paths of the applications, datasets and models to your personal paths.
+
 ### Basic Benchmark
 
 ```bash
