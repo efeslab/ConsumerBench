@@ -730,147 +730,147 @@ def run_deep_research(**kwargs):
 # Define example functions for a simple benchmark
 
 # ====== text2image ========
-# def setup_imagegen(**kwargs):
-#     global global_vars
-
-#     model = kwargs.get('model', "/mnt/tmpfs/models/stable-diffusion-3.5-large")
-#     device = kwargs.get('device', "gpu")
-#     mps = kwargs.get('mps', 100)
-
-#     # print("Pushing NVTX range 'Main'")
-#     # try:
-#     #     nvtx.push_range("Main")
-#     #     print("NVTX push successful")
-#     # except Exception as e:
-#     #     print(f"NVTX push error: {e}")
-#     #     sys.exit(1)
-
-#     if device == "gpu":
-#         # Set environment variable for MPS
-#         os.environ["CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"] = str(mps)
-#         global_vars['imagegen_pipeline'] = StableDiffusion3Pipeline.from_pretrained(
-#             model,
-#             text_encoder_3=None,
-#             tokenizer_3=None,
-#             torch_dtype=torch.float16
-#         )
-#         global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cuda")
-#     else:
-#         global_vars['imagegen_pipeline'] = StableDiffusion3Pipeline.from_pretrained(
-#             model,
-#             text_encoder_3=None,
-#             tokenizer_3=None
-#         )
-#         global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cpu")
-
-
-# def run_imagegen_prompt(prompt):
-#     global global_vars
-
-#     end_time = None
-
-#     nvtx.mark("[Imagegen request Start]")
-#     start_time = time.time()
-
-#     image = global_vars['imagegen_pipeline'](
-#         prompt,
-#         num_inference_steps=28,
-#         guidance_scale=3.5,
-#     ).images[0]
-
-#     end_time = time.time()
-#     nvtx.mark("[Imagegen request End]")
-
-#     result = {
-#         "total time": end_time - start_time,
-#     }
-#     print(result)
-#     return result
-
-# With CUDA Graph
-
 def setup_imagegen(**kwargs):
     global global_vars
 
     model = kwargs.get('model', "/mnt/tmpfs/models/stable-diffusion-3.5-large")
     device = kwargs.get('device', "gpu")
     mps = kwargs.get('mps', 100)
-    fixed_prompt = globals.get_next_imagegen_prompt()
+
+    # print("Pushing NVTX range 'Main'")
+    # try:
+    #     nvtx.push_range("Main")
+    #     print("NVTX push successful")
+    # except Exception as e:
+    #     print(f"NVTX push error: {e}")
+    #     sys.exit(1)
 
     if device == "gpu":
+        # Set environment variable for MPS
         os.environ["CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"] = str(mps)
-        pipe = StableDiffusion3Pipeline.from_pretrained(
+        global_vars['imagegen_pipeline'] = StableDiffusion3Pipeline.from_pretrained(
             model,
             text_encoder_3=None,
             tokenizer_3=None,
             torch_dtype=torch.float16
-        ).to("cuda")
-
-        # Warm-up and graph capture
-        pipe(prompt=fixed_prompt, num_inference_steps=28, guidance_scale=3.5)  # warm-up
-
-        torch.cuda.empty_cache()
-        torch.cuda.synchronize()
-
-        graph = torch.cuda.CUDAGraph()
-        static_output = None
-
-        with torch.cuda.graph(graph):
-            static_output = pipe(prompt=fixed_prompt, num_inference_steps=28, guidance_scale=3.5)
-
-        # Save all to global_vars
-        global_vars['imagegen_pipeline'] = pipe
-        global_vars['imagegen_cuda_graph'] = graph
-        global_vars['imagegen_output'] = static_output
-        global_vars['imagegen_prompt'] = fixed_prompt
+        )
+        global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cuda")
     else:
-        pipe = StableDiffusion3Pipeline.from_pretrained(
+        global_vars['imagegen_pipeline'] = StableDiffusion3Pipeline.from_pretrained(
             model,
             text_encoder_3=None,
             tokenizer_3=None
-        ).to("cpu")
-        global_vars['imagegen_pipeline'] = pipe
+        )
+        global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cpu")
+
 
 def run_imagegen_prompt(prompt):
     global global_vars
 
-    if (
-        'imagegen_cuda_graph' in global_vars
-        and prompt == global_vars.get('imagegen_prompt')
-    ):
-        nvtx.mark("[Imagegen request Start]")
-        torch.cuda.synchronize()
-        start_time = time.time()
+    end_time = None
 
-        global_vars['imagegen_cuda_graph'].replay()
+    nvtx.mark("[Imagegen request Start]")
+    start_time = time.time()
 
-        torch.cuda.synchronize()
-        end_time = time.time()
-        nvtx.mark("[Imagegen request End]")
+    image = global_vars['imagegen_pipeline'](
+        prompt,
+        num_inference_steps=28,
+        guidance_scale=3.5,
+    ).images[0]
 
-        print({"total time": end_time - start_time})
-        return {
-            "total time": end_time - start_time,
-            "image": global_vars['imagegen_output'].images[0]
-        }
+    end_time = time.time()
+    nvtx.mark("[Imagegen request End]")
 
-    else:
-        # Fallback to normal pipeline execution
-        nvtx.mark("[Imagegen request Start]")
-        start_time = time.time()
-        image = global_vars['imagegen_pipeline'](
-            prompt,
-            num_inference_steps=28,
-            guidance_scale=3.5,
-        ).images[0]
-        end_time = time.time()
-        nvtx.mark("[Imagegen request End]")
+    result = {
+        "total time": end_time - start_time,
+    }
+    print(result)
+    return result
 
-        print({"total time": end_time - start_time})
-        return {
-            "total time": end_time - start_time,
-            "image": image
-        }
+# With CUDA Graph
+
+# def setup_imagegen(**kwargs):
+#     global global_vars
+
+#     model = kwargs.get('model', "/mnt/tmpfs/models/stable-diffusion-3.5-large")
+#     device = kwargs.get('device', "gpu")
+#     mps = kwargs.get('mps', 100)
+#     fixed_prompt = globals.get_next_imagegen_prompt()
+
+#     if device == "gpu":
+#         os.environ["CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"] = str(mps)
+#         pipe = StableDiffusion3Pipeline.from_pretrained(
+#             model,
+#             text_encoder_3=None,
+#             tokenizer_3=None,
+#             torch_dtype=torch.float16
+#         ).to("cuda")
+
+#         # Warm-up and graph capture
+#         # pipe(prompt=fixed_prompt, num_inference_steps=28, guidance_scale=3.5)  # warm-up
+
+#         # torch.cuda.empty_cache()
+#         # torch.cuda.synchronize()
+
+#         # graph = torch.cuda.CUDAGraph()
+#         # static_output = None
+
+#         # with torch.cuda.graph(graph):
+#         #     static_output = pipe(prompt=fixed_prompt, num_inference_steps=28, guidance_scale=3.5)
+
+#         # Save all to global_vars
+#         global_vars['imagegen_pipeline'] = pipe
+#         # global_vars['imagegen_cuda_graph'] = graph
+#         # global_vars['imagegen_output'] = static_output
+#         global_vars['imagegen_prompt'] = fixed_prompt
+#     else:
+#         pipe = StableDiffusion3Pipeline.from_pretrained(
+#             model,
+#             text_encoder_3=None,
+#             tokenizer_3=None
+#         ).to("cpu")
+#         global_vars['imagegen_pipeline'] = pipe
+
+# def run_imagegen_prompt(prompt):
+#     global global_vars
+
+#     if (
+#         'imagegen_cuda_graph' in global_vars
+#         and prompt == global_vars.get('imagegen_prompt')
+#     ):
+#         nvtx.mark("[Imagegen request Start]")
+#         torch.cuda.synchronize()
+#         start_time = time.time()
+
+#         global_vars['imagegen_cuda_graph'].replay()
+
+#         torch.cuda.synchronize()
+#         end_time = time.time()
+#         nvtx.mark("[Imagegen request End]")
+
+#         print({"total time": end_time - start_time})
+#         return {
+#             "total time": end_time - start_time,
+#             "image": global_vars['imagegen_output'].images[0]
+#         }
+
+#     else:
+#         # Fallback to normal pipeline execution
+#         nvtx.mark("[Imagegen request Start]")
+#         start_time = time.time()
+#         image = global_vars['imagegen_pipeline'](
+#             prompt,
+#             num_inference_steps=28,
+#             guidance_scale=3.5,
+#         ).images[0]
+#         end_time = time.time()
+#         nvtx.mark("[Imagegen request End]")
+
+#         print({"total time": end_time - start_time})
+#         return {
+#             "total time": end_time - start_time,
+#             "image": image
+#         }
 
 
 
