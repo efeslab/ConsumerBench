@@ -123,7 +123,9 @@ def main():
     args = parser.parse_args()
 
     if args.start_time:
-        start_time = datetime.strptime(args.start_time, '%Y-%m-%d_%H:%M:%S')    
+        start_time = datetime.strptime(args.start_time, '%Y-%m-%d_%H:%M:%S') 
+    else:
+        start_time = None
     
     # Parse the data
     timestamps, sm_active, sm_occupied, memory_bandwidth = parse_dcgm_output(args.input_file, start_time)
