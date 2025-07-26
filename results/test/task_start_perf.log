@@ -1,0 +1,19 @@
+app_type: start
+task_id: start
+start_time: 1.447919
+end_time: 1.456248
+Task start execution time: 0.0000 seconds
+
+Execution times for each node:
+Node start_0:
+  Execution time: 0.0000 seconds
+  Success: True
+Node start_1:
+  Execution time: 0.0000 seconds
+  Success: True
+Node start_2:
+  Execution time: 0.0000 seconds
+  Success: True
+
+Task start results:
+[True, True, True]

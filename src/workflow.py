@@ -5,8 +5,9 @@ import sys
 sys.path.append("/home/cc/os-llm")
 
 
-from benchmark_v2 import DAGScheduler, Task, set_default_args
-from benchmark_v2 import (
+from benchmark_v3 import DAGScheduler, Task
+# [ROHAN: This file also should not have explicit application names. But if we absolutely need it, we can require that users add a line here for their application maybe. ]
+from handles import (
     # chatbot func
     setup_llamacpp_server,
     run_textgen,
@@ -40,6 +41,51 @@ NODE_TYPE_CONFIG_MAPPING_INDEX = {
     "live_captions":  3,
     "sleep":         4
 }
+
+def set_default_args(args = None):
+    """Sets default arguments for the tasks. If args are not provided, it uses the default values."""
+    config_args = {"chatbot_args": {}, "deep_research_args": {}, "imagegen_args": {}, "live_captions_args": {}, "sleep_args": {}}
+
+    if args and args.config:
+        # Load the config file and override default arguments
+        # config_args = parse_config_file(args.config, config_args)
+        config_args, workflow = parse_config_file(args.config, config_args)
+    else:
+        config_args["chatbot_args"] = {}
+        config_args["deep_research_args"] = {}
+        config_args["imagegen_args"] = {}
+        config_args["live_captions_args"] = {}
+        config_args["sleep_args"] = {}
+
+        # Set default arguments for each task
+        config_args["chatbot_args"]["num_requests"] = 10
+        config_args["deep_research_args"]["num_requests"] = 2
+        config_args["imagegen_args"]["num_requests"] = 10
+        config_args["live_captions_args"]["num_requests"] = 2
+
+        # Set default server and client models
+        config_args["chatbot_args"]["server_model"] = "/home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf"
+        config_args["chatbot_args"]["client_model"] = "openai/meta-llama/Llama-3.2-3B-Instruct"
+        config_args["deep_research_args"]["server_model"] = "/home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf"
+        config_args["deep_research_args"]["client_model"] = "openai/meta-llama/Llama-3.2-3B-Instruct"
+        config_args["imagegen_args"]["server_model"] = "/mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo"
+
+        # Set default device
+        config_args["chatbot_args"]["device"] = "gpu"
+        config_args["deep_research_args"]["device"] = "gpu"
+        config_args["imagegen_args"]["device"] = "gpu"
+        config_args["live_captions_args"]["device"] = "gpu"
+
+        # Set the mps value
+        config_args["chatbot_args"]["mps"] = 100
+        config_args["deep_research_args"]["mps"] = 100
+        config_args["imagegen_args"]["mps"] = 100
+        config_args["live_captions_args"]["mps"] = 100        
+
+        workflow = []
+
+
+    return config_args["chatbot_args"], config_args["deep_research_args"], config_args["imagegen_args"], config_args["live_captions_args"], config_args["sleep_args"], workflow
 
 class WorkflowUnit:
     def __init__(self, type: str, task: Task, node_start: str, node_end: str):
@@ -111,6 +157,7 @@ class Workflow:
                 self.tasks_map_queue[k].append(WorkflowUnit(type, task, start_node, end_node))
 
 
+    # [ROHAN: here as well, can we move out the application-specific stuff to applications/ directory? I am not sure how to automatically get the node_type and stuff, maybe there is a way? Or again, if it is impossible or too much of a hassle, we can maybe ask users to add their application in this function].
     def load_node_config(self, node_config, node_type):
         default_args = set_default_args()
         node_defaults_args = default_args[NODE_TYPE_CONFIG_MAPPING_INDEX[node_type]]
@@ -218,11 +265,6 @@ class Workflow:
 
         # 5) Finally, hand it off to your scheduler
         return DAGScheduler(merged_dag, task_sets)
-
-
-
-
-
         
         
     def _generate_task_group(self, task_id, app_type, num_requests = 1, listen_port = 5000,
@@ -243,6 +285,7 @@ class Workflow:
             "mps": mps
         })
 
+        # [ROHAN: maybe we don't need command_file and so on]
         for i in range(1, num_requests + 1):
             task.add_node(f"{task_id}_{i}", run_func, {
                 "command_file": client_command_file,
@@ -261,17 +304,18 @@ class Workflow:
     
 
 
-if __name__ == "__main__":
-    workflow = Workflow("/home/cc/os-llm/configs/workflow_test.yml")
-    workflow.load_workflow_unit_config()
-    workflow.generate_task_queue()
-    for k, v in workflow.tasks_map_queue.items():
-        print(f"Task group {k}:")
-        for unit in v:
-            print(f"  - {unit.type} (ID: {unit.id})")
-            print(f"    Start node: {unit.node_start}")
-            print(f"    End node: {unit.node_end}")
-    bm = workflow.generate_benchmark()
-    print("Benchmark generated successfully.")
-    bm.visualize()
-    print("Benchmark visualization generated successfully.")
+# [We don't need main method here. We are currently also just calling workflow.py from within benchmark_v2.py. This was just added for testing.]
+# if __name__ == "__main__":
+#     workflow = Workflow("/home/cc/os-llm/configs/workflow_test.yml")
+#     workflow.load_workflow_unit_config()
+#     workflow.generate_task_queue()
+#     for k, v in workflow.tasks_map_queue.items():
+#         print(f"Task group {k}:")
+#         for unit in v:
+#             print(f"  - {unit.type} (ID: {unit.id})")
+#             print(f"    Start node: {unit.node_start}")
+#             print(f"    End node: {unit.node_end}")
+#     bm = workflow.generate_benchmark()
+#     print("Benchmark generated successfully.")
+#     bm.visualize()
+#     print("Benchmark visualization generated successfully.")

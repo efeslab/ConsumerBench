@@ -1,0 +1,94 @@
+SERVER_PID=1061203
+Pushing NVTX range 'Main'
+NVTX push successful
+Marking NVTX event: Start processing request
+NVTX mark successful
+Marking NVTX event: Done processing prompt
+NVTX mark successful
+=== Attention Weights Summary ===
+Total layers recorded: 28
+Layer 0 (layer_0_attn): [96, 88, 24, 1] = 202752 elements
+Layer 1 (layer_1_attn): [96, 88, 24, 1] = 202752 elements
+Layer 2 (layer_2_attn): [96, 88, 24, 1] = 202752 elements
+Layer 3 (layer_3_attn): [96, 88, 24, 1] = 202752 elements
+Layer 4 (layer_4_attn): [96, 88, 24, 1] = 202752 elements
+Layer 5 (layer_5_attn): [96, 88, 24, 1] = 202752 elements
+Layer 6 (layer_6_attn): [96, 88, 24, 1] = 202752 elements
+Layer 7 (layer_7_attn): [96, 88, 24, 1] = 202752 elements
+Layer 8 (layer_8_attn): [96, 88, 24, 1] = 202752 elements
+Layer 9 (layer_9_attn): [96, 88, 24, 1] = 202752 elements
+Layer 10 (layer_10_attn): [96, 88, 24, 1] = 202752 elements
+Layer 11 (layer_11_attn): [96, 88, 24, 1] = 202752 elements
+Layer 12 (layer_12_attn): [96, 88, 24, 1] = 202752 elements
+Layer 13 (layer_13_attn): [96, 88, 24, 1] = 202752 elements
+Layer 14 (layer_14_attn): [96, 88, 24, 1] = 202752 elements
+Layer 15 (layer_15_attn): [96, 88, 24, 1] = 202752 elements
+Layer 16 (layer_16_attn): [96, 88, 24, 1] = 202752 elements
+Layer 17 (layer_17_attn): [96, 88, 24, 1] = 202752 elements
+Layer 18 (layer_18_attn): [96, 88, 24, 1] = 202752 elements
+Layer 19 (layer_19_attn): [96, 88, 24, 1] = 202752 elements
+Layer 20 (layer_20_attn): [96, 88, 24, 1] = 202752 elements
+Layer 21 (layer_21_attn): [96, 88, 24, 1] = 202752 elements
+Layer 22 (layer_22_attn): [96, 88, 24, 1] = 202752 elements
+Layer 23 (layer_23_attn): [96, 88, 24, 1] = 202752 elements
+Layer 24 (layer_24_attn): [96, 88, 24, 1] = 202752 elements
+Layer 25 (layer_25_attn): [96, 88, 24, 1] = 202752 elements
+Layer 26 (layer_26_attn): [96, 88, 24, 1] = 202752 elements
+Layer 27 (layer_27_attn): [96, 88, 24, 1] = 202752 elements
+================================
+Saved layer 0 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_0.bin
+Saved layer 1 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_1.bin
+Saved layer 2 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_2.bin
+Saved layer 3 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_3.bin
+Saved layer 4 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_4.bin
+Saved layer 5 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_5.bin
+Saved layer 6 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_6.bin
+Saved layer 7 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_7.bin
+Saved layer 8 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_8.bin
+Saved layer 9 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_9.bin
+Saved layer 10 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_10.bin
+Saved layer 11 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_11.bin
+Saved layer 12 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_12.bin
+Saved layer 13 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_13.bin
+Saved layer 14 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_14.bin
+Saved layer 15 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_15.bin
+Saved layer 16 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_16.bin
+Saved layer 17 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_17.bin
+Saved layer 18 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_18.bin
+Saved layer 19 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_19.bin
+Saved layer 20 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_20.bin
+Saved layer 21 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_21.bin
+Saved layer 22 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_22.bin
+Saved layer 23 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_23.bin
+Saved layer 24 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_24.bin
+Saved layer 25 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_25.bin
+Saved layer 26 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_26.bin
+Saved layer 27 attention weights to /mnt/tmpfs/llama.cpp/attention_analysis/temp/attention_weights_layer_27.bin
+Layer 0 has 88 tokens
+Layer 1 has 88 tokens
+Layer 2 has 88 tokens
+Layer 3 has 88 tokens
+Layer 4 has 88 tokens
+Layer 5 has 88 tokens
+Layer 6 has 88 tokens
+Layer 7 has 88 tokens
+Layer 8 has 88 tokens
+Layer 9 has 88 tokens
+Layer 10 has 88 tokens
+Layer 11 has 88 tokens
+Layer 12 has 88 tokens
+Layer 13 has 88 tokens
+Layer 14 has 88 tokens
+Layer 15 has 88 tokens
+Layer 16 has 88 tokens
+Layer 17 has 88 tokens
+Layer 18 has 88 tokens
+Layer 19 has 88 tokens
+Layer 20 has 88 tokens
+Layer 21 has 88 tokens
+Layer 22 has 88 tokens
+Layer 23 has 88 tokens
+Layer 24 has 88 tokens
+Layer 25 has 88 tokens
+Layer 26 has 88 tokens
+Layer 27 has 88 tokens

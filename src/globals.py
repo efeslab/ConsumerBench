@@ -1,14 +1,21 @@
 from datasets import load_dataset
 import os
+import threading
 from datetime import datetime
+
+project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 results_dir = None  # Default value
 # declare dataset variables
-start_time = None
 textgen_prompts = []
 imagegen_prompts = []
 livecaptions_prompts = []
 deep_research_prompts = []
+
+start_time = None
+
+model_refcount_lock = threading.Lock()
+model_refcount = {}
 
 # You can add a function to update it
 def set_results_dir(path):
@@ -21,15 +28,17 @@ def get_results_dir():
         raise ValueError("Results directory is not set. Please set it using set_results_dir()")
     return results_dir
 
-def set_start_time(time):
+def set_start_time():
     global start_time    
-    start_time = datetime.strptime(time, '%Y-%m-%d_%H:%M:%S')
+    start_time = datetime.now()
 
+# [ROHAN: We should remove this explicit prompt]
 def load_deep_research_dataset():
     global deep_research_prompts
     # deep_research_prompts.append("Give me a summary of the latest research paper on AI.")
     deep_research_prompts.append("What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?")
 
+# [ROHAN: We should remove names of datasets if possible]
 def load_textgen_dataset():
     global textgen_prompts
     """Load the text generation dataset"""
@@ -40,11 +49,13 @@ def load_textgen_dataset():
     for item in ds_textgen_lmsys:
         textgen_prompts.append(item['conversation'][0]['content'])
 
+# [ROHAN: We should remove names of datasets if possible]
 def get_next_textgen_prompt():
     global textgen_prompts
     return textgen_prompts.pop(0)
 
 
+# [ROHAN: We should remove names of datasets if possible]
 def load_imagegen_dataset():
     global imagegen_prompts
     """Load the image generation dataset"""
@@ -55,11 +66,13 @@ def load_imagegen_dataset():
     for item in ds_imagegen_cococaptions:
         imagegen_prompts.append(item['caption1'])
 
+# [ROHAN: We should remove names of datasets if possible]
 def get_next_imagegen_prompt():
     global imagegen_prompts
     return imagegen_prompts.pop(0)
 
 
+# [ROHAN: We should remove names of datasets if possible]
 def load_livecaptions_dataset():
     global livecaptions_prompts
     """Load the live captions dataset"""

@@ -21,6 +21,7 @@ from datetime import datetime
 import nvtx
 
 
+# [ROHAN: We should remove these paths. All application stuff should be imported from applications/, datasets/, inference-backed/ respectively. ]
 sys.path.append("/home/cc/os-llm/scripts")
 sys.path.append("/home/cc/os-llm")
 from memory_util import GpuMemoryMonitor
@@ -502,6 +503,7 @@ class DAGScheduler:
             print(f"Task dependencies visualization saved to {output_filename}")
 
 
+# [ROHAN: are we using this?]
 def parse_commands(filename: str):
     """Read commands from a file"""
     commands: list[str] = []
@@ -602,6 +604,7 @@ def util_run_server_script_check_log(script_path: str, stdout_log_path: str, std
 
 
 # ====== LlamaCPP ========
+# [ROHAN: no need to have this]
 def setup_llamacpp_server(**kwargs):
     # return True
 
@@ -647,6 +650,7 @@ def setup_llamacpp_server(**kwargs):
 
 
 
+# [ROHAN: no need to have this]
 def cleanup_llamacpp_server(**kwargs):
     # return True
     # print("Popping Main range")
@@ -683,6 +687,7 @@ def cleanup_llamacpp_server(**kwargs):
 
 
 # ====== Deep Research ======
+# [ROHAN: no need to have this]
 def run_deep_research_dataset(api_port, model):
     global deep_research_prompts
 
@@ -716,6 +721,7 @@ def run_deep_research_dataset(api_port, model):
     return result
 
 
+# [ROHAN: no need to have this]
 def run_deep_research(**kwargs):
     print("Running deep research (ephemeral app)...")
 
@@ -730,6 +736,7 @@ def run_deep_research(**kwargs):
 # Define example functions for a simple benchmark
 
 # ====== text2image ========
+# [ROHAN: no need to have this]
 def setup_imagegen(**kwargs):
     global global_vars
 
@@ -764,6 +771,7 @@ def setup_imagegen(**kwargs):
         global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cpu")
 
 
+# [ROHAN: no need to have this]
 def run_imagegen_prompt(prompt):
     global global_vars
 
@@ -874,6 +882,7 @@ def run_imagegen_prompt(prompt):
 
 
 
+# [ROHAN: no need to have this]
 def run_imagegen_command_file(filename):
     # read the commands from the file
     commands = parse_commands(filename)
@@ -886,6 +895,7 @@ def run_imagegen_command_file(filename):
     return result
 
 
+# [ROHAN: no need to have this]
 def run_imagegen_dataset():
     global imagegen_prompts
 
@@ -897,6 +907,7 @@ def run_imagegen_dataset():
     return result
 
 
+# [ROHAN: no need to have this]
 def run_imagegen(**kwargs):
     print("Running imagegen")
 
@@ -909,6 +920,7 @@ def run_imagegen(**kwargs):
 
     return result
 
+# [ROHAN: no need to have this]
 def cleanup_imagegen(**kwargs):
     # print("Popping Main range")
     # try:
@@ -921,16 +933,19 @@ def cleanup_imagegen(**kwargs):
 
 # ====== Nothing ========
 
+# [ROHAN: no need to have this. Move it to applications/ if necessary]
 def nothing_function(**kwargs):
     # This function does nothing
     return True
 
+# [ROHAN: no need to have this. Move it to applications/ if necessary]
 def sleep_function(**kwargs):
     # This function sleeps for 1 second
     time.sleep(60)
     return True
 
 # ====== Live Captions =======
+# [ROHAN: no need to have this]
 def setup_whisper():
     global global_vars
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
@@ -955,7 +970,7 @@ def setup_whisper():
     )
 
 
-
+# [ROHAN: no need to have this]
 def run_whisper(**kwargs):
     global global_vars, livecaptions_prompts
     print("Running whisper (ephemeral app)...")
@@ -983,11 +998,13 @@ def run_whisper(**kwargs):
     return result
 
     
+# [ROHAN: no need to have this]
 def cleanup_whisper():
     # Do nothing
     return
 
 
+# [ROHAN: no need to have this]
 def setup_whisper_online(**kwargs):
     # python3 whisper_online_server.py --host 127.0.0.1 --port 5050
     # python3 /home/cc/applications/whisper_streaming/generate_raw_realtime.py /home/cc/datasets/whisper-earnings21/4320211_chunk_001.wav --port 5050
@@ -1015,6 +1032,7 @@ def setup_whisper_online(**kwargs):
     return server_pid
 
 
+# [ROHAN: no need to have this]
 def run_whisper_online_command_file(api_port, wav_file_path):
     print(f"Running whisper-online (ephemeral app) on {wav_file_path}...")
     end_time = None
@@ -1055,6 +1073,7 @@ def run_whisper_online_command_file(api_port, wav_file_path):
     return result
 
 
+# [ROHAN: no need to have this]
 def run_whisper_online_dataset(api_port):
     # get a random file from /home/cc/datasets/whisper-earnings21
     directory = "/home/cc/datasets/whisper-earnings21"
@@ -1066,6 +1085,7 @@ def run_whisper_online_dataset(api_port):
     return result
 
 
+# [ROHAN: no need to have this]
 def run_whisper_online(**kwargs):
     api_port = kwargs.get('api_port', 5050)
     wav_file_path = kwargs.get('command_file', None)
@@ -1076,6 +1096,7 @@ def run_whisper_online(**kwargs):
     return result
 
 
+# [ROHAN: no need to have this]
 def cleanup_whisper_online(**kwargs):
     api_port = kwargs.get('api_port', 5050)
     process = subprocess.Popen(
@@ -1089,6 +1110,7 @@ def cleanup_whisper_online(**kwargs):
 
 
 # ====== textgen ========
+# [ROHAN: no need to have this]
 def setup_textgen(**kwargs):
     server_pid = -1
 
@@ -1112,6 +1134,7 @@ def setup_textgen(**kwargs):
     return server_pid
 
 
+# [ROHAN: no need to have this]
 def run_textgen_command_file(filename, api_port):
     commands = parse_commands(filename)        
 
@@ -1181,6 +1204,7 @@ def run_textgen_command_file(filename, api_port):
     # }
 
 
+# [ROHAN: no need to have this]
 def run_textgen_dataset(api_port):
     # TODO: Yile, use the following session to issue posts
     api_url = f"http://127.0.0.1:{api_port}/v1/completions"
@@ -1260,6 +1284,7 @@ def run_textgen_dataset(api_port):
     return result
     
 
+# [ROHAN: no need to have this]
 def run_textgen(**kwargs):
     print("Running textgen (background app)...")
 
@@ -1277,6 +1302,7 @@ def run_textgen(**kwargs):
     return result
 
 
+# [ROHAN: no need to have this]
 def cleanup_textgen(**kwargs):
     """Example function to cleanup textgen"""
     print("Cleaning up textgen app...")
@@ -1293,6 +1319,7 @@ def cleanup_textgen(**kwargs):
 
 
 # ====== gpt4all ========
+# [ROHAN: no need to have this]
 def run_gpt4all(**kwargs):
     """Example function to run GPT4All"""
     print("Running GPT4All app...")
@@ -1306,6 +1333,7 @@ def run_gpt4all(**kwargs):
     return True
 
 # ====== gpt4all ========
+# [ROHAN: no need to have this]
 def run_share4video(**kwargs):
     """Example function to run share4video"""
     print("Running share4video app...")
@@ -1317,6 +1345,7 @@ def run_share4video(**kwargs):
     return True
 
 # ====== livecaptions ========
+# [ROHAN: no need to have this]
 def run_livecaptions(**kwargs):
     """Example function to run livecaptions"""
     print("Running livecaptions app...")
@@ -1327,6 +1356,7 @@ def run_livecaptions(**kwargs):
     process.wait()
     return True
 
+# [ROHAN: no need to have this. Shadow can also be an application]
 def shadow_function(**kwargs):
     return True
 
@@ -1366,6 +1396,7 @@ def create_task(task_id, app_type, num_requests = 1, listen_port = 5000,
 
     return task
 
+# [ROHAN: no need to have this]
 def create_textgen_benchmark_large():
     """Creates a textgen benchmark with Chatbot, Codebot, and Reasonbot using large model variants."""
     chatbot_task = create_task("chatbot", "chatbot", 5001, 5000, "Llama-3.1-8B-Instruct")
@@ -1385,6 +1416,7 @@ def create_textgen_benchmark_large():
         
     return benchmark
 
+# [ROHAN: no need to have this]
 def create_textgen_benchmark_small():
     """Creates a textgen benchmark with Chatbot, Codebot, and Reasonbot using small model variants."""
     chatbot_task = create_task("chatbot", "chatbot", 5001, 5000, "Llama-3.2-3B-Instruct", client_command_file="/home/cc/os-llm/example_workflow/textgen_client_1.log")
@@ -1404,6 +1436,7 @@ def create_textgen_benchmark_small():
         
     return benchmark
 
+# [ROHAN: no need to have this]
 def create_textgen_benchmark_debug():
     """Creates a textgen benchmark with Chatbot, Codebot, and Reasonbot using small model variants."""
     chatbot_task = create_task("chatbot", "chatbot", 5001, 5000, "Llama-3.2-3B-Instruct", client_command_file="/home/cc/os-llm/example_workflow/textgen_client_1.log")
@@ -1418,6 +1451,7 @@ def create_textgen_benchmark_debug():
 ######################################
 
 
+# [ROHAN: no need to have this]
 def create_livecaptions_benchmark(num_requests):
     """Creates a textgen benchmark with Chatbot using small model variants."""
     # chatbot_task = create_task("chatbot", "chatbot", 5001, 5000, "Llama-3.2-3B-Instruct", "/home/cc/os-llm/example_workflow/textgen_client_1.log", num_requests)
@@ -1428,6 +1462,7 @@ def create_livecaptions_benchmark(num_requests):
         
     return benchmark
 
+# [ROHAN: no need to have this]
 def create_whisper_online_benchmark(num_requests):
     """Creates a whisper benchmark with Chatbot using small model variants."""
     # chatbot_task = create_task("chatbot", 5001, 5000, "Llama-3.2-3B-Instruct", "/home/cc/os-llm/example_workflow/textgen_client_1.log", num_requests)
@@ -1449,6 +1484,7 @@ def create_whisper_online_benchmark(num_requests):
     return benchmark
 
 
+# [ROHAN: no need to have this]
 def create_whisper_benchmark(num_requests):
     """Creates a whisper benchmark with Chatbot using small model variants."""
     # chatbot_task = create_task("chatbot", 5001, 5000, "Llama-3.2-3B-Instruct", "/home/cc/os-llm/example_workflow/textgen_client_1.log", num_requests)
@@ -1459,6 +1495,7 @@ def create_whisper_benchmark(num_requests):
         
     return benchmark
 
+# [ROHAN: no need to have this]
 def create_imagegen_benchmark(num_requests):
     """Creates a textgen benchmark with Chatbot using small model variants."""
     # chatbot_task = create_task("chatbot", 5001, 5000, "Llama-3.2-3B-Instruct", "/home/cc/os-llm/example_workflow/textgen_client_1.log", num_requests)
@@ -1476,6 +1513,7 @@ def create_imagegen_benchmark(num_requests):
         
     return benchmark
 
+# [ROHAN: no need to have this]
 def create_deep_research_benchmark(num_requests):
     """Creates a textgen benchmark with Chatbot using small model variants."""
     # deep_research_task = create_deep_research_task("deep-research", 8080, "/home/cc/models/Llama-3.1-8B-Instruct-GGUF/Llama-3.1-8B-Instruct-f16.gguf", "openai/meta-llama/Llama-3.1-8B-Instruct", num_requests=num_requests)
@@ -1494,6 +1532,7 @@ def create_deep_research_benchmark(num_requests):
     return benchmark
 
 
+# [ROHAN: no need to have this]
 def create_chatbot_benchmark(num_requests):
     """Creates a textgen benchmark with Chatbot using small model variants."""
     # chatbot_task = create_task("chatbot", 5001, 5000, "Llama-3.2-3B-Instruct", "/home/cc/os-llm/example_workflow/textgen_client_1.log", num_requests)
@@ -1511,6 +1550,7 @@ def create_chatbot_benchmark(num_requests):
     return benchmark
 
 
+# [ROHAN: no need to have this]
 def create_chatbot_llama_benchmark(num_requests):
     """Creates a textgen benchmark with Chatbot using small model variants."""
     # chatbot_task = create_task("chatbot", 5001, 5000, "Llama-3.2-3B-Instruct", "/home/cc/os-llm/example_workflow/textgen_client_1.log", num_requests)
@@ -1531,6 +1571,7 @@ def create_chatbot_llama_benchmark(num_requests):
     return benchmark
 
 
+# [ROHAN: no need to have this]
 def create_codebot_benchmark(num_requests):
     """Creates a textgen benchmark with Codebot using small model variants."""
     codebot_task = create_task("codebot", "codebot", listen_port = 5003, api_port = 5002,
@@ -1547,6 +1588,7 @@ def create_codebot_benchmark(num_requests):
         
     return benchmark
 
+# [ROHAN: no need to have this]
 def create_reasonbot_benchmark(num_requests):
     """Creates a textgen benchmark with Reasonbot using small model variants."""
     reasonbot_task = create_task("reasonbot", "chatbot", listen_port = 5005, api_port = 5004,
@@ -1718,6 +1760,7 @@ def create_concurrent_benchmark(args):
 
     dag_compose = []
 
+    # [ROHAN: Again, we only use workflows, so no need to check, and no names of applications in this file]
     if workflow != []:
         num_chatbot_requests = 0
         num_deep_research_requests = 0
@@ -1745,6 +1788,7 @@ def create_concurrent_benchmark(args):
             live_captions_args["num_requests"] = num_live_captions_requests
 
 
+    # [ROHAN: somehow we shouldn't mention applications in this file at all. all these applications should be a part of config, and here we only want generic functions, each application can override the generic functions that require application-specific inputs in the applications/ directory.]
     if (chatbot_args != {}):    
         chatbot_task = create_task("chatbot", "chatbot", listen_port = 5001, api_port = 5000,
                                     server_model = chatbot_args["server_model"],
@@ -1758,18 +1802,6 @@ def create_concurrent_benchmark(args):
         
         chatbot_dag = chatbot_task.get_dag()
         dag_compose.append(chatbot_dag)
-
-    # chatbot_task_2 = create_task("chatbot2", listen_port = 5001, api_port = 5000,
-    #                             # server_model = "/home/cc/models/Llama-3.1-8B-Instruct-GGUF/Llama-3.1-8B-Instruct-f16.gguf",
-    #                             # client_model = "openai/meta-llama/Llama-3.1-8B-Instruct",
-    #                             server_model = "/home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf",
-    #                             client_model = "openai/meta-llama/Llama-3.2-3B-Instruct",
-    #                             num_requests = 10,
-    #                             setup_func = setup_llamacpp_server,
-    #                             run_func = run_textgen,
-    #                             cleanup_func = cleanup_llamacpp_server)
-    
-    # chatbot_dag_2 = chatbot_task_2.get_dag()
 
 
     if (deep_research_args != {}):    
@@ -1880,6 +1912,7 @@ def main(args):
     log_path = os.path.join(args.results, log_filename)
     logging.basicConfig(filename=log_path, level=logging.INFO)
 
+    # [ROHAN: Maybe lets just keep workflow? No other things needed. Basically no need to check workflow. We only support workflows, and workflows can have different applications running singularly within the yaml.]
     if args.benchmark == "chatbot":
         benchmark = create_chatbot_benchmark(args.num_requests)
         globals.load_textgen_dataset()
@@ -1918,19 +1951,10 @@ def main(args):
         workflow.generate_task_queue()
         benchmark = workflow.generate_benchmark()
 
-    # Create and run benchmark
-    # benchmark = create_simple_benchmark()
-    # benchmark = create_debug_benchmark()
-    # benchmark = create_textgen_benchmark()
-    # benchmark = create_textgen_benchmark_small()
-    # benchmark = create_textgen_benchmark_debug()
-    # logging.info("\n=== Running Sequential Benchmark ===")
-    # benchmark.run_sequential()
-    # benchmark.display_results()
-
     benchmark.visualize()
     # logging.info("\n=== Running Concurrent Benchmark ===")
 
+    # [ROHAN: monitoring can be in a separate directory as well to keep it modular]
     monitor = GpuMemoryMonitor(gpu_id=0, interval=0.01, results_dir=args.results)
     import threading
     monitor_thread = threading.Thread(target=monitor.start_monitoring)
@@ -1946,9 +1970,12 @@ def main(args):
 
 def get_parser():
     parser = argparse.ArgumentParser()
+    # [ROHAN: remove --benchmark flag from here. Everything should be through config.yaml]
     parser.add_argument('--benchmark', type=str, help="Name of the application (chatbot, chatbot-llama, codebot, reasonbot, whisper, imagegen, deep-research, whisper-online, concurrent, all)", required=True)
+    # [ROHAN: remove --num_requests flag from here. Everything should be through config.yaml]
     parser.add_argument('--num_requests', type=int, help="Number of requests", required=False, default=10)
     parser.add_argument('--config', type=str, help="Path to the config file", required=False)
+    # [ROHAN: can get rid of start_time] 
     parser.add_argument('--start_time', type=str, help="Start time for the benchmark", required=False, default=0)
     parser.add_argument('--results', type=str, help="Path to the results directory", required=True)
     return parser

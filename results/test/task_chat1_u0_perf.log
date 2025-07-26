@@ -1,0 +1,166 @@
+app_type: chatbot
+task_id: chat1_u0
+start_time: 1.449416
+end_time: 59.589682
+Task chat1_u0 execution time: 58.1065 seconds
+
+Execution times for each node:
+Node chat1_u0_0:
+  Execution time: 47.0708 seconds
+  Success: False
+Node chat1_u0_1:
+  Execution time: 10.4871 seconds
+  Success: False
+Node chat1_u0_2:
+  Execution time: 0.0068 seconds
+  Success: False
+Node chat1_u0_3:
+  Execution time: 0.0039 seconds
+  Success: False
+Node chat1_u0_4:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_5:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_6:
+  Execution time: 0.0048 seconds
+  Success: False
+Node chat1_u0_7:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_8:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_9:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_10:
+  Execution time: 0.0039 seconds
+  Success: False
+Node chat1_u0_11:
+  Execution time: 0.0050 seconds
+  Success: False
+Node chat1_u0_12:
+  Execution time: 0.0038 seconds
+  Success: False
+Node chat1_u0_13:
+  Execution time: 0.0047 seconds
+  Success: False
+Node chat1_u0_14:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_15:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_16:
+  Execution time: 0.0050 seconds
+  Success: False
+Node chat1_u0_17:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_18:
+  Execution time: 0.0057 seconds
+  Success: False
+Node chat1_u0_19:
+  Execution time: 0.0035 seconds
+  Success: False
+Node chat1_u0_20:
+  Execution time: 0.0039 seconds
+  Success: False
+Node chat1_u0_21:
+  Execution time: 0.0050 seconds
+  Success: False
+Node chat1_u0_22:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_23:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_24:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_25:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_26:
+  Execution time: 0.0050 seconds
+  Success: False
+Node chat1_u0_27:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_28:
+  Execution time: 0.0035 seconds
+  Success: False
+Node chat1_u0_29:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_30:
+  Execution time: 0.0039 seconds
+  Success: False
+Node chat1_u0_31:
+  Execution time: 0.0049 seconds
+  Success: False
+Node chat1_u0_32:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_33:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_34:
+  Execution time: 0.0035 seconds
+  Success: False
+Node chat1_u0_35:
+  Execution time: 0.0048 seconds
+  Success: False
+Node chat1_u0_36:
+  Execution time: 0.0049 seconds
+  Success: False
+Node chat1_u0_37:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_38:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_39:
+  Execution time: 0.0035 seconds
+  Success: False
+Node chat1_u0_40:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_41:
+  Execution time: 0.0049 seconds
+  Success: False
+Node chat1_u0_42:
+  Execution time: 0.0036 seconds
+  Success: False
+Node chat1_u0_43:
+  Execution time: 0.0038 seconds
+  Success: False
+Node chat1_u0_44:
+  Execution time: 0.0037 seconds
+  Success: False
+Node chat1_u0_45:
+  Execution time: 0.0035 seconds
+  Success: False
+Node chat1_u0_46:
+  Execution time: 0.0051 seconds
+  Success: False
+Node chat1_u0_47:
+  Execution time: 0.0029 seconds
+  Success: False
+Node chat1_u0_48:
+  Execution time: 0.0055 seconds
+  Success: False
+Node chat1_u0_49:
+  Execution time: 0.0026 seconds
+  Success: False
+Node chat1_u0_50:
+  Execution time: 0.0035 seconds
+  Success: False
+Node chat1_u0_51:
+  Execution time: 0.3500 seconds
+  Success: True
+
+Task chat1_u0 results:
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, True]
