@@ -1,13 +1,15 @@
-[submodule "applications/stable-diffusion-webui"]
-	path = applications/stable-diffusion-webui
-	url = git@github.com:AUTOMATIC1111/stable-diffusion-webui.git
-[submodule "applications/whisper_streaming"]
-	path = applications/whisper_streaming
-	url = git@github.com:efeslab/whisper_streaming.git
+[submodule "applications/ImageGen/stable-diffusion-webui"]
+	path = applications/ImageGen/stable-diffusion-webui
+	url = https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+	branch = master
+[submodule "applications/LiveCaptions/whisper_streaming"]
+	path = applications/LiveCaptions/whisper_streaming
+	url = https://github.com/efeslab/whisper_streaming.git
+	branch = main
 [submodule "inference_backends/llama.cpp"]
 	path = inference_backends/llama.cpp
 	url = git@github.com:efeslab/llama.cpp.git
-[submodule "applications/smolagents"]
-	path = applications/smolagents
-	url = https://github.com/efeslab/smolagents
+[submodule "applications/DeepResearch/smolagents"]
+	path = applications/DeepResearch/smolagents
+	url = https://github.com/efeslab/smolagents.git
 	branch = os-llm
