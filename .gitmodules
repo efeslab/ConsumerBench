@@ -1,6 +1,3 @@
-[submodule "applications/smolagents"]
-	path = applications/smolagents
-	url = git@github.com:efeslab/smolagents.git
 [submodule "applications/stable-diffusion-webui"]
 	path = applications/stable-diffusion-webui
 	url = git@github.com:AUTOMATIC1111/stable-diffusion-webui.git
@@ -10,3 +7,7 @@
 [submodule "inference_backends/llama.cpp"]
 	path = inference_backends/llama.cpp
 	url = git@github.com:efeslab/llama.cpp.git
+[submodule "applications/smolagents"]
+	path = applications/smolagents
+	url = https://github.com/efeslab/smolagents
+	branch = os-llm
