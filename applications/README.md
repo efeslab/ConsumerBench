@@ -3,7 +3,7 @@ Users can configure any custom applications that use local GenAI models, to run 
 
 1. Create a new sub-directory in this folder for the application
 2. Install the application in the sub-directory
-3. Inherit a child class from the `Application` class and implement its corresponding functions. (Please see the existing applications, such as DeepResearch: <>)
+3. Inherit a child class from the `Application` class and implement its corresponding functions. (Please see the existing applications, such as DeepResearch: https://github.com/efeslab/ConsumerBench/blob/master/applications/DeepResearch/DeepResearch.py)
 4. You can then add your own applications to the workflows (specified in `configs/`), and the application will be monitored automatically with ConsumerBench
 
 ## Setting up existing applications
