@@ -4,7 +4,7 @@
 
 ConsumerBench is a comprehensive benchmarking framework that evaluates the runtime performance of user-defined GenAI applications under realistic conditions on end-user devices.
 
-## 🚀 Quick Start
+## 🚀 Benchmark Setup
 
 ```bash
 # Clone the repository
@@ -15,71 +15,59 @@ cd ConsumerBench
 conda create -n consumerbench python=3.10
 conda activate consumerbench
 pip install -r requirements.txt
-
-# Run a sample benchmark
-python3 benchmark_v2.py --benchmark workflow --config configs/workflow_imagegen.yml
 ```
+### Install applications
+Follow instructions mentioned in `applications/`
+
+### Adding config
+Add your own yml workflow in `configs/`
+
+### Running benchmark
+Run the benchmark using the command
+```
+python src/scripts/run_consumerbench.py --config <path-to-config>
+```
+
 
 ## 📋 Repository Structure
 
 ```
 ConsumerBench/
-├── applications/           # Application repositories
+├── src/                    # Source code
+├── inference_backends/     # Inference backends
+├── models/                 # GenAI models
+├── applications/           # Applications
 ├── configs/                # Example user configurations & workflows
-├── scripts/                # Result processing and plotting scripts
-├── benchmark_v2.py         # Core benchmark code
-├── workflow.py             # Workflow class definition
-└── globals.py              # Shared global variables
+└── scripts/                # Result processing and plotting scripts
 ```
 
-## 🧩 Supported Applications
+## 🧩 Current Supported Applications
 
 ### 💬 Chatbot
 Text-to-text generation for chat and Q&A with:
-- Minimal frontend in `benchmark_v2.py`
 - Local backend mimicking OpenAI API
 - Powered by llama.cpp for efficient CPU-GPU co-execution
+- Located in `applications/Chatbot`
 
 ### 🔍 DeepResearch
 Agent-based reasoning for complex fact gathering:
 - Built on open-deep-research framework
 - Served via LiteLLM
-- Located in `applications/smolagents`
+- Located in `applications/DeepResearch`
 
 ### 🖼️ ImageGen
 Text-to-image generation optimized for edge devices:
 - Utilizes stable-diffusion-webui in API mode
-- Located in `applications/stable-diffusion-webui`
+- Located in `applications/ImageGen`
 
 ### 🎙️ LiveCaptions
 Audio-to-text transcription for real-time and offline use:
 - Whisper-based backend over HTTP
-- Front-end: `applications/whisper_streaming/generate_raw_realtime.py`
-- Back-end: `applications/whisper_streaming/whisper_online_server.py`
+- Located in `applications/LiveCaptions`
 
-## ⚙️ Installation & Setup
 
-### Application Installation
-
-Follow the README in each application directory for specific installation instructions. 
-
-> **Note:** For llama.cpp, use these CMAKE flags:
-> ```
-> -DGGML_CUDA=ON -DGGML_CUDA_F16=1 -DCMAKE_CUDA_ARCHITECTURES="75"
-> ```
-
-## 📊 Running Benchmarks
-
-Note: Please change the paths of the applications, datasets and models to your personal paths.
-
-### Basic Benchmark
-
-```bash
-python3 benchmark_v2.py --benchmark workflow --config configs/workflow_imagegen.yml
-```
-
-### Comprehensive Benchmark with System Metrics
-
+## System Metrics Collection
+Run the script:
 ```bash
 ./scripts/run_benchmark.sh configs/workflow_imagegen.yml 0
 ```

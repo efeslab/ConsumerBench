@@ -25,7 +25,7 @@ class LiveCaptions(Application):
         mps = kwargs.get('mps', self.get_default_config()['mps'])
 
         utils.util_run_server_script_check_log(
-            script_path=f"{repo_dir}/scripts/applications/whisper_online_server.sh",
+            script_path=f"{repo_dir}/applications/LiveCaptions/whisper_online_server.sh",
             server_dir=f"{repo_dir}/applications/LiveCaptions",
             stdout_log_path=f"{globals.get_results_dir()}/whisper_online_server_stdout",
             stderr_log_path=f"{globals.get_results_dir()}/whisper_online_server_stderr",
@@ -56,7 +56,7 @@ class LiveCaptions(Application):
 
     def run_application(self, *args, **kwargs):
         print(f"LiveCaptions application")
-        live_captions_path = self.live_captions_paths.pop(0)
+        live_captions_path = kwargs.get('client_command_file', self.get_default_config()['client_command_file'])
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
 
         stdout_log = os.path.join(globals.get_results_dir(), f"live_captions_client_stdout_{api_port}.log")
@@ -65,7 +65,7 @@ class LiveCaptions(Application):
         # Start the server process with log file redirection
         with open(stdout_log, 'w') as stdout_file, open(stderr_log, 'w') as stderr_file:
             process = subprocess.Popen(
-                [f"{repo_dir}/scripts/applications/whisper_online_client.sh", str(api_port), str(live_captions_path)],
+                [f"{repo_dir}/applications/LiveCaptions/whisper_online_client.sh", str(api_port), str(live_captions_path)],
                 stdout=stdout_file,
                 stderr=stderr_file,
                 start_new_session=True,  # Important for server processes
@@ -95,13 +95,12 @@ class LiveCaptions(Application):
 
     def load_dataset(self, *args, **kwargs):
         """Load the live captions dataset"""
-        self.live_captions_paths = [kwargs.get('wav_file_path', self.get_default_config()['wav_file_path'])]
 
     def get_default_config(self) -> Dict[str, Any]:
         return {
             "device": "gpu",
             "mps": 100,
             "api_port": 5000,
-            "wav_file_path": f"{repo_dir}/applications/LiveCaptions/whisper-earnings21/4320211_chunk_001.wav"
+            "client_command_file": f"{repo_dir}/applications/LiveCaptions/whisper-earnings21/4320211_chunk_001.wav"
         }
     

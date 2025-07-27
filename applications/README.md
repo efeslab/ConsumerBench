@@ -10,34 +10,47 @@ Users can configure any custom applications that use local GenAI models, to run 
 
 Currently, the ConsumerBench repository contains with 4 applications: Chatbot, DeepResearch, LiveCaptions and Imagegen. We have already added their classes in the corresponding directories. 
 
-Following are the steps to install the applications, setup the inference backend with the model and the datasets specified in the paper. While we specify the model and dataset here, users are free to download their own models and datasets to use with the applications. 
+Following are the steps to install the applications, setup the inference backend with the model and the datasets specified in the paper. While we specify the model and dataset here which are used in the paper, users are free to download their own models and datasets to use with the applications. 
 
 ### Chatbot 
-
+#### Install application
+Installing application involves setting up llama.cpp server.
+```
+cd <repo-dir>/inference_backends/llama.cpp
+cmake -B build -DGGML_CUDA=ON -DGGML_CUDA_F16=1 -DCMAKE_CUDA_ARCHITECTURES="75"  -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.8/bin/nvcc
+cd build
+make -j32
+```
+Chatbot client then directly sends http requests to the llama.cpp server for each request.
 
 ### DeepResearch
 Create a new conda environment with python 3.10. Activate the environment.
+```
+conda create -n deepresearch python=3.10
+conda activate deepresearch
+```
 
 #### Install Application
 ```
-$ cd DeepResearch/smolagents/examples/open_deep_research
-$ pip install -r requirements.txt 
-$ pip install -e ../../.[dev]
+cd DeepResearch/smolagents/examples/open_deep_research
+pip install -r requirements.txt 
+pip install -e ../../.[dev]
 ```
 
 #### Download GenAI model
 Download the Llama-3.2-3B model from huggingface. Note that you may need a huggingface account, and permission to download the gated llama model. 
 ```
-$ wget https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-f16.gguf
-$ mv Llama-3.2-3B-Instruct-f16.gguf ../models/
+wget https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-f16.gguf
+mv Llama-3.2-3B-Instruct-f16.gguf <repo-base>/models/
 ```
-
-#### Download Dataset
-
 
 
 ### Imagegen
 Create a conda environment with python 3.10. Activate the environment.
+```
+conda create -n imagegen python=3.10
+conda activate imagegen
+```
 
 #### Install Application
 ```
@@ -49,17 +62,18 @@ pip install transformers==4.50.3
 #### Download GenAI model
 Download the stable-diffusion-3.5-large model from huggingface. Note that you may need a huggingface account
 ```
-$ git lfs install
-$ git clone https://huggingface.co/tensorart/stable-diffusion-3.5-medium-turbo
-$ mv stable-diffusion-3.5-medium-turbo ../models/
+git lfs install
+git clone https://huggingface.co/tensorart/stable-diffusion-3.5-medium-turbo
+mv stable-diffusion-3.5-medium-turbo <repo-base>/models/
 ```
-
-#### Download Dataset
-
 
 
 ### LiveCaptions
 Create a conda environment with python 3.10. Activate the environment.
+```
+conda create -n whisper python=3.10
+conda activate whisper
+```
 
 #### Install Application
 ```
@@ -79,4 +93,11 @@ git clone https://huggingface.co/openai/whisper-large-v3-turbo
 mv whisper-large-v3-turbo ../models/
 ```
 
-#### Download Dataset
+#### Prepare Dataset
+LiveCaptions shows live audio captioning. In the paper, in order to simulate live captioning for multiple requests, we store the `distil-whisper/earnings21` dataset into wav files, and use each wav file as a single request for this application. 
+```
+conda activate whisper
+cd <repo-base>/applications/LiveCaptions/
+python whisper_streaming/generate_wav_dataset.py 
+python whisper_streaming/split_wav_file.py --input_file ./whisper-earnings21/4320211.wav --output-dir ./whisper-earnings21 
+```

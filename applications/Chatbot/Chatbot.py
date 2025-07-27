@@ -14,11 +14,13 @@ sys.path.append(repo_dir)
 from applications.application import Application
 import src.utils as utils
 import src.globals as globals
+from inference_backends.Llamacpp import LlamaCpp
 
 class Chatbot(Application):
     def __init__(self):
         super().__init__()
         self.chatbot_prompts = []
+        self.backend = LlamaCpp()
 
     def run_setup(self, *args, **kwargs):
         print("Chatbot setup")
@@ -26,22 +28,9 @@ class Chatbot(Application):
         model = kwargs.get('model', self.get_default_config()['model'])
         device = kwargs.get('device', self.get_default_config()['device'])
         mps = kwargs.get('mps', self.get_default_config()['mps'])
-        llama_cpp_path = kwargs.get('llamacpp_path', self.get_default_config()['llamacpp_path'])
+        llamacpp_path = kwargs.get('llamacpp_path', self.get_default_config()['llamacpp_path'])
 
-        utils.util_run_server_script_check_log(
-            script_path=f"{repo_dir}/scripts/inference_backends/llamacpp_server.sh",
-            server_dir=f"{llama_cpp_path}",
-            stdout_log_path=f"{globals.get_results_dir()}/llamacpp_server_stdout",
-            stderr_log_path=f"{globals.get_results_dir()}/llamacpp_server_stderr",
-            stderr_ready_patterns=["update_slots: all slots are idle"],
-            stdout_ready_patterns=[],
-            listen_port=api_port,
-            api_port=api_port,
-            model=model,
-            device=device,
-            mps=mps
-        )
-
+        self.backend.launch_backend(api_port=api_port, model=model, device=device, mps=mps, llamacpp_path=llamacpp_path)
         print(f"Chatbot setup complete")
 
         return {"status": "setup_complete", "config": self.config}
@@ -49,13 +38,8 @@ class Chatbot(Application):
     def run_cleanup(self, *args, **kwargs):
         print("Chatbot cleanup")
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
-        process = subprocess.Popen(
-                        [f"{repo_dir}/scripts/cleanup.sh", str(api_port)],
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE,
-                        text=True,
-                    )
-        process.wait()
+
+        self.backend.cleanup_backend(api_port=api_port)
         return {"status": "cleanup_complete"}
 
     def run_application(self, *args, **kwargs):

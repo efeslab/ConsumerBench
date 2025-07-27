@@ -1,11 +1,11 @@
 import sys
 import os
+import argparse
 
 repo_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(repo_dir)
 
 from applications.SleepApplication.SleepApplication import SleepApplication
-from applications.AnotherApplication.AnotherApplication import AnotherApplication
 from applications.ImageGen.ImageGen import ImageGen
 from applications.DeepResearch.DeepResearch import DeepResearch
 from applications.Chatbot.Chatbot import Chatbot
@@ -13,29 +13,31 @@ from applications.LiveCaptions.LiveCaptions import LiveCaptions
 from src.workflow import Workflow
 import src.globals as globals
 
-def main():
-    """Test complex workflow with dependencies"""
-    
-    print("=== Testing Complex Workflow with Dependencies ===\n")
-    
+def main(args):
+    """User workflow with ConsumerBench"""
+    parser = argparse.ArgumentParser(description='User workflow with ConsumerBench')
+    parser.add_argument('--config', type=str, help='Path to the config file', required=True)
+    args = parser.parse_args()    
+    config_file = args.config
+    print(f"=== Testing User Workflow with ConsumerBench ===\n")
+    print(f"Using config file: {config_file}")
+
     # Initialize globals
     globals.set_start_time()
     globals.set_results_dir(f"{repo_dir}/results")
         
     # Create application instances
     sleepApplication1 = SleepApplication()
-    anotherApplication = AnotherApplication()
     imageGen = ImageGen()
     deepResearch = DeepResearch()
     chatbot = Chatbot()
     liveCaptions = LiveCaptions()
     
     # Create workflow from YAML
-    workflow = Workflow(f"{repo_dir}/configs/test_complex.yml")
+    workflow = Workflow(config_file)
     
     # Register applications
     workflow.register_application("SleepApplication", sleepApplication1)
-    workflow.register_application("AnotherApplication", anotherApplication)
     workflow.register_application("ImageGen", imageGen)
     workflow.register_application("DeepResearch", deepResearch)
     workflow.register_application("Chatbot", chatbot)
@@ -83,4 +85,4 @@ def main():
     bm.display_results()
 
 if __name__ == "__main__":
-    main() 
+    main(sys.argv[1:]) 

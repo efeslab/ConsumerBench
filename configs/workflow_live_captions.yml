@@ -3,7 +3,7 @@ lv:
     device: gpu
     mps: 100
     client_command_file: /home/cc/datasets/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
-    type: live_captions
+    type: LiveCaptions
 
 workflows:
     start_captions:

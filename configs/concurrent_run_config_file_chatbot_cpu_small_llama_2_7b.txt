@@ -1,6 +1,0 @@
-chatbot:
-    server_model = /home/cc/models/Llama-2-7B-Chat-GGUF/llama-2-7b-chat.Q8_0.gguf
-    client_model = openai/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF
-    num_requests = 10
-    device = cpu
-    mps = 100
