@@ -1,0 +1,26 @@
+sleep1:
+    type: SleepApplication
+    sleep_time: 2.0
+    num_requests: 2
+
+sleep2:
+    type: SleepApplication
+    sleep_time: 1.0
+    num_requests: 1
+
+another1:
+    type: AnotherApplication
+    another_config: "custom_value"
+    num_requests: 3
+
+workflows:
+    first_sleep:
+        uses: sleep1
+    
+    second_sleep:
+        uses: sleep2
+        depend_on: ["first_sleep"]
+    
+    another_task:
+        uses: another1
+        depend_on: ["first_sleep", "second_sleep"] 
