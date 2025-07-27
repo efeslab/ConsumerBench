@@ -6,11 +6,12 @@
 export PYTHONUNBUFFERED=1    # Python-specific: disable buffering
 export PYTHONIOENCODING=utf-8  # Ensure proper encoding
 
-listen_port=$1
-api_port=$2
-model=$3
-device=$4
-mps=$5
+server_dir=$1
+listen_port=$2
+api_port=$3
+model=$4
+device=$5
+mps=$6
 
 source ~/anaconda3/etc/profile.d/conda.sh
 
@@ -29,11 +30,11 @@ export CUDA_MPS_ACTIVE_THREAD_PERCENTAGE=${mps}
 export CUDA_VISIBLE_DEVICES=0
 
 conda activate whisper
-cd /home/cc/applications/whisper_streaming
+cd ${server_dir}/whisper_streaming
 # nsys profile --capture-range=nvtx --nvtx-capture="Main" --trace=cuda,nvtx,osrt --cuda-memory-usage=true --stats=true --force-overwrite=true --python-backtrace=cuda  --cudabacktrace=true python3 -u whisper_online_server.py --host 127.0.0.1 --port ${api_port} --device ${device} -l DEBUG --min-chunk-size 2.0 --warmup-file /home/cc/datasets/whisper-earnings21/harvard_chunk_001.wav &
 # nsys profile --capture-range=nvtx --nvtx-capture="Main" --trace=cuda,nvtx,osrt --stats=true --force-overwrite=true --python-backtrace=cuda  --cudabacktrace=true
 # nsys profile --capture-range=nvtx --nvtx-capture="Main" --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true
-python3 -u whisper_online_server.py --host 127.0.0.1 --port ${api_port} --device ${device} -l DEBUG --min-chunk-size 2.0 --warmup-file /home/cc/datasets/whisper-earnings21/harvard_chunk_001.wav &
+python3 -u whisper_online_server.py --host 127.0.0.1 --port ${api_port} --device ${device} -l DEBUG --min-chunk-size 2.0 --warmup-file ${server_dir}/whisper-earnings21/harvard_chunk_001.wav &
 
 # ncu --target-processes all python3 -u whisper_online_server.py --host 127.0.0.1 --port ${api_port} --device ${device} -l DEBUG --min-chunk-size 2.0 --warmup-file /home/cc/datasets/whisper-earnings21/harvard_chunk_001.wav &
 # ncu \

@@ -1,11 +1,15 @@
 import os
 import time
 import subprocess
+import sys
 
-import globals
+repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(repo_dir)
+
+import src.globals as globals
 
 
-def util_run_server_script_check_log(script_path: str, stdout_log_path: str, stderr_log_path: str, stderr_ready_patterns,
+def util_run_server_script_check_log(script_path: str, server_dir: str, stdout_log_path: str, stderr_log_path: str, stderr_ready_patterns,
                               stdout_ready_patterns, listen_port, api_port, model, device="gpu", mps=100):
     """Run a script and check log files for startup indicators"""
     server_pid = -1
@@ -19,7 +23,7 @@ def util_run_server_script_check_log(script_path: str, stdout_log_path: str, std
     # Start the server process with log file redirection
     with open(stdout_log, 'w') as stdout_file, open(stderr_log, 'w') as stderr_file:
         process = subprocess.Popen(
-            [script_path, str(listen_port), str(api_port), str(model), str(device), str(mps)],
+            [script_path, str(server_dir), str(listen_port), str(api_port), str(model), str(device), str(mps)],
             stdout=stdout_file,
             stderr=stderr_file,
             start_new_session=True,  # Important for server processes

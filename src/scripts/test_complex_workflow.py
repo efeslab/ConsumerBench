@@ -1,7 +1,17 @@
-from applications.SleepApplication import SleepApplication
-from applications.AnotherApplication import AnotherApplication
-from workflow import Workflow
-import globals
+import sys
+import os
+
+repo_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(repo_dir)
+
+from applications.SleepApplication.SleepApplication import SleepApplication
+from applications.AnotherApplication.AnotherApplication import AnotherApplication
+from applications.ImageGen.ImageGen import ImageGen
+from applications.DeepResearch.DeepResearch import DeepResearch
+from applications.Chatbot.Chatbot import Chatbot
+from applications.LiveCaptions.LiveCaptions import LiveCaptions
+from src.workflow import Workflow
+import src.globals as globals
 
 def main():
     """Test complex workflow with dependencies"""
@@ -10,18 +20,26 @@ def main():
     
     # Initialize globals
     globals.set_start_time()
-    globals.set_results_dir("results")
-    
+    globals.set_results_dir(f"{repo_dir}/results")
+        
     # Create application instances
     sleepApplication1 = SleepApplication()
     anotherApplication = AnotherApplication()
+    imageGen = ImageGen()
+    deepResearch = DeepResearch()
+    chatbot = Chatbot()
+    liveCaptions = LiveCaptions()
     
     # Create workflow from YAML
-    workflow = Workflow("configs/test_complex.yml")
+    workflow = Workflow(f"{repo_dir}/configs/test_complex.yml")
     
     # Register applications
     workflow.register_application("SleepApplication", sleepApplication1)
     workflow.register_application("AnotherApplication", anotherApplication)
+    workflow.register_application("ImageGen", imageGen)
+    workflow.register_application("DeepResearch", deepResearch)
+    workflow.register_application("Chatbot", chatbot)
+    workflow.register_application("LiveCaptions", liveCaptions)
     
     print("Registered applications:")
     for app_name, app in workflow.applications.items():

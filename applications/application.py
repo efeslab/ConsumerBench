@@ -33,3 +33,8 @@ class Application(ABC):
     @abstractmethod
     def run_application(self, *args, **kwargs):
         pass
+
+    # have to return something
+    @abstractmethod
+    def load_dataset(self):
+        pass

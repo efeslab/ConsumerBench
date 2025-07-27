@@ -1,9 +1,13 @@
 from collections import deque
 import yaml
 import sys
+import os
+
+repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(repo_dir)
 
 from applications.application import Application
-from benchmark_v3 import DAGScheduler, Task
+from src.benchmark_v3 import DAGScheduler, Task
 import networkx as nx
 
 # Helper functions to wrap Application methods for ExecutionNode
@@ -50,6 +54,7 @@ class Workflow:
     def register_application(self, application_name: str, application: Application):
         """Register an application instance with the workflow"""
         self.applications[application_name] = application
+        application.load_dataset()
     
     def load_workflow_unit_config(self):
         """Load workflow unit configuration from YAML"""

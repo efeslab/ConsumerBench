@@ -10,10 +10,12 @@ from typing import Dict, Callable, List, Tuple, Any, Set, Optional
 import sys
 from datetime import datetime
 
+repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(repo_dir)
+
 # [ROHAN: We should remove these paths. All application stuff should be imported from applications/, datasets/, inference-backed/ respectively. ]
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from monitors.memory_util import GpuMemoryMonitor
-import globals
+import src.globals as globals
 
 model_refcount = {}
 
@@ -391,18 +393,18 @@ class DAGScheduler:
                     
                     if not done:
                         # Timeout occurred, but no futures completed yet
-                        if len(pending_tasks) == 1 and \
-                            ("deep" in pending_tasks[0] or "research" in pending_tasks[0] or "dr" in pending_tasks[0]):
-                            print("Deep research task is pending, executing cleanup node")
-                            task = self.tasks[pending_tasks[0]]
-                            # execute the last node of deep research which is cleanup
-                            executor.submit(execute_node, f"{pending_tasks[0]}_{len(task.node_map)-1}")
-                            task.update_total_time()
-                            print(f"Task {task.task_id} completed and result written to file.")
-                            task.write_results()
-                            print(f"Node {completed_node_id} completed with result: {result}")
-                            pending_tasks.remove(task.task_id)
-                            break
+                        # if len(pending_tasks) == 1 and \
+                        #     ("deep" in pending_tasks[0] or "research" in pending_tasks[0] or "dr" in pending_tasks[0]):
+                        #     print("Deep research task is pending, executing cleanup node")
+                        #     task = self.tasks[pending_tasks[0]]
+                        #     # execute the last node of deep research which is cleanup
+                        #     executor.submit(execute_node, f"{pending_tasks[0]}_{len(task.node_map)-1}")
+                        #     task.update_total_time()
+                        #     print(f"Task {task.task_id} completed and result written to file.")
+                        #     task.write_results()
+                        #     print(f"Node {completed_node_id} completed with result: {result}")
+                        #     pending_tasks.remove(task.task_id)
+                        #     break
                         continue
                     
                     # Process completed futures and submit new tasks

@@ -1,7 +1,12 @@
 import time
 from typing import Any, Dict
-from applications.application import Application
+import sys
+import os
 
+repo_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(repo_dir)
+
+from applications.application import Application
 
 class SleepApplication(Application):
     def __init__(self):
@@ -26,3 +31,6 @@ class SleepApplication(Application):
             "sleep_time": 1.0
         }
     
+    def load_dataset(self):
+        print("SleepApplication loading dataset")
+        return {"status": "dataset_loaded"}

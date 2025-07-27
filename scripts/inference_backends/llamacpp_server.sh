@@ -6,13 +6,14 @@
 export PYTHONUNBUFFERED=1    # Python-specific: disable buffering
 export PYTHONIOENCODING=utf-8  # Ensure proper encoding
 
-listen_port=$1
-api_port=$2
-model=$3
-device=$4
-mps=$5
+server_dir=$1
+listen_port=$2
+api_port=$3
+model=$4
+device=$5
+mps=$6
 
-source ~/anaconda3/etc/profile.d/conda.sh
+# source ~/anaconda3/etc/profile.d/conda.sh
 
 # if api port is been listening, do nothing
 # pid=$(lsof -t -i :$api_port)
@@ -21,8 +22,8 @@ source ~/anaconda3/etc/profile.d/conda.sh
 #     exit 0
 # fi
 
-conda activate llamacpp
-cd /home/cc/llama.cpp
+# conda activate llamacpp
+cd $server_dir
 
 # if device is cpu, use cpu version
 if [ "$device" == "gpu" ]; then

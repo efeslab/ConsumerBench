@@ -1,6 +1,11 @@
 from typing import Any, Dict
-from applications.application import Application
+import os
+import sys
 
+repo_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(repo_dir)
+
+from applications.application import Application
 
 class AnotherApplication(Application):
     def __init__(self):
@@ -22,3 +27,7 @@ class AnotherApplication(Application):
         return {
             "another_config": "another_value"
         }
+
+    def load_dataset(self):
+        print("AnotherApplication loading dataset")
+        return {"status": "dataset_loaded"}

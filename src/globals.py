@@ -17,15 +17,15 @@ start_time = None
 model_refcount_lock = threading.Lock()
 model_refcount = {}
 
-def set_working_dir(path):
-    global working_dir
-    working_dir = path
+def set_base_dir(path):
+    global base_dir
+    base_dir = path
 
-def get_working_dir():
-    global working_dir
-    if working_dir is None:
-        raise ValueError("Working directory is not set. Please set it using set_working_dir()")
-    return working_dir
+def get_base_dir():
+    global base_dir
+    if base_dir is None:
+        raise ValueError("Base directory is not set. Please set it using set_base_dir()")
+    return base_dir
 
 # You can add a function to update it
 def set_results_dir(path):
