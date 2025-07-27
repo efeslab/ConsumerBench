@@ -2,8 +2,6 @@ from collections import deque
 import yaml
 import sys
 
-sys.path.append("/home/cc/os-llm")
-
 from applications.application import Application
 from benchmark_v3 import DAGScheduler, Task
 import networkx as nx
@@ -60,7 +58,10 @@ class Workflow:
                 continue
 
             app_type = v["type"]
+            application = self.applications[app_type]
+            default_config = application.get_default_config()
             node_config = {k: val for k, val in v.items() if k != "type"}
+            node_config = {**default_config, **node_config}
             
             # Store the configuration
             self.workflow_unit_map[k] = {

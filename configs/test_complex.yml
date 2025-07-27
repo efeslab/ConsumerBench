@@ -5,7 +5,6 @@ sleep1:
 
 sleep2:
     type: SleepApplication
-    sleep_time: 1.0
     num_requests: 1
 
 another1:

@@ -19,14 +19,17 @@ class Application(ABC):
     def add_config(self, config: Dict[str, Any]):
         self.config.update(config)
 
+    # have to return something
     @abstractmethod
     def run_setup(self, *args, **kwargs):
         pass
 
+    # have to return something
     @abstractmethod
     def run_cleanup(self, *args, **kwargs):
         pass
 
+    # have to return something
     @abstractmethod
     def run_application(self, *args, **kwargs):
         pass
