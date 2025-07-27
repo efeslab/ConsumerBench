@@ -308,12 +308,17 @@ class DAGScheduler:
             topo_order = list(nx.topological_sort(self.dag))
             print(f"Topological order: {topo_order}")
             for node_id in topo_order:
-                node = self.dag.nodes[node_id]
                 print(f"\n=== Executing Node {node_id} ===")
                 execution_time, result, success = self.node_map[node_id].execute()
                 if not success:
                     raise ValueError(f"Node {node_id} failed to execute successfully")
                 print(f"Node {node_id} completed in {execution_time:.4f} seconds")
+                
+                # Store the result in the corresponding task
+                if node_id in self.node_id_to_task:
+                    task = self.node_id_to_task[node_id]
+                    task.results.append(result)
+                    print(f"Node {node_id} completed with result: {result}")
                 
         
         self.total_time = time.time() - start_time
