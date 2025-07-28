@@ -17,6 +17,7 @@ def main(args):
     """User workflow with ConsumerBench"""
     parser = argparse.ArgumentParser(description='User workflow with ConsumerBench')
     parser.add_argument('--config', type=str, help='Path to the config file', required=True)
+    parser.add_argument('--results', type=str, help='Path to save results', default=f"{repo_dir}/results")
     args = parser.parse_args()    
     config_file = args.config
     print(f"=== Testing User Workflow with ConsumerBench ===\n")
@@ -24,7 +25,7 @@ def main(args):
 
     # Initialize globals
     globals.set_start_time()
-    globals.set_results_dir(f"{repo_dir}/results")
+    globals.set_results_dir(f"{args.results}")
         
     # Create application instances
     sleepApplication1 = SleepApplication()

@@ -2,14 +2,18 @@
 
 # This script runs the benchmark for the LLM model using the specified parameters.
 # Usage: ./run_benchmark.sh <config_file>
-# Example: ./run_benchmark.sh /home/cc/os-llm/configs/config.txt
+# Example: ./run_benchmark.sh ConsumerBench/configs/workflow_chatbot.yml 0
 # Check if the config file is provided
 
 source ~/anaconda3/etc/profile.d/conda.sh
+
+# Change to your conda environment name
 conda activate benchmark
 
 SCRIPTS_DIR=`readlink -f $(dirname "$0")`
+SCRIPTS_DIR=$SCRIPTS_DIR/../monitors
 BASE_DIR=`readlink -f $SCRIPTS_DIR/..`
+PLOT_SCRIPTS_DIR=$BASE_DIR/scripts/result_processing
 
 if [ $# -ne 2 ]; then
     echo "Usage: $0 <config_file> <nsight(0/1)>"
@@ -50,7 +54,7 @@ cat ${RESULTS_DIR}/config.json | jq
 if [ $NSIGHT -eq 1 ]; then
     echo "Running with Nsight Systems profiling..."
     #nsys profile --cuda-memory-usage=true --force-overwrite=true --trace=cuda,nvtx,osrt --gpu-metrics-devices=all --event-sample=system-wide --cpu-core-events='1' --event-sampling-interval=200 --cpuctxsw=system-wide -o memory_report --export=sqlite python3 -u /home/cc/os-llm/benchmark_v2.py --benchmark all --config $CONFIG_FILE --results $RESULTS_DIR
-    nsys profile --delay=50 --duration=60 --cuda-memory-usage=true --force-overwrite=true --trace=cuda,nvtx,osrt --gpu-metrics-devices=all -o memory_report --export=sqlite python3 -u ${BASE_DIR}/benchmark_v2.py --benchmark workflow --config $CONFIG_FILE --results $RESULTS_DIR --start_time $start_time
+    nsys profile --delay=50 --duration=60 --cuda-memory-usage=true --force-overwrite=true --trace=cuda,nvtx,osrt --gpu-metrics-devices=all -o memory_report --export=sqlite python3 -u ${BASE_DIR}/src/scripts/run_consumerbench.py --config $CONFIG_FILE --results $RESULTS_DIR
 
     if [ $? -ne 0 ]; then
         echo "Benchmark failed!"
@@ -85,7 +89,7 @@ else
     echo "Result directory":
     echo "$RESULTS_DIR"
     echo "--------------------------------"
-    python3 -u ${BASE_DIR}/benchmark_v2.py --benchmark workflow --config $CONFIG_FILE --results $RESULTS_DIR --start_time $start_time
+    python3 -u ${BASE_DIR}/src/scripts/run_consumerbench.py --config $CONFIG_FILE --results $RESULTS_DIR
     # Check if the benchmark was successful
     if [ $? -ne 0 ]; then
         echo "Benchmark failed!"
@@ -114,28 +118,13 @@ fi
 echo "start_time: $start_time"
 
 # Create plots
-python3 ${SCRIPTS_DIR}/plot_cpu_compute_usage.py --input_file_cpu ${RESULTS_DIR}/cpu_usage.log --input_file_mem ${RESULTS_DIR}/memory-bw.csv -o ${RESULTS_DIR}/cpu_compute_usage.png -s $start_time
-python3 ${SCRIPTS_DIR}/plot_cpu_mem_usage.py --input_file_cpu ${RESULTS_DIR}/cpu_usage.log --input_file_mem ${RESULTS_DIR}/memory-bw.csv -o ${RESULTS_DIR}/cpu_mem_usage.png -s $start_time
-python3 ${SCRIPTS_DIR}/dcgm_plotter_gpu_compute.py ${RESULTS_DIR}/gpu_utilization.log -o ${RESULTS_DIR}/gpu_compute_usage.png -s $start_time
-python3 ${SCRIPTS_DIR}/dcgm_plotter_gpu_mem.py ${RESULTS_DIR}/gpu_utilization.log -o ${RESULTS_DIR}/gpu_mem_usage.png -s $start_time
-python3 ${SCRIPTS_DIR}/plot_power_usage.py --input ${RESULTS_DIR}/power_data.csv -o ${RESULTS_DIR}/power_usage.png
+python3 ${PLOT_SCRIPTS_DIR}/plot_cpu_compute_usage.py --input_file_cpu ${RESULTS_DIR}/cpu_usage.log --input_file_mem ${RESULTS_DIR}/memory-bw.csv -o ${RESULTS_DIR}/cpu_compute_usage.png -s $start_time
+python3 ${PLOT_SCRIPTS_DIR}/plot_cpu_mem_usage.py --input_file_cpu ${RESULTS_DIR}/cpu_usage.log --input_file_mem ${RESULTS_DIR}/memory-bw.csv -o ${RESULTS_DIR}/cpu_mem_usage.png -s $start_time
+python3 ${PLOT_SCRIPTS_DIR}/dcgm_plotter_gpu_compute.py ${RESULTS_DIR}/gpu_utilization.log -o ${RESULTS_DIR}/gpu_compute_usage.png -s $start_time
+python3 ${PLOT_SCRIPTS_DIR}/dcgm_plotter_gpu_mem.py ${RESULTS_DIR}/gpu_utilization.log -o ${RESULTS_DIR}/gpu_mem_usage.png -s $start_time
+python3 ${PLOT_SCRIPTS_DIR}/plot_power_usage.py --input ${RESULTS_DIR}/power_data.csv -o ${RESULTS_DIR}/power_usage.png
 
-IFS=$'\n'
-perf_logs=($(find "$RESULTS_DIR" -type f -name "*_perf.log"))
-unset IFS  # Reset IFS when done
-for i in "${!perf_logs[@]}"
-do
-    python3 ${SCRIPTS_DIR}/parse-results-chatbot.py "${perf_logs[$i]}"
-    python3 ${SCRIPTS_DIR}/parse-results-deepresearch.py "${perf_logs[$i]}"
-    python3 ${SCRIPTS_DIR}/parse-results-imagegen.py "${perf_logs[$i]}"
-    python3 ${SCRIPTS_DIR}/parse-results-whisper.py "${perf_logs[$i]}"
-    python3 ${SCRIPTS_DIR}/parse-results-chatbot-log.py "${perf_logs[$i]}"
-    python3 ${SCRIPTS_DIR}/parse-results-deepresearch-log.py "${perf_logs[$i]}"
-    python3 ${SCRIPTS_DIR}/parse-results-imagegen-log.py "${perf_logs[$i]}"
-    python3 ${SCRIPTS_DIR}/parse-results-whisper-log.py "${perf_logs[$i]}"
-done
 
-python3 /home/cc/os-llm/scripts/overall_benchmark_output.py ${RESULTS_DIR}/overall_perf.log
     
 # Remove csv files
 # sudo rm ${RESULTS_DIR}/cpu_usage.log

@@ -2,7 +2,6 @@
 
 # This script monitors CPU usage and logs it to a file.
 # Usage: ./get_cpu_usage.sh <Results Directory>
-# Example: ./get_cpu_usage.sh /home/cc/os-llm/results
 # Check if the results directory is provided
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <Results Directory>"
