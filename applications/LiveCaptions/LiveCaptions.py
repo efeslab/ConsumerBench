@@ -65,7 +65,7 @@ class LiveCaptions(Application):
         # Start the server process with log file redirection
         with open(stdout_log, 'w') as stdout_file, open(stderr_log, 'w') as stderr_file:
             process = subprocess.Popen(
-                [f"{repo_dir}/applications/LiveCaptions/whisper_online_client.sh", str(api_port), str(live_captions_path)],
+                [f"{repo_dir}/applications/LiveCaptions/whisper_online_client.sh", str(api_port), str(live_captions_path), f"{repo_dir}/applications/LiveCaptions"],
                 stdout=stdout_file,
                 stderr=stderr_file,
                 start_new_session=True,  # Important for server processes

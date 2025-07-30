@@ -8,10 +8,11 @@ export PYTHONIOENCODING=utf-8  # Ensure proper encoding
 
 api_port=$1
 wav_file_path=$2
+app_dir=$3
 
 source ~/anaconda3/etc/profile.d/conda.sh
 
 conda activate whisper
 
-cd /home/cc/applications/whisper_streaming
-stdbuf -oL -eL python3 /home/cc/applications/whisper_streaming/generate_raw_realtime.py ${wav_file_path} --port ${api_port}
+cd ${app_dir}/whisper_streaming
+stdbuf -oL -eL python3 generate_raw_realtime.py ${wav_file_path} --port ${api_port}
