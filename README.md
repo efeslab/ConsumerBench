@@ -28,6 +28,17 @@ Run the benchmark using the command
 python src/scripts/run_consumerbench.py --config <path-to-config>
 ```
 
+## 🔧 Hardware / System Requirements
+The benchmark has been tested on the following hardware:
+Setup 1:
+  CPU: Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
+  GPU: NVIDIA RTX 6000  
+  System Memory: 32GB
+  CPU cores: 12
+Setup 2:
+  Macbook Pro M1
+  Unified Memory: 32GB
+
 
 ## 📋 Repository Structure
 
