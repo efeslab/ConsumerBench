@@ -8,8 +8,8 @@
 	branch = main
 [submodule "inference_backends/llama.cpp"]
 	path = inference_backends/llama.cpp
-	url = git@github.com:efeslab/llama.cpp.git
+	url = https://github.com/ggml-org/llama.cpp
 [submodule "applications/DeepResearch/smolagents"]
 	path = applications/DeepResearch/smolagents
-	url = https://github.com/efeslab/smolagents.git
+	url = https://github.com/huggingface/smolagents
 	branch = os-llm

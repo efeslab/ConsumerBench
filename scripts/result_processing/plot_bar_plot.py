@@ -13,7 +13,7 @@ SLOs = {
     'livecaption': 2
 }
 
-def plot_performance(gpu_folder_path, cpu_folder_path, save_path="/home/cc/os-llm/scripts/plots/gpu_vs_cpu_latency_and_slo_sampling"):
+def plot_performance(gpu_folder_path, cpu_folder_path, save_path="scripts/plots/gpu_vs_cpu_latency_and_slo_sampling"):
     # Read CSVs
     # gpu_data = pd.read_csv(os.path.join(gpu_folder_path, 'task_chat1_u0_perf.csv'))
     # cpu_data = pd.read_csv(os.path.join(cpu_folder_path, 'task_chat1_u0_perf.csv'))
@@ -281,8 +281,7 @@ def plot_performance_bar_plots(folder_path):
     print(f"Plot saved to {plot_path}")
 
 # Example usage:
-# plot_performance_bar_plots('/home/cc/os-llm/scripts/plots/bar_plots_cpu_single_app')
 plot_performance(
-    '/home/cc/os-llm/scripts/plots/bar_plots_gpu_single_app_sampling',
-    '/home/cc/os-llm/scripts/plots/bar_plots_cpu_single_app_sampling'
+    'scripts/plots/bar_plots_gpu_single_app_sampling',
+    'scripts/plots/bar_plots_cpu_single_app_sampling'
     )

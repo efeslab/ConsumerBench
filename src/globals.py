@@ -42,13 +42,13 @@ def set_start_time():
     global start_time    
     start_time = datetime.now()
 
-# [ROHAN: We should remove this explicit prompt]
+# [ We should remove this explicit prompt]
 def load_deep_research_dataset():
     global deep_research_prompts
     # deep_research_prompts.append("Give me a summary of the latest research paper on AI.")
     deep_research_prompts.append("What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?")
 
-# [ROHAN: We should remove names of datasets if possible]
+# [ We should remove names of datasets if possible]
 def load_textgen_dataset():
     global textgen_prompts
     """Load the text generation dataset"""
@@ -59,13 +59,13 @@ def load_textgen_dataset():
     for item in ds_textgen_lmsys:
         textgen_prompts.append(item['conversation'][0]['content'])
 
-# [ROHAN: We should remove names of datasets if possible]
+# [ We should remove names of datasets if possible]
 def get_next_textgen_prompt():
     global textgen_prompts
     return textgen_prompts.pop(0)
 
 
-# [ROHAN: We should remove names of datasets if possible]
+# [ We should remove names of datasets if possible]
 def load_imagegen_dataset():
     global imagegen_prompts
     """Load the image generation dataset"""
@@ -76,13 +76,13 @@ def load_imagegen_dataset():
     for item in ds_imagegen_cococaptions:
         imagegen_prompts.append(item['caption1'])
 
-# [ROHAN: We should remove names of datasets if possible]
+# [ We should remove names of datasets if possible]
 def get_next_imagegen_prompt():
     global imagegen_prompts
     return imagegen_prompts.pop(0)
 
 
-# [ROHAN: We should remove names of datasets if possible]
+# [ We should remove names of datasets if possible]
 def load_livecaptions_dataset():
     global livecaptions_prompts
     """Load the live captions dataset"""
@@ -94,4 +94,4 @@ def load_livecaptions_dataset():
         # livecaptions_prompts.append(item['audio'])
         # save the audio file
         audio_file = item['audio']
-        audio_file_path = os.path.join("/home/cc/datasets/whisper-earnings21", audio_file)
+        audio_file_path = os.path.join("datasets/whisper-earnings21", audio_file)

@@ -1,12 +1,12 @@
 Brainstorm (chatbot):
-    model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
     num_requests: 10
     device: gpu
     type: Chatbot
     mps: 100
 
 Analysis (deep_research):
-    server_model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    server_model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
     client_model: openai/meta-llama/Llama-3.2-3B-Instruct
     num_requests: 1
     device: gpu
@@ -14,7 +14,7 @@ Analysis (deep_research):
     mps: 100
 
 Preparing Outline (chatbot):
-    model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
     num_requests: 20
     device: gpu
     type: Chatbot
@@ -30,7 +30,7 @@ Creating Cover Art (imagegen):
 Generating Captions (live_captions):
     num_requests: 1
     device: gpu
-    client_command_file: /home/cc/datasets/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
+    client_command_file: datasets/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
     mps: 100
     type: LiveCaptions  
 

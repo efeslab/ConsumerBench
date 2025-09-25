@@ -94,30 +94,30 @@ This script collects:
 Results are saved in the `results` directory with timestamps. PDF plots are automatically generated.
 
 To modify Service Level Objectives (SLOs):
-- Chatbot: [`scripts/parse-results-chatbot-log.py`](https://github.com/efeslab/ConsumerBench/blob/master/scripts/parse-results-chatbot-log.py)
-- DeepResearch: [`scripts/parse-results-deepresearch-log.py`](https://github.com/efeslab/ConsumerBench/blob/master/scripts/parse-results-deepresearch-log.py)
-- ImageGen: [`scripts/parse-results-imagegen-log.py`](https://github.com/efeslab/ConsumerBench/blob/master/scripts/parse-results-imagegen-log.py)
-- LiveCaptions: [`scripts/parse-results-whisper-log.py`](https://github.com/efeslab/ConsumerBench/blob/master/scripts/parse-results-whisper-log.py)
+- Chatbot: [`scripts/parse-results-chatbot-log.py`](scripts/parse-results-chatbot-log.py)
+- DeepResearch: [`scripts/parse-results-deepresearch-log.py`](scripts/parse-results-deepresearch-log.py)
+- ImageGen: [`scripts/parse-results-imagegen-log.py`](scripts/parse-results-imagegen-log.py)
+- LiveCaptions: [`scripts/parse-results-whisper-log.py`](scripts/parse-results-whisper-log.py)
 
 ## 📝 Experiment Configurations
 
 ### Exclusive Execution
 | Application | Config |
 |-------------|--------|
-| Chatbot | [`configs/workflow_chatbot.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_chatbot.yml) |
-| LiveCaptions | [`configs/workflow_live_captions.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_live_captions.yml) |
-| ImageGen | [`configs/workflow_imagegen.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_imagegen.yml) |
+| Chatbot | [`configs/workflow_chatbot.yml`](configs/workflow_chatbot.yml) |
+| LiveCaptions | [`configs/workflow_live_captions.yml`](configs/workflow_live_captions.yml) |
+| ImageGen | [`configs/workflow_imagegen.yml`](configs/workflow_imagegen.yml) |
 
 > **CPU-only:** Change `device` from "gpu" to "cpu" in the configs.
 
 ### Concurrent Execution
-- **Greedy allocation:** [`configs/workflow_chatbot_imagegen_live_captions.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_chatbot_imagegen_live_captions.yml)
-- **GPU partitioning:** [`configs/workflow_chatbot_imagegen_live_captions_mps.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_chatbot_imagegen_live_captions_mps.yml)
+- **Greedy allocation:** [`configs/workflow_chatbot_imagegen_live_captions.yml`](configs/workflow_chatbot_imagegen_live_captions.yml)
+- **GPU partitioning:** [`configs/workflow_chatbot_imagegen_live_captions_mps.yml`](configs/workflow_chatbot_imagegen_live_captions_mps.yml)
 
 ### Model Sharing (Inference Server)
-- **Config:** [`configs/workflow_chatbot_deep_research.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_chatbot_deep_research.yml)
-- Edit [`example_workflow/llamacpp_server.sh`](https://github.com/efeslab/ConsumerBench/blob/master/example_workflow/llamacpp_server.sh) to add `-c 128000 -nkvo` for Chatbot-KVCache-CPU
+- **Config:** [`configs/workflow_chatbot_deep_research.yml`](configs/workflow_chatbot_deep_research.yml)
+- Edit [`example_workflow/llamacpp_server.sh`](example_workflow/llamacpp_server.sh) to add `-c 128000 -nkvo` for Chatbot-KVCache-CPU
 
 ### End-to-End User Workflow
-- **Greedy allocation:** [`configs/workflow_content_creation.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_content_creation.yml)
-- **GPU partitioning:** [`configs/workflow_content_creation_mps.yml`](https://github.com/efeslab/ConsumerBench/blob/master/configs/workflow_content_creation_mps.yml)
+- **Greedy allocation:** [`configs/workflow_content_creation.yml`](configs/workflow_content_creation.yml)
+- **GPU partitioning:** [`configs/workflow_content_creation_mps.yml`](configs/workflow_content_creation_mps.yml)

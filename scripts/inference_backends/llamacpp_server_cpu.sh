@@ -13,7 +13,7 @@ model=$3
 source ~/anaconda3/etc/profile.d/conda.sh
 
 conda activate llamacpp
-cd /home/cc/llama.cpp
+cd llama.cpp
 stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model}
 SERVER_PID=$!
 

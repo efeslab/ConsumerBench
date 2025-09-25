@@ -13,7 +13,7 @@ model=$3
 source ~/anaconda3/etc/profile.d/conda.sh
 
 conda activate textgen
-cd /home/cc/applications/text-generation-webui
+cd applications/text-generation-webui
 stdbuf -oL -eL python one_click.py --api --listen-port=${listen_port} --api-port=${api_port} --model=${model} &
 SERVER_PID=$!
 

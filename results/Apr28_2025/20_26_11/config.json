@@ -1,7 +1,0 @@
-{
-    "imagegen": {
-        "server_model": "/home/cc/models/stable-diffusion-3.5-large",
-        "num_requests": 3,
-        "device": "cpu"
-    }
-}

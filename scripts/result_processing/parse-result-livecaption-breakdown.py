@@ -1,7 +1,7 @@
 import re
 import pandas as pd
 
-file_path = "/home/cc/os-llm/scripts/plots/concurrent/plot_data/livecaption-no-mps.txt"
+file_path = "scripts/plots/concurrent/plot_data/livecaption-no-mps.txt"
 with open(file_path, 'r') as f:
     log_text = f.read()
 

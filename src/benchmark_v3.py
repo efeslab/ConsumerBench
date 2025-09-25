@@ -13,7 +13,7 @@ from datetime import datetime
 repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(repo_dir)
 
-# [ROHAN: We should remove these paths. All application stuff should be imported from applications/, datasets/, inference-backed/ respectively. ]
+# [ We should remove these paths. All application stuff should be imported from applications/, datasets/, inference-backed/ respectively. ]
 from monitors.memory_util import GpuMemoryMonitor
 import src.globals as globals
 
@@ -645,7 +645,7 @@ def main(args):
     log_path = os.path.join(args.results, log_filename)
     logging.basicConfig(filename=log_path, level=logging.INFO)
 
-    # [ROHAN: Maybe lets just keep workflow? No other things needed. Basically no need to check workflow. We only support workflows, and workflows can have different applications running singularly within the yaml.]
+    # [ Maybe lets just keep workflow? No other things needed. Basically no need to check workflow. We only support workflows, and workflows can have different applications running singularly within the yaml.]
     from workflow import Workflow
     globals.load_textgen_dataset()
     globals.load_imagegen_dataset()
@@ -659,7 +659,7 @@ def main(args):
     benchmark.visualize()
     # logging.info("\n=== Running Concurrent Benchmark ===")
 
-    # [ROHAN: monitoring can be in a separate directory as well to keep it modular]
+    # [ monitoring can be in a separate directory as well to keep it modular]
     monitor = GpuMemoryMonitor(gpu_id=0, interval=0.01, results_dir=args.results)
     import threading
     monitor_thread = threading.Thread(target=monitor.start_monitoring)

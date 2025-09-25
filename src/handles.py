@@ -16,7 +16,7 @@ from utils import util_run_server_script_check_log, parse_commands
 
 
 # ====== LlamaCPP ========
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def setup_llamacpp_server(**kwargs):
     # return True
 
@@ -61,7 +61,7 @@ def setup_llamacpp_server(**kwargs):
 
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def cleanup_llamacpp_server(**kwargs):
     # return True
     # print("Popping Main range")
@@ -98,7 +98,7 @@ def cleanup_llamacpp_server(**kwargs):
 
 
 # ====== Deep Research ======
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_deep_research_dataset(api_port, model):
     global deep_research_prompts
 
@@ -132,7 +132,7 @@ def run_deep_research_dataset(api_port, model):
     return result
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_deep_research(**kwargs):
     print("Running deep research (ephemeral app)...")
 
@@ -147,7 +147,7 @@ def run_deep_research(**kwargs):
 # Define example functions for a simple benchmark
 
 # ====== text2image ========
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def setup_imagegen(**kwargs):
     global global_vars
 
@@ -182,7 +182,7 @@ def setup_imagegen(**kwargs):
         global_vars['imagegen_pipeline'] = global_vars['imagegen_pipeline'].to("cpu")
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_imagegen_prompt(prompt):
     global global_vars
 
@@ -293,7 +293,7 @@ def run_imagegen_prompt(prompt):
 
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_imagegen_command_file(filename):
     # read the commands from the file
     commands = parse_commands(filename)
@@ -306,7 +306,7 @@ def run_imagegen_command_file(filename):
     return result
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_imagegen_dataset():
     global imagegen_prompts
 
@@ -318,7 +318,7 @@ def run_imagegen_dataset():
     return result
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_imagegen(**kwargs):
     print("Running imagegen")
 
@@ -331,7 +331,7 @@ def run_imagegen(**kwargs):
 
     return result
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def cleanup_imagegen(**kwargs):
     # print("Popping Main range")
     # try:
@@ -344,19 +344,19 @@ def cleanup_imagegen(**kwargs):
 
 # ====== Nothing ========
 
-# [ROHAN: no need to have this. Move it to applications/ if necessary]
+# [ no need to have this. Move it to applications/ if necessary]
 def nothing_function(**kwargs):
     # This function does nothing
     return True
 
-# [ROHAN: no need to have this. Move it to applications/ if necessary]
+# [ no need to have this. Move it to applications/ if necessary]
 def sleep_function(**kwargs):
     # This function sleeps for 1 second
     time.sleep(60)
     return True
 
 # ====== Live Captions =======
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def setup_whisper():
     global global_vars
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
@@ -381,7 +381,7 @@ def setup_whisper():
     )
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_whisper(**kwargs):
     global global_vars, livecaptions_prompts
     print("Running whisper (ephemeral app)...")
@@ -409,13 +409,13 @@ def run_whisper(**kwargs):
     return result
 
     
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def cleanup_whisper():
     # Do nothing
     return
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def setup_whisper_online(**kwargs):
     server_pid = -1
 
@@ -441,7 +441,7 @@ def setup_whisper_online(**kwargs):
     return server_pid
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_whisper_online_command_file(api_port, wav_file_path):
     print(f"Running whisper-online (ephemeral app) on {wav_file_path}...")
     end_time = None
@@ -482,7 +482,7 @@ def run_whisper_online_command_file(api_port, wav_file_path):
     return result
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_whisper_online_dataset(api_port):
     # get a random file from datasets/whisper-earnings21
     directory = os.path.join(globals.project_dir, "datasets/whisper-earnings21")
@@ -494,7 +494,7 @@ def run_whisper_online_dataset(api_port):
     return result
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_whisper_online(**kwargs):
     api_port = kwargs.get('api_port', 5050)
     wav_file_path = kwargs.get('command_file', None)
@@ -505,7 +505,7 @@ def run_whisper_online(**kwargs):
     return result
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def cleanup_whisper_online(**kwargs):
     api_port = kwargs.get('api_port', 5050)
     process = subprocess.Popen(
@@ -519,7 +519,7 @@ def cleanup_whisper_online(**kwargs):
 
 
 # ====== textgen ========
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def setup_textgen(**kwargs):
     server_pid = -1
 
@@ -543,7 +543,7 @@ def setup_textgen(**kwargs):
     return server_pid
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_textgen_command_file(filename, api_port):
     commands = parse_commands(filename)        
 
@@ -613,9 +613,9 @@ def run_textgen_command_file(filename, api_port):
     # }
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_textgen_dataset(api_port):
-    # TODO: Yile, use the following session to issue posts
+    # TODO: use the following session to issue posts
     api_url = f"http://127.0.0.1:{api_port}/v1/completions"
 
     ttft = None
@@ -696,7 +696,7 @@ def run_textgen_dataset(api_port):
     return result
     
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_textgen(**kwargs):
     print("Running textgen (background app)...")
 
@@ -714,7 +714,7 @@ def run_textgen(**kwargs):
     return result
 
 
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def cleanup_textgen(**kwargs):
     """Example function to cleanup textgen"""
     print("Cleaning up textgen app...")
@@ -730,7 +730,7 @@ def cleanup_textgen(**kwargs):
     return True
 
 # ====== livecaptions ========
-# [ROHAN: no need to have this]
+# [ no need to have this]
 def run_livecaptions(**kwargs):
     """Example function to run livecaptions"""
     print("Running livecaptions app...")
@@ -741,6 +741,6 @@ def run_livecaptions(**kwargs):
     process.wait()
     return True
 
-# [ROHAN: no need to have this. Shadow can also be an application]
+# [ no need to have this. Shadow can also be an application]
 def shadow_function(**kwargs):
     return True

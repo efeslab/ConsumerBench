@@ -53,7 +53,6 @@ cat ${RESULTS_DIR}/config.json | jq
 # Check if nsight is enabled
 if [ $NSIGHT -eq 1 ]; then
     echo "Running with Nsight Systems profiling..."
-    #nsys profile --cuda-memory-usage=true --force-overwrite=true --trace=cuda,nvtx,osrt --gpu-metrics-devices=all --event-sample=system-wide --cpu-core-events='1' --event-sampling-interval=200 --cpuctxsw=system-wide -o memory_report --export=sqlite python3 -u /home/cc/os-llm/benchmark_v2.py --benchmark all --config $CONFIG_FILE --results $RESULTS_DIR
     nsys profile --delay=50 --duration=60 --cuda-memory-usage=true --force-overwrite=true --trace=cuda,nvtx,osrt --gpu-metrics-devices=all -o memory_report --export=sqlite python3 -u ${BASE_DIR}/src/scripts/run_consumerbench.py --config $CONFIG_FILE --results $RESULTS_DIR
 
     if [ $? -ne 0 ]; then

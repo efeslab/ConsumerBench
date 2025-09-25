@@ -136,4 +136,4 @@ def plot_performance_bar_plots(folder_path):
     print(f"Plot saved to {plot_path}")
 
 # Example usage:
-plot_performance_bar_plots('/home/cc/os-llm/scripts/plots/bar_plots_kv_offload_sampling')
+plot_performance_bar_plots('scripts/plots/bar_plots_kv_offload_sampling')

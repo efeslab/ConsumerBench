@@ -79,7 +79,7 @@ def util_run_server_script_check_log(script_path: str, server_dir: str, stdout_l
     
     return server_pid
 
-# [ROHAN: are we using this?]
+# [ are we using this?]
 def parse_commands(filename: str):
     """Read commands from a file"""
     commands: list[str] = []

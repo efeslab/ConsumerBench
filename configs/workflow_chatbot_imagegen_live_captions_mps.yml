@@ -10,11 +10,11 @@ lv:
     num_requests: 1
     device: gpu
     mps: 33
-    client_command_file: /home/cc/datasets/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
+    client_command_file: datasets/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
     type: LiveCaptions
 
 chat1:
-    model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
     num_requests: 50
     device: gpu
     type: Chatbot

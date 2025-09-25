@@ -109,13 +109,3 @@ def plot_latency_comparison(no_mps_path, with_mps_path, output_file):
     fig.tight_layout()
     plt.savefig(output_file)
     plt.show()
-
-# Example usage
-plot_latency_comparison(
-    # '/home/cc/os-llm/results/May12_2025/workflow_chatbot_imagegen_live_captions_00_21_08',
-    # '/home/cc/os-llm/results/May11_2025/workflow_chatbot_imagegen_live_captions_mps_23_57_50',
-    # '/home/cc/os-llm/scripts/plots/concurrent/concurrent.png'
-    '/home/cc/os-llm/results/May13_2025/workflow_chatbot_imagegen_live_captions_06_40_56',
-    '/home/cc/os-llm/results/May13_2025/workflow_chatbot_imagegen_live_captions_mps_06_51_07',
-    '/home/cc/os-llm/scripts/plots/concurrent_sampling/concurrent.png'
-)
