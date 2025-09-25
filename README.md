@@ -94,10 +94,10 @@ This script collects:
 Results are saved in the `results` directory with timestamps. PDF plots are automatically generated.
 
 To modify Service Level Objectives (SLOs):
-- Chatbot: [`scripts/parse-results-chatbot-log.py`](scripts/parse-results-chatbot-log.py)
-- DeepResearch: [`scripts/parse-results-deepresearch-log.py`](scripts/parse-results-deepresearch-log.py)
-- ImageGen: [`scripts/parse-results-imagegen-log.py`](scripts/parse-results-imagegen-log.py)
-- LiveCaptions: [`scripts/parse-results-whisper-log.py`](scripts/parse-results-whisper-log.py)
+- Chatbot: [`scripts/result_processing/parse-results-chatbot-log.py`](scripts/result_processing/parse-results-chatbot-log.py)
+- DeepResearch: [`scripts/result_processing/parse-results-deepresearch-log.py`](scripts/result_processing/parse-results-deepresearch-log.py)
+- ImageGen: [`scripts/result_processing/parse-results-imagegen-log.py`](scripts/result_processing/parse-results-imagegen-log.py)
+- LiveCaptions: [`scripts/result_processing/parse-results-whisper-log.py`](scripts/result_processing/parse-results-whisper-log.py)
 
 ## 📝 Experiment Configurations
 
