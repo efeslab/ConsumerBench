@@ -12,7 +12,7 @@ def parse_results_from_file(file_path, generate_plot=True):
         with open(file_path, 'r') as file:
             file_content = file.read()
         
-        pattern = r"app_type: deep_research"
+        pattern = r"app_type: DeepResearch"
         match = re.search(pattern, file_content)
         if not match:
             return True

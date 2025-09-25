@@ -13,7 +13,7 @@ def parse_results_from_file(file_path, generate_plot=True):
             file_content = file.read()
         
         # Check if the file contains the app_type for chatbot        
-        pattern = r"app_type: imagegen"
+        pattern = r"app_type: ImageGen"
         match = re.search(pattern, file_content)
         if not match:
             return True

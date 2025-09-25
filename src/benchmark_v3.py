@@ -69,7 +69,7 @@ class ExecutionNode:
 
 class Task:
     """Represents a workflow task composed of execution nodes arranged in a DAG"""
-    def __init__(self, task_id: str, task_type: str = "ephemeral", app_type: str = "chatbot"):
+    def __init__(self, task_id: str, task_type: str = "ephemeral", app_type: str = "Chatbot"):
         """
         Initialize a task with a DAG of execution nodes.
         
