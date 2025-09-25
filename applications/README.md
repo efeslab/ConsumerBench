@@ -3,7 +3,7 @@ Users can configure any custom applications that use local GenAI models, to run 
 
 1. Create a new sub-directory in this folder for the application
 2. Install the application in the sub-directory
-3. Implement the `Application` interface. (Please see the existing applications, such as DeepResearch: [`applications/DeepResearch/DeepResearch.py`](applications/DeepResearch/DeepResearch.py).)
+3. Implement the `Application` interface. (Please see the existing applications, such as DeepResearch: [`DeepResearch/DeepResearch.py`](applications/DeepResearch/DeepResearch.py).)
 4. Register the application with ConsumerBench: Please create an instance of the application in `src/scripts/run_consumerbench.py`. Look for existing applications and similarly register the new application. 
 4. You can then add your own applications to the workflows (specified in `configs/`), and the application will be monitored automatically with ConsumerBench
 
