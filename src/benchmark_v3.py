@@ -651,7 +651,7 @@ def main(args):
     globals.load_imagegen_dataset()
     globals.load_deep_research_dataset()
     globals.set_start_time()
-    workflow = Workflow(args.config)
+    workflow = Workflow(args.config, args.mcp_trace_json)
     workflow.load_workflow_unit_config()
     workflow.generate_task_queue()
     benchmark = workflow.generate_benchmark()
@@ -677,6 +677,7 @@ def get_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, help="Path to the config file", required=True)
     parser.add_argument('--results', type=str, help="Path to the results directory", required=True)
+    parser.add_argument("--mcp_trace_json", type=str, help="Path to the MCP trace", required=False, default=None)
     return parser
 
 if __name__ == "__main__":

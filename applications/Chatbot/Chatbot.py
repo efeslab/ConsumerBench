@@ -45,6 +45,7 @@ class Chatbot(Application):
     def run_application(self, *args, **kwargs):
         print(f"Chatbot application")
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
+
         chatbot_prompt = self.chatbot_prompts.pop(0)
         chatbot_prompts = [chatbot_prompt]
 
@@ -110,14 +111,24 @@ class Chatbot(Application):
 
         return {"status": "chatbot_complete", "ttft": end_time - start_time, "tpot": tpot, "itl": itl}
 
-    def load_dataset(self):
+    def load_dataset(self, *args, **kwargs):
         """Load the chatbot dataset"""
-        ds_textgen = load_dataset("lmsys/lmsys-chat-1m")
-        ds_textgen = ds_textgen["train"]
-        ds_textgen = ds_textgen.shuffle(seed=42)
-        ds_textgen = ds_textgen.select(range(0, 100))
-        for item in ds_textgen:
-            self.chatbot_prompts.append(item['conversation'][0]['content'])
+        mcp_trace = kwargs.get('mcp_trace_json', None)
+        if mcp_trace is not None:
+            trace_json = json.loads(open(mcp_trace, 'r').read())
+            for section_name, section_data in trace_json.items():
+                if section_name == "text_generate":
+                    for call_id, call_data in section_data.items():
+                        prompt = call_data.get('prompt', None)
+                        if prompt is not None:
+                            self.chatbot_prompts.append(prompt)
+        else:
+            ds_textgen = load_dataset("lmsys/lmsys-chat-1m")
+            ds_textgen = ds_textgen["train"]
+            ds_textgen = ds_textgen.shuffle(seed=42)
+            ds_textgen = ds_textgen.select(range(0, 100))
+            for item in ds_textgen:
+                self.chatbot_prompts.append(item['conversation'][0]['content'])
 
     def get_default_config(self) -> Dict[str, Any]:
         return {

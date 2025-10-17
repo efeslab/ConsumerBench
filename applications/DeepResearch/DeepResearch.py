@@ -62,7 +62,7 @@ class DeepResearch(Application):
         
         return {"status": "deep_research_complete", "total time": time.time() - start_time}
 
-    def load_dataset(self):
+    def load_dataset(self, *args, **kwargs):
         """Load the deep research dataset"""
         self.deep_research_prompts.append("What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?")
 

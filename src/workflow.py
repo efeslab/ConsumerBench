@@ -39,8 +39,9 @@ class WorkflowUnit:
 
 
 class Workflow:
-    def __init__(self, yaml_file):
+    def __init__(self, yaml_file, mcp_trace_json=None):
         self.yaml_file = yaml_file
+        self.mcp_trace_json = mcp_trace_json
         self.workflow_config = self.load_yaml()
         self.tasks_map_queue = {}
         self.workflow_unit_map = {}
@@ -54,8 +55,8 @@ class Workflow:
     def register_application(self, application_name: str, application: Application):
         """Register an application instance with the workflow"""
         self.applications[application_name] = application
-        application.load_dataset()
-    
+        application.load_dataset(yaml_file=self.yaml_file, mcp_trace_json=self.mcp_trace_json)
+
     def load_workflow_unit_config(self):
         """Load workflow unit configuration from YAML"""
         for k, v in self.workflow_config.items():

@@ -31,6 +31,6 @@ class SleepApplication(Application):
             "sleep_time": 1.0
         }
     
-    def load_dataset(self):
+    def load_dataset(self, *args, **kwargs):
         print("SleepApplication loading dataset")
         return {"status": "dataset_loaded"}

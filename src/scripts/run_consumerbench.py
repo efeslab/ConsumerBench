@@ -10,6 +10,7 @@ from applications.ImageGen.ImageGen import ImageGen
 from applications.DeepResearch.DeepResearch import DeepResearch
 from applications.Chatbot.Chatbot import Chatbot
 from applications.LiveCaptions.LiveCaptions import LiveCaptions
+from applications.MCPServer.MCPServer import MCPServer
 from src.workflow import Workflow
 import src.globals as globals
 
@@ -19,9 +20,11 @@ def main(args):
     """User workflow with ConsumerBench"""
     parser = argparse.ArgumentParser(description='User workflow with ConsumerBench')
     parser.add_argument('--config', type=str, help='Path to the config file', required=True)
+    parser.add_argument('--mcp_trace', type=str, help='Path to MCP trace JSONL file', default=None)
     parser.add_argument('--results', type=str, help='Path to save results', default=f"{repo_dir}/results")
     args = parser.parse_args()    
     config_file = args.config
+    mcp_trace_file = args.mcp_trace
     print(f"=== Testing User Workflow with ConsumerBench ===\n")
     print(f"Using config file: {config_file}")
 
@@ -35,6 +38,7 @@ def main(args):
     deepResearch = DeepResearch()
     chatbot = Chatbot()
     liveCaptions = LiveCaptions()
+    mcpServer = MCPServer(mcp_trace_file=mcp_trace_file, config_file=config_file)
     
     # Create workflow from YAML
     workflow = Workflow(config_file)
@@ -45,7 +49,8 @@ def main(args):
     workflow.register_application("DeepResearch", deepResearch)
     workflow.register_application("Chatbot", chatbot)
     workflow.register_application("LiveCaptions", liveCaptions)
-    
+    workflow.register_application("MCPServer", mcpServer)
+
     print("Registered applications:")
     for app_name, app in workflow.applications.items():
         print(f"  - {app_name}: {type(app).__name__}")

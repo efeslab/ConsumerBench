@@ -55,7 +55,7 @@ class ImageGen(Application):
                                        guidance_scale=3.5).images[0]
         return {"status": "image_gen_complete", "total time": time.time() - start_time}
 
-    def load_dataset(self):
+    def load_dataset(self, *args, **kwargs):
         """Load the image generation dataset"""
         ds_imagegen = load_dataset(self.config.get("dataset", self.get_default_config()['dataset']))
         ds_imagegen = ds_imagegen["train"]
