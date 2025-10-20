@@ -280,7 +280,6 @@ def create_gantt_chart_with_slo(data, csv_directory=".", output_filename="task_b
         # )
 
         space_right = x_max - end
-        # Space needed for "Rohan" text (estimated)
         text_space_needed = 600  # Adjust this value based on your font size and figure size
 
         # Prepare text to show with conditional formatting
@@ -357,7 +356,6 @@ def create_gantt_chart_with_slo(data, csv_directory=".", output_filename="task_b
 
         # Check if there's enough space to the right
         if space_right >= text_space_needed:
-            # Place "Rohan" text to the right of the bar
             plt.text(
                 x=end + 5,  # Small offset from the end of the bar
                 y=i,
@@ -371,7 +369,6 @@ def create_gantt_chart_with_slo(data, csv_directory=".", output_filename="task_b
         else:
             # Not enough space on right, check if there's space on the left
             if start - x_min >= text_space_needed:
-                # Place "Rohan" text to the left of the bar
                 plt.text(
                     x=start - 5,  # Small offset from the start of the bar
                     y=i,

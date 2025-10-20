@@ -1,11 +1,8 @@
 chat1:
-    server_model: /home/cc/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
-    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
-    # server_model: /home/cc/models/Llama-3.1-8B-Instruct-GGUF/Llama-3.1-8B-Instruct-f16.gguf
-    # client_model: openai/meta-llama/Llama-3.1-8B-Instruct
+    model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
     num_requests: 50
     device: cpu
-    type: chatbot
+    type: Chatbot
     # mps: 33
 
 workflows:

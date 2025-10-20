@@ -1,6 +1,0 @@
-chatbot:
-    server_model = /home/cc/models/Llama-2-13B-chat-GGUF/llama-2-13b-chat.Q4_0.gguf
-    client_model = openai/leafspark/Llama-3.2-11B-Vision-Instruct-GGUF
-    num_requests = 10
-    device = cpu
-    mps = 100
