@@ -7,7 +7,7 @@ repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(repo_dir)
 
 from applications.application import Application
-from src.benchmark_v3 import DAGScheduler, Task
+from src.benchmark import DAGScheduler, Task
 import networkx as nx
 
 # Helper functions to wrap Application methods for ExecutionNode
