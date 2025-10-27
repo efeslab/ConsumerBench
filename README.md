@@ -4,7 +4,33 @@
 
 ConsumerBench is a comprehensive benchmarking framework that evaluates the runtime performance of user-defined GenAI applications under realistic conditions on end-user devices.
 
-## 🚀 Benchmark Setup
+## 🚀 Quick Start
+
+### Option 1: Install from PyPI (Recommended)
+
+```bash
+# Install ConsumerBench
+pip install consumer-bench
+
+# Run a benchmark
+consumerbench --config path/to/your/config.yml
+```
+
+### Option 2: Install from Source
+
+```bash
+# Clone the repository
+git clone https://github.com/your-org/ConsumerBench.git
+cd ConsumerBench
+
+# Install in development mode
+pip install -e .
+
+# Run a benchmark
+consumerbench --config configs/sleep_test.yml
+```
+
+### Option 3: Development Setup
 
 ```bash
 # Clone the repository
@@ -23,8 +49,23 @@ Follow instructions mentioned in `applications/`
 Add your own yml workflow in `configs/`
 
 ### Running benchmark
-Run the benchmark using the command
+
+```bash
+# Basic usage
+consumerbench --config <path-to-config>
+
+# With custom results directory
+consumerbench --config configs/workflow_chatbot.yml --results ./my_results
+
+# With visualization enabled (generates DAG plots)
+consumerbench --config configs/workflow_imagegen.yml --visualize
+
+# View help
+consumerbench --help
 ```
+
+### Legacy Command (still supported)
+```bash
 python src/scripts/run_consumerbench.py --config <path-to-config>
 ```
 

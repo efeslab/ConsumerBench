@@ -1,0 +1,33 @@
+# Include essential documentation
+include README.md
+include LICENSE
+include requirements.txt
+
+# Include all config files
+recursive-include configs *.yml *.yaml *.json
+
+# Include all script files
+recursive-include scripts *.py *.sh
+
+# Include application files
+recursive-include applications *.py *.yml *.yaml *.json *.txt *.md
+
+# Include inference backend files
+recursive-include inference_backends *.py *.yml *.yaml *.json
+
+# Include monitoring utilities
+recursive-include monitors *.py
+
+# Exclude build artifacts and caches
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *$py.class
+global-exclude *.so
+global-exclude .DS_Store
+
+# Exclude environment and results
+prune env
+prune venv
+prune results
+prune .git
+

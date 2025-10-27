@@ -1,0 +1,17 @@
+sleep1:
+  type: SleepApplication
+  sleep_time: 1.5
+  num_requests: 3
+
+sleep2:
+  type: SleepApplication
+  sleep_time: 2.5
+  num_requests: 2
+
+workflows:
+  first_sleep:
+    uses: sleep1
+
+  second_sleep:
+    uses: sleep2
+    depend_on: ["first_sleep"]  
