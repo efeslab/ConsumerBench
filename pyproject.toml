@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "consumer-bench"
+version = "0.1.0"
+description = "A comprehensive benchmarking framework for evaluating GenAI applications on end-user devices"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Yile Gu"},
+    {name = "Rohan Kadekodi"},
+    {name = "Hoang Nguyen"},
+    {name = "Keisuke Kamahori"},
+    {name = "Yiyu Liu"},
+    {name = "Baris Kasikci"}
+]
+keywords = ["benchmark", "genai", "performance", "llm", "inference"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "accelerate>=1.5.0",
+    "aiohttp>=3.9.0",
+    "anthropic>=0.52.0",
+    "datasets>=3.0.0",
+    "diffusers>=0.30.0",
+    "fastapi>=0.115.0",
+    "huggingface-hub>=0.30.0",
+    "httpx>=0.27.0",
+    "instructor>=1.8.0",
+    "ipykernel>=6.29.0",
+    "librosa>=0.11.0",
+    "matplotlib>=3.10.0",
+    "mcp>=1.9.0",
+    "mcp-server-fetch>=2025.4.0",
+    "numba>=0.61.0",
+    "numpy>=2.0.0",
+    "nvidia-ml-py>=12.0.0",
+    "openai>=1.80.0",
+    "pandas>=2.2.0",
+    "pillow>=11.0.0",
+    "psutil>=7.0.0",
+    "pydantic>=2.11.0",
+    "pynvml>=12.0.0",
+    "PyYAML>=6.0.0",
+    "requests>=2.32.0",
+    "scikit-learn>=1.6.0",
+    "scipy>=1.15.0",
+    "seaborn>=0.13.0",
+    "soundfile>=0.13.0",
+    "torch>=2.6.0",
+    "torchaudio>=2.6.0",
+    "torchvision>=0.21.0",
+    "tqdm>=4.67.0",
+    "transformers>=4.50.0",
+    "uvicorn>=0.34.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://consumerbench.github.io/"
+Documentation = "https://consumerbench.github.io/"
+Repository = "https://github.com/efeslab/ConsumerBench"
+Issues = "https://github.com/efeslab/ConsumerBench/issues"
+
+[project.scripts]
+consumerbench = "consumerbench.cli:main"
+
+[tool.setuptools]
+packages = ["consumerbench", "consumerbench.applications", "consumerbench.monitors", "consumerbench.scripts", "consumerbench.inference_backends"]
+
+[tool.setuptools.package-dir]
+consumerbench = "src"
+"consumerbench.applications" = "applications"
+"consumerbench.monitors" = "monitors"
+"consumerbench.scripts" = "scripts"
+"consumerbench.inference_backends" = "inference_backends"
+
+[tool.setuptools.package-data]
+consumerbench = ["*.yml", "*.yaml", "*.json"]
+
