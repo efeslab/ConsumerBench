@@ -74,10 +74,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-org/ConsumerBench"
-Documentation = "https://github.com/your-org/ConsumerBench#readme"
-Repository = "https://github.com/your-org/ConsumerBench"
-Issues = "https://github.com/your-org/ConsumerBench/issues"
+Homepage = "https://consumerbench.github.io/"
+Documentation = "https://consumerbench.github.io/"
+Repository = "https://github.com/efeslab/ConsumerBench"
+Issues = "https://github.com/efeslab/ConsumerBench/issues"
 
 [project.scripts]
 consumerbench = "consumerbench.cli:main"
