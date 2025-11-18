@@ -76,8 +76,9 @@ conda create -n whisper python=3.10
 conda activate whisper
 ```
 
-#### Install Application
+#### Install Dependencies and libraries
 ```
+conda install nvidia::cudnn cuda-version=12
 pip install librosa soundfile
 pip install faster-whisper
 pip install torch torchaudio
@@ -102,3 +103,7 @@ cd <repo-base>/applications/LiveCaptions/
 python whisper_streaming/generate_wav_dataset.py 
 python whisper_streaming/split_wav_file.py --input_file ./whisper-earnings21/4320211.wav --output-dir ./whisper-earnings21 
 ```
+
+#### Prepare Config
+Make sure conda path in `whisper_online_client.sh` and `whisper_online_server.sh` are setup correctly.
+Make sure ` --warmup-file` in `whisper_online_server.sh` is pointed to a correct warmup audio.

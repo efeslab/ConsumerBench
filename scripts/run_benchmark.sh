@@ -8,7 +8,7 @@
 source ~/anaconda3/etc/profile.d/conda.sh
 
 # Change to your conda environment name
-conda activate benchmark
+conda activate consumerbench
 
 SCRIPTS_DIR=`readlink -f $(dirname "$0")`
 SCRIPTS_DIR=$SCRIPTS_DIR/../monitors
@@ -67,21 +67,31 @@ else
     sleep 1
     cpu_usage_pid=`pgrep "get_cpu_usage"`
 
+    echo "Setting up CPU Memory bandwidth monitoring..."
     # Get CPU Memory bandwidth
-    tmux new-session -d "sudo pcm-memory 0.05 -s -csv=${RESULTS_DIR}/memory-bw.csv"
+    tmux new-session -d "sudo pcm-memory 0.05 -silent -csv=${RESULTS_DIR}/memory-bw.csv"
     # Check if the command is running
-    while ! pgrep "pcm-memory" > /dev/null; do
-        sleep 1
-    done
+    timeout 20 bash -c '
+        while ! pgrep "pcm-memory" >/dev/null; do sleep 1; done
+    '
+
+    if [ $? -eq 124 ]; then
+        echo "Timed out waiting for pcm-memory"
+    else
+        echo "pcm-memory started!"
+    fi
     pcm_memory_pid=`pgrep "pcm-memory"`
 
+    echo "Setting up GPU compute and mem utilization monitoring..."
     # Get GPU compute and mem utilization
     ${SCRIPTS_DIR}/record_gpu_mem_compute.sh ${RESULTS_DIR} &
     sleep 1
     gpu_utilization_pid=`pgrep "dcgmi"`
 
+
+    echo "Setting up power utilization monitoring..."
     # Get power utilization
-    tmux new-session -d sudo python3 ${SCRIPTS_DIR}/record_power_usage.py -o ${RESULTS_DIR}/power_data.csv -s ${start_time}
+    tmux new-session -d sudo -E "$(which python3)" ${SCRIPTS_DIR}/record_power_usage.py -o ${RESULTS_DIR}/power_data.csv -s ${start_time}
     power_pid=`pgrep -fo record_power`
 
     echo "--------------------------------"

@@ -252,6 +252,8 @@ def main():
 
     if args.start_time:
         start_time = datetime.strptime(args.start_time, '%Y-%m-%d_%H:%M:%S')
+    else:
+        start_time = datetime.now()
 
     # Create a flag event to communicate with the monitoring thread
     stop_event = threading.Event()
