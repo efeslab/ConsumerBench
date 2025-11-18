@@ -53,6 +53,9 @@ class ImageGen(Application):
         _ = self.imagegen_pipeline(imagegen_prompt, 
                                        num_inference_steps=28, 
                                        guidance_scale=3.5).images[0]
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.ipc_collect()
         return {"status": "image_gen_complete", "total time": time.time() - start_time}
 
     def load_dataset(self, *args, **kwargs):
