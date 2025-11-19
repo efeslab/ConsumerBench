@@ -71,16 +71,16 @@ else
     # Get CPU Memory bandwidth
     tmux new-session -d "sudo pcm-memory 0.05 -silent -csv=${RESULTS_DIR}/memory-bw.csv"
     # Check if the command is running
-    timeout 20 bash -c '
-        while ! pgrep "pcm-memory" >/dev/null; do sleep 1; done
-    '
+    # timeout 20 bash -c '
+    #     while ! pgrep "pcm-memory" >/dev/null; do sleep 1; done
+    # '
 
-    if [ $? -eq 124 ]; then
-        echo "Timed out waiting for pcm-memory"
-    else
-        echo "pcm-memory started!"
-    fi
-    pcm_memory_pid=`pgrep "pcm-memory"`
+    # if [ $? -eq 124 ]; then
+    #     echo "Timed out waiting for pcm-memory"
+    # else
+    #     echo "pcm-memory started!"
+    # fi
+    # pcm_memory_pid=`pgrep "pcm-memory"`
 
     echo "Setting up GPU compute and mem utilization monitoring..."
     # Get GPU compute and mem utilization
@@ -107,7 +107,7 @@ else
     sleep 2
     # Kill the background processes
     kill -9 $cpu_usage_pid
-    sudo kill -9 $pcm_memory_pid
+    # sudo kill -9 $pcm_memory_pid
     kill -9 $gpu_utilization_pid
     sudo kill -9 $power_pid
 

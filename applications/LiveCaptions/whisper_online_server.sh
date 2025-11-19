@@ -32,7 +32,7 @@ export CUDA_VISIBLE_DEVICES=0
 conda activate consumerbench
 cd ${server_dir}/whisper_streaming
 
-python3 -u whisper_online_server.py --host 127.0.0.1 --port ${api_port} --device ${device} -l DEBUG --min-chunk-size 2.0 --warmup-file ${server_dir}/whisper-earnings21/10-sec-chunks/4320211_chunk_001.wav --model ${model} &
+python3 -u whisper_online_server.py --host 127.0.0.1 --port ${api_port} --device ${device} -l DEBUG --min-chunk-size 2.0 --warmup-file /mnt/d/rohan/ConsumerBench/applications/LiveCaptions/whisper-earnings21/60s-chunks/audio_file_0_chunk_001.wav --model ${model} &
 
 
 
