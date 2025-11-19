@@ -23,6 +23,7 @@ class LiveCaptions(Application):
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
         device = kwargs.get('device', self.get_default_config()['device'])
         mps = kwargs.get('mps', self.get_default_config()['mps'])
+        model = kwargs.get('model', self.get_default_config()['model'])
 
         utils.util_run_server_script_check_log(
             script_path=f"{repo_dir}/applications/LiveCaptions/whisper_online_server.sh",
@@ -33,7 +34,7 @@ class LiveCaptions(Application):
             stdout_ready_patterns=[],
             listen_port=api_port,
             api_port=api_port,
-            model=None,
+            model=model,
             device=device,
             mps=mps
         )
@@ -101,6 +102,7 @@ class LiveCaptions(Application):
             "device": "gpu",
             "mps": 100,
             "api_port": 5000,
+            "model": "large-v3-turbo",
             "client_command_file": f"{repo_dir}/applications/LiveCaptions/whisper-earnings21/4320211_chunk_001.wav"
         }
     
