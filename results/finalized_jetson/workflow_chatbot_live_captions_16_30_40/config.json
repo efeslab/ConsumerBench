@@ -1,0 +1,23 @@
+{
+    "chat1": {
+        "model": "/home/yilegu/ConsumerBench/models/Llama-3.2-1B/Llama-3.2-1B-Instruct-Q8_0.gguf",
+        "num_requests": 50,
+        "device": "gpu",
+        "type": "Chatbot"
+    },
+    "lv": {
+        "num_requests": 1,
+        "model": "tiny",
+        "device": "gpu",
+        "client_command_file": "/home/yilegu/ConsumerBench/applications/LiveCaptions/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav",
+        "type": "LiveCaptions"
+    },
+    "workflows": {
+        "chat_summary": {
+            "uses": "chat1"
+        },
+        "start_captions": {
+            "uses": "lv"
+        }
+    }
+}
