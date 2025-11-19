@@ -107,3 +107,18 @@ python whisper_streaming/split_wav_file.py --input_file ./whisper-earnings21/432
 #### Prepare Config
 Make sure conda path in `whisper_online_client.sh` and `whisper_online_server.sh` are setup correctly.
 Make sure ` --warmup-file` in `whisper_online_server.sh` is pointed to a correct warmup audio.
+
+
+## Enable and Disable MPS
+### Enable MPS
+
+```
+sudo nvidia-cuda-mps-control -d
+```
+
+
+### Disable MPS
+```
+sudo nvidia-cuda-mps-control
+quit
+```

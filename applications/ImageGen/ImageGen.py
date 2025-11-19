@@ -23,6 +23,7 @@ class ImageGen(Application):
         model = kwargs.get('model', self.get_default_config()['model'])
         device = kwargs.get('device', self.get_default_config()['device'])
         mps = kwargs.get('mps', self.get_default_config()['mps'])
+        self.stream_priority = kwargs.get('stream_priority', None)
 
         if device == "gpu":
             # Set environment variable for MPS
@@ -50,9 +51,19 @@ class ImageGen(Application):
     def run_application(self, *args, **kwargs):
         imagegen_prompt = self.imagegen_prompts.pop(0)
         start_time = time.time()
-        _ = self.imagegen_pipeline(imagegen_prompt, 
-                                       num_inference_steps=28, 
-                                       guidance_scale=3.5).images[0]
+        if self.stream_priority is not None:
+            stream = torch.cuda.Stream(priority=self.stream_priority)
+            with torch.cuda.stream(stream):
+                _ = self.imagegen_pipeline(imagegen_prompt, 
+                                            num_inference_steps=28, 
+                                            guidance_scale=3.5).images[0]
+            print(f"ImageGen set with stream priority {stream.priority}")
+        else:
+            _ = self.imagegen_pipeline(imagegen_prompt, 
+                                        num_inference_steps=28, 
+                                        guidance_scale=3.5).images[0]
+            print(f"ImageGen set without stream priority")
+        
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
             torch.cuda.ipc_collect()

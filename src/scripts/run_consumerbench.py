@@ -33,6 +33,8 @@ def main(args):
     globals.set_results_dir(f"{args.results}")
         
     # Create application instances
+    
+    # TODO: Yile, fix application type and instance tied up
     sleepApplication1 = SleepApplication()
     imageGen = ImageGen()
     deepResearch = DeepResearch()

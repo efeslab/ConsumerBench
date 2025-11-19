@@ -13,7 +13,7 @@ model=$4
 device=$5
 mps=$6
 
-source ~/archiconda3/etc/profile.d/conda.sh
+source ~/anaconda3/etc/profile.d/conda.sh
 
 # Wrapper script for diffusion model application to use NVIDIA MPS
 
