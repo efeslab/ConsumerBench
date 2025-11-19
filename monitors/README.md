@@ -43,6 +43,11 @@ sudo systemctl start nvidia-dcgm
 sudo systemctl enable nvidia-dcgm   # optional
 
 ```
+### WSL
+Follow the guide here https://docs.nvidia.com/datacenter/dcgm/latest/user-guide/getting-started.html#ubuntu-lts-and-debian
+
+Remember to first register CUDA key ring https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#wsl-installation
+
 
 ## For Power Usage
 

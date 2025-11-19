@@ -10,9 +10,9 @@ api_port=$1
 wav_file_path=$2
 app_dir=$3
 
-source ~/anaconda3/etc/profile.d/conda.sh
+source ~/miniconda3/etc/profile.d/conda.sh
 
-conda activate whisper
+conda activate consumerbench
 
 cd ${app_dir}/whisper_streaming
 stdbuf -oL -eL python3 generate_raw_realtime.py ${wav_file_path} --port ${api_port}

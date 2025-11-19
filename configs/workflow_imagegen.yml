@@ -1,5 +1,5 @@
 imagegen1:
-    model: /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
+    model: /mnt/d/rohan/models/stable-diffusion-3.5-medium-turbo
     # server_model: CompVis/stable-diffusion-v1-4
     num_requests: 10
     device: gpu

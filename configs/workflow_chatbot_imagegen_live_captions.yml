@@ -1,5 +1,5 @@
 imagegen1:
-    model: /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
+    model: /mnt/d/rohan/models/stable-diffusion-3.5-medium-turbo
     # server_model: CompVis/stable-diffusion-v1-4
     num_requests: 20
     device: gpu
@@ -10,11 +10,11 @@ lv:
     num_requests: 1
     device: gpu
     mps: 100
-    client_command_file: datasets/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
+    client_command_file: /mnt/d/rohan/ConsumerBench/applications/LiveCaptions/whisper-earnings21/5-min-chunks/audio_file_0_chunk_001.wav
     type: LiveCaptions
 
 chat1:
-    model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    model: /mnt/d/rohan/models/Llama-3.2-1B/Llama-3.2-1B-Instruct-f16.gguf
     num_requests: 50
     device: gpu
     type: Chatbot

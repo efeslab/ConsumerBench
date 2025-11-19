@@ -18,7 +18,16 @@ Following are the steps to install the applications, setup the inference backend
 Installing application involves setting up llama.cpp server.
 ```
 cd <repo-dir>/inference_backends/llama.cpp
+# for Linux server
 cmake -B build -DGGML_CUDA=ON -DGGML_CUDA_F16=1 -DCMAKE_CUDA_ARCHITECTURES="75"  -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.8/bin/nvcc
+# for newer Ampere WSL server
+cmake -B build .. \
+  -DGGML_CUDA=ON \
+  -DGGML_CUDA_F16=1 \
+  -DCMAKE_CUDA_ARCHITECTURES=86 \
+  -DCUDAToolkit_ROOT=/usr/local/cuda \
+  -DCMAKE_PREFIX_PATH=/usr/local/cuda \
+  -DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc
 cd build
 make -j32
 ```

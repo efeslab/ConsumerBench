@@ -3,7 +3,7 @@ import time
 from typing import Any, Dict
 import sys
 import os
-from diffusers import StableDiffusion3Pipeline
+from diffusers import StableDiffusion3Pipeline, SD3Transformer2DModel, GGUFQuantizationConfig
 import torch
 from datasets import load_dataset
 
@@ -27,11 +27,13 @@ class ImageGen(Application):
         if device == "gpu":
             # Set environment variable for MPS
             os.environ["CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"] = str(mps)
+            transformer = SD3Transformer2DModel.from_single_file("/mnt/d/rohan/models/stable-diffusion-3.5-medium-turbo/sd3.5m_turbo-Q8_0.gguf", quantization_config=GGUFQuantizationConfig(compute_dtype=torch.bfloat16))
             self.imagegen_pipeline = StableDiffusion3Pipeline.from_pretrained(
                 model,
+                transformer=transformer,
                 text_encoder_3=None,
                 tokenizer_3=None,
-                torch_dtype=torch.float16
+                torch_dtype=torch.bfloat16
             )
             self.imagegen_pipeline = self.imagegen_pipeline.to("cuda")
         else:
