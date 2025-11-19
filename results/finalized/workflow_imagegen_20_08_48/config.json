@@ -1,0 +1,14 @@
+{
+    "imagegen1": {
+        "model": "/mnt/d/rohan/models/stable-diffusion-3.5-medium-turbo",
+        "num_requests": 20,
+        "device": "gpu",
+        "type": "ImageGen",
+        "mps": 100
+    },
+    "workflows": {
+        "generate_image": {
+            "uses": "imagegen1"
+        }
+    }
+}

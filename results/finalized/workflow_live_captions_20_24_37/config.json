@@ -1,0 +1,14 @@
+{
+    "lv": {
+        "num_requests": 1,
+        "device": "gpu",
+        "mps": 100,
+        "client_command_file": "/mnt/d/rohan/ConsumerBench/applications/LiveCaptions/whisper-earnings21/5-min-chunks/audio_file_0_chunk_001.wav",
+        "type": "LiveCaptions"
+    },
+    "workflows": {
+        "start_captions": {
+            "uses": "lv"
+        }
+    }
+}

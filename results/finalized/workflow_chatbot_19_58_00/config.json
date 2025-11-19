@@ -1,0 +1,13 @@
+{
+    "chat1": {
+        "model": "/mnt/d/rohan/models/Llama-3.2-1B/Llama-3.2-1B-Instruct-f16.gguf",
+        "num_requests": 50,
+        "device": "gpu",
+        "type": "Chatbot"
+    },
+    "workflows": {
+        "chat_summary": {
+            "uses": "chat1"
+        }
+    }
+}

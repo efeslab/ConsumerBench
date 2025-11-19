@@ -1,0 +1,1208 @@
+INFO	Loading Whisper large-v3-turbo model for auto...
+/home/rohan/miniconda3/envs/consumerbench/lib/python3.10/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+INFO	done. It took 8.71 seconds.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 2.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(0.0), np.float64(1.98), ' ギギギギギギギギギギギ')
+DEBUG	len of buffer now: 2.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 4.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(3.0199999999999996), np.float64(3.98), ' Good morning, ladies and gentlemen.')
+DEBUG	len of buffer now: 4.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 6.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(2.9599999999999995), np.float64(4.0), ' Good morning, ladies and')
+DEBUG	INCOMPLETE: (np.float64(4.0), np.float64(5.58), ' gentlemen, and welcome to the Monroe Inc.')
+DEBUG	len of buffer now: 6.00
+2960 4000  Good morning, ladies and
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and
+DEBUG	transcribing 8.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(4.0), np.float64(5.26), ' gentlemen, and welcome to the Monroe')
+DEBUG	INCOMPLETE: (np.float64(5.26), np.float64(7.98), " Inc earnings conference call for the third quarter And we'll see you next time.")
+DEBUG	len of buffer now: 8.00
+4000 5260  gentlemen, and welcome to the Monroe
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and gentlemen, and welcome to the Monroe
+DEBUG	transcribing 10.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(5.26), np.float64(7.76), ' Inc earnings conference call for the third quarter')
+DEBUG	INCOMPLETE: (np.float64(7.76), np.float64(8.58), ' fiscal 2020.')
+DEBUG	len of buffer now: 10.00
+5260 7760  Inc earnings conference call for the third quarter
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter
+DEBUG	transcribing 12.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(7.78), np.float64(8.56), ' fiscal 2020.')
+DEBUG	INCOMPLETE: (np.float64(9.06), np.float64(11.78), ' At this time, all participants are in a listen-only mode.')
+DEBUG	len of buffer now: 12.00
+7780 8560  fiscal 2020.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020.
+DEBUG	transcribing 14.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(9.1), np.float64(11.8), ' At this time, all participants are in a listen-only mode.')
+DEBUG	INCOMPLETE: (np.float64(12.24), np.float64(13.98), ' Later, we will conduct a question and answer.')
+DEBUG	len of buffer now: 14.00
+9100 11800  At this time, all participants are in a listen-only mode.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	transcribing 16.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(12.2), np.float64(13.76), ' Later, we will conduct a question')
+DEBUG	INCOMPLETE: (np.float64(13.76), np.float64(15.98), '-and-answer session, and instructions will follow at that time.')
+DEBUG	--- segment chunked at 11.80
+DEBUG	chunking segment
+DEBUG	len of buffer now: 4.20
+12200 13760  Later, we will conduct a question
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question
+DEBUG	transcribing 6.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(13.74), np.float64(16.26), '-and-answer session, and instructions will follow at that time.')
+DEBUG	INCOMPLETE: (np.float64(16.82), np.float64(17.98), ' If anyone should require...')
+DEBUG	len of buffer now: 6.20
+13760 16260 -and-answer session, and instructions will follow at that time.
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time.
+DEBUG	transcribing 8.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(16.82), np.float64(17.64), ' If anyone should')
+DEBUG	INCOMPLETE: (np.float64(17.64), np.float64(19.98), ' require assistance during the call, please press star zero.')
+DEBUG	len of buffer now: 8.20
+16820 17640  If anyone should
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time. If anyone should
+DEBUG	transcribing 10.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(17.64), np.float64(19.78), ' require assistance during the call, please press star')
+DEBUG	INCOMPLETE: (np.float64(19.78), np.float64(21.200000000000003), ' zero on your touchtone phone.')
+DEBUG	len of buffer now: 10.20
+17640 19780  require assistance during the call, please press star
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star
+DEBUG	transcribing 12.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(19.78), np.float64(21.22), ' zero on your touchtone phone.')
+DEBUG	INCOMPLETE: (np.float64(21.82), np.float64(23.98), ' As a reminder, ladies and gentlemen, this conference is...')
+DEBUG	len of buffer now: 12.20
+19780 21220  zero on your touchtone phone.
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	transcribing 14.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(21.82), np.float64(23.8), ' As a reminder, ladies and gentlemen, this conference')
+DEBUG	INCOMPLETE: (np.float64(23.8), np.float64(25.98), ' is being recorded and may not be reproduced.')
+DEBUG	len of buffer now: 14.20
+21820 23800  As a reminder, ladies and gentlemen, this conference
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone. As a reminder, ladies and gentlemen, this conference
+DEBUG	transcribing 16.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(23.8), np.float64(25.42), ' is being recorded and may not be')
+DEBUG	INCOMPLETE: (np.float64(25.42), np.float64(27.98), ' reproduced in whole or in part without permission.')
+DEBUG	--- segment chunked at 21.22
+DEBUG	chunking segment
+DEBUG	len of buffer now: 6.78
+23800 25420  is being recorded and may not be
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be
+DEBUG	transcribing 8.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(25.419999999999998), np.float64(27.74), ' reproduced in whole or in part without')
+DEBUG	INCOMPLETE: (np.float64(27.74), np.float64(28.88), ' permission from the company.')
+DEBUG	len of buffer now: 8.78
+25420 27740  reproduced in whole or in part without
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be reproduced in whole or in part without
+DEBUG	transcribing 10.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(27.74), np.float64(28.86), ' permission from the company.')
+DEBUG	INCOMPLETE: (np.float64(29.419999999999998), np.float64(31.919999999999998), ' I would now like to introduce Ms. Maureen Mulholland.')
+DEBUG	len of buffer now: 10.78
+27740 28860  permission from the company.
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be reproduced in whole or in part without permission from the company.
+DEBUG	transcribing 12.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(29.42), np.float64(31.5), ' I would now like to introduce Ms. Maureen')
+DEBUG	INCOMPLETE: (np.float64(31.5), np.float64(33.86), ' Mulholland, Senior Vice President, General Counsel.')
+DEBUG	len of buffer now: 12.78
+29420 31500  I would now like to introduce Ms. Maureen
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be reproduced in whole or in part without permission from the company. I would now like to introduce Ms. Maureen
+DEBUG	transcribing 14.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(31.5), np.float64(33.48), ' Mulholland, Senior Vice President, General')
+DEBUG	INCOMPLETE: (np.float64(33.48), np.float64(35.76), ' Counsel, and Secretary Monroe. Thank you.')
+DEBUG	len of buffer now: 14.78
+31500 33480  Mulholland, Senior Vice President, General
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be reproduced in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General
+DEBUG	transcribing 16.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(33.48), np.float64(35.739999999999995), ' Counsel, and Secretary Monroe. Thank you.')
+DEBUG	INCOMPLETE: (np.float64(35.9), np.float64(36.5), ' Please go ahead.')
+DEBUG	--- segment chunked at 34.82
+DEBUG	chunking segment
+DEBUG	len of buffer now: 3.18
+33480 35740  Counsel, and Secretary Monroe. Thank you.
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you.
+DEBUG	transcribing 5.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(35.92), np.float64(36.48), ' Please go ahead.')
+DEBUG	INCOMPLETE: (np.float64(37.94), np.float64(39.8), ' Thank you. Hello, everyone.')
+DEBUG	len of buffer now: 5.18
+35920 36480  Please go ahead.
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead.
+DEBUG	transcribing 7.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(37.94), np.float64(39.5), ' Thank you. Hello,')
+DEBUG	INCOMPLETE: (np.float64(39.58), np.float64(41.84), ' everyone, and thank you for joining us on this morning.')
+DEBUG	len of buffer now: 7.18
+37940 39500  Thank you. Hello,
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello,
+DEBUG	transcribing 9.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(39.54), np.float64(41.6), ' everyone, and thank you for joining us on this')
+DEBUG	INCOMPLETE: (np.float64(41.6), np.float64(43.92), " morning's call. Before we get started,")
+DEBUG	len of buffer now: 9.18
+39540 41600  everyone, and thank you for joining us on this
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this
+DEBUG	transcribing 11.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(41.6), np.float64(44.06), " morning's call. Before we get started,")
+DEBUG	INCOMPLETE: (np.float64(44.38), np.float64(45.980000000000004), ' please note that as part of the')
+DEBUG	len of buffer now: 11.18
+41600 44060  morning's call. Before we get started,
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started,
+DEBUG	transcribing 13.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(44.36), np.float64(46.06), ' please note that as part of the')
+DEBUG	INCOMPLETE: (np.float64(46.06), np.float64(47.980000000000004), ' call this morning, we will be...')
+DEBUG	len of buffer now: 13.18
+44360 46060  please note that as part of the
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the
+DEBUG	transcribing 15.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(46.06), np.float64(47.620000000000005), ' call this morning, we will')
+DEBUG	INCOMPLETE: (np.float64(47.620000000000005), np.float64(49.980000000000004), ' be referencing a presentation that is available to you.')
+DEBUG	--- last segment not within commited area
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.18
+46060 47620  call this morning, we will
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will
+DEBUG	transcribing 17.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(47.620000000000005), np.float64(49.94), ' be referencing a presentation that is available')
+DEBUG	INCOMPLETE: (np.float64(49.94), np.float64(51.980000000000004), ' on the Investors section of our website.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.18
+47620 49940  be referencing a presentation that is available
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available
+DEBUG	transcribing 19.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(49.92), np.float64(51.9), ' on the Investors section of our')
+DEBUG	INCOMPLETE: (np.float64(51.9), np.float64(53.980000000000004), ' website at corporate.org.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.18
+49940 51900  on the Investors section of our
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available on the Investors section of our
+DEBUG	transcribing 21.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(51.9), np.float64(53.54), ' website at corporate')
+DEBUG	INCOMPLETE: (np.float64(53.54), np.float64(55.3), '.monroe.com.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.18
+51900 53540  website at corporate
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available on the Investors section of our website at corporate
+DEBUG	transcribing 23.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(53.54), np.float64(54.54), '.monroe')
+DEBUG	INCOMPLETE: (np.float64(54.54), np.float64(57.18), '.com backslash investors.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 23.18
+53540 54540 .monroe
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe
+DEBUG	transcribing 25.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(54.54), np.float64(56.58), '.com backslash')
+DEBUG	INCOMPLETE: (np.float64(56.58), np.float64(59.980000000000004), ' investors backslash investor resources.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 25.18
+54540 56580 .com backslash
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash
+DEBUG	transcribing 27.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(56.58), np.float64(60.2), ' investors backslash investor resources.')
+DEBUG	INCOMPLETE: (None, None, '')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 27.18
+56580 60200  investors backslash investor resources.
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor resources.
+DEBUG	transcribing 29.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(61.72), np.float64(63.980000000000004), ' If I could draw your attention to the same...')
+DEBUG	--- segment chunked at 60.20
+DEBUG	chunking segment
+DEBUG	len of buffer now: 3.80
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  call this morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor
+DEBUG	CONTEXT:  resources.
+DEBUG	transcribing 5.80 seconds from 60.20
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(61.64), np.float64(65.98), ' if I could draw your attention to the safe harbor statement on slide two of')
+DEBUG	len of buffer now: 5.80
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  call this morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor
+DEBUG	CONTEXT:  resources.
+DEBUG	transcribing 7.80 seconds from 60.20
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(61.64), np.float64(67.98), " If I could draw your attention to the Safe Harbor Statement on slide 2 of the presentation, I'd like to remember")
+DEBUG	len of buffer now: 7.80
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  call this morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor
+DEBUG	CONTEXT:  resources.
+DEBUG	transcribing 9.80 seconds from 60.20
+DEBUG	>>>>COMPLETE NOW: (np.float64(61.6), np.float64(63.800000000000004), ' If I could draw your attention to the')
+DEBUG	INCOMPLETE: (np.float64(63.800000000000004), np.float64(69.9), " safe harbor statement on slide 2 of the presentation, I'd like to remind participants on this morning's call")
+DEBUG	len of buffer now: 9.80
+61600 63800  If I could draw your attention to the
+DEBUG	PROMPT:  morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor resources.
+DEBUG	CONTEXT:  If I could draw your attention to the
+DEBUG	transcribing 11.80 seconds from 60.20
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(63.800000000000004), np.float64(71.98), " Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some...")
+DEBUG	len of buffer now: 11.80
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor resources.
+DEBUG	CONTEXT:  If I could draw your attention to the
+DEBUG	transcribing 13.80 seconds from 60.20
+DEBUG	>>>>COMPLETE NOW: (np.float64(63.800000000000004), np.float64(71.5), " Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes")
+DEBUG	INCOMPLETE: (np.float64(71.5), np.float64(73.98), " some forward-looking statements about Monroe's")
+DEBUG	len of buffer now: 13.80
+63800 71500  Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes
+DEBUG	PROMPT:  morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor resources.
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes
+DEBUG	transcribing 15.80 seconds from 60.20
+DEBUG	>>>>COMPLETE NOW: (np.float64(71.48), np.float64(74.08), " some forward-looking statements about Monroe's")
+DEBUG	INCOMPLETE: (np.float64(74.08), np.float64(75.04), ' future performance.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.80
+71500 74080  some forward-looking statements about Monroe's
+DEBUG	PROMPT:  morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor resources.
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's
+DEBUG	transcribing 17.80 seconds from 60.20
+DEBUG	>>>>COMPLETE NOW: (np.float64(74.08), np.float64(75.04), ' future performance.')
+DEBUG	INCOMPLETE: (np.float64(75.72), np.float64(77.92), ' Actual results may differ materially.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.80
+74080 75040  future performance.
+DEBUG	PROMPT:  morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor resources.
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's future performance.
+DEBUG	transcribing 19.80 seconds from 60.20
+DEBUG	>>>>COMPLETE NOW: (np.float64(75.74000000000001), np.float64(77.30000000000001), ' Actual results may differ')
+DEBUG	INCOMPLETE: (np.float64(77.30000000000001), np.float64(79.98), ' materially from those suggested by our comments today.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.80
+75740 77300  Actual results may differ
+DEBUG	PROMPT:  morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe.com backslash investors backslash investor resources.
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's future performance. Actual results may differ
+DEBUG	transcribing 21.80 seconds from 60.20
+DEBUG	>>>>COMPLETE NOW: (np.float64(77.30000000000001), np.float64(80.22), ' materially from those suggested by our comments today.')
+DEBUG	INCOMPLETE: (np.float64(80.22), np.float64(81.86), ' The most significant')
+DEBUG	--- segment chunked at 80.22
+DEBUG	chunking segment
+DEBUG	len of buffer now: 1.78
+77300 80220  materially from those suggested by our comments today.
+DEBUG	PROMPT:  call that our presentation includes some forward-looking statements about Monroe's future performance. Actual results may differ materially from those suggested by our comments
+DEBUG	CONTEXT:  today.
+DEBUG	transcribing 3.78 seconds from 80.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(80.22), np.float64(82.0), ' The most significant')
+DEBUG	INCOMPLETE: (np.float64(82.0), np.float64(83.92), ' factors that could affect future results')
+DEBUG	len of buffer now: 3.78
+80220 82000  The most significant
+DEBUG	PROMPT:  that our presentation includes some forward-looking statements about Monroe's future performance. Actual results may differ materially from those suggested by our comments today.
+DEBUG	CONTEXT:  The most significant
+DEBUG	transcribing 5.78 seconds from 80.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(82.0), np.float64(84.06), ' factors that could affect future results')
+DEBUG	INCOMPLETE: (np.float64(84.06), np.float64(85.9), " are outlined in Monroe's filing")
+DEBUG	len of buffer now: 5.78
+82000 84060  factors that could affect future results
+DEBUG	PROMPT:  that our presentation includes some forward-looking statements about Monroe's future performance. Actual results may differ materially from those suggested by our comments today.
+DEBUG	CONTEXT:  The most significant factors that could affect future results
+DEBUG	transcribing 7.78 seconds from 80.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(84.06), np.float64(85.58), " are outlined in Monroe's")
+DEBUG	INCOMPLETE: (np.float64(85.58), np.float64(87.98), ' filings with the SEC and in our')
+DEBUG	len of buffer now: 7.78
+84060 85580  are outlined in Monroe's
+DEBUG	PROMPT:  that our presentation includes some forward-looking statements about Monroe's future performance. Actual results may differ materially from those suggested by our comments today.
+DEBUG	CONTEXT:  The most significant factors that could affect future results are outlined in Monroe's
+DEBUG	transcribing 9.78 seconds from 80.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(85.58), np.float64(88.06), ' filings with the SEC and in our')
+DEBUG	INCOMPLETE: (np.float64(88.06), np.float64(88.84), ' earnings release.')
+DEBUG	len of buffer now: 9.78
+85580 88060  filings with the SEC and in our
+DEBUG	PROMPT:  that our presentation includes some forward-looking statements about Monroe's future performance. Actual results may differ materially from those suggested by our comments today.
+DEBUG	CONTEXT:  The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our
+DEBUG	transcribing 11.78 seconds from 80.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(88.06), np.float64(88.82), ' earnings release.')
+DEBUG	INCOMPLETE: (np.float64(89.64), np.float64(91.98), ' The company disclaims any intention or...')
+DEBUG	len of buffer now: 11.78
+88060 88820  earnings release.
+DEBUG	PROMPT:  that our presentation includes some forward-looking statements about Monroe's future performance. Actual results may differ materially from those suggested by our comments today.
+DEBUG	CONTEXT:  The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release.
+DEBUG	transcribing 13.78 seconds from 80.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(89.66), np.float64(91.7), ' The company disclaims any intention')
+DEBUG	INCOMPLETE: (np.float64(91.7), np.float64(93.9), ' or obligation to update or revise')
+DEBUG	len of buffer now: 13.78
+89660 91700  The company disclaims any intention
+DEBUG	PROMPT:  that our presentation includes some forward-looking statements about Monroe's future performance. Actual results may differ materially from those suggested by our comments today.
+DEBUG	CONTEXT:  The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release. The company disclaims any intention
+DEBUG	transcribing 15.78 seconds from 80.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(91.7), np.float64(94.06), ' or obligation to update or revise')
+DEBUG	INCOMPLETE: (np.float64(94.06), np.float64(95.62), ' any forward-looking statements.')
+DEBUG	--- segment chunked at 88.82
+DEBUG	chunking segment
+DEBUG	len of buffer now: 7.18
+91700 94060  or obligation to update or revise
+DEBUG	PROMPT:  those suggested by our comments today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release.
+DEBUG	CONTEXT:  The company disclaims any intention or obligation to update or revise
+DEBUG	transcribing 9.18 seconds from 88.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(94.05999999999999), np.float64(95.17999999999999), ' any forward-looking')
+DEBUG	INCOMPLETE: (np.float64(95.17999999999999), np.float64(97.91999999999999), ' statements, whether as a result of new information,')
+DEBUG	len of buffer now: 9.18
+94060 95180  any forward-looking
+DEBUG	PROMPT:  those suggested by our comments today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release.
+DEBUG	CONTEXT:  The company disclaims any intention or obligation to update or revise any forward-looking
+DEBUG	transcribing 11.18 seconds from 88.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(95.17999999999999), np.float64(98.33999999999999), ' statements, whether as a result of new information,')
+DEBUG	INCOMPLETE: (np.float64(98.69999999999999), np.float64(99.69999999999999), ' future events...')
+DEBUG	len of buffer now: 11.18
+95180 98340  statements, whether as a result of new information,
+DEBUG	PROMPT:  those suggested by our comments today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release.
+DEBUG	CONTEXT:  The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information,
+DEBUG	transcribing 13.18 seconds from 88.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(98.69999999999999), np.float64(99.22), ' future')
+DEBUG	INCOMPLETE: (np.float64(99.22), np.float64(100.82), ' events, or otherwise.')
+DEBUG	len of buffer now: 13.18
+98700 99220  future
+DEBUG	PROMPT:  those suggested by our comments today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release.
+DEBUG	CONTEXT:  The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future
+DEBUG	transcribing 15.18 seconds from 88.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(99.22), np.float64(100.28), ' events, or')
+DEBUG	INCOMPLETE: (np.float64(100.28), np.float64(102.96), ' otherwise, except as required by law.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.18
+99220 100280  events, or
+DEBUG	PROMPT:  those suggested by our comments today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release.
+DEBUG	CONTEXT:  The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events, or
+DEBUG	transcribing 17.18 seconds from 88.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(100.28), np.float64(102.97999999999999), ' otherwise, except as required by law.')
+DEBUG	INCOMPLETE: (np.float64(103.63999999999999), np.float64(105.67999999999999), " Additionally, on today's call,")
+DEBUG	--- segment chunked at 102.98
+DEBUG	chunking segment
+DEBUG	len of buffer now: 3.02
+100280 102980  otherwise, except as required by law.
+DEBUG	PROMPT:  disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise, except as required by
+DEBUG	CONTEXT:  law.
+DEBUG	transcribing 5.02 seconds from 102.98
+DEBUG	>>>>COMPLETE NOW: (np.float64(102.97999999999999), np.float64(105.66), " Additionally, on today's call,")
+DEBUG	INCOMPLETE: (np.float64(105.83999999999999), np.float64(107.97999999999999), ' management statements include a discussion')
+DEBUG	len of buffer now: 5.02
+102980 105660  Additionally, on today's call,
+DEBUG	PROMPT:  any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise, except as required by law.
+DEBUG	CONTEXT:  Additionally, on today's call,
+DEBUG	transcribing 7.02 seconds from 102.98
+DEBUG	>>>>COMPLETE NOW: (np.float64(105.83999999999999), np.float64(108.07999999999998), ' management statements include a discussion')
+DEBUG	INCOMPLETE: (np.float64(108.07999999999998), np.float64(109.97999999999999), ' of certain non-GAAP financial measures.')
+DEBUG	len of buffer now: 7.02
+105840 108080  management statements include a discussion
+DEBUG	PROMPT:  any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise, except as required by law.
+DEBUG	CONTEXT:  Additionally, on today's call, management statements include a discussion
+DEBUG	transcribing 9.02 seconds from 102.98
+DEBUG	>>>>COMPLETE NOW: (np.float64(108.07999999999998), np.float64(109.82), ' of certain non-GAAP financial')
+DEBUG	INCOMPLETE: (np.float64(109.82), np.float64(111.97999999999999), ' measures, which are intended to supplement.')
+DEBUG	len of buffer now: 9.02
+108080 109820  of certain non-GAAP financial
+DEBUG	PROMPT:  any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise, except as required by law.
+DEBUG	CONTEXT:  Additionally, on today's call, management statements include a discussion of certain non-GAAP financial
+DEBUG	transcribing 11.02 seconds from 102.98
+DEBUG	>>>>COMPLETE NOW: (np.float64(109.82), np.float64(111.74), ' measures, which are intended to')
+DEBUG	INCOMPLETE: (np.float64(111.74), np.float64(113.97999999999999), ' supplement and not be substitutes for.')
+DEBUG	len of buffer now: 11.02
+109820 111740  measures, which are intended to
+DEBUG	PROMPT:  any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise, except as required by law.
+DEBUG	CONTEXT:  Additionally, on today's call, management statements include a discussion of certain non-GAAP financial measures, which are intended to
+DEBUG	transcribing 13.02 seconds from 102.98
+DEBUG	>>>>COMPLETE NOW: (np.float64(111.74), np.float64(113.83999999999999), ' supplement and not be substitutes')
+DEBUG	INCOMPLETE: (np.float64(113.83999999999999), np.float64(115.79999999999998), ' for comparable GAAP measures.')
+DEBUG	len of buffer now: 13.02
+111740 113840  supplement and not be substitutes
+DEBUG	PROMPT:  any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise, except as required by law.
+DEBUG	CONTEXT:  Additionally, on today's call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes
+DEBUG	transcribing 15.02 seconds from 102.98
+DEBUG	>>>>COMPLETE NOW: (np.float64(113.83999999999999), np.float64(115.94), ' for comparable GAAP measures.')
+DEBUG	INCOMPLETE: (np.float64(117.07999999999998), np.float64(117.97999999999999), ' Reconciliations of...')
+DEBUG	--- segment chunked at 115.94
+DEBUG	chunking segment
+DEBUG	len of buffer now: 2.06
+113840 115940  for comparable GAAP measures.
+DEBUG	PROMPT:  on today's call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes for comparable GAAP
+DEBUG	CONTEXT:  measures.
+DEBUG	transcribing 4.06 seconds from 115.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(117.34), np.float64(117.86), ' Reconciliations')
+DEBUG	INCOMPLETE: (np.float64(117.86), np.float64(119.86), ' of such supplemental information to the')
+DEBUG	len of buffer now: 4.06
+117340 117860  Reconciliations
+DEBUG	PROMPT:  call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes for comparable GAAP measures.
+DEBUG	CONTEXT:  Reconciliations
+DEBUG	transcribing 6.06 seconds from 115.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(117.86), np.float64(119.86), ' of such supplemental information to the')
+DEBUG	INCOMPLETE: (np.float64(119.86), np.float64(121.98), ' comparable GAAP measures will be included.')
+DEBUG	len of buffer now: 6.06
+117860 119860  of such supplemental information to the
+DEBUG	PROMPT:  call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes for comparable GAAP measures.
+DEBUG	CONTEXT:  Reconciliations of such supplemental information to the
+DEBUG	transcribing 8.06 seconds from 115.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(119.88), np.float64(121.8), ' comparable GAAP measures will be')
+DEBUG	INCOMPLETE: (np.float64(121.8), np.float64(123.66), " included as part of today's presentation.")
+DEBUG	len of buffer now: 8.06
+119880 121800  comparable GAAP measures will be
+DEBUG	PROMPT:  call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes for comparable GAAP measures.
+DEBUG	CONTEXT:  Reconciliations of such supplemental information to the comparable GAAP measures will be
+DEBUG	transcribing 10.06 seconds from 115.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(121.8), np.float64(123.17999999999999), " included as part of today's")
+DEBUG	INCOMPLETE: (np.float64(123.17999999999999), np.float64(125.34), ' presentation and in our earnings release.')
+DEBUG	len of buffer now: 10.06
+121800 123180  included as part of today's
+DEBUG	PROMPT:  call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes for comparable GAAP measures.
+DEBUG	CONTEXT:  Reconciliations of such supplemental information to the comparable GAAP measures will be included as part of today's
+DEBUG	transcribing 12.06 seconds from 115.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(123.17999999999999), np.float64(125.36), ' presentation and in our earnings release.')
+DEBUG	INCOMPLETE: (np.float64(126.16), np.float64(127.97999999999999), " With that, I'd like to turn the call.")
+DEBUG	len of buffer now: 12.06
+123180 125360  presentation and in our earnings release.
+DEBUG	PROMPT:  call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes for comparable GAAP measures.
+DEBUG	CONTEXT:  Reconciliations of such supplemental information to the comparable GAAP measures will be included as part of today's presentation and in our earnings release.
+DEBUG	transcribing 14.06 seconds from 115.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(126.12), np.float64(127.88), " With that, I'd like to turn the")
+DEBUG	INCOMPLETE: (np.float64(127.88), np.float64(129.98), ' call over to our President and Chief...')
+DEBUG	len of buffer now: 14.06
+126120 127880  With that, I'd like to turn the
+DEBUG	PROMPT:  call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes for comparable GAAP measures.
+DEBUG	CONTEXT:  Reconciliations of such supplemental information to the comparable GAAP measures will be included as part of today's presentation and in our earnings release. With that, I'd like to turn the
+DEBUG	transcribing 16.06 seconds from 115.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(127.88), np.float64(129.68), ' call over to our President and')
+DEBUG	INCOMPLETE: (np.float64(129.68), np.float64(131.85999999999999), ' Chief Executive Officer, Brett Ponta.')
+DEBUG	--- segment chunked at 125.36
+DEBUG	chunking segment
+DEBUG	len of buffer now: 6.64
+127880 129680  call over to our President and
+DEBUG	PROMPT:  comparable GAAP measures. Reconciliations of such supplemental information to the comparable GAAP measures will be included as part of today's presentation and in our earnings release.
+DEBUG	CONTEXT:  With that, I'd like to turn the call over to our President and
+DEBUG	transcribing 8.64 seconds from 125.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(129.68), np.float64(131.54), ' Chief Executive Officer, Brett')
+DEBUG	INCOMPLETE: (np.float64(131.54), np.float64(133.98), ' Ponton. Brett? Thank you, Maureen.')
+DEBUG	len of buffer now: 8.64
+129680 131540  Chief Executive Officer, Brett
+DEBUG	PROMPT:  comparable GAAP measures. Reconciliations of such supplemental information to the comparable GAAP measures will be included as part of today's presentation and in our earnings release.
+DEBUG	CONTEXT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett
+DEBUG	transcribing 10.64 seconds from 125.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(131.54), np.float64(133.78), ' Ponton. Brett? Thank you,')
+DEBUG	INCOMPLETE: (np.float64(133.88), np.float64(135.32), ' Maureen, and good morning, everyone.')
+DEBUG	len of buffer now: 10.64
+131540 133780  Ponton. Brett? Thank you,
+DEBUG	PROMPT:  comparable GAAP measures. Reconciliations of such supplemental information to the comparable GAAP measures will be included as part of today's presentation and in our earnings release.
+DEBUG	CONTEXT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you,
+DEBUG	transcribing 12.64 seconds from 125.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(133.88), np.float64(135.32), ' Maureen, and good morning, everyone.')
+DEBUG	INCOMPLETE: (np.float64(135.78), np.float64(136.82), ' Thanks for joining us.')
+DEBUG	len of buffer now: 12.64
+133880 135320  Maureen, and good morning, everyone.
+DEBUG	PROMPT:  comparable GAAP measures. Reconciliations of such supplemental information to the comparable GAAP measures will be included as part of today's presentation and in our earnings release.
+DEBUG	CONTEXT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone.
+DEBUG	transcribing 14.64 seconds from 125.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(135.62), np.float64(136.78), ' Thanks for joining us.')
+DEBUG	INCOMPLETE: (np.float64(137.14), np.float64(139.98), " I'll get started today with a brief overview of our...")
+DEBUG	len of buffer now: 14.64
+135620 136780  Thanks for joining us.
+DEBUG	PROMPT:  comparable GAAP measures. Reconciliations of such supplemental information to the comparable GAAP measures will be included as part of today's presentation and in our earnings release.
+DEBUG	CONTEXT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining us.
+DEBUG	transcribing 16.64 seconds from 125.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(137.16), np.float64(139.84), " I'll get started today with a brief overview of")
+DEBUG	INCOMPLETE: (np.float64(139.84), np.float64(141.98), ' our third quarter results, followed by...')
+DEBUG	--- segment chunked at 136.76
+DEBUG	chunking segment
+DEBUG	len of buffer now: 5.24
+137160 139840  I'll get started today with a brief overview of
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of
+DEBUG	transcribing 7.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(139.84), np.float64(141.54), ' our third quarter results, followed')
+DEBUG	INCOMPLETE: (np.float64(141.54), np.float64(143.98), " by an update on the progress we've")
+DEBUG	len of buffer now: 7.24
+139840 141540  our third quarter results, followed
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed
+DEBUG	transcribing 9.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(141.56), np.float64(144.07999999999998), " by an update on the progress we've")
+DEBUG	INCOMPLETE: (np.float64(144.07999999999998), np.float64(145.88), ' made on our Monroe Forward Strategy.')
+DEBUG	len of buffer now: 9.24
+141560 144080  by an update on the progress we've
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've
+DEBUG	transcribing 11.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(144.07999999999998), np.float64(146.17999999999998), ' made on our Monroe Forward Strategy.')
+DEBUG	INCOMPLETE: (None, None, '')
+DEBUG	len of buffer now: 11.24
+144080 146180  made on our Monroe Forward Strategy.
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy.
+DEBUG	transcribing 13.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(147.2), np.float64(149.85999999999999), ' As illustrated on slide three, we')
+DEBUG	len of buffer now: 13.24
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy.
+DEBUG	transcribing 15.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(147.17999999999998), np.float64(149.85999999999999), ' As illustrated on slide three, we')
+DEBUG	INCOMPLETE: (np.float64(149.85999999999999), np.float64(151.98), ' reported comps down 0.9%.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.24
+147180 149860  As illustrated on slide three, we
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy. As illustrated on slide three, we
+DEBUG	transcribing 17.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(149.85999999999999), np.float64(151.45999999999998), ' reported comps down 0')
+DEBUG	INCOMPLETE: (np.float64(151.45999999999998), np.float64(153.35999999999999), '.9% in the third quarter.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.24
+149860 151460  reported comps down 0
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy. As illustrated on slide three, we reported comps down 0
+DEBUG	transcribing 19.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(151.45999999999998), np.float64(152.92), '.9% in the third')
+DEBUG	INCOMPLETE: (np.float64(152.92), np.float64(155.78), ' quarter as higher year-over-year ticket.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.24
+151460 152920 .9% in the third
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy. As illustrated on slide three, we reported comps down 0.9% in the third
+DEBUG	transcribing 21.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(152.94), np.float64(155.35999999999999), ' quarter as higher year-over-year')
+DEBUG	INCOMPLETE: (np.float64(155.35999999999999), np.float64(157.45999999999998), ' ticket was offset by negative traffic.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.24
+152940 155360  quarter as higher year-over-year
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy. As illustrated on slide three, we reported comps down 0.9% in the third quarter as higher year-over-year
+DEBUG	transcribing 23.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(155.35999999999999), np.float64(157.5), ' ticket was offset by negative traffic.')
+DEBUG	INCOMPLETE: (np.float64(157.83999999999997), np.float64(159.98), ' In October and the beginning of November,')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 23.24
+155360 157500  ticket was offset by negative traffic.
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy. As illustrated on slide three, we reported comps down 0.9% in the third quarter as higher year-over-year ticket was offset by negative traffic.
+DEBUG	transcribing 25.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(157.82), np.float64(160.22), ' In October and the beginning of November,')
+DEBUG	INCOMPLETE: (np.float64(160.45999999999998), np.float64(161.76), ' we performed well against')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 25.24
+157820 160220  In October and the beginning of November,
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy. As illustrated on slide three, we reported comps down 0.9% in the third quarter as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November,
+DEBUG	transcribing 27.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(160.45999999999998), np.float64(161.79999999999998), ' we performed well against')
+DEBUG	INCOMPLETE: (np.float64(161.79999999999998), np.float64(163.78), ' difficult comparisons in the prior year.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 27.24
+160460 161800  we performed well against
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy. As illustrated on slide three, we reported comps down 0.9% in the third quarter as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November, we performed well against
+DEBUG	transcribing 29.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(161.79999999999998), np.float64(163.79999999999998), ' difficult comparisons in the prior year.')
+DEBUG	INCOMPLETE: (np.float64(164.23999999999998), np.float64(165.98), ' Mild weather conditions toward')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 29.24
+161800 163800  difficult comparisons in the prior year.
+DEBUG	PROMPT:  With that, I'd like to turn the call over to our President and Chief Executive Officer, Brett Ponton. Brett? Thank you, Maureen, and good morning, everyone. Thanks for joining
+DEBUG	CONTEXT:  us. I'll get started today with a brief overview of our third quarter results, followed by an update on the progress we've made on our Monroe Forward Strategy. As illustrated on slide three, we reported comps down 0.9% in the third quarter as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November, we performed well against difficult comparisons in the prior year.
+DEBUG	transcribing 31.24 seconds from 136.76
+DEBUG	>>>>COMPLETE NOW: (np.float64(163.79999999999998), np.float64(165.62), ' Mild weather conditions')
+DEBUG	INCOMPLETE: (np.float64(165.62), np.float64(167.45999999999998), ' towards the end of November.')
+DEBUG	--- segment chunked at 163.80
+DEBUG	chunking segment
+DEBUG	len of buffer now: 4.20
+163800 165620  Mild weather conditions
+DEBUG	PROMPT:  as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November, we performed well against difficult comparisons in the prior year.
+DEBUG	CONTEXT:  Mild weather conditions
+DEBUG	transcribing 6.20 seconds from 163.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(165.61999999999998), np.float64(167.01999999999998), ' towards the end of')
+DEBUG	INCOMPLETE: (np.float64(167.01999999999998), np.float64(169.98), ' November and in December caused a slowdown across the...')
+DEBUG	len of buffer now: 6.20
+165620 167020  towards the end of
+DEBUG	PROMPT:  as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November, we performed well against difficult comparisons in the prior year.
+DEBUG	CONTEXT:  Mild weather conditions towards the end of
+DEBUG	transcribing 8.20 seconds from 163.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(167.01999999999998), np.float64(169.82), ' November and in December caused a slowdown across')
+DEBUG	INCOMPLETE: (np.float64(169.82), np.float64(171.48), ' our core northern markets.')
+DEBUG	len of buffer now: 8.20
+167020 169820  November and in December caused a slowdown across
+DEBUG	PROMPT:  as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November, we performed well against difficult comparisons in the prior year.
+DEBUG	CONTEXT:  Mild weather conditions towards the end of November and in December caused a slowdown across
+DEBUG	transcribing 10.20 seconds from 163.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(169.82), np.float64(171.51999999999998), ' our core northern markets.')
+DEBUG	INCOMPLETE: (np.float64(171.83999999999997), np.float64(173.98), ' These conditions have continued into change.')
+DEBUG	len of buffer now: 10.20
+169820 171520  our core northern markets.
+DEBUG	PROMPT:  as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November, we performed well against difficult comparisons in the prior year.
+DEBUG	CONTEXT:  Mild weather conditions towards the end of November and in December caused a slowdown across our core northern markets.
+DEBUG	transcribing 12.20 seconds from 163.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(171.88), np.float64(173.89999999999998), ' These conditions have continued into')
+DEBUG	INCOMPLETE: (np.float64(173.89999999999998), np.float64(175.98), ' January with our comparable story.')
+DEBUG	len of buffer now: 12.20
+171880 173900  These conditions have continued into
+DEBUG	PROMPT:  as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November, we performed well against difficult comparisons in the prior year.
+DEBUG	CONTEXT:  Mild weather conditions towards the end of November and in December caused a slowdown across our core northern markets. These conditions have continued into
+DEBUG	transcribing 14.20 seconds from 163.80
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(173.89999999999998), np.float64(177.98), ' January, with our comparable store sales down 4% during the year.')
+DEBUG	len of buffer now: 14.20
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November, we performed well against difficult comparisons in the prior year.
+DEBUG	CONTEXT:  Mild weather conditions towards the end of November and in December caused a slowdown across our core northern markets. These conditions have continued into
+DEBUG	transcribing 16.20 seconds from 163.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(173.89999999999998), np.float64(178.15999999999997), ' January, with our comparable store sales down 4% during the')
+DEBUG	INCOMPLETE: (np.float64(178.15999999999997), np.float64(178.39999999999998), ' month.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.20
+173900 178160  January, with our comparable store sales down 4% during the
+DEBUG	PROMPT:  as higher year-over-year ticket was offset by negative traffic. In October and the beginning of November, we performed well against difficult comparisons in the prior year.
+DEBUG	CONTEXT:  Mild weather conditions towards the end of November and in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the
+DEBUG	transcribing 18.20 seconds from 163.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(178.15999999999997), np.float64(178.39999999999998), ' month.')
+DEBUG	INCOMPLETE: (np.float64(178.99999999999997), np.float64(181.48), ' We do not like talking about the weather.')
+DEBUG	--- segment chunked at 178.40
+DEBUG	chunking segment
+DEBUG	len of buffer now: 3.60
+178160 178400  month.
+DEBUG	PROMPT:  November and in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the
+DEBUG	CONTEXT:  month.
+DEBUG	transcribing 5.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(178.39999999999998), np.float64(183.98), ' year. We do not like talking about the weather. However, it is impossible to ignore the weather.')
+DEBUG	len of buffer now: 5.60
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  November and in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the
+DEBUG	CONTEXT:  month.
+DEBUG	transcribing 7.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(178.39999999999998), np.float64(184.14), ' year. We do not like talking about the weather. However, it is impossible to ignore the')
+DEBUG	INCOMPLETE: (np.float64(184.14), np.float64(185.79999999999998), ' impact it has on our business.')
+DEBUG	len of buffer now: 7.60
+178400 184140  year. We do not like talking about the weather. However, it is impossible to ignore the
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the
+DEBUG	transcribing 9.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(184.14), np.float64(185.83999999999997), ' impact it has on our business.')
+DEBUG	INCOMPLETE: (np.float64(186.2), np.float64(187.98), ' While we are not satisfied with the weather, it is impossible to ignore the impact it has on our business.')
+DEBUG	len of buffer now: 9.60
+184140 185840  impact it has on our business.
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business.
+DEBUG	transcribing 11.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(186.14), np.float64(188.09999999999997), ' While we are not satisfied with')
+DEBUG	INCOMPLETE: (np.float64(188.09999999999997), np.float64(189.7), ' our financial results this quarter,')
+DEBUG	len of buffer now: 11.60
+186140 188100  While we are not satisfied with
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business. While we are not satisfied with
+DEBUG	transcribing 13.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(188.09999999999997), np.float64(189.67999999999998), ' our financial results this quarter,')
+DEBUG	INCOMPLETE: (np.float64(189.92), np.float64(191.98), ' we are executing well against the...')
+DEBUG	len of buffer now: 13.60
+188100 189680  our financial results this quarter,
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business. While we are not satisfied with our financial results this quarter,
+DEBUG	transcribing 15.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(189.89999999999998), np.float64(191.81999999999996), ' we are executing well against')
+DEBUG	INCOMPLETE: (np.float64(191.81999999999996), np.float64(193.49999999999997), ' the areas within our control.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.60
+189900 191820  we are executing well against
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business. While we are not satisfied with our financial results this quarter, we are executing well against
+DEBUG	transcribing 17.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(191.81999999999996), np.float64(193.51999999999998), ' the areas within our control.')
+DEBUG	INCOMPLETE: (np.float64(193.83999999999997), np.float64(195.97999999999996), ' In particular, we continue to move')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.60
+191820 193520  the areas within our control.
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business. While we are not satisfied with our financial results this quarter, we are executing well against the areas within our control.
+DEBUG	transcribing 19.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(193.85999999999999), np.float64(196.11999999999998), ' In particular, we continue to move')
+DEBUG	INCOMPLETE: (np.float64(196.11999999999998), np.float64(197.83999999999997), ' deeper into our company transformation.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.60
+193860 196120  In particular, we continue to move
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business. While we are not satisfied with our financial results this quarter, we are executing well against the areas within our control. In particular, we continue to move
+DEBUG	transcribing 21.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(196.11999999999998), np.float64(197.42), ' deeper into our company')
+DEBUG	INCOMPLETE: (np.float64(197.42), np.float64(199.97999999999996), ' transformation and are confident we are')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.60
+196120 197420  deeper into our company
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business. While we are not satisfied with our financial results this quarter, we are executing well against the areas within our control. In particular, we continue to move deeper into our company
+DEBUG	transcribing 23.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(197.42), np.float64(200.01999999999998), ' transformation and are confident we are')
+DEBUG	INCOMPLETE: (np.float64(200.01999999999998), np.float64(200.92), ' on the right path.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 23.60
+197420 200020  transformation and are confident we are
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business. While we are not satisfied with our financial results this quarter, we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are
+DEBUG	transcribing 25.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(200.01999999999998), np.float64(200.89999999999998), ' on the right path.')
+DEBUG	INCOMPLETE: (np.float64(201.26), np.float64(203.92), ' We are committed to making the necessary changes.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 25.60
+200020 200900  on the right path.
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business. While we are not satisfied with our financial results this quarter, we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right path.
+DEBUG	transcribing 27.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(201.29999999999998), np.float64(203.47999999999996), ' We are committed to making the necessary')
+DEBUG	INCOMPLETE: (np.float64(203.47999999999996), np.float64(205.65999999999997), ' changes across our organization.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 27.60
+201300 203480  We are committed to making the necessary
+DEBUG	PROMPT:  in December caused a slowdown across our core northern markets. These conditions have continued into January, with our comparable store sales down 4% during the month. year.
+DEBUG	CONTEXT:  We do not like talking about the weather. However, it is impossible to ignore the impact it has on our business. While we are not satisfied with our financial results this quarter, we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right path. We are committed to making the necessary
+DEBUG	transcribing 29.60 seconds from 178.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(203.47999999999996), np.float64(205.17999999999998), ' changes across our')
+DEBUG	INCOMPLETE: (np.float64(205.17999999999998), np.float64(207.49999999999997), ' organization to position us to deliver')
+DEBUG	--- segment chunked at 200.88
+DEBUG	chunking segment
+DEBUG	len of buffer now: 7.12
+203480 205180  changes across our
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our
+DEBUG	transcribing 9.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(205.17999999999998), np.float64(207.51999999999995), ' organization to position us to deliver')
+DEBUG	INCOMPLETE: (np.float64(207.51999999999995), np.float64(209.85999999999996), ' strong results no matter')
+DEBUG	len of buffer now: 9.12
+205180 207520  organization to position us to deliver
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver
+DEBUG	transcribing 11.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(207.51999999999995), np.float64(209.87999999999997), ' strong results no matter')
+DEBUG	INCOMPLETE: (np.float64(209.87999999999997), np.float64(211.55999999999997), ' the external circumstances.')
+DEBUG	len of buffer now: 11.12
+207520 209880  strong results no matter
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter
+DEBUG	transcribing 13.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(209.87999999999997), np.float64(211.63999999999996), ' the external circumstances.')
+DEBUG	INCOMPLETE: (np.float64(212.31999999999996), np.float64(213.95999999999998), ' Moving on to our performance')
+DEBUG	len of buffer now: 13.12
+209880 211640  the external circumstances.
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter the external circumstances.
+DEBUG	transcribing 15.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(212.35999999999996), np.float64(214.05999999999997), ' Moving on to our performance')
+DEBUG	INCOMPLETE: (np.float64(214.05999999999997), np.float64(215.83999999999997), ' by category in the third quarter')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.12
+212360 214060  Moving on to our performance
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter the external circumstances. Moving on to our performance
+DEBUG	transcribing 17.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(214.05999999999997), np.float64(215.45999999999998), ' by category in the third')
+DEBUG	INCOMPLETE: (np.float64(215.45999999999998), np.float64(217.97999999999996), ' quarter, we were down 1% year over')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.12
+214060 215460  by category in the third
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter the external circumstances. Moving on to our performance by category in the third
+DEBUG	transcribing 19.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(215.45999999999998), np.float64(217.81999999999996), ' quarter, we were down 1% year')
+DEBUG	INCOMPLETE: (np.float64(217.81999999999996), np.float64(219.93999999999997), '-over-year in the tires comparable store.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.12
+215460 217820  quarter, we were down 1% year
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter the external circumstances. Moving on to our performance by category in the third quarter, we were down 1% year
+DEBUG	transcribing 21.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(217.81999999999996), np.float64(218.69999999999996), '-over-year in')
+DEBUG	INCOMPLETE: (np.float64(218.69999999999996), np.float64(221.79999999999995), ' tires comparable store sales. As higher ticket')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.12
+217820 218700 -over-year in
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter the external circumstances. Moving on to our performance by category in the third quarter, we were down 1% year-over-year in
+DEBUG	transcribing 23.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(218.69999999999996), np.float64(221.85999999999996), ' tires comparable store sales. As higher ticket')
+DEBUG	INCOMPLETE: (np.float64(221.85999999999996), np.float64(223.97999999999996), ' year-over-year was offset by a decline.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 23.12
+218700 221860  tires comparable store sales. As higher ticket
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter the external circumstances. Moving on to our performance by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket
+DEBUG	transcribing 25.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(221.85999999999996), np.float64(223.75999999999996), ' year-over-year was offset by a')
+DEBUG	INCOMPLETE: (np.float64(223.75999999999996), np.float64(224.79999999999995), ' decline in tire volume.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 25.12
+221860 223760  year-over-year was offset by a
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter the external circumstances. Moving on to our performance by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a
+DEBUG	transcribing 27.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(223.75999999999996), np.float64(224.79999999999995), ' decline in tire volume.')
+DEBUG	INCOMPLETE: (np.float64(225.43999999999997), np.float64(227.97999999999996), ' We experienced more normalized retail sales')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 27.12
+223760 224800  decline in tire volume.
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter the external circumstances. Moving on to our performance by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	transcribing 29.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(225.47999999999996), np.float64(227.93999999999997), ' We experienced more normalized retail')
+DEBUG	INCOMPLETE: (np.float64(227.93999999999997), np.float64(229.87999999999997), ' pricing this quarter, and our')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 29.12
+225480 227940  We experienced more normalized retail
+DEBUG	PROMPT:  we are executing well against the areas within our control. In particular, we continue to move deeper into our company transformation and are confident we are on the right
+DEBUG	CONTEXT:  path. We are committed to making the necessary changes across our organization to position us to deliver strong results no matter the external circumstances. Moving on to our performance by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume. We experienced more normalized retail
+DEBUG	transcribing 31.12 seconds from 200.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(227.91999999999996), np.float64(228.73999999999995), ' pricing this')
+DEBUG	INCOMPLETE: (np.float64(228.73999999999995), np.float64(231.89999999999998), ' quarter and are focused on further refining our tire.')
+DEBUG	--- segment chunked at 224.80
+DEBUG	chunking segment
+DEBUG	len of buffer now: 7.20
+227940 228740  pricing this
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this
+DEBUG	transcribing 9.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(228.73999999999995), np.float64(231.75999999999996), ' quarter and are focused on further refining our')
+DEBUG	INCOMPLETE: (np.float64(231.75999999999996), np.float64(233.79999999999995), ' tire strategy to drive strength.')
+DEBUG	len of buffer now: 9.20
+228740 231760  quarter and are focused on further refining our
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our
+DEBUG	transcribing 11.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(231.75999999999996), np.float64(233.39999999999995), ' tire strategy to drive')
+DEBUG	INCOMPLETE: (np.float64(233.39999999999995), np.float64(235.25999999999996), ' strength in our largest category.')
+DEBUG	len of buffer now: 11.20
+231760 233400  tire strategy to drive
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our tire strategy to drive
+DEBUG	transcribing 13.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(233.39999999999995), np.float64(235.31999999999996), ' strength in our largest category.')
+DEBUG	INCOMPLETE: (np.float64(235.93999999999994), np.float64(237.97999999999996), ' Importantly, we are on track to...')
+DEBUG	len of buffer now: 13.20
+233400 235320  strength in our largest category.
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our tire strategy to drive strength in our largest category.
+DEBUG	transcribing 15.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(235.97999999999996), np.float64(237.71999999999994), ' Importantly, we are on track')
+DEBUG	INCOMPLETE: (np.float64(237.71999999999994), np.float64(239.83999999999995), ' to roll out our tire category management.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.20
+235980 237720  Importantly, we are on track
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our tire strategy to drive strength in our largest category. Importantly, we are on track
+DEBUG	transcribing 17.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(237.73999999999995), np.float64(239.37999999999997), ' to roll out our tire category')
+DEBUG	INCOMPLETE: (np.float64(239.37999999999997), np.float64(241.97999999999996), ' management and pricing system beginning in the first quarter.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.20
+237740 239380  to roll out our tire category
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our tire strategy to drive strength in our largest category. Importantly, we are on track to roll out our tire category
+DEBUG	transcribing 19.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(239.37999999999997), np.float64(242.11999999999995), ' management and pricing system beginning in the first')
+DEBUG	INCOMPLETE: (np.float64(242.11999999999995), np.float64(243.39999999999995), ' quarter of fiscal 2021.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.20
+239380 242120  management and pricing system beginning in the first
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our tire strategy to drive strength in our largest category. Importantly, we are on track to roll out our tire category management and pricing system beginning in the first
+DEBUG	transcribing 21.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(242.11999999999995), np.float64(242.91999999999996), ' quarter of fiscal')
+DEBUG	INCOMPLETE: (np.float64(242.91999999999996), np.float64(245.97999999999996), ' 2021, which will enable a more dynamic.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.20
+242120 242920  quarter of fiscal
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our tire strategy to drive strength in our largest category. Importantly, we are on track to roll out our tire category management and pricing system beginning in the first quarter of fiscal
+DEBUG	transcribing 23.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(242.91999999999996), np.float64(245.59999999999997), ' 2021, which will enable a more')
+DEBUG	INCOMPLETE: (np.float64(245.59999999999997), np.float64(247.97999999999996), ' dynamic and sophisticated approach to real-time.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 23.20
+242920 245600  2021, which will enable a more
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our tire strategy to drive strength in our largest category. Importantly, we are on track to roll out our tire category management and pricing system beginning in the first quarter of fiscal 2021, which will enable a more
+DEBUG	transcribing 25.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(245.61999999999995), np.float64(248.03999999999996), ' dynamic and sophisticated approach to real')
+DEBUG	INCOMPLETE: (np.float64(248.03999999999996), np.float64(249.87999999999994), "-time pricing. I'll provide")
+DEBUG	--- last segment not within commited area
+DEBUG	chunking segment
+DEBUG	len of buffer now: 25.20
+245620 248040  dynamic and sophisticated approach to real
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our tire strategy to drive strength in our largest category. Importantly, we are on track to roll out our tire category management and pricing system beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real
+DEBUG	transcribing 27.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(248.03999999999996), np.float64(249.99999999999994), "-time pricing. I'll provide")
+DEBUG	INCOMPLETE: (np.float64(249.99999999999994), np.float64(251.37999999999994), ' more details on this shortly.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 27.20
+248040 250000 -time pricing. I'll provide
+DEBUG	PROMPT:  by category in the third quarter, we were down 1% year-over-year in tires comparable store sales. As higher ticket year-over-year was offset by a decline in tire volume.
+DEBUG	CONTEXT:  We experienced more normalized retail pricing this quarter and are focused on further refining our tire strategy to drive strength in our largest category. Importantly, we are on track to roll out our tire category management and pricing system beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide
+DEBUG	transcribing 29.20 seconds from 224.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(249.99999999999994), np.float64(251.39999999999995), ' more details on this shortly.')
+DEBUG	INCOMPLETE: (np.float64(252.79999999999995), np.float64(253.87999999999994), ' Turning to our service.')
+DEBUG	--- segment chunked at 251.40
+DEBUG	chunking segment
+DEBUG	len of buffer now: 2.60
+250000 251400  more details on this shortly.
+DEBUG	PROMPT:  pricing system beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this
+DEBUG	CONTEXT:  shortly.
+DEBUG	transcribing 4.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(251.39999999999995), np.float64(255.97999999999996), ' quickly. Turning to our service and repair categories, we saw a 3% increase in the first quarter of fiscal year.')
+DEBUG	len of buffer now: 4.60
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  pricing system beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this
+DEBUG	CONTEXT:  shortly.
+DEBUG	transcribing 6.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(251.39999999999995), np.float64(255.99999999999994), ' quickly. Turning to our service and repair categories, we saw a 3%')
+DEBUG	INCOMPLETE: (np.float64(255.99999999999994), np.float64(257.9), ' decline in breaks year-over-year.')
+DEBUG	len of buffer now: 6.60
+251400 256000  quickly. Turning to our service and repair categories, we saw a 3%
+DEBUG	PROMPT:  beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this shortly.
+DEBUG	CONTEXT:  quickly. Turning to our service and repair categories, we saw a 3%
+DEBUG	transcribing 8.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(256.0199999999999), np.float64(257.65999999999997), ' decline in breaks year-over')
+DEBUG	INCOMPLETE: (np.float64(257.65999999999997), np.float64(259.97999999999996), '-year, falling short of a difficult...')
+DEBUG	len of buffer now: 8.60
+256020 257660  decline in breaks year-over
+DEBUG	PROMPT:  beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this shortly.
+DEBUG	CONTEXT:  quickly. Turning to our service and repair categories, we saw a 3% decline in breaks year-over
+DEBUG	transcribing 10.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(257.67999999999995), np.float64(259.49999999999994), '-year, falling short of a')
+DEBUG	INCOMPLETE: (np.float64(259.49999999999994), np.float64(261.75999999999993), ' difficult comparison in the third quarter last year.')
+DEBUG	len of buffer now: 10.60
+257680 259500 -year, falling short of a
+DEBUG	PROMPT:  beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this shortly.
+DEBUG	CONTEXT:  quickly. Turning to our service and repair categories, we saw a 3% decline in breaks year-over-year, falling short of a
+DEBUG	transcribing 12.60 seconds from 251.40
+DEBUG	removing last 1 words: (np.float64(259.4), np.float64(259.49999999999994), ' a')
+DEBUG	>>>>COMPLETE NOW: (np.float64(259.49999999999994), np.float64(261.75999999999993), ' difficult comparison in the third quarter last year.')
+DEBUG	INCOMPLETE: (np.float64(262.05999999999995), np.float64(263.97999999999996), ' In maintenance, we were flat while...')
+DEBUG	len of buffer now: 12.60
+259500 261760  difficult comparison in the third quarter last year.
+DEBUG	PROMPT:  beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this shortly.
+DEBUG	CONTEXT:  quickly. Turning to our service and repair categories, we saw a 3% decline in breaks year-over-year, falling short of a difficult comparison in the third quarter last year.
+DEBUG	transcribing 14.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(262.05999999999995), np.float64(263.61999999999995), ' In maintenance, we were flat')
+DEBUG	INCOMPLETE: (np.float64(263.61999999999995), np.float64(265.75999999999993), ' while front-end shocks were down 1%.')
+DEBUG	len of buffer now: 14.60
+262060 263620  In maintenance, we were flat
+DEBUG	PROMPT:  beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this shortly.
+DEBUG	CONTEXT:  quickly. Turning to our service and repair categories, we saw a 3% decline in breaks year-over-year, falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat
+DEBUG	transcribing 16.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(263.61999999999995), np.float64(265.25999999999993), ' while front-end shocks were down')
+DEBUG	INCOMPLETE: (np.float64(265.25999999999993), np.float64(267.65999999999997), ' 1% and alignments declined 3%.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.60
+263620 265260  while front-end shocks were down
+DEBUG	PROMPT:  beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this shortly.
+DEBUG	CONTEXT:  quickly. Turning to our service and repair categories, we saw a 3% decline in breaks year-over-year, falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down
+DEBUG	transcribing 18.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(265.25999999999993), np.float64(267.09999999999997), ' 1% and alignments declined')
+DEBUG	INCOMPLETE: (np.float64(267.09999999999997), np.float64(269.67999999999995), ' 3% year over year. Overall,')
+DEBUG	--- last segment not within commited area
+DEBUG	chunking segment
+DEBUG	len of buffer now: 18.60
+265260 267100  1% and alignments declined
+DEBUG	PROMPT:  beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this shortly.
+DEBUG	CONTEXT:  quickly. Turning to our service and repair categories, we saw a 3% decline in breaks year-over-year, falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined
+DEBUG	transcribing 20.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(267.11999999999995), np.float64(269.79999999999995), ' 3% year over year. Overall,')
+DEBUG	INCOMPLETE: (np.float64(270.09999999999997), np.float64(271.4), ' our southern markets outperformed...')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 20.60
+267120 269800  3% year over year. Overall,
+DEBUG	PROMPT:  beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this shortly.
+DEBUG	CONTEXT:  quickly. Turning to our service and repair categories, we saw a 3% decline in breaks year-over-year, falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over year. Overall,
+DEBUG	transcribing 22.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(270.09999999999997), np.float64(271.0799999999999), ' our southern markets')
+DEBUG	INCOMPLETE: (np.float64(271.0799999999999), np.float64(273.84), ' outperformed our northern markets as expected.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 22.60
+270100 271080  our southern markets
+DEBUG	PROMPT:  beginning in the first quarter of fiscal 2021, which will enable a more dynamic and sophisticated approach to real-time pricing. I'll provide more details on this shortly.
+DEBUG	CONTEXT:  quickly. Turning to our service and repair categories, we saw a 3% decline in breaks year-over-year, falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over year. Overall, our southern markets
+DEBUG	transcribing 24.60 seconds from 251.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(271.0799999999999), np.float64(273.31999999999994), ' outperformed our northern markets as')
+DEBUG	INCOMPLETE: (np.float64(273.31999999999994), np.float64(275.97999999999996), ' expected given the mild winter weather conditions.')
+DEBUG	--- segment chunked at 268.58
+DEBUG	chunking segment
+DEBUG	len of buffer now: 7.42
+271080 273320  outperformed our northern markets as
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as
+DEBUG	transcribing 9.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(273.3399999999999), np.float64(275.5999999999999), ' expected given the mild winter weather')
+DEBUG	INCOMPLETE: (np.float64(275.5999999999999), np.float64(277.37999999999994), ' conditions we faced in this region.')
+DEBUG	len of buffer now: 9.42
+273340 275600  expected given the mild winter weather
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather
+DEBUG	transcribing 11.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(275.5799999999999), np.float64(277.05999999999995), ' conditions we faced in this')
+DEBUG	INCOMPLETE: (np.float64(277.05999999999995), np.float64(279.9799999999999), ' region New stores added 22%')
+DEBUG	len of buffer now: 11.42
+275600 277060  conditions we faced in this
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this
+DEBUG	transcribing 13.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(277.05999999999995), np.float64(281.8999999999999), ' region. New stores added $22.7 million in revenue during the')
+DEBUG	len of buffer now: 13.42
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this
+DEBUG	transcribing 15.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(277.0399999999999), np.float64(281.8999999999999), ' region. New stores added $22.7 million in revenue during the')
+DEBUG	INCOMPLETE: (np.float64(281.8999999999999), np.float64(283.9799999999999), ' quarter including $20.7 million')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.42
+277060 281900  region. New stores added $22.7 million in revenue during the
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this region. New stores added $22.7 million in revenue during the
+DEBUG	transcribing 17.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(281.8999999999999), np.float64(284.11999999999995), ' quarter including $20.7 million')
+DEBUG	INCOMPLETE: (np.float64(284.11999999999995), np.float64(285.79999999999995), ' from recent acquisitions.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.42
+281900 284120  quarter including $20.7 million
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this region. New stores added $22.7 million in revenue during the quarter including $20.7 million
+DEBUG	transcribing 19.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(284.11999999999995), np.float64(285.81999999999994), ' from recent acquisitions.')
+DEBUG	INCOMPLETE: (np.float64(286.3999999999999), np.float64(287.8599999999999), ' Regarding our gross margin')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.42
+284120 285820  from recent acquisitions.
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this region. New stores added $22.7 million in revenue during the quarter including $20.7 million from recent acquisitions.
+DEBUG	transcribing 21.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(286.4599999999999), np.float64(287.87999999999994), ' Regarding our gross margin')
+DEBUG	INCOMPLETE: (np.float64(287.87999999999994), np.float64(289.9799999999999), ' performance during the quarter, we saw a decline')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.42
+286460 287880  Regarding our gross margin
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this region. New stores added $22.7 million in revenue during the quarter including $20.7 million from recent acquisitions. Regarding our gross margin
+DEBUG	transcribing 23.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(287.87999999999994), np.float64(290.0799999999999), ' performance during the quarter, we saw a decline')
+DEBUG	INCOMPLETE: (np.float64(290.0799999999999), np.float64(291.9799999999999), ' of 20 basis points compared to')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 23.42
+287880 290080  performance during the quarter, we saw a decline
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this region. New stores added $22.7 million in revenue during the quarter including $20.7 million from recent acquisitions. Regarding our gross margin performance during the quarter, we saw a decline
+DEBUG	transcribing 25.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(290.0799999999999), np.float64(292.0999999999999), ' of 20 basis points compared to')
+DEBUG	INCOMPLETE: (np.float64(292.0999999999999), np.float64(293.79999999999995), ' the prior year period.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 25.42
+290080 292100  of 20 basis points compared to
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this region. New stores added $22.7 million in revenue during the quarter including $20.7 million from recent acquisitions. Regarding our gross margin performance during the quarter, we saw a decline of 20 basis points compared to
+DEBUG	transcribing 27.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(292.0999999999999), np.float64(293.31999999999994), ' the prior year')
+DEBUG	INCOMPLETE: (np.float64(293.31999999999994), np.float64(295.9799999999999), ' period primarily driven by the decrease in the region.')
+DEBUG	--- last segment not within commited area
+DEBUG	chunking segment
+DEBUG	len of buffer now: 27.42
+292100 293320  the prior year
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this region. New stores added $22.7 million in revenue during the quarter including $20.7 million from recent acquisitions. Regarding our gross margin performance during the quarter, we saw a decline of 20 basis points compared to the prior year
+DEBUG	transcribing 29.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(293.31999999999994), np.float64(295.9599999999999), ' period primarily driven by the decrease in')
+DEBUG	INCOMPLETE: (np.float64(295.9599999999999), np.float64(297.25999999999993), ' our comparable store sales.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 29.42
+293320 295960  period primarily driven by the decrease in
+DEBUG	PROMPT:  falling short of a difficult comparison in the third quarter last year. In maintenance, we were flat while front-end shocks were down 1% and alignments declined 3% year over
+DEBUG	CONTEXT:  year. Overall, our southern markets outperformed our northern markets as expected given the mild winter weather conditions we faced in this region. New stores added $22.7 million in revenue during the quarter including $20.7 million from recent acquisitions. Regarding our gross margin performance during the quarter, we saw a decline of 20 basis points compared to the prior year period primarily driven by the decrease in
+DEBUG	transcribing 31.42 seconds from 268.58
+DEBUG	>>>>COMPLETE NOW: (np.float64(295.9599999999999), np.float64(296.79999999999995), ' our comparable store')
+DEBUG	INCOMPLETE: (np.float64(296.79999999999995), np.float64(299.63999999999993), ' sales, which resulted in higher fixed costs.')
+DEBUG	--- segment chunked at 285.80
+DEBUG	chunking segment
+DEBUG	len of buffer now: 14.20
+295960 296800  our comparable store

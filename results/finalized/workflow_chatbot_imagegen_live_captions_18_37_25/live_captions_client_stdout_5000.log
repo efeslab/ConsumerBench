@@ -1,0 +1,1205 @@
+Audio duration: 300.00 seconds
+Connected to localhost:5000
+Sent chunk 1: 64000 bytes (2.00 seconds) at 1763519870.564568
+Received 9 bytes of response data
+
+Response for chunk 1:
+  Processing time: 0.201094 seconds
+  Content: No input
+  Received at: 1763519870.765662
+  Sent at: 1763519870.564568
+Sent chunk 2: 64000 bytes (2.00 seconds) at 1763519872.568540
+Received 9 bytes of response data
+
+Response for chunk 2:
+  Processing time: 0.401807 seconds
+  Content: No input
+  Received at: 1763519872.970347
+  Sent at: 1763519872.568540
+Sent chunk 3: 64000 bytes (2.00 seconds) at 1763519874.573523
+Received 36 bytes of response data
+
+Response for chunk 3:
+  Processing time: 0.301338 seconds
+  Content: 2900 4020  Good morning, ladies and
+  Received at: 1763519874.874861
+  Sent at: 1763519874.573523
+Sent chunk 4: 64000 bytes (2.00 seconds) at 1763519876.577943
+Received 41 bytes of response data
+
+Response for chunk 4:
+  Processing time: 0.501609 seconds
+  Content: 4020 5000  gentlemen, and welcome to the
+  Received at: 1763519877.079552
+  Sent at: 1763519876.577943
+Sent chunk 5: 64000 bytes (2.00 seconds) at 1763519878.582375
+Received 68 bytes of response data
+
+Response for chunk 5:
+  Processing time: 0.401298 seconds
+  Content: 5000 7740  Monroe Inks Earnings Conference Call for the 3rd Quarter
+  Received at: 1763519878.983672
+  Sent at: 1763519878.582375
+Sent chunk 6: 64000 bytes (2.00 seconds) at 1763519880.587469
+Received 24 bytes of response data
+
+Response for chunk 6:
+  Processing time: 0.401605 seconds
+  Content: 7740 8720  Fiscal 2020.
+  Received at: 1763519880.989074
+  Sent at: 1763519880.587469
+Sent chunk 7: 64000 bytes (2.00 seconds) at 1763519882.592070
+Received 59 bytes of response data
+
+Response for chunk 7:
+  Processing time: 0.502038 seconds
+  Content: 9320 11300  At this time, all participants are on a listen
+  Received at: 1763519883.094108
+  Sent at: 1763519882.592070
+Sent chunk 8: 64000 bytes (2.00 seconds) at 1763519884.597259
+Received 24 bytes of response data
+
+Response for chunk 8:
+  Processing time: 0.601686 seconds
+  Content: 11300 11780 -only mode.
+  Received at: 1763519885.198945
+  Sent at: 1763519884.597259
+Sent chunk 9: 64000 bytes (2.00 seconds) at 1763519886.601961
+Received 9 bytes of response data
+
+Response for chunk 9:
+  Processing time: 0.401349 seconds
+  Content: No input
+  Received at: 1763519887.003310
+  Sent at: 1763519886.601961
+Sent chunk 10: 64000 bytes (2.00 seconds) at 1763519888.607785
+Received 53 bytes of response data
+
+Response for chunk 10:
+  Processing time: 0.501444 seconds
+  Content: 11780 13720  note. Later, we will conduct a question
+  Received at: 1763519889.109229
+  Sent at: 1763519888.607785
+Sent chunk 11: 64000 bytes (2.00 seconds) at 1763519890.612148
+Received 9 bytes of response data
+
+Response for chunk 11:
+  Processing time: 0.400991 seconds
+  Content: No input
+  Received at: 1763519891.013138
+  Sent at: 1763519890.612148
+Sent chunk 12: 64000 bytes (2.00 seconds) at 1763519892.617669
+Sent chunk 13: 64000 bytes (2.00 seconds) at 1763519894.622118
+Sent chunk 14: 64000 bytes (2.00 seconds) at 1763519896.639465
+Received 24 bytes of response data
+
+Response for chunk 12:
+  Processing time: 4.530851 seconds
+  Content: 13720 14180  and answer
+  Received at: 1763519897.148520
+  Sent at: 1763519892.617669
+Received 9 bytes of response data
+
+Response for chunk 13:
+  Processing time: 3.029521 seconds
+  Content: No input
+  Received at: 1763519897.651639
+  Sent at: 1763519894.622118
+Received 264 bytes of response data
+
+Response for chunk 14:
+  Processing time: 1.519571 seconds
+  Content: 14180 26260  session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touch tone phone. As a reminder, ladies and gentlemen, this conference is being recorded and may not be reproduced
+  Received at: 1763519898.159036
+  Sent at: 1763519896.639465
+Sent chunk 15: 64000 bytes (2.00 seconds) at 1763519898.660785
+Received 41 bytes of response data
+
+Response for chunk 15:
+  Processing time: 0.301427 seconds
+  Content: 26260 27760  in whole or in part without
+  Received at: 1763519898.962212
+  Sent at: 1763519898.660785
+Sent chunk 16: 64000 bytes (2.00 seconds) at 1763519900.666452
+Received 42 bytes of response data
+
+Response for chunk 16:
+  Processing time: 0.501689 seconds
+  Content: 27760 28820  permission from the company.
+  Received at: 1763519901.168141
+  Sent at: 1763519900.666452
+Sent chunk 17: 64000 bytes (2.00 seconds) at 1763519902.671960
+Received 55 bytes of response data
+
+Response for chunk 17:
+  Processing time: 0.401372 seconds
+  Content: 29720 31520  I would now like to introduce Ms. Maureen
+  Received at: 1763519903.073333
+  Sent at: 1763519902.671960
+Sent chunk 18: 64000 bytes (2.00 seconds) at 1763519904.677230
+Received 55 bytes of response data
+
+Response for chunk 18:
+  Processing time: 0.501370 seconds
+  Content: 31520 33480  Mahauland, Senior Vice President, General
+  Received at: 1763519905.178600
+  Sent at: 1763519904.677230
+Sent chunk 19: 64000 bytes (2.00 seconds) at 1763519906.681591
+Received 54 bytes of response data
+
+Response for chunk 19:
+  Processing time: 0.501535 seconds
+  Content: 33480 35760  Counsel, and Secretary Munro. Thank you.
+  Received at: 1763519907.183126
+  Sent at: 1763519906.681591
+Sent chunk 20: 64000 bytes (2.00 seconds) at 1763519908.686542
+Received 30 bytes of response data
+
+Response for chunk 20:
+  Processing time: 0.501614 seconds
+  Content: 36020 36460  Please go ahead.
+  Received at: 1763519909.188155
+  Sent at: 1763519908.686542
+Sent chunk 21: 64000 bytes (2.00 seconds) at 1763519910.691408
+Received 31 bytes of response data
+
+Response for chunk 21:
+  Processing time: 0.501461 seconds
+  Content: 37920 39520  Thank you. Hello,
+  Received at: 1763519911.192869
+  Sent at: 1763519910.691408
+Sent chunk 22: 64000 bytes (2.00 seconds) at 1763519912.696255
+Received 70 bytes of response data
+
+Response for chunk 22:
+  Processing time: 0.401313 seconds
+  Content: 39600 42080  everyone, and thank you for joining us on this morning's
+  Received at: 1763519913.097568
+  Sent at: 1763519912.696255
+Sent chunk 23: 64000 bytes (2.00 seconds) at 1763519914.701348
+Received 33 bytes of response data
+
+Response for chunk 23:
+  Processing time: 0.401170 seconds
+  Content: 42080 43660  call. Before we get
+  Received at: 1763519915.102518
+  Sent at: 1763519914.701348
+Sent chunk 24: 64000 bytes (2.00 seconds) at 1763519916.705433
+Received 54 bytes of response data
+
+Response for chunk 24:
+  Processing time: 0.601562 seconds
+  Content: 43660 46060  started, please note that as part of the
+  Received at: 1763519917.306995
+  Sent at: 1763519916.705433
+Sent chunk 25: 64000 bytes (2.00 seconds) at 1763519918.709507
+Received 43 bytes of response data
+
+Response for chunk 25:
+  Processing time: 0.601375 seconds
+  Content: 46060 47780  call this morning, we will be
+  Received at: 1763519919.310882
+  Sent at: 1763519918.709507
+Sent chunk 26: 64000 bytes (2.00 seconds) at 1763519920.713638
+Received 48 bytes of response data
+
+Response for chunk 26:
+  Processing time: 0.501298 seconds
+  Content: 47780 49520  referencing a presentation that is
+  Received at: 1763519921.214936
+  Sent at: 1763519920.713638
+Sent chunk 27: 64000 bytes (2.00 seconds) at 1763519922.717456
+Received 30 bytes of response data
+
+Response for chunk 27:
+  Processing time: 0.300944 seconds
+  Content: 49520 50420  available on the
+  Received at: 1763519923.018400
+  Sent at: 1763519922.717456
+Sent chunk 28: 64000 bytes (2.00 seconds) at 1763519924.722604
+Received 9 bytes of response data
+
+Response for chunk 28:
+  Processing time: 0.502269 seconds
+  Content: No input
+  Received at: 1763519925.224872
+  Sent at: 1763519924.722604
+Sent chunk 29: 64000 bytes (2.00 seconds) at 1763519926.729037
+Received 9 bytes of response data
+
+Response for chunk 29:
+  Processing time: 0.401757 seconds
+  Content: No input
+  Received at: 1763519927.130795
+  Sent at: 1763519926.729037
+Sent chunk 30: 64000 bytes (2.00 seconds) at 1763519928.736284
+Received 67 bytes of response data
+
+Response for chunk 30:
+  Processing time: 0.501732 seconds
+  Content: 50420 54560  Investors section of our website at corporate.linrowe
+  Received at: 1763519929.238016
+  Sent at: 1763519928.736284
+Sent chunk 31: 64000 bytes (2.00 seconds) at 1763519930.741473
+Received 9 bytes of response data
+
+Response for chunk 31:
+  Processing time: 0.401535 seconds
+  Content: No input
+  Received at: 1763519931.143009
+  Sent at: 1763519930.741473
+Sent chunk 32: 64000 bytes (2.00 seconds) at 1763519932.746556
+Received 9 bytes of response data
+
+Response for chunk 32:
+  Processing time: 1.703449 seconds
+  Content: No input
+  Received at: 1763519934.450005
+  Sent at: 1763519932.746556
+Sent chunk 33: 64000 bytes (2.00 seconds) at 1763519934.751295
+Received 107 bytes of response data
+
+Response for chunk 33:
+  Processing time: 0.401245 seconds
+  Content: 54560 63800 .com, backslash investors, backslash investor resources. If I could draw your attention to the
+  Received at: 1763519935.152540
+  Sent at: 1763519934.751295
+Sent chunk 34: 64000 bytes (2.00 seconds) at 1763519936.755766
+Received 44 bytes of response data
+
+Response for chunk 34:
+  Processing time: 0.802657 seconds
+  Content: 63800 65380  safe harbor statement on slide
+  Received at: 1763519937.558423
+  Sent at: 1763519936.755766
+Sent chunk 35: 64000 bytes (2.00 seconds) at 1763519938.761148
+Received 9 bytes of response data
+
+Response for chunk 35:
+  Processing time: 0.501086 seconds
+  Content: No input
+  Received at: 1763519939.262234
+  Sent at: 1763519938.761148
+Sent chunk 36: 64000 bytes (2.00 seconds) at 1763519940.765121
+Received 93 bytes of response data
+
+Response for chunk 36:
+  Processing time: 0.501511 seconds
+  Content: 65380 69880  two of the presentation, I'd like to remind participants on this morning's call
+  Received at: 1763519941.266632
+  Sent at: 1763519940.765121
+Sent chunk 37: 64000 bytes (2.00 seconds) at 1763519942.769493
+Received 49 bytes of response data
+
+Response for chunk 37:
+  Processing time: 0.501503 seconds
+  Content: 69880 71800  that our presentation includes some
+  Received at: 1763519943.270996
+  Sent at: 1763519942.769493
+Sent chunk 38: 64000 bytes (2.00 seconds) at 1763519944.774119
+Received 21 bytes of response data
+
+Response for chunk 38:
+  Processing time: 0.401289 seconds
+  Content: 71800 72260  forward
+  Received at: 1763519945.175408
+  Sent at: 1763519944.774119
+Sent chunk 39: 64000 bytes (2.00 seconds) at 1763519946.778426
+Received 67 bytes of response data
+
+Response for chunk 39:
+  Processing time: 0.601588 seconds
+  Content: 72260 75020  looking statements about Monroe's future performance.
+  Received at: 1763519947.380014
+  Sent at: 1763519946.778426
+Sent chunk 40: 64000 bytes (2.00 seconds) at 1763519948.782942
+Received 50 bytes of response data
+
+Response for chunk 40:
+  Processing time: 0.301098 seconds
+  Content: 75900 78000  Actual results may differ materially
+  Received at: 1763519949.084040
+  Sent at: 1763519948.782942
+Sent chunk 41: 64000 bytes (2.00 seconds) at 1763519950.787007
+Received 50 bytes of response data
+
+Response for chunk 41:
+  Processing time: 0.501224 seconds
+  Content: 78000 79720  from those suggested by our comments
+  Received at: 1763519951.288232
+  Sent at: 1763519950.787007
+Sent chunk 42: 64000 bytes (2.00 seconds) at 1763519952.791309
+Received 41 bytes of response data
+
+Response for chunk 42:
+  Processing time: 0.401368 seconds
+  Content: 79720 81900  today. The most significant
+  Received at: 1763519953.192677
+  Sent at: 1763519952.791309
+Sent chunk 43: 64000 bytes (2.00 seconds) at 1763519954.795466
+Received 54 bytes of response data
+
+Response for chunk 43:
+  Processing time: 0.401184 seconds
+  Content: 81920 84120  factors that could affect future results
+  Received at: 1763519955.196650
+  Sent at: 1763519954.795466
+Sent chunk 44: 64000 bytes (2.00 seconds) at 1763519956.799560
+Received 38 bytes of response data
+
+Response for chunk 44:
+  Processing time: 0.602023 seconds
+  Content: 84120 85580  are outlined in Monroe's
+  Received at: 1763519957.401583
+  Sent at: 1763519956.799560
+Sent chunk 45: 64000 bytes (2.00 seconds) at 1763519958.806075
+Received 26 bytes of response data
+
+Response for chunk 45:
+  Processing time: 0.301515 seconds
+  Content: 85580 86260  filings with
+  Received at: 1763519959.107589
+  Sent at: 1763519958.806075
+Sent chunk 46: 64000 bytes (2.00 seconds) at 1763519960.811326
+Received 50 bytes of response data
+
+Response for chunk 46:
+  Processing time: 0.401425 seconds
+  Content: 86260 88780  the SEC and in our earnings release.
+  Received at: 1763519961.212752
+  Sent at: 1763519960.811326
+Sent chunk 47: 64000 bytes (2.00 seconds) at 1763519962.816690
+Received 52 bytes of response data
+
+Response for chunk 47:
+  Processing time: 0.401619 seconds
+  Content: 89800 91980  The company disclaims any intention or
+  Received at: 1763519963.218309
+  Sent at: 1763519962.816690
+Sent chunk 48: 64000 bytes (2.00 seconds) at 1763519964.821601
+Received 37 bytes of response data
+
+Response for chunk 48:
+  Processing time: 1.202985 seconds
+  Content: 91980 93540  obligation to update or
+  Received at: 1763519966.024586
+  Sent at: 1763519964.821601
+Sent chunk 49: 64000 bytes (2.00 seconds) at 1763519966.826731
+Received 50 bytes of response data
+
+Response for chunk 49:
+  Processing time: 1.402822 seconds
+  Content: 93540 95700  revise any forward-looking statement
+  Received at: 1763519968.229552
+  Sent at: 1763519966.826731
+Sent chunk 50: 64000 bytes (2.00 seconds) at 1763519968.831622
+Received 40 bytes of response data
+
+Response for chunk 50:
+  Processing time: 0.902107 seconds
+  Content: 96340 97680  whether as a result of new
+  Received at: 1763519969.733729
+  Sent at: 1763519968.831622
+Sent chunk 51: 64000 bytes (2.00 seconds) at 1763519970.836190
+Received 41 bytes of response data
+
+Response for chunk 51:
+  Processing time: 1.002265 seconds
+  Content: 97680 99640  information, future events,
+  Received at: 1763519971.838455
+  Sent at: 1763519970.836190
+Sent chunk 52: 64000 bytes (2.00 seconds) at 1763519972.840649
+Received 18 bytes of response data
+
+Response for chunk 52:
+  Processing time: 1.001997 seconds
+  Content: 100120 100320  or
+  Received at: 1763519973.842646
+  Sent at: 1763519972.840649
+Sent chunk 53: 64000 bytes (2.00 seconds) at 1763519974.845744
+Received 53 bytes of response data
+
+Response for chunk 53:
+  Processing time: 1.203797 seconds
+  Content: 100320 102940  otherwise, except as required by law.
+  Received at: 1763519976.049541
+  Sent at: 1763519974.845744
+Sent chunk 54: 64000 bytes (2.00 seconds) at 1763519976.852839
+Received 46 bytes of response data
+
+Response for chunk 54:
+  Processing time: 1.503529 seconds
+  Content: 103900 105600  Additionally, on today's call,
+  Received at: 1763519978.356368
+  Sent at: 1763519976.852839
+Sent chunk 55: 64000 bytes (2.00 seconds) at 1763519978.859854
+Received 58 bytes of response data
+
+Response for chunk 55:
+  Processing time: 0.902586 seconds
+  Content: 105900 108020  management statements include a discussion
+  Received at: 1763519979.762440
+  Sent at: 1763519978.859854
+Sent chunk 56: 64000 bytes (2.00 seconds) at 1763519980.865095
+Received 44 bytes of response data
+
+Response for chunk 56:
+  Processing time: 0.902487 seconds
+  Content: 108020 109760  of certain non-GAP financial
+  Received at: 1763519981.767582
+  Sent at: 1763519980.865095
+Sent chunk 57: 64000 bytes (2.00 seconds) at 1763519982.871780
+Sent chunk 58: 64000 bytes (2.00 seconds) at 1763519984.874887
+Sent chunk 59: 64000 bytes (2.00 seconds) at 1763519986.877771
+Sent chunk 60: 64000 bytes (2.00 seconds) at 1763519988.881676
+Sent chunk 61: 64000 bytes (2.00 seconds) at 1763519990.884913
+Sent chunk 62: 64000 bytes (2.00 seconds) at 1763519992.888198
+Received 46 bytes of response data
+
+Response for chunk 57:
+  Processing time: 10.417857 seconds
+  Content: 109760 111720  measures which are intended to
+  Received at: 1763519993.289637
+  Sent at: 1763519982.871780
+Received 37 bytes of response data
+
+Response for chunk 58:
+  Processing time: 9.528131 seconds
+  Content: 111720 113120  supplement and not be
+  Received at: 1763519994.403019
+  Sent at: 1763519984.874887
+Sent chunk 63: 64000 bytes (2.00 seconds) at 1763519994.904547
+Received 56 bytes of response data
+
+Response for chunk 59:
+  Processing time: 8.628758 seconds
+  Content: 113120 115820  substitutes for comparable GAP measures.
+  Received at: 1763519995.506529
+  Sent at: 1763519986.877771
+Sent chunk 64: 64000 bytes (2.00 seconds) at 1763519996.909457
+Received 9 bytes of response data
+
+Response for chunk 60:
+  Processing time: 8.128381 seconds
+  Content: No input
+  Received at: 1763519997.010058
+  Sent at: 1763519988.881676
+Sent chunk 65: 64000 bytes (2.00 seconds) at 1763519998.913755
+Sent chunk 66: 64000 bytes (2.00 seconds) at 1763520000.917034
+Sent chunk 67: 64000 bytes (2.00 seconds) at 1763520002.920699
+Sent chunk 68: 64000 bytes (2.00 seconds) at 1763520004.925851
+Sent chunk 69: 64000 bytes (2.00 seconds) at 1763520006.930762
+Sent chunk 70: 64000 bytes (2.00 seconds) at 1763520008.935339
+Sent chunk 71: 64000 bytes (2.00 seconds) at 1763520010.939851
+Sent chunk 72: 64000 bytes (2.00 seconds) at 1763520012.943950
+Sent chunk 73: 64000 bytes (2.00 seconds) at 1763520014.947837
+Sent chunk 74: 64000 bytes (2.00 seconds) at 1763520016.951431
+Received 9 bytes of response data
+
+Response for chunk 61:
+  Processing time: 27.673264 seconds
+  Content: No input
+  Received at: 1763520018.558176
+  Sent at: 1763519990.884913
+Sent chunk 75: 64000 bytes (2.00 seconds) at 1763520018.959703
+Received 122 bytes of response data
+
+Response for chunk 62:
+  Processing time: 27.478536 seconds
+  Content: 115820 122180  measures. Reconciliations of such supplemental information to the comparable GAP measures will be included
+  Received at: 1763520020.366734
+  Sent at: 1763519992.888198
+Sent chunk 76: 64000 bytes (2.00 seconds) at 1763520020.969200
+Received 34 bytes of response data
+
+Response for chunk 63:
+  Processing time: 27.467697 seconds
+  Content: 122200 123180  as part of today's
+  Received at: 1763520022.372244
+  Sent at: 1763519994.904547
+Sent chunk 77: 64000 bytes (2.00 seconds) at 1763520022.974538
+Sent chunk 78: 64000 bytes (2.00 seconds) at 1763520024.977465
+Sent chunk 79: 64000 bytes (2.00 seconds) at 1763520026.981220
+Sent chunk 80: 64000 bytes (2.00 seconds) at 1763520028.984259
+Sent chunk 81: 64000 bytes (2.00 seconds) at 1763520030.987025
+Received 57 bytes of response data
+
+Response for chunk 64:
+  Processing time: 35.179770 seconds
+  Content: 123180 125280  presentation and in our earnings release.
+  Received at: 1763520032.089228
+  Sent at: 1763519996.909457
+Sent chunk 82: 64000 bytes (2.00 seconds) at 1763520032.991740
+Sent chunk 83: 64000 bytes (2.00 seconds) at 1763520034.994678
+Received 38 bytes of response data
+
+Response for chunk 65:
+  Processing time: 36.983248 seconds
+  Content: 126140 127480  With that, I'd like to
+  Received at: 1763520035.897003
+  Sent at: 1763519998.913755
+Sent chunk 84: 64000 bytes (2.00 seconds) at 1763520036.999623
+Sent chunk 85: 64000 bytes (2.00 seconds) at 1763520039.004237
+Received 61 bytes of response data
+
+Response for chunk 66:
+  Processing time: 38.087725 seconds
+  Content: 127480 129900  turn the call over to our President and Chief
+  Received at: 1763520039.004759
+  Sent at: 1763520000.917034
+Received 40 bytes of response data
+
+Response for chunk 67:
+  Processing time: 37.988849 seconds
+  Content: 129900 131540  Executive Officer, Brett
+  Received at: 1763520040.909548
+  Sent at: 1763520002.920699
+Sent chunk 86: 64000 bytes (2.00 seconds) at 1763520041.010583
+Sent chunk 87: 64000 bytes (2.00 seconds) at 1763520043.014428
+Received 30 bytes of response data
+
+Response for chunk 68:
+  Processing time: 38.294080 seconds
+  Content: 131540 132680  Ponton. Brett?
+  Received at: 1763520043.219931
+  Sent at: 1763520004.925851
+Sent chunk 88: 64000 bytes (2.00 seconds) at 1763520045.023670
+Received 63 bytes of response data
+
+Response for chunk 69:
+  Processing time: 38.996265 seconds
+  Content: 133340 135200  Thank you, Maureen, and good morning, everyone.
+  Received at: 1763520045.927027
+  Sent at: 1763520006.930762
+Sent chunk 89: 64000 bytes (2.00 seconds) at 1763520047.032417
+Received 38 bytes of response data
+
+Response for chunk 70:
+  Processing time: 39.901318 seconds
+  Content: 135760 136760  Thanks for joining us.
+  Received at: 1763520048.836657
+  Sent at: 1763520008.935339
+Sent chunk 90: 64000 bytes (2.00 seconds) at 1763520049.037863
+Sent chunk 91: 64000 bytes (2.00 seconds) at 1763520051.041745
+Received 67 bytes of response data
+
+Response for chunk 71:
+  Processing time: 41.103919 seconds
+  Content: 137460 139980  I'll get started today with a brief overview of our
+  Received at: 1763520052.043770
+  Sent at: 1763520010.939851
+Sent chunk 92: 64000 bytes (2.00 seconds) at 1763520053.045997
+Received 29 bytes of response data
+
+Response for chunk 72:
+  Processing time: 41.003834 seconds
+  Content: 139980 140560  third quarter
+  Received at: 1763520053.947784
+  Sent at: 1763520012.943950
+Sent chunk 93: 64000 bytes (2.00 seconds) at 1763520055.050422
+Received 9 bytes of response data
+
+Response for chunk 73:
+  Processing time: 41.006009 seconds
+  Content: No input
+  Received at: 1763520055.953846
+  Sent at: 1763520014.947837
+Sent chunk 94: 64000 bytes (2.00 seconds) at 1763520057.056323
+Sent chunk 95: 64000 bytes (2.00 seconds) at 1763520059.059778
+Sent chunk 96: 64000 bytes (2.00 seconds) at 1763520061.063021
+Sent chunk 97: 64000 bytes (2.00 seconds) at 1763520063.066123
+Sent chunk 98: 64000 bytes (2.00 seconds) at 1763520065.069657
+Sent chunk 99: 64000 bytes (2.00 seconds) at 1763520067.073059
+Received 9 bytes of response data
+
+Response for chunk 74:
+  Processing time: 50.726668 seconds
+  Content: No input
+  Received at: 1763520067.678099
+  Sent at: 1763520016.951431
+Sent chunk 100: 64000 bytes (2.00 seconds) at 1763520069.083647
+Sent chunk 101: 64000 bytes (2.00 seconds) at 1763520071.088712
+Received 9 bytes of response data
+
+Response for chunk 75:
+  Processing time: 52.630836 seconds
+  Content: No input
+  Received at: 1763520071.590539
+  Sent at: 1763520018.959703
+Sent chunk 102: 64000 bytes (2.00 seconds) at 1763520073.095167
+Sent chunk 103: 64000 bytes (2.00 seconds) at 1763520075.098768
+Sent chunk 104: 64000 bytes (2.00 seconds) at 1763520077.102914
+Sent chunk 105: 64000 bytes (2.00 seconds) at 1763520079.106683
+Received 139 bytes of response data
+
+Response for chunk 76:
+  Processing time: 58.659137 seconds
+  Content: 140560 149840  results, followed by an update on the progress we've made on our Monroe Forward Strategy. As illustrated on slide three, we
+  Received at: 1763520079.628337
+  Sent at: 1763520020.969200
+Received 39 bytes of response data
+
+Response for chunk 77:
+  Processing time: 58.057105 seconds
+  Content: 149840 151840  reported comps down 0.9
+  Received at: 1763520081.031642
+  Sent at: 1763520022.974538
+Sent chunk 106: 64000 bytes (2.00 seconds) at 1763520081.132959
+Received 36 bytes of response data
+
+Response for chunk 78:
+  Processing time: 57.858827 seconds
+  Content: 151840 152920  percent in the third
+  Received at: 1763520082.836292
+  Sent at: 1763520024.977465
+Sent chunk 107: 64000 bytes (2.00 seconds) at 1763520083.137642
+Received 60 bytes of response data
+
+Response for chunk 79:
+  Processing time: 57.659250 seconds
+  Content: 152920 156040  quarter, as higher year over year ticket was
+  Received at: 1763520084.640470
+  Sent at: 1763520026.981220
+Sent chunk 108: 64000 bytes (2.00 seconds) at 1763520085.142045
+Sent chunk 109: 64000 bytes (2.00 seconds) at 1763520087.145118
+Received 43 bytes of response data
+
+Response for chunk 80:
+  Processing time: 58.662016 seconds
+  Content: 156060 157480  offset by negative traffic.
+  Received at: 1763520087.646275
+  Sent at: 1763520028.984259
+Sent chunk 110: 64000 bytes (2.00 seconds) at 1763520089.149037
+Sent chunk 111: 64000 bytes (2.00 seconds) at 1763520091.152244
+Sent chunk 112: 64000 bytes (2.00 seconds) at 1763520093.155025
+Sent chunk 113: 64000 bytes (2.00 seconds) at 1763520095.157894
+Sent chunk 114: 64000 bytes (2.00 seconds) at 1763520097.161643
+Sent chunk 115: 64000 bytes (2.00 seconds) at 1763520099.164770
+Sent chunk 116: 64000 bytes (2.00 seconds) at 1763520101.168127
+Sent chunk 117: 64000 bytes (2.00 seconds) at 1763520103.172444
+Sent chunk 118: 64000 bytes (2.00 seconds) at 1763520105.177345
+Sent chunk 119: 64000 bytes (2.00 seconds) at 1763520107.181190
+Sent chunk 120: 64000 bytes (2.00 seconds) at 1763520109.184937
+Sent chunk 121: 64000 bytes (2.00 seconds) at 1763520111.188796
+Received 18 bytes of response data
+
+Response for chunk 81:
+  Processing time: 81.906572 seconds
+  Content: 158340 158460  In
+  Received at: 1763520112.893596
+  Sent at: 1763520030.987025
+Sent chunk 122: 64000 bytes (2.00 seconds) at 1763520113.209330
+Sent chunk 123: 64000 bytes (2.00 seconds) at 1763520115.213558
+Sent chunk 124: 64000 bytes (2.00 seconds) at 1763520117.216772
+Received 44 bytes of response data
+
+Response for chunk 82:
+  Processing time: 84.726700 seconds
+  Content: 158460 159820  October and the beginning of
+  Received at: 1763520117.718440
+  Sent at: 1763520032.991740
+Sent chunk 125: 64000 bytes (2.00 seconds) at 1763520119.222332
+Received 92 bytes of response data
+
+Response for chunk 83:
+  Processing time: 84.629363 seconds
+  Content: 159820 163800  November, we performed well against difficult comparisons in the prior year.
+  Received at: 1763520119.624042
+  Sent at: 1763520034.994678
+Sent chunk 126: 64000 bytes (2.00 seconds) at 1763520121.226930
+Sent chunk 127: 64000 bytes (2.00 seconds) at 1763520123.230147
+Sent chunk 128: 64000 bytes (2.00 seconds) at 1763520125.233598
+Sent chunk 129: 64000 bytes (2.00 seconds) at 1763520127.236603
+Sent chunk 130: 64000 bytes (2.00 seconds) at 1763520129.239917
+Sent chunk 131: 64000 bytes (2.00 seconds) at 1763520131.243166
+Sent chunk 132: 64000 bytes (2.00 seconds) at 1763520133.246685
+Sent chunk 133: 64000 bytes (2.00 seconds) at 1763520135.251145
+Sent chunk 134: 64000 bytes (2.00 seconds) at 1763520137.255723
+Sent chunk 135: 64000 bytes (2.00 seconds) at 1763520139.259711
+Sent chunk 136: 64000 bytes (2.00 seconds) at 1763520141.263455
+Sent chunk 137: 64000 bytes (2.00 seconds) at 1763520143.267093
+Sent chunk 138: 64000 bytes (2.00 seconds) at 1763520145.270679
+Sent chunk 139: 64000 bytes (2.00 seconds) at 1763520147.275463
+Sent chunk 140: 64000 bytes (2.00 seconds) at 1763520149.278315
+Received 39 bytes of response data
+
+Response for chunk 84:
+  Processing time: 113.180981 seconds
+  Content: 164540 165620  Mild weather conditions
+  Received at: 1763520150.180604
+  Sent at: 1763520036.999623
+Sent chunk 141: 64000 bytes (2.00 seconds) at 1763520151.283196
+Sent chunk 142: 64000 bytes (2.00 seconds) at 1763520153.286053
+Sent chunk 143: 64000 bytes (2.00 seconds) at 1763520155.289457
+Sent chunk 144: 64000 bytes (2.00 seconds) at 1763520157.292996
+Sent chunk 145: 64000 bytes (2.00 seconds) at 1763520159.296538
+Sent chunk 146: 64000 bytes (2.00 seconds) at 1763520161.300326
+Sent chunk 147: 64000 bytes (2.00 seconds) at 1763520163.303324
+Sent chunk 148: 64000 bytes (2.00 seconds) at 1763520165.307245
+Sent chunk 149: 64000 bytes (2.00 seconds) at 1763520167.311414
+Sent chunk 150: 64000 bytes (2.00 seconds) at 1763520169.315495
+Finished sending 150 chunks (9600000 bytes)
+Waiting up to 500000000 seconds for responses to 66 remaining chunks...
+Received 47 bytes of response data
+
+Response for chunk 85:
+  Processing time: 137.529461 seconds
+  Content: 165620 167860  towards the end of November and
+  Received at: 1763520176.533699
+  Sent at: 1763520039.004237
+Received 52 bytes of response data
+
+Response for chunk 86:
+  Processing time: 138.229809 seconds
+  Content: 167880 169740  in December caused a slowdown across
+  Received at: 1763520179.240391
+  Sent at: 1763520041.010583
+Received 42 bytes of response data
+
+Response for chunk 87:
+  Processing time: 161.065427 seconds
+  Content: 169740 171480  our core northern markets.
+  Received at: 1763520204.079855
+  Sent at: 1763520043.014428
+Received 47 bytes of response data
+
+Response for chunk 88:
+  Processing time: 160.960222 seconds
+  Content: 172160 173580  These conditions have continued
+  Received at: 1763520205.983892
+  Sent at: 1763520045.023670
+Received 54 bytes of response data
+
+Response for chunk 89:
+  Processing time: 161.056072 seconds
+  Content: 173580 176000  into January with our comparable store
+  Received at: 1763520208.088489
+  Sent at: 1763520047.032417
+Received 36 bytes of response data
+
+Response for chunk 90:
+  Processing time: 161.256492 seconds
+  Content: 176000 177960  sales down 4% during
+  Received at: 1763520210.294355
+  Sent at: 1763520049.037863
+Received 26 bytes of response data
+
+Response for chunk 91:
+  Processing time: 161.863737 seconds
+  Content: 177960 178360  the month.
+  Received at: 1763520212.905482
+  Sent at: 1763520051.041745
+Received 9 bytes of response data
+
+Response for chunk 92:
+  Processing time: 161.262841 seconds
+  Content: No input
+  Received at: 1763520214.308838
+  Sent at: 1763520053.045997
+Received 55 bytes of response data
+
+Response for chunk 93:
+  Processing time: 161.074567 seconds
+  Content: 178360 181220  month. We do not like talking about the
+  Received at: 1763520216.124989
+  Sent at: 1763520055.050422
+Received 95 bytes of response data
+
+Response for chunk 94:
+  Processing time: 165.480005 seconds
+  Content: 181220 185840  weather, however, it is impossible to ignore the impact it has on our business.
+  Received at: 1763520222.536327
+  Sent at: 1763520057.056323
+Received 47 bytes of response data
+
+Response for chunk 95:
+  Processing time: 164.485471 seconds
+  Content: 186520 188120  While we are not satisfied with
+  Received at: 1763520223.545248
+  Sent at: 1763520059.059778
+Received 51 bytes of response data
+
+Response for chunk 96:
+  Processing time: 164.285510 seconds
+  Content: 188120 189680  our financial results this quarter,
+  Received at: 1763520225.348531
+  Sent at: 1763520061.063021
+Received 49 bytes of response data
+
+Response for chunk 97:
+  Processing time: 163.885672 seconds
+  Content: 190200 192060  we are executing well against the
+  Received at: 1763520226.951795
+  Sent at: 1763520063.066123
+Received 41 bytes of response data
+
+Response for chunk 98:
+  Processing time: 163.493730 seconds
+  Content: 192060 193560  areas within our control.
+  Received at: 1763520228.563386
+  Sent at: 1763520065.069657
+Received 50 bytes of response data
+
+Response for chunk 99:
+  Processing time: 163.294477 seconds
+  Content: 194220 196060  In particular, we continue to move
+  Received at: 1763520230.367536
+  Sent at: 1763520067.073059
+Received 31 bytes of response data
+
+Response for chunk 100:
+  Processing time: 162.791676 seconds
+  Content: 196080 197020  deeper into our
+  Received at: 1763520231.875323
+  Sent at: 1763520069.083647
+Received 64 bytes of response data
+
+Response for chunk 101:
+  Processing time: 162.493228 seconds
+  Content: 197020 200020  company transformation and our confidence we are
+  Received at: 1763520233.581940
+  Sent at: 1763520071.088712
+Received 41 bytes of response data
+
+Response for chunk 102:
+  Processing time: 161.694584 seconds
+  Content: 200020 201980  on the right path. We are
+  Received at: 1763520234.789751
+  Sent at: 1763520073.095167
+Received 57 bytes of response data
+
+Response for chunk 103:
+  Processing time: 160.894525 seconds
+  Content: 201980 204000  committed to making the necessary changes
+  Received at: 1763520235.993294
+  Sent at: 1763520075.098768
+Received 26 bytes of response data
+
+Response for chunk 104:
+  Processing time: 160.194021 seconds
+  Content: 204020 205180  across our
+  Received at: 1763520237.296935
+  Sent at: 1763520077.102914
+Received 54 bytes of response data
+
+Response for chunk 105:
+  Processing time: 159.694868 seconds
+  Content: 205180 207500  organization to position us to deliver
+  Received at: 1763520238.801551
+  Sent at: 1763520079.106683
+Received 40 bytes of response data
+
+Response for chunk 106:
+  Processing time: 159.074685 seconds
+  Content: 207500 209880  strong results no matter
+  Received at: 1763520240.207644
+  Sent at: 1763520081.132959
+Received 43 bytes of response data
+
+Response for chunk 107:
+  Processing time: 157.779988 seconds
+  Content: 209880 211620  the external circumstances.
+  Received at: 1763520240.917630
+  Sent at: 1763520083.137642
+Received 9 bytes of response data
+
+Response for chunk 108:
+  Processing time: 156.780990 seconds
+  Content: No input
+  Received at: 1763520241.923035
+  Sent at: 1763520085.142045
+Received 69 bytes of response data
+
+Response for chunk 109:
+  Processing time: 165.194501 seconds
+  Content: 212740 215460  Moving on to our performance by category in the third
+  Received at: 1763520252.339619
+  Sent at: 1763520087.145118
+Received 9 bytes of response data
+
+Response for chunk 110:
+  Processing time: 164.601303 seconds
+  Content: No input
+  Received at: 1763520253.750340
+  Sent at: 1763520089.149037
+Received 37 bytes of response data
+
+Response for chunk 111:
+  Processing time: 179.028086 seconds
+  Content: 215460 216920  quarter, we were down
+  Received at: 1763520270.180330
+  Sent at: 1763520091.152244
+Received 9 bytes of response data
+
+Response for chunk 112:
+  Processing time: 179.031573 seconds
+  Content: No input
+  Received at: 1763520272.186597
+  Sent at: 1763520093.155025
+Received 23 bytes of response data
+
+Response for chunk 113:
+  Processing time: 178.537875 seconds
+  Content: 216920 217820  1% year
+  Received at: 1763520273.695769
+  Sent at: 1763520095.157894
+Received 50 bytes of response data
+
+Response for chunk 114:
+  Processing time: 192.161566 seconds
+  Content: 217820 220000  over year in tire comparable store
+  Received at: 1763520289.323210
+  Sent at: 1763520097.161643
+Received 132 bytes of response data
+
+Response for chunk 115:
+  Processing time: 195.369885 seconds
+  Content: 220000 227960  sales, as higher ticket year over year was offset by a decline in tire volume. We experienced more normalized retail
+  Received at: 1763520294.534655
+  Sent at: 1763520099.164770
+Received 23 bytes of response data
+
+Response for chunk 116:
+  Processing time: 199.083277 seconds
+  Content: 227960 228460  pricing
+  Received at: 1763520300.251404
+  Sent at: 1763520101.168127
+Received 71 bytes of response data
+
+Response for chunk 117:
+  Processing time: 198.082598 seconds
+  Content: 228460 231760  in this quarter and are focused on further refining our
+  Received at: 1763520301.255042
+  Sent at: 1763520103.172444
+Received 37 bytes of response data
+
+Response for chunk 118:
+  Processing time: 197.280667 seconds
+  Content: 231760 233380  ire strategy to drive
+  Received at: 1763520302.458012
+  Sent at: 1763520105.177345
+Received 49 bytes of response data
+
+Response for chunk 119:
+  Processing time: 197.881730 seconds
+  Content: 233380 235280  strength in our largest category.
+  Received at: 1763520305.062919
+  Sent at: 1763520107.181190
+Received 47 bytes of response data
+
+Response for chunk 120:
+  Processing time: 197.381072 seconds
+  Content: 236060 237980  Importantly, we are on track to
+  Received at: 1763520306.566009
+  Sent at: 1763520109.184937
+Received 28 bytes of response data
+
+Response for chunk 121:
+  Processing time: 196.484857 seconds
+  Content: 237980 238540  roll out our
+  Received at: 1763520307.673653
+  Sent at: 1763520111.188796
+Received 81 bytes of response data
+
+Response for chunk 122:
+  Processing time: 195.567566 seconds
+  Content: 238540 242100  ire category management and pricing system beginning in the first
+  Received at: 1763520308.776896
+  Sent at: 1763520113.209330
+Received 33 bytes of response data
+
+Response for chunk 123:
+  Processing time: 195.080515 seconds
+  Content: 242100 242880  quarter of fiscal
+  Received at: 1763520310.294073
+  Sent at: 1763520115.213558
+Received 54 bytes of response data
+
+Response for chunk 124:
+  Processing time: 194.981045 seconds
+  Content: 242880 246140  2021, which will enable a more dynamic
+  Received at: 1763520312.197817
+  Sent at: 1763520117.216772
+Received 33 bytes of response data
+
+Response for chunk 125:
+  Processing time: 194.980271 seconds
+  Content: 246140 246960  and sophisticated
+  Received at: 1763520314.202603
+  Sent at: 1763520119.222332
+Received 59 bytes of response data
+
+Response for chunk 126:
+  Processing time: 194.679016 seconds
+  Content: 246960 249960  approach to real-time pricing. I'll provide
+  Received at: 1763520315.905946
+  Sent at: 1763520121.226930
+Received 45 bytes of response data
+
+Response for chunk 127:
+  Processing time: 211.408313 seconds
+  Content: 250000 251400  more details on this shortly.
+  Received at: 1763520334.638460
+  Sent at: 1763520123.230147
+Received 42 bytes of response data
+
+Response for chunk 128:
+  Processing time: 210.514050 seconds
+  Content: 252840 254020  Turning to our service and
+  Received at: 1763520335.747648
+  Sent at: 1763520125.233598
+Received 46 bytes of response data
+
+Response for chunk 129:
+  Processing time: 209.715780 seconds
+  Content: 254020 256040  repair categories, we saw a 3%
+  Received at: 1763520336.952382
+  Sent at: 1763520127.236603
+Received 26 bytes of response data
+
+Response for chunk 130:
+  Processing time: 209.216935 seconds
+  Content: 256040 256660  decline in
+  Received at: 1763520338.456852
+  Sent at: 1763520129.239917
+Received 9 bytes of response data
+
+Response for chunk 131:
+  Processing time: 208.719786 seconds
+  Content: No input
+  Received at: 1763520339.962952
+  Sent at: 1763520131.243166
+Received 110 bytes of response data
+
+Response for chunk 132:
+  Processing time: 209.124003 seconds
+  Content: 256660 261760  brakes year over year, falling short of a difficult comparison in the third quarter last year.
+  Received at: 1763520342.370688
+  Sent at: 1763520133.246685
+Received 9 bytes of response data
+
+Response for chunk 133:
+  Processing time: 207.923428 seconds
+  Content: No input
+  Received at: 1763520343.174574
+  Sent at: 1763520135.251145
+Received 86 bytes of response data
+
+Response for chunk 134:
+  Processing time: 207.021652 seconds
+  Content: 261760 265240  quarter. In maintenance, we were flat while front end shocks were down
+  Received at: 1763520344.277374
+  Sent at: 1763520137.255723
+Received 42 bytes of response data
+
+Response for chunk 135:
+  Processing time: 206.224213 seconds
+  Content: 265260 267000  1% and alignments declined
+  Received at: 1763520345.483924
+  Sent at: 1763520139.259711
+Received 43 bytes of response data
+
+Response for chunk 136:
+  Processing time: 219.047318 seconds
+  Content: 267020 269780  3% year over year. Overall,
+  Received at: 1763520360.310773
+  Sent at: 1763520141.263455
+Received 19 bytes of response data
+
+Response for chunk 137:
+  Processing time: 218.549805 seconds
+  Content: 270100 270180  our
+  Received at: 1763520361.816898
+  Sent at: 1763520143.267093
+Received 58 bytes of response data
+
+Response for chunk 138:
+  Processing time: 218.150037 seconds
+  Content: 270180 272340  southern markets outperformed our northern
+  Received at: 1763520363.420717
+  Sent at: 1763520145.270679
+Received 67 bytes of response data
+
+Response for chunk 139:
+  Processing time: 217.849478 seconds
+  Content: 272340 275580  markets, as expected, given the mild winter weather
+  Received at: 1763520365.124942
+  Sent at: 1763520147.275463
+Received 51 bytes of response data
+
+Response for chunk 140:
+  Processing time: 217.250280 seconds
+  Content: 275580 277400  conditions we faced in this region.
+  Received at: 1763520366.528595
+  Sent at: 1763520149.278315
+Received 32 bytes of response data
+
+Response for chunk 141:
+  Processing time: 216.765143 seconds
+  Content: 278580 279520  New stores added
+  Received at: 1763520368.048339
+  Sent at: 1763520151.283196
+Received 51 bytes of response data
+
+Response for chunk 142:
+  Processing time: 216.666521 seconds
+  Content: 279520 281920  $22.7 million in revenue during the
+  Received at: 1763520369.952574
+  Sent at: 1763520153.286053
+Received 48 bytes of response data
+
+Response for chunk 143:
+  Processing time: 215.866874 seconds
+  Content: 281920 284080  quarter, including $20.7 million
+  Received at: 1763520371.156330
+  Sent at: 1763520155.289457
+Received 41 bytes of response data
+
+Response for chunk 144:
+  Processing time: 215.568571 seconds
+  Content: 284080 285780  from recent acquisitions.
+  Received at: 1763520372.861567
+  Sent at: 1763520157.292996
+Received 42 bytes of response data
+
+Response for chunk 145:
+  Processing time: 222.578929 seconds
+  Content: 286640 287860  Regarding our gross margin
+  Received at: 1763520381.875467
+  Sent at: 1763520159.296538
+Received 54 bytes of response data
+
+Response for chunk 146:
+  Processing time: 224.080501 seconds
+  Content: 287880 289600  performance during the quarter, we saw
+  Received at: 1763520385.380826
+  Sent at: 1763520161.300326
+Received 9 bytes of response data
+
+Response for chunk 147:
+  Processing time: 223.881371 seconds
+  Content: No input
+  Received at: 1763520387.184694
+  Sent at: 1763520163.303324
+Received 9 bytes of response data
+
+Response for chunk 148:
+  Processing time: 222.980044 seconds
+  Content: No input
+  Received at: 1763520388.287289
+  Sent at: 1763520165.307245
+Received 116 bytes of response data
+
+Response for chunk 149:
+  Processing time: 222.178608 seconds
+  Content: 289600 295960  the client of 20 basis points compared to the prior year period, primarily driven by the decrease in
+  Received at: 1763520389.490023
+  Sent at: 1763520167.311414
+Received 49 bytes of response data
+
+Response for chunk 150:
+  Processing time: 221.477221 seconds
+  Content: 295960 297860  our comparable store sales, which
+  Received at: 1763520390.792715
+  Sent at: 1763520169.315495
+Connection closed

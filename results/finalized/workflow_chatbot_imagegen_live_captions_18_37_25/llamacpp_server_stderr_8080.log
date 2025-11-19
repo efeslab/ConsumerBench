@@ -1,0 +1,803 @@
+ggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA GeForce RTX 3060, compute capability 8.6, VMM: yes
+build: 4978 (5dec47dcd) with cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0 for x86_64-linux-gnu
+system info: n_threads = 14, n_threads_batch = 14, total_threads = 28
+
+system_info: n_threads = 14 (n_threads_batch = 14) / 28 | CUDA : ARCHS = 860 | F16 = 1 | USE_GRAPHS = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | AARCH64_REPACK = 1 | 
+
+main: HTTP server is listening, hostname: 127.0.0.1, port: 8080, http threads: 27
+main: loading model
+srv    load_model: loading model '/mnt/d/rohan/models/Llama-3.2-1B/Llama-3.2-1B-Instruct-f16.gguf'
+llama_model_load_from_file_impl: using device CUDA0 (NVIDIA GeForce RTX 3060) - 11240 MiB free
+llama_model_loader: loaded meta data with 31 key-value pairs and 147 tensors from /mnt/d/rohan/models/Llama-3.2-1B/Llama-3.2-1B-Instruct-f16.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Llama 3.2 1B Instruct
+llama_model_loader: - kv   3:                           general.finetune str              = Instruct
+llama_model_loader: - kv   4:                           general.basename str              = Llama-3.2
+llama_model_loader: - kv   5:                         general.size_label str              = 1B
+llama_model_loader: - kv   6:                            general.license str              = llama3.2
+llama_model_loader: - kv   7:                               general.tags arr[str,6]       = ["facebook", "meta", "pytorch", "llam...
+llama_model_loader: - kv   8:                          general.languages arr[str,8]       = ["en", "de", "fr", "it", "pt", "hi", ...
+llama_model_loader: - kv   9:                          llama.block_count u32              = 16
+llama_model_loader: - kv  10:                       llama.context_length u32              = 131072
+llama_model_loader: - kv  11:                     llama.embedding_length u32              = 2048
+llama_model_loader: - kv  12:                  llama.feed_forward_length u32              = 8192
+llama_model_loader: - kv  13:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv  14:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  15:                       llama.rope.freq_base f32              = 500000.000000
+llama_model_loader: - kv  16:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  17:                 llama.attention.key_length u32              = 64
+llama_model_loader: - kv  18:               llama.attention.value_length u32              = 64
+llama_model_loader: - kv  19:                          general.file_type u32              = 1
+llama_model_loader: - kv  20:                           llama.vocab_size u32              = 128256
+llama_model_loader: - kv  21:                 llama.rope.dimension_count u32              = 64
+llama_model_loader: - kv  22:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  23:                         tokenizer.ggml.pre str              = llama-bpe
+llama_model_loader: - kv  24:                      tokenizer.ggml.tokens arr[str,128256]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  25:                  tokenizer.ggml.token_type arr[i32,128256]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  26:                      tokenizer.ggml.merges arr[str,280147]  = ["Ġ Ġ", "Ġ ĠĠĠ", "ĠĠ ĠĠ", "...
+llama_model_loader: - kv  27:                tokenizer.ggml.bos_token_id u32              = 128000
+llama_model_loader: - kv  28:                tokenizer.ggml.eos_token_id u32              = 128009
+llama_model_loader: - kv  29:                    tokenizer.chat_template str              = {{- bos_token }}\n{%- if custom_tools ...
+llama_model_loader: - kv  30:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   34 tensors
+llama_model_loader: - type  f16:  113 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = F16
+print_info: file size   = 2.30 GiB (16.00 BPW) 
+load: special tokens cache size = 256
+load: token to piece cache size = 0.7999 MB
+print_info: arch             = llama
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 131072
+print_info: n_embd           = 2048
+print_info: n_layer          = 16
+print_info: n_head           = 32
+print_info: n_head_kv        = 8
+print_info: n_rot            = 64
+print_info: n_swa            = 0
+print_info: n_swa_pattern    = 1
+print_info: n_embd_head_k    = 64
+print_info: n_embd_head_v    = 64
+print_info: n_gqa            = 4
+print_info: n_embd_k_gqa     = 512
+print_info: n_embd_v_gqa     = 512
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-05
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 8192
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = 0
+print_info: rope type        = 0
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 500000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 131072
+print_info: rope_finetuned   = unknown
+print_info: ssm_d_conv       = 0
+print_info: ssm_d_inner      = 0
+print_info: ssm_d_state      = 0
+print_info: ssm_dt_rank      = 0
+print_info: ssm_dt_b_c_rms   = 0
+print_info: model type       = 1B
+print_info: model params     = 1.24 B
+print_info: general.name     = Llama 3.2 1B Instruct
+print_info: vocab type       = BPE
+print_info: n_vocab          = 128256
+print_info: n_merges         = 280147
+print_info: BOS token        = 128000 '<|begin_of_text|>'
+print_info: EOS token        = 128009 '<|eot_id|>'
+print_info: EOT token        = 128009 '<|eot_id|>'
+print_info: EOM token        = 128008 '<|eom_id|>'
+print_info: LF token         = 198 'Ċ'
+print_info: EOG token        = 128008 '<|eom_id|>'
+print_info: EOG token        = 128009 '<|eot_id|>'
+print_info: max token length = 256
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+make_cpu_buft_list: disabling extra buffer types (i.e. repacking) since a GPU device is available
+load_tensors: offloading 16 repeating layers to GPU
+load_tensors: offloading output layer to GPU
+load_tensors: offloaded 17/17 layers to GPU
+load_tensors:        CUDA0 model buffer size =  2357.26 MiB
+load_tensors:   CPU_Mapped model buffer size =   501.00 MiB
+............................................................
+llama_context: constructing llama_context
+llama_context: n_seq_max     = 8
+llama_context: n_ctx         = 4096
+llama_context: n_ctx_per_seq = 512
+llama_context: n_batch       = 2048
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = 0
+llama_context: freq_base     = 500000.0
+llama_context: freq_scale    = 1
+llama_context: n_ctx_per_seq (512) < n_ctx_train (131072) -- the full capacity of the model will not be utilized
+llama_context:  CUDA_Host  output buffer size =     3.91 MiB
+init: kv_size = 4096, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 16, can_shift = 1
+init:      CUDA0 KV buffer size =   128.00 MiB
+llama_context: KV self size  =  128.00 MiB, K (f16):   64.00 MiB, V (f16):   64.00 MiB
+llama_context:      CUDA0 compute buffer size =   280.00 MiB
+llama_context:  CUDA_Host compute buffer size =    12.01 MiB
+llama_context: graph nodes  = 550
+llama_context: graph splits = 2
+common_init_from_params: setting dry_penalty_last_n to ctx_size = 4096
+common_init_from_params: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+srv          init: initializing slots, n_slots = 8
+slot         init: id  0 | task -1 | new slot n_ctx_slot = 512
+slot         init: id  1 | task -1 | new slot n_ctx_slot = 512
+slot         init: id  2 | task -1 | new slot n_ctx_slot = 512
+slot         init: id  3 | task -1 | new slot n_ctx_slot = 512
+slot         init: id  4 | task -1 | new slot n_ctx_slot = 512
+slot         init: id  5 | task -1 | new slot n_ctx_slot = 512
+slot         init: id  6 | task -1 | new slot n_ctx_slot = 512
+slot         init: id  7 | task -1 | new slot n_ctx_slot = 512
+main: model loaded
+main: chat template, chat_template: {{- bos_token }}
+{%- if custom_tools is defined %}
+    {%- set tools = custom_tools %}
+{%- endif %}
+{%- if not tools_in_user_message is defined %}
+    {%- set tools_in_user_message = true %}
+{%- endif %}
+{%- if not date_string is defined %}
+    {%- if strftime_now is defined %}
+        {%- set date_string = strftime_now("%d %b %Y") %}
+    {%- else %}
+        {%- set date_string = "26 Jul 2024" %}
+    {%- endif %}
+{%- endif %}
+{%- if not tools is defined %}
+    {%- set tools = none %}
+{%- endif %}
+
+{#- This block extracts the system message, so we can slot it into the right place. #}
+{%- if messages[0]['role'] == 'system' %}
+    {%- set system_message = messages[0]['content']|trim %}
+    {%- set messages = messages[1:] %}
+{%- else %}
+    {%- set system_message = "" %}
+{%- endif %}
+
+{#- System message #}
+{{- "<|start_header_id|>system<|end_header_id|>\n\n" }}
+{%- if tools is not none %}
+    {{- "Environment: ipython\n" }}
+{%- endif %}
+{{- "Cutting Knowledge Date: December 2023\n" }}
+{{- "Today Date: " + date_string + "\n\n" }}
+{%- if tools is not none and not tools_in_user_message %}
+    {{- "You have access to the following functions. To call a function, please respond with JSON for a function call." }}
+    {{- 'Respond in the format {"name": function name, "parameters": dictionary of argument name and its value}.' }}
+    {{- "Do not use variables.\n\n" }}
+    {%- for t in tools %}
+        {{- t | tojson(indent=4) }}
+        {{- "\n\n" }}
+    {%- endfor %}
+{%- endif %}
+{{- system_message }}
+{{- "<|eot_id|>" }}
+
+{#- Custom tools are passed in a user message with some extra guidance #}
+{%- if tools_in_user_message and not tools is none %}
+    {#- Extract the first user message so we can plug it in here #}
+    {%- if messages | length != 0 %}
+        {%- set first_user_message = messages[0]['content']|trim %}
+        {%- set messages = messages[1:] %}
+    {%- else %}
+        {{- raise_exception("Cannot put tools in the first user message when there's no first user message!") }}
+{%- endif %}
+    {{- '<|start_header_id|>user<|end_header_id|>\n\n' -}}
+    {{- "Given the following functions, please respond with a JSON for a function call " }}
+    {{- "with its proper arguments that best answers the given prompt.\n\n" }}
+    {{- 'Respond in the format {"name": function name, "parameters": dictionary of argument name and its value}.' }}
+    {{- "Do not use variables.\n\n" }}
+    {%- for t in tools %}
+        {{- t | tojson(indent=4) }}
+        {{- "\n\n" }}
+    {%- endfor %}
+    {{- first_user_message + "<|eot_id|>"}}
+{%- endif %}
+
+{%- for message in messages %}
+    {%- if not (message.role == 'ipython' or message.role == 'tool' or 'tool_calls' in message) %}
+        {{- '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' }}
+    {%- elif 'tool_calls' in message %}
+        {%- if not message.tool_calls|length == 1 %}
+            {{- raise_exception("This model only supports single tool-calls at once!") }}
+        {%- endif %}
+        {%- set tool_call = message.tool_calls[0].function %}
+        {{- '<|start_header_id|>assistant<|end_header_id|>\n\n' -}}
+        {{- '{"name": "' + tool_call.name + '", ' }}
+        {{- '"parameters": ' }}
+        {{- tool_call.arguments | tojson }}
+        {{- "}" }}
+        {{- "<|eot_id|>" }}
+    {%- elif message.role == "tool" or message.role == "ipython" %}
+        {{- "<|start_header_id|>ipython<|end_header_id|>\n\n" }}
+        {%- if message.content is mapping or message.content is iterable %}
+            {{- message.content | tojson }}
+        {%- else %}
+            {{- message.content }}
+        {%- endif %}
+        {{- "<|eot_id|>" }}
+    {%- endif %}
+{%- endfor %}
+{%- if add_generation_prompt %}
+    {{- '<|start_header_id|>assistant<|end_header_id|>\n\n' }}
+{%- endif %}
+, example_format: '<|start_header_id|>system<|end_header_id|>
+
+You are a helpful assistant<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Hello<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Hi there<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+How are you?<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+'
+main: server is listening on http://127.0.0.1:8080 - starting the main loop
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 0 | processing task
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 88
+slot update_slots: id  0 | task 0 | kv cache rm [0, end)
+slot update_slots: id  0 | task 0 | prompt processing progress, n_past = 88, n_tokens = 88, progress = 1.000000
+slot update_slots: id  0 | task 0 | prompt done, n_past = 88, n_tokens = 88
+slot      release: id  0 | task 0 | stop processing: n_past = 302, truncated = 0
+slot print_timing: id  0 | task 0 | 
+prompt eval time =      16.43 ms /    88 tokens (    0.19 ms per token,  5355.40 tokens per second)
+       eval time =    2554.68 ms /   215 tokens (   11.88 ms per token,    84.16 tokens per second)
+      total time =    2571.12 ms /   303 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  1 | task 216 | processing task
+slot update_slots: id  1 | task 216 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 383
+slot update_slots: id  1 | task 216 | kv cache rm [0, end)
+slot update_slots: id  1 | task 216 | prompt processing progress, n_past = 383, n_tokens = 383, progress = 1.000000
+slot update_slots: id  1 | task 216 | prompt done, n_past = 383, n_tokens = 383
+slot      release: id  1 | task 216 | stop processing: n_past = 383, truncated = 0
+slot print_timing: id  1 | task 216 | 
+prompt eval time =     135.39 ms /   383 tokens (    0.35 ms per token,  2828.95 tokens per second)
+       eval time =       0.06 ms /     1 tokens (    0.06 ms per token, 16949.15 tokens per second)
+      total time =     135.44 ms /   384 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  2 | task 218 | processing task
+slot update_slots: id  2 | task 218 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 17
+slot update_slots: id  2 | task 218 | kv cache rm [0, end)
+slot update_slots: id  2 | task 218 | prompt processing progress, n_past = 17, n_tokens = 17, progress = 1.000000
+slot update_slots: id  2 | task 218 | prompt done, n_past = 17, n_tokens = 17
+slot      release: id  2 | task 218 | stop processing: n_past = 231, truncated = 0
+slot print_timing: id  2 | task 218 | 
+prompt eval time =      36.29 ms /    17 tokens (    2.13 ms per token,   468.44 tokens per second)
+       eval time =    2925.72 ms /   215 tokens (   13.61 ms per token,    73.49 tokens per second)
+      total time =    2962.01 ms /   232 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  3 | task 434 | processing task
+slot update_slots: id  3 | task 434 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 15
+slot update_slots: id  3 | task 434 | kv cache rm [0, end)
+slot update_slots: id  3 | task 434 | prompt processing progress, n_past = 15, n_tokens = 15, progress = 1.000000
+slot update_slots: id  3 | task 434 | prompt done, n_past = 15, n_tokens = 15
+slot      release: id  3 | task 434 | stop processing: n_past = 229, truncated = 0
+slot print_timing: id  3 | task 434 | 
+prompt eval time =      12.95 ms /    15 tokens (    0.86 ms per token,  1158.66 tokens per second)
+       eval time =    2430.66 ms /   215 tokens (   11.31 ms per token,    88.45 tokens per second)
+      total time =    2443.61 ms /   230 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  4 | task 650 | processing task
+slot update_slots: id  4 | task 650 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 62
+slot update_slots: id  4 | task 650 | kv cache rm [0, end)
+slot update_slots: id  4 | task 650 | prompt processing progress, n_past = 62, n_tokens = 62, progress = 1.000000
+slot update_slots: id  4 | task 650 | prompt done, n_past = 62, n_tokens = 62
+slot      release: id  4 | task 650 | stop processing: n_past = 276, truncated = 0
+slot print_timing: id  4 | task 650 | 
+prompt eval time =      19.35 ms /    62 tokens (    0.31 ms per token,  3203.64 tokens per second)
+       eval time =    2873.39 ms /   215 tokens (   13.36 ms per token,    74.82 tokens per second)
+      total time =    2892.74 ms /   277 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  5 | task 866 | processing task
+slot update_slots: id  5 | task 866 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 34
+slot update_slots: id  5 | task 866 | kv cache rm [0, end)
+slot update_slots: id  5 | task 866 | prompt processing progress, n_past = 34, n_tokens = 34, progress = 1.000000
+slot update_slots: id  5 | task 866 | prompt done, n_past = 34, n_tokens = 34
+slot      release: id  5 | task 866 | stop processing: n_past = 248, truncated = 0
+slot print_timing: id  5 | task 866 | 
+prompt eval time =      28.38 ms /    34 tokens (    0.83 ms per token,  1197.90 tokens per second)
+       eval time =    2981.30 ms /   215 tokens (   13.87 ms per token,    72.12 tokens per second)
+      total time =    3009.68 ms /   249 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  6 | task 1082 | processing task
+slot update_slots: id  6 | task 1082 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 42
+slot update_slots: id  6 | task 1082 | kv cache rm [0, end)
+slot update_slots: id  6 | task 1082 | prompt processing progress, n_past = 42, n_tokens = 42, progress = 1.000000
+slot update_slots: id  6 | task 1082 | prompt done, n_past = 42, n_tokens = 42
+slot      release: id  6 | task 1082 | stop processing: n_past = 256, truncated = 0
+slot print_timing: id  6 | task 1082 | 
+prompt eval time =      17.42 ms /    42 tokens (    0.41 ms per token,  2411.58 tokens per second)
+       eval time =    2451.06 ms /   215 tokens (   11.40 ms per token,    87.72 tokens per second)
+      total time =    2468.48 ms /   257 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  7 | task 1298 | processing task
+slot update_slots: id  7 | task 1298 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 2
+slot update_slots: id  7 | task 1298 | kv cache rm [0, end)
+slot update_slots: id  7 | task 1298 | prompt processing progress, n_past = 2, n_tokens = 2, progress = 1.000000
+slot update_slots: id  7 | task 1298 | prompt done, n_past = 2, n_tokens = 2
+slot      release: id  7 | task 1298 | stop processing: n_past = 216, truncated = 0
+slot print_timing: id  7 | task 1298 | 
+prompt eval time =      12.22 ms /     2 tokens (    6.11 ms per token,   163.60 tokens per second)
+       eval time =    2926.45 ms /   215 tokens (   13.61 ms per token,    73.47 tokens per second)
+      total time =    2938.68 ms /   217 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 1514 | processing task
+slot update_slots: id  0 | task 1514 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 77
+slot update_slots: id  0 | task 1514 | kv cache rm [1, end)
+slot update_slots: id  0 | task 1514 | prompt processing progress, n_past = 77, n_tokens = 76, progress = 0.987013
+slot update_slots: id  0 | task 1514 | prompt done, n_past = 77, n_tokens = 76
+slot      release: id  0 | task 1514 | stop processing: n_past = 291, truncated = 0
+slot print_timing: id  0 | task 1514 | 
+prompt eval time =      37.07 ms /    76 tokens (    0.49 ms per token,  2050.18 tokens per second)
+       eval time =    3880.48 ms /   215 tokens (   18.05 ms per token,    55.41 tokens per second)
+      total time =    3917.55 ms /   291 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  1 | task 1730 | processing task
+slot update_slots: id  1 | task 1730 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 2
+slot update_slots: id  1 | task 1730 | kv cache rm [1, end)
+slot update_slots: id  1 | task 1730 | prompt processing progress, n_past = 2, n_tokens = 1, progress = 0.500000
+slot update_slots: id  1 | task 1730 | prompt done, n_past = 2, n_tokens = 1
+slot      release: id  1 | task 1730 | stop processing: n_past = 216, truncated = 0
+slot print_timing: id  1 | task 1730 | 
+prompt eval time =      21.43 ms /     1 tokens (   21.43 ms per token,    46.65 tokens per second)
+       eval time =    3986.26 ms /   215 tokens (   18.54 ms per token,    53.94 tokens per second)
+      total time =    4007.70 ms /   216 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  2 | task 1946 | processing task
+slot update_slots: id  2 | task 1946 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 14
+slot update_slots: id  2 | task 1946 | kv cache rm [1, end)
+slot update_slots: id  2 | task 1946 | prompt processing progress, n_past = 14, n_tokens = 13, progress = 0.928571
+slot update_slots: id  2 | task 1946 | prompt done, n_past = 14, n_tokens = 13
+slot      release: id  2 | task 1946 | stop processing: n_past = 228, truncated = 0
+slot print_timing: id  2 | task 1946 | 
+prompt eval time =      25.24 ms /    13 tokens (    1.94 ms per token,   515.14 tokens per second)
+       eval time =    4157.43 ms /   215 tokens (   19.34 ms per token,    51.71 tokens per second)
+      total time =    4182.67 ms /   228 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  3 | task 2162 | processing task
+slot update_slots: id  3 | task 2162 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 9
+slot update_slots: id  3 | task 2162 | kv cache rm [1, end)
+slot update_slots: id  3 | task 2162 | prompt processing progress, n_past = 9, n_tokens = 8, progress = 0.888889
+slot update_slots: id  3 | task 2162 | prompt done, n_past = 9, n_tokens = 8
+slot      release: id  3 | task 2162 | stop processing: n_past = 223, truncated = 0
+slot print_timing: id  3 | task 2162 | 
+prompt eval time =      22.80 ms /     8 tokens (    2.85 ms per token,   350.83 tokens per second)
+       eval time =    4877.54 ms /   215 tokens (   22.69 ms per token,    44.08 tokens per second)
+      total time =    4900.34 ms /   223 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  4 | task 2378 | processing task
+slot update_slots: id  4 | task 2378 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 6
+slot update_slots: id  4 | task 2378 | kv cache rm [1, end)
+slot update_slots: id  4 | task 2378 | prompt processing progress, n_past = 6, n_tokens = 5, progress = 0.833333
+slot update_slots: id  4 | task 2378 | prompt done, n_past = 6, n_tokens = 5
+slot      release: id  4 | task 2378 | stop processing: n_past = 220, truncated = 0
+slot print_timing: id  4 | task 2378 | 
+prompt eval time =      41.75 ms /     5 tokens (    8.35 ms per token,   119.77 tokens per second)
+       eval time =    6551.68 ms /   215 tokens (   30.47 ms per token,    32.82 tokens per second)
+      total time =    6593.43 ms /   220 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  5 | task 2594 | processing task
+slot update_slots: id  5 | task 2594 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 5
+slot update_slots: id  5 | task 2594 | kv cache rm [1, end)
+slot update_slots: id  5 | task 2594 | prompt processing progress, n_past = 5, n_tokens = 4, progress = 0.800000
+slot update_slots: id  5 | task 2594 | prompt done, n_past = 5, n_tokens = 4
+slot      release: id  5 | task 2594 | stop processing: n_past = 219, truncated = 0
+slot print_timing: id  5 | task 2594 | 
+prompt eval time =      45.29 ms /     4 tokens (   11.32 ms per token,    88.32 tokens per second)
+       eval time =    6591.77 ms /   215 tokens (   30.66 ms per token,    32.62 tokens per second)
+      total time =    6637.05 ms /   219 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  6 | task 2810 | processing task
+slot update_slots: id  6 | task 2810 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 8
+slot update_slots: id  6 | task 2810 | kv cache rm [1, end)
+slot update_slots: id  6 | task 2810 | prompt processing progress, n_past = 8, n_tokens = 7, progress = 0.875000
+slot update_slots: id  6 | task 2810 | prompt done, n_past = 8, n_tokens = 7
+slot      release: id  6 | task 2810 | stop processing: n_past = 222, truncated = 0
+slot print_timing: id  6 | task 2810 | 
+prompt eval time =      42.13 ms /     7 tokens (    6.02 ms per token,   166.16 tokens per second)
+       eval time =    6687.98 ms /   215 tokens (   31.11 ms per token,    32.15 tokens per second)
+      total time =    6730.10 ms /   222 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  7 | task 3026 | processing task
+slot update_slots: id  7 | task 3026 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 25
+slot update_slots: id  7 | task 3026 | kv cache rm [1, end)
+slot update_slots: id  7 | task 3026 | prompt processing progress, n_past = 25, n_tokens = 24, progress = 0.960000
+slot update_slots: id  7 | task 3026 | prompt done, n_past = 25, n_tokens = 24
+slot      release: id  7 | task 3026 | stop processing: n_past = 239, truncated = 0
+slot print_timing: id  7 | task 3026 | 
+prompt eval time =      52.96 ms /    24 tokens (    2.21 ms per token,   453.15 tokens per second)
+       eval time =    6422.46 ms /   215 tokens (   29.87 ms per token,    33.48 tokens per second)
+      total time =    6475.43 ms /   239 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 3242 | processing task
+slot update_slots: id  0 | task 3242 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 33
+slot update_slots: id  0 | task 3242 | kv cache rm [1, end)
+slot update_slots: id  0 | task 3242 | prompt processing progress, n_past = 33, n_tokens = 32, progress = 0.969697
+slot update_slots: id  0 | task 3242 | prompt done, n_past = 33, n_tokens = 32
+slot      release: id  0 | task 3242 | stop processing: n_past = 68, truncated = 0
+slot print_timing: id  0 | task 3242 | 
+prompt eval time =      49.65 ms /    32 tokens (    1.55 ms per token,   644.52 tokens per second)
+       eval time =    1053.88 ms /    36 tokens (   29.27 ms per token,    34.16 tokens per second)
+      total time =    1103.53 ms /    68 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  1 | task 3279 | processing task
+slot update_slots: id  1 | task 3279 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 480
+slot update_slots: id  1 | task 3279 | kv cache rm [1, end)
+slot update_slots: id  1 | task 3279 | prompt processing progress, n_past = 480, n_tokens = 479, progress = 0.997917
+slot update_slots: id  1 | task 3279 | prompt done, n_past = 480, n_tokens = 479
+slot update_slots: id  1 | task 3279 | slot context shift, n_keep = 1, n_left = 510, n_discard = 255
+slot      release: id  1 | task 3279 | stop processing: n_past = 439, truncated = 1
+slot print_timing: id  1 | task 3279 | 
+prompt eval time =     310.44 ms /   479 tokens (    0.65 ms per token,  1542.95 tokens per second)
+       eval time =    6594.26 ms /   215 tokens (   30.67 ms per token,    32.60 tokens per second)
+      total time =    6904.70 ms /   694 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  2 | task 3495 | processing task
+slot update_slots: id  2 | task 3495 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 9
+slot update_slots: id  2 | task 3495 | kv cache rm [1, end)
+slot update_slots: id  2 | task 3495 | prompt processing progress, n_past = 9, n_tokens = 8, progress = 0.888889
+slot update_slots: id  2 | task 3495 | prompt done, n_past = 9, n_tokens = 8
+slot      release: id  2 | task 3495 | stop processing: n_past = 223, truncated = 0
+slot print_timing: id  2 | task 3495 | 
+prompt eval time =      40.80 ms /     8 tokens (    5.10 ms per token,   196.07 tokens per second)
+       eval time =    6682.86 ms /   215 tokens (   31.08 ms per token,    32.17 tokens per second)
+      total time =    6723.66 ms /   223 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  3 | task 3711 | processing task
+slot update_slots: id  3 | task 3711 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 367
+slot update_slots: id  3 | task 3711 | kv cache rm [1, end)
+slot update_slots: id  3 | task 3711 | prompt processing progress, n_past = 367, n_tokens = 366, progress = 0.997275
+slot update_slots: id  3 | task 3711 | prompt done, n_past = 367, n_tokens = 366
+slot update_slots: id  3 | task 3711 | slot context shift, n_keep = 1, n_left = 510, n_discard = 255
+slot      release: id  3 | task 3711 | stop processing: n_past = 326, truncated = 1
+slot print_timing: id  3 | task 3711 | 
+prompt eval time =     241.72 ms /   366 tokens (    0.66 ms per token,  1514.14 tokens per second)
+       eval time =    6554.40 ms /   215 tokens (   30.49 ms per token,    32.80 tokens per second)
+      total time =    6796.12 ms /   581 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  4 | task 3927 | processing task
+slot update_slots: id  4 | task 3927 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 235
+slot update_slots: id  4 | task 3927 | kv cache rm [1, end)
+slot update_slots: id  4 | task 3927 | prompt processing progress, n_past = 235, n_tokens = 234, progress = 0.995745
+slot update_slots: id  4 | task 3927 | prompt done, n_past = 235, n_tokens = 234
+slot      release: id  4 | task 3927 | stop processing: n_past = 239, truncated = 0
+slot print_timing: id  4 | task 3927 | 
+prompt eval time =     201.58 ms /   234 tokens (    0.86 ms per token,  1160.83 tokens per second)
+       eval time =     148.24 ms /     5 tokens (   29.65 ms per token,    33.73 tokens per second)
+      total time =     349.82 ms /   239 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  5 | task 3933 | processing task
+slot update_slots: id  5 | task 3933 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 59
+slot update_slots: id  5 | task 3933 | kv cache rm [1, end)
+slot update_slots: id  5 | task 3933 | prompt processing progress, n_past = 59, n_tokens = 58, progress = 0.983051
+slot update_slots: id  5 | task 3933 | prompt done, n_past = 59, n_tokens = 58
+slot      release: id  5 | task 3933 | stop processing: n_past = 273, truncated = 0
+slot print_timing: id  5 | task 3933 | 
+prompt eval time =      79.14 ms /    58 tokens (    1.36 ms per token,   732.91 tokens per second)
+       eval time =    6542.09 ms /   215 tokens (   30.43 ms per token,    32.86 tokens per second)
+      total time =    6621.22 ms /   273 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  6 | task 4149 | processing task
+slot update_slots: id  6 | task 4149 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 2
+slot update_slots: id  6 | task 4149 | kv cache rm [1, end)
+slot update_slots: id  6 | task 4149 | prompt processing progress, n_past = 2, n_tokens = 1, progress = 0.500000
+slot update_slots: id  6 | task 4149 | prompt done, n_past = 2, n_tokens = 1
+slot      release: id  6 | task 4149 | stop processing: n_past = 216, truncated = 0
+slot print_timing: id  6 | task 4149 | 
+prompt eval time =      29.03 ms /     1 tokens (   29.03 ms per token,    34.45 tokens per second)
+       eval time =    6468.83 ms /   215 tokens (   30.09 ms per token,    33.24 tokens per second)
+      total time =    6497.86 ms /   216 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  7 | task 4365 | processing task
+slot update_slots: id  7 | task 4365 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 167
+slot update_slots: id  7 | task 4365 | kv cache rm [1, end)
+slot update_slots: id  7 | task 4365 | prompt processing progress, n_past = 167, n_tokens = 166, progress = 0.994012
+slot update_slots: id  7 | task 4365 | prompt done, n_past = 167, n_tokens = 166
+slot      release: id  7 | task 4365 | stop processing: n_past = 179, truncated = 0
+slot print_timing: id  7 | task 4365 | 
+prompt eval time =     113.33 ms /   166 tokens (    0.68 ms per token,  1464.71 tokens per second)
+       eval time =     363.56 ms /    13 tokens (   27.97 ms per token,    35.76 tokens per second)
+      total time =     476.89 ms /   179 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 4379 | processing task
+slot update_slots: id  0 | task 4379 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 54
+slot update_slots: id  0 | task 4379 | kv cache rm [1, end)
+slot update_slots: id  0 | task 4379 | prompt processing progress, n_past = 54, n_tokens = 53, progress = 0.981481
+slot update_slots: id  0 | task 4379 | prompt done, n_past = 54, n_tokens = 53
+slot      release: id  0 | task 4379 | stop processing: n_past = 268, truncated = 0
+slot print_timing: id  0 | task 4379 | 
+prompt eval time =      60.38 ms /    53 tokens (    1.14 ms per token,   877.70 tokens per second)
+       eval time =    6612.49 ms /   215 tokens (   30.76 ms per token,    32.51 tokens per second)
+      total time =    6672.88 ms /   268 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  1 | task 4595 | processing task
+slot update_slots: id  1 | task 4595 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 40
+slot update_slots: id  1 | task 4595 | kv cache rm [1, end)
+slot update_slots: id  1 | task 4595 | prompt processing progress, n_past = 40, n_tokens = 39, progress = 0.975000
+slot update_slots: id  1 | task 4595 | prompt done, n_past = 40, n_tokens = 39
+slot      release: id  1 | task 4595 | stop processing: n_past = 254, truncated = 0
+slot print_timing: id  1 | task 4595 | 
+prompt eval time =      57.47 ms /    39 tokens (    1.47 ms per token,   678.64 tokens per second)
+       eval time =    6571.48 ms /   215 tokens (   30.57 ms per token,    32.72 tokens per second)
+      total time =    6628.95 ms /   254 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  2 | task 4811 | processing task
+slot update_slots: id  2 | task 4811 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 4
+slot update_slots: id  2 | task 4811 | kv cache rm [1, end)
+slot update_slots: id  2 | task 4811 | prompt processing progress, n_past = 4, n_tokens = 3, progress = 0.750000
+slot update_slots: id  2 | task 4811 | prompt done, n_past = 4, n_tokens = 3
+slot      release: id  2 | task 4811 | stop processing: n_past = 218, truncated = 0
+slot print_timing: id  2 | task 4811 | 
+prompt eval time =      42.10 ms /     3 tokens (   14.03 ms per token,    71.27 tokens per second)
+       eval time =    6637.07 ms /   215 tokens (   30.87 ms per token,    32.39 tokens per second)
+      total time =    6679.17 ms /   218 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  3 | task 5027 | processing task
+slot update_slots: id  3 | task 5027 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 5
+slot update_slots: id  3 | task 5027 | kv cache rm [1, end)
+slot update_slots: id  3 | task 5027 | prompt processing progress, n_past = 5, n_tokens = 4, progress = 0.800000
+slot update_slots: id  3 | task 5027 | prompt done, n_past = 5, n_tokens = 4
+slot      release: id  3 | task 5027 | stop processing: n_past = 219, truncated = 0
+slot print_timing: id  3 | task 5027 | 
+prompt eval time =      34.46 ms /     4 tokens (    8.61 ms per token,   116.09 tokens per second)
+       eval time =    6617.30 ms /   215 tokens (   30.78 ms per token,    32.49 tokens per second)
+      total time =    6651.76 ms /   219 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  4 | task 5243 | processing task
+slot update_slots: id  4 | task 5243 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 45
+slot update_slots: id  4 | task 5243 | kv cache rm [1, end)
+slot update_slots: id  4 | task 5243 | prompt processing progress, n_past = 45, n_tokens = 44, progress = 0.977778
+slot update_slots: id  4 | task 5243 | prompt done, n_past = 45, n_tokens = 44
+slot      release: id  4 | task 5243 | stop processing: n_past = 259, truncated = 0
+slot print_timing: id  4 | task 5243 | 
+prompt eval time =      55.78 ms /    44 tokens (    1.27 ms per token,   788.83 tokens per second)
+       eval time =    6394.69 ms /   215 tokens (   29.74 ms per token,    33.62 tokens per second)
+      total time =    6450.47 ms /   259 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  5 | task 5459 | processing task
+slot update_slots: id  5 | task 5459 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 119
+slot update_slots: id  5 | task 5459 | kv cache rm [1, end)
+slot update_slots: id  5 | task 5459 | prompt processing progress, n_past = 119, n_tokens = 118, progress = 0.991597
+slot update_slots: id  5 | task 5459 | prompt done, n_past = 119, n_tokens = 118
+slot      release: id  5 | task 5459 | stop processing: n_past = 333, truncated = 0
+slot print_timing: id  5 | task 5459 | 
+prompt eval time =      85.38 ms /   118 tokens (    0.72 ms per token,  1382.01 tokens per second)
+       eval time =    6555.94 ms /   215 tokens (   30.49 ms per token,    32.79 tokens per second)
+      total time =    6641.32 ms /   333 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  6 | task 5675 | processing task
+slot update_slots: id  6 | task 5675 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 30
+slot update_slots: id  6 | task 5675 | kv cache rm [1, end)
+slot update_slots: id  6 | task 5675 | prompt processing progress, n_past = 30, n_tokens = 29, progress = 0.966667
+slot update_slots: id  6 | task 5675 | prompt done, n_past = 30, n_tokens = 29
+slot      release: id  6 | task 5675 | stop processing: n_past = 244, truncated = 0
+slot print_timing: id  6 | task 5675 | 
+prompt eval time =      45.81 ms /    29 tokens (    1.58 ms per token,   632.98 tokens per second)
+       eval time =    6616.10 ms /   215 tokens (   30.77 ms per token,    32.50 tokens per second)
+      total time =    6661.91 ms /   244 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  7 | task 5891 | processing task
+slot update_slots: id  7 | task 5891 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 26
+slot update_slots: id  7 | task 5891 | kv cache rm [1, end)
+slot update_slots: id  7 | task 5891 | prompt processing progress, n_past = 26, n_tokens = 25, progress = 0.961538
+slot update_slots: id  7 | task 5891 | prompt done, n_past = 26, n_tokens = 25
+slot      release: id  7 | task 5891 | stop processing: n_past = 240, truncated = 0
+slot print_timing: id  7 | task 5891 | 
+prompt eval time =      47.03 ms /    25 tokens (    1.88 ms per token,   531.58 tokens per second)
+       eval time =    5311.59 ms /   215 tokens (   24.71 ms per token,    40.48 tokens per second)
+      total time =    5358.62 ms /   240 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 6107 | processing task
+slot update_slots: id  0 | task 6107 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 138
+slot update_slots: id  0 | task 6107 | kv cache rm [1, end)
+slot update_slots: id  0 | task 6107 | prompt processing progress, n_past = 138, n_tokens = 137, progress = 0.992754
+slot update_slots: id  0 | task 6107 | prompt done, n_past = 138, n_tokens = 137
+slot      release: id  0 | task 6107 | stop processing: n_past = 352, truncated = 0
+slot print_timing: id  0 | task 6107 | 
+prompt eval time =      31.75 ms /   137 tokens (    0.23 ms per token,  4314.69 tokens per second)
+       eval time =    7053.06 ms /   215 tokens (   32.80 ms per token,    30.48 tokens per second)
+      total time =    7084.82 ms /   352 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  1 | task 6323 | processing task
+slot update_slots: id  1 | task 6323 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 3
+slot update_slots: id  1 | task 6323 | kv cache rm [1, end)
+slot update_slots: id  1 | task 6323 | prompt processing progress, n_past = 3, n_tokens = 2, progress = 0.666667
+slot update_slots: id  1 | task 6323 | prompt done, n_past = 3, n_tokens = 2
+slot      release: id  1 | task 6323 | stop processing: n_past = 175, truncated = 0
+slot print_timing: id  1 | task 6323 | 
+prompt eval time =      40.96 ms /     2 tokens (   20.48 ms per token,    48.82 tokens per second)
+       eval time =    5149.29 ms /   173 tokens (   29.76 ms per token,    33.60 tokens per second)
+      total time =    5190.25 ms /   175 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  2 | task 6497 | processing task
+slot update_slots: id  2 | task 6497 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 8
+slot update_slots: id  2 | task 6497 | kv cache rm [1, end)
+slot update_slots: id  2 | task 6497 | prompt processing progress, n_past = 8, n_tokens = 7, progress = 0.875000
+slot update_slots: id  2 | task 6497 | prompt done, n_past = 8, n_tokens = 7
+slot      release: id  2 | task 6497 | stop processing: n_past = 222, truncated = 0
+slot print_timing: id  2 | task 6497 | 
+prompt eval time =      40.71 ms /     7 tokens (    5.82 ms per token,   171.95 tokens per second)
+       eval time =    6527.44 ms /   215 tokens (   30.36 ms per token,    32.94 tokens per second)
+      total time =    6568.15 ms /   222 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  3 | task 6713 | processing task
+slot update_slots: id  3 | task 6713 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 5
+slot update_slots: id  3 | task 6713 | kv cache rm [1, end)
+slot update_slots: id  3 | task 6713 | prompt processing progress, n_past = 5, n_tokens = 4, progress = 0.800000
+slot update_slots: id  3 | task 6713 | prompt done, n_past = 5, n_tokens = 4
+slot      release: id  3 | task 6713 | stop processing: n_past = 193, truncated = 0
+slot print_timing: id  3 | task 6713 | 
+prompt eval time =      44.62 ms /     4 tokens (   11.16 ms per token,    89.64 tokens per second)
+       eval time =    5837.48 ms /   189 tokens (   30.89 ms per token,    32.38 tokens per second)
+      total time =    5882.10 ms /   193 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  4 | task 6903 | processing task
+slot update_slots: id  4 | task 6903 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 64
+slot update_slots: id  4 | task 6903 | kv cache rm [1, end)
+slot update_slots: id  4 | task 6903 | prompt processing progress, n_past = 64, n_tokens = 63, progress = 0.984375
+slot update_slots: id  4 | task 6903 | prompt done, n_past = 64, n_tokens = 63
+slot      release: id  4 | task 6903 | stop processing: n_past = 278, truncated = 0
+slot print_timing: id  4 | task 6903 | 
+prompt eval time =      63.27 ms /    63 tokens (    1.00 ms per token,   995.67 tokens per second)
+       eval time =    6571.24 ms /   215 tokens (   30.56 ms per token,    32.72 tokens per second)
+      total time =    6634.52 ms /   278 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  5 | task 7119 | processing task
+slot update_slots: id  5 | task 7119 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 77
+slot update_slots: id  5 | task 7119 | kv cache rm [1, end)
+slot update_slots: id  5 | task 7119 | prompt processing progress, n_past = 77, n_tokens = 76, progress = 0.987013
+slot update_slots: id  5 | task 7119 | prompt done, n_past = 77, n_tokens = 76
+slot      release: id  5 | task 7119 | stop processing: n_past = 291, truncated = 0
+slot print_timing: id  5 | task 7119 | 
+prompt eval time =      66.46 ms /    76 tokens (    0.87 ms per token,  1143.61 tokens per second)
+       eval time =    6565.60 ms /   215 tokens (   30.54 ms per token,    32.75 tokens per second)
+      total time =    6632.06 ms /   291 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  6 | task 7335 | processing task
+slot update_slots: id  6 | task 7335 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 7
+slot update_slots: id  6 | task 7335 | kv cache rm [1, end)
+slot update_slots: id  6 | task 7335 | prompt processing progress, n_past = 7, n_tokens = 6, progress = 0.857143
+slot update_slots: id  6 | task 7335 | prompt done, n_past = 7, n_tokens = 6
+slot      release: id  6 | task 7335 | stop processing: n_past = 80, truncated = 0
+slot print_timing: id  6 | task 7335 | 
+prompt eval time =      41.52 ms /     6 tokens (    6.92 ms per token,   144.52 tokens per second)
+       eval time =    2173.91 ms /    74 tokens (   29.38 ms per token,    34.04 tokens per second)
+      total time =    2215.43 ms /    80 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  7 | task 7410 | processing task
+slot update_slots: id  7 | task 7410 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 246
+slot update_slots: id  7 | task 7410 | kv cache rm [1, end)
+slot update_slots: id  7 | task 7410 | prompt processing progress, n_past = 246, n_tokens = 245, progress = 0.995935
+slot update_slots: id  7 | task 7410 | prompt done, n_past = 246, n_tokens = 245
+slot      release: id  7 | task 7410 | stop processing: n_past = 280, truncated = 0
+slot print_timing: id  7 | task 7410 | 
+prompt eval time =     168.66 ms /   245 tokens (    0.69 ms per token,  1452.66 tokens per second)
+       eval time =    1029.88 ms /    35 tokens (   29.43 ms per token,    33.98 tokens per second)
+      total time =    1198.54 ms /   280 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 7446 | processing task
+slot update_slots: id  0 | task 7446 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 13
+slot update_slots: id  0 | task 7446 | kv cache rm [1, end)
+slot update_slots: id  0 | task 7446 | prompt processing progress, n_past = 13, n_tokens = 12, progress = 0.923077
+slot update_slots: id  0 | task 7446 | prompt done, n_past = 13, n_tokens = 12
+slot      release: id  0 | task 7446 | stop processing: n_past = 227, truncated = 0
+slot print_timing: id  0 | task 7446 | 
+prompt eval time =      43.72 ms /    12 tokens (    3.64 ms per token,   274.50 tokens per second)
+       eval time =    6493.37 ms /   215 tokens (   30.20 ms per token,    33.11 tokens per second)
+      total time =    6537.08 ms /   227 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  1 | task 7662 | processing task
+slot update_slots: id  1 | task 7662 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 33
+slot update_slots: id  1 | task 7662 | kv cache rm [1, end)
+slot update_slots: id  1 | task 7662 | prompt processing progress, n_past = 33, n_tokens = 32, progress = 0.969697
+slot update_slots: id  1 | task 7662 | prompt done, n_past = 33, n_tokens = 32
+slot      release: id  1 | task 7662 | stop processing: n_past = 247, truncated = 0
+slot print_timing: id  1 | task 7662 | 
+prompt eval time =      49.53 ms /    32 tokens (    1.55 ms per token,   646.09 tokens per second)
+       eval time =    6637.17 ms /   215 tokens (   30.87 ms per token,    32.39 tokens per second)
+      total time =    6686.70 ms /   247 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  2 | task 7878 | processing task
+slot update_slots: id  2 | task 7878 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 12
+slot update_slots: id  2 | task 7878 | kv cache rm [1, end)
+slot update_slots: id  2 | task 7878 | prompt processing progress, n_past = 12, n_tokens = 11, progress = 0.916667
+slot update_slots: id  2 | task 7878 | prompt done, n_past = 12, n_tokens = 11
+slot      release: id  2 | task 7878 | stop processing: n_past = 33, truncated = 0
+slot print_timing: id  2 | task 7878 | 
+prompt eval time =      44.40 ms /    11 tokens (    4.04 ms per token,   247.74 tokens per second)
+       eval time =     651.53 ms /    22 tokens (   29.61 ms per token,    33.77 tokens per second)
+      total time =     695.93 ms /    33 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  3 | task 7901 | processing task
+slot update_slots: id  3 | task 7901 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 80
+slot update_slots: id  3 | task 7901 | kv cache rm [1, end)
+slot update_slots: id  3 | task 7901 | prompt processing progress, n_past = 80, n_tokens = 79, progress = 0.987500
+slot update_slots: id  3 | task 7901 | prompt done, n_past = 80, n_tokens = 79
+slot      release: id  3 | task 7901 | stop processing: n_past = 294, truncated = 0
+slot print_timing: id  3 | task 7901 | 
+prompt eval time =      71.66 ms /    79 tokens (    0.91 ms per token,  1102.40 tokens per second)
+       eval time =    6605.84 ms /   215 tokens (   30.72 ms per token,    32.55 tokens per second)
+      total time =    6677.51 ms /   294 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  4 | task 8117 | processing task
+slot update_slots: id  4 | task 8117 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 11
+slot update_slots: id  4 | task 8117 | kv cache rm [1, end)
+slot update_slots: id  4 | task 8117 | prompt processing progress, n_past = 11, n_tokens = 10, progress = 0.909091
+slot update_slots: id  4 | task 8117 | prompt done, n_past = 11, n_tokens = 10
+slot      release: id  4 | task 8117 | stop processing: n_past = 225, truncated = 0
+slot print_timing: id  4 | task 8117 | 
+prompt eval time =      54.06 ms /    10 tokens (    5.41 ms per token,   184.99 tokens per second)
+       eval time =    6508.92 ms /   215 tokens (   30.27 ms per token,    33.03 tokens per second)
+      total time =    6562.98 ms /   225 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  5 | task 8333 | processing task
+slot update_slots: id  5 | task 8333 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 29
+slot update_slots: id  5 | task 8333 | kv cache rm [1, end)
+slot update_slots: id  5 | task 8333 | prompt processing progress, n_past = 29, n_tokens = 28, progress = 0.965517
+slot update_slots: id  5 | task 8333 | prompt done, n_past = 29, n_tokens = 28
+slot      release: id  5 | task 8333 | stop processing: n_past = 243, truncated = 0
+slot print_timing: id  5 | task 8333 | 
+prompt eval time =      43.85 ms /    28 tokens (    1.57 ms per token,   638.60 tokens per second)
+       eval time =    6467.71 ms /   215 tokens (   30.08 ms per token,    33.24 tokens per second)
+      total time =    6511.55 ms /   243 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  6 | task 8549 | processing task
+slot update_slots: id  6 | task 8549 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 7
+slot update_slots: id  6 | task 8549 | kv cache rm [1, end)
+slot update_slots: id  6 | task 8549 | prompt processing progress, n_past = 7, n_tokens = 6, progress = 0.857143
+slot update_slots: id  6 | task 8549 | prompt done, n_past = 7, n_tokens = 6
+slot      release: id  6 | task 8549 | stop processing: n_past = 221, truncated = 0
+slot print_timing: id  6 | task 8549 | 
+prompt eval time =      38.90 ms /     6 tokens (    6.48 ms per token,   154.23 tokens per second)
+       eval time =    6558.76 ms /   215 tokens (   30.51 ms per token,    32.78 tokens per second)
+      total time =    6597.66 ms /   221 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  7 | task 8765 | processing task
+slot update_slots: id  7 | task 8765 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 2
+slot update_slots: id  7 | task 8765 | kv cache rm [1, end)
+slot update_slots: id  7 | task 8765 | prompt processing progress, n_past = 2, n_tokens = 1, progress = 0.500000
+slot update_slots: id  7 | task 8765 | prompt done, n_past = 2, n_tokens = 1
+slot      release: id  7 | task 8765 | stop processing: n_past = 216, truncated = 0
+slot print_timing: id  7 | task 8765 | 
+prompt eval time =      31.69 ms /     1 tokens (   31.69 ms per token,    31.56 tokens per second)
+       eval time =    6607.21 ms /   215 tokens (   30.73 ms per token,    32.54 tokens per second)
+      total time =    6638.90 ms /   216 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 8981 | processing task
+slot update_slots: id  0 | task 8981 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 8
+slot update_slots: id  0 | task 8981 | kv cache rm [1, end)
+slot update_slots: id  0 | task 8981 | prompt processing progress, n_past = 8, n_tokens = 7, progress = 0.875000
+slot update_slots: id  0 | task 8981 | prompt done, n_past = 8, n_tokens = 7
+slot      release: id  0 | task 8981 | stop processing: n_past = 222, truncated = 0
+slot print_timing: id  0 | task 8981 | 
+prompt eval time =      42.01 ms /     7 tokens (    6.00 ms per token,   166.63 tokens per second)
+       eval time =    6643.90 ms /   215 tokens (   30.90 ms per token,    32.36 tokens per second)
+      total time =    6685.91 ms /   222 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  1 | task 9197 | processing task
+slot update_slots: id  1 | task 9197 | new prompt, n_ctx_slot = 512, n_keep = 0, n_prompt_tokens = 21
+slot update_slots: id  1 | task 9197 | kv cache rm [1, end)
+slot update_slots: id  1 | task 9197 | prompt processing progress, n_past = 21, n_tokens = 20, progress = 0.952381
+slot update_slots: id  1 | task 9197 | prompt done, n_past = 21, n_tokens = 20
+slot      release: id  1 | task 9197 | stop processing: n_past = 235, truncated = 0
+slot print_timing: id  1 | task 9197 | 
+prompt eval time =      42.80 ms /    20 tokens (    2.14 ms per token,   467.29 tokens per second)
+       eval time =    6616.33 ms /   215 tokens (   30.77 ms per token,    32.50 tokens per second)
+      total time =    6659.13 ms /   235 tokens
+srv  update_slots: all slots are idle
+srv    operator(): operator(): cleaning up before exit...
+terminate called without an active exception
