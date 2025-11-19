@@ -11,6 +11,7 @@ lv:
     device: gpu
     mps: 100
     client_command_file: /mnt/d/rohan/ConsumerBench/applications/LiveCaptions/whisper-earnings21/5-min-chunks/audio_file_0_chunk_001.wav
+    model: small
     type: LiveCaptions
 
 chat1:
