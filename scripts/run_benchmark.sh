@@ -91,7 +91,7 @@ else
 
     echo "Setting up power utilization monitoring..."
     # Get power utilization
-    tmux new-session -d sudo -E "$(which python3)" ${SCRIPTS_DIR}/record_power_usage.py -o ${RESULTS_DIR}/power_data.csv -s ${start_time}
+    tmux new-session -d "sudo -E $(which python3) ${SCRIPTS_DIR}/record_power_usage.py -o ${RESULTS_DIR}/power_data.csv -s ${start_time}"
     power_pid=`pgrep -fo record_power`
 
     echo "--------------------------------"

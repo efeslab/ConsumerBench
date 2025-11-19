@@ -1,8 +1,9 @@
 lv:
     num_requests: 1
+    model: tiny
     device: gpu
     mps: 100
-    client_command_file: datasets/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
+    client_command_file: /home/yilegu/ConsumerBench/applications/LiveCaptions/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
     type: LiveCaptions
 
 workflows:

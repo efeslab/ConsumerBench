@@ -1,6 +1,6 @@
 chat1:
-    model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
-    num_requests: 50
+    model: /home/yilegu/ConsumerBench/models/Llama-3.2-1B/Llama-3.2-1B-Instruct-Q8_0.gguf
+    num_requests: 30
     device: gpu
     type: Chatbot
     # mps: 33

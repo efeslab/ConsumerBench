@@ -84,11 +84,11 @@ def main(args):
     print("Benchmark visualization saved to 'complex_workflow_benchmark.png'")
     
     #  Set up GPU memory monitoring
-    gpu_monitor = GpuMemoryMonitor(gpu_id=0, interval=0.01, results_dir=args.results)
-    import threading
-    monitor_thread = threading.Thread(target=gpu_monitor.start_monitoring)
-    monitor_thread.daemon = True
-    monitor_thread.start()
+    # gpu_monitor = GpuMemoryMonitor(gpu_id=0, interval=0.01, results_dir=args.results)
+    # import threading
+    # monitor_thread = threading.Thread(target=gpu_monitor.start_monitoring)
+    # monitor_thread.daemon = True
+    # monitor_thread.start()
 
     # Run the benchmark
     print("\n=== Running Benchmark ===")
@@ -100,8 +100,8 @@ def main(args):
     bm.display_results()
 
     # Stop GPU memory monitoring
-    gpu_monitor.running = False
-    monitor_thread.join()
+    # gpu_monitor.running = False
+    # monitor_thread.join()
 
 if __name__ == "__main__":
     main(sys.argv[1:]) 

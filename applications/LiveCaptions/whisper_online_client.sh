@@ -10,7 +10,7 @@ api_port=$1
 wav_file_path=$2
 app_dir=$3
 
-source ~/anaconda3/etc/profile.d/conda.sh
+source ~/archiconda3/etc/profile.d/conda.sh
 
 conda activate whisper
 

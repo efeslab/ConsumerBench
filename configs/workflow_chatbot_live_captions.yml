@@ -1,33 +1,20 @@
 chat1:
-    # server_model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
-    # client_model: openai/meta-llama/Llama-3.2-3B-Instruct
-    server_model: models/Llama-3.1-8B-Instruct-GGUF/Llama-3.1-8B-Instruct-f16.gguf
-    client_model: openai/meta-llama/Llama-3.1-8B-Instruct
-    num_requests: 30
-    device: cpu
-    type: chatbot
-    mps: 100
+    model: /home/yilegu/ConsumerBench/models/Llama-3.2-1B/Llama-3.2-1B-Instruct-Q8_0.gguf
+    num_requests: 50
+    device: gpu
+    type: Chatbot
 
 lv:
-    num_requests: 3
-    device: gpu
-    mps: 100
-    type: live_captions
-
-sleep:
     num_requests: 1
+    model: tiny
     device: gpu
-    mps: 100
-    type: sleep
+    client_command_file: /home/yilegu/ConsumerBench/applications/LiveCaptions/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
+    type: LiveCaptions
 
 
 workflows:
     chat_summary:
         uses: chat1
 
-    sleep1:
-        uses: sleep
-
     start_captions:
         uses: lv
-        depend_on: ["sleep1"]
