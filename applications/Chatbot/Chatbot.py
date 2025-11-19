@@ -109,7 +109,7 @@ class Chatbot(Application):
         tpot = (end_time - first_token_time) / token_count if token_count > 0 else None    
         itl = (end_time - start_time) / token_count if token_count > 0 else None
 
-        return {"status": "chatbot_complete", "ttft": end_time - start_time, "tpot": tpot, "itl": itl}
+        return {"status": "chatbot_complete", "ttft": ttft, "tpot": tpot, "itl": itl}
 
     def load_dataset(self, *args, **kwargs):
         """Load the chatbot dataset"""
