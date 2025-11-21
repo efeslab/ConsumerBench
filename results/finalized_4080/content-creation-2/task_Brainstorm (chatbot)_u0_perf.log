@@ -1,0 +1,46 @@
+app_type: Chatbot
+task_id: Brainstorm (chatbot)_u0
+start_time: 5.922524
+end_time: 74.814462
+Task Brainstorm (chatbot)_u0 execution time: 68.8868 seconds
+
+Execution times for each node:
+Node Brainstorm (chatbot)_u0_0:
+  Execution time: 36.1667 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_1:
+  Execution time: 1.9143 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_2:
+  Execution time: 2.3768 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_3:
+  Execution time: 2.3691 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_4:
+  Execution time: 2.5219 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_5:
+  Execution time: 2.9522 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_6:
+  Execution time: 3.0297 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_7:
+  Execution time: 5.2024 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_8:
+  Execution time: 4.3719 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_9:
+  Execution time: 2.8985 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_10:
+  Execution time: 5.0832 seconds
+  Success: True
+Node Brainstorm (chatbot)_u0_11:
+  Execution time: 0.0001 seconds
+  Success: True
+
+Task Brainstorm (chatbot)_u0 results:
+[{'status': 'setup_complete', 'config': {'model': '/mnt/e/rohan/ConsumerBench/models/Qwen3-VL-2B-Instruct-GGUF/Qwen3-VL-2B-Instruct-BF16.gguf', 'device': 'gpu', 'mps': 100, 'api_port': 8080, 'llamacpp_path': '/mnt/e/rohan/ConsumerBench/inference_backends/llama.cpp', 'dataset': 'lmsys/lmsys-chat-1m', 'num_requests': 20}}, {'status': 'chatbot_complete', 'ttft': 0.1203916072845459, 'tpot': 0.010870732683123965, 'itl': 0.011600378787878788}, {'status': 'chatbot_complete', 'ttft': 0.02731466293334961, 'tpot': 0.010926772272864054, 'itl': 0.011053817216740099}, {'status': 'chatbot_complete', 'ttft': 0.03880476951599121, 'tpot': 0.010837812201921329, 'itl': 0.011018299501995708}, {'status': 'chatbot_complete', 'ttft': 0.022494077682495117, 'tpot': 0.011624066774235215, 'itl': 0.0117286903913631}, {'status': 'chatbot_complete', 'ttft': 0.03996133804321289, 'tpot': 0.013544122562852017, 'itl': 0.0137299892514251}, {'status': 'chatbot_complete', 'ttft': 0.040645599365234375, 'tpot': 0.013902110831682073, 'itl': 0.014091160131055255}, {'status': 'chatbot_complete', 'ttft': 0.05217099189758301, 'tpot': 0.02395389246386151, 'itl': 0.02419654824012934}, {'status': 'chatbot_complete', 'ttft': 0.04754376411437988, 'tpot': 0.02011209864949071, 'itl': 0.020333232436069222}, {'status': 'chatbot_complete', 'ttft': 0.05780482292175293, 'tpot': 0.013210638179335482, 'itl': 0.013479497820832008}, {'status': 'chatbot_complete', 'ttft': 0.048482418060302734, 'tpot': 0.0234149411667225, 'itl': 0.023640440785607626}, {'status': 'cleanup_complete'}]

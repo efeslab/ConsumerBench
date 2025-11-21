@@ -1,0 +1,906 @@
+SERVER_PID=135337
+Whisper is warmed up.
+Listening on('127.0.0.1', 5000)
+Connected to client on ('127.0.0.1', 46530)
+Received fragment: 32741 bytes, total so far: 32741/64000
+Received fragment: 31259 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'D\x00I\x00U\x00d\x00d\x00'
+[1]: received audio
+[1]: processing time: 0.545317 seconds, start time: 1763363389.682483 seconds, end time: 1763363390.227800 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfa\xff\xf7\xff\xfc\xff\xfd\xff\xfd\xff'
+[2]: received audio
+[2]: processing time: 3.054737 seconds, start time: 1763363391.689424 seconds, end time: 1763363394.744161 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf9\xff\xfb\xff\x02\x00\x05\x00\x04\x00'
+[3]: received audio
+[3]: processing time: 1.692990 seconds, start time: 1763363394.748717 seconds, end time: 1763363396.441707 seconds
+send message: 0 3800  of sales. Our variable margin, on the other hand,
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x04\x00\x02\x00\x01\x00\x02\x00\xfd\xff'
+[4]: received audio
+[4]: processing time: 1.256506 seconds, start time: 1763363396.445589 seconds, end time: 1763363397.702095 seconds
+send message: 4180 5660  expanded due to lower
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x83\xff\x17\xff\xae\xfez\xfeT\xfe'
+[5]: received audio
+[5]: processing time: 4.360208 seconds, start time: 1763363397.706390 seconds, end time: 1763363402.066598 seconds
+send message: 5660 8400  year-over-year material cost as a percentage of sales.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x8b\x042\x07q\t~\x0b\x1d\r'
+[6]: received audio
+[6]: processing time: 1.455754 seconds, start time: 1763363402.071070 seconds, end time: 1763363403.526824 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xd3\xe83\xe8\xef\xe7,\xe8\xae\xe8'
+[7]: received audio
+[7]: processing time: 2.242218 seconds, start time: 1763363403.531303 seconds, end time: 1763363405.773521 seconds
+send message: 8400 10920  While slightly higher than the prior year quarter,
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x92\xf9\xfd\xfb\xfb\xfd:\xff\x99\xff'
+[8]: received audio
+[8]: processing time: 19.657916 seconds, start time: 1763363405.776719 seconds, end time: 1763363425.434635 seconds
+send message: 11440 13520  technician labor as a percentage of sales
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf8\xff\xff\xff\xfe\xff\xf3\xff\xf9\xff'
+[9]: received audio
+[9]: processing time: 1.222680 seconds, start time: 1763363425.438120 seconds, end time: 1763363426.660800 seconds
+send message: 13520 15700  decreased sequentially from last quarter.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x08\xff\xf3\xffL\x01\xca\x01\r\x01'
+[10]: received audio
+[10]: processing time: 1.466969 seconds, start time: 1763363426.663900 seconds, end time: 1763363428.130869 seconds
+send message: 15980 17660  This is a good example of us
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf1\xff\xf1\xff\xf1\xff\xf8\xff\xfb\xff'
+[11]: received audio
+[11]: processing time: 1.548714 seconds, start time: 1763363428.134212 seconds, end time: 1763363429.682927 seconds
+send message: 17660 20140  executing well against the areas within our control.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xd2\x19\n\x18\x8c\x134\x0e\x13\n'
+[12]: received audio
+[12]: processing time: 1.738431 seconds, start time: 1763363429.686270 seconds, end time: 1763363431.424701 seconds
+send message: 20440 21820  We identified issues
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xd8\xfeY\xfd8\xfcB\xfbK\xfa'
+[13]: received audio
+[13]: processing time: 1.874177 seconds, start time: 1763363431.427943 seconds, end time: 1763363433.302120 seconds
+send message: 21820 23360  last quarter that arose from our
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b's\xf4*\xf4\xaa\xf4(\xf5/\xf5'
+[14]: received audio
+[14]: processing time: 2.076519 seconds, start time: 1763363433.305372 seconds, end time: 1763363435.381891 seconds
+send message: 23380 26040  transformation and took corrective action to drive
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x06\x00\x06\x00\xff\xff\xfa\xff\xf7\xff'
+[15]: received audio
+[15]: processing time: 3.183637 seconds, start time: 1763363435.385066 seconds, end time: 1763363438.568703 seconds
+send message: 26040 26960  improved results.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xff\xff\x07\x00\x0c\x00\r\x00\r\x00'
+[16]: received audio
+[16]: processing time: 5.254794 seconds, start time: 1763363438.571922 seconds, end time: 1763363443.826715 seconds
+send message: 27600 30180  We will have additional opportunities to continue
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'g\xfe\xbf\xfd\x08\xfd\x01\xfc\xc4\xfa'
+[17]: received audio
+[17]: processing time: 9.975781 seconds, start time: 1763363443.830248 seconds, end time: 1763363453.806029 seconds
+send message: 30180 31600  to improve results in this
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xa1\xec\x80\xef\xf4\xf2\x1d\xf7$\xfc'
+[18]: received audio
+[18]: processing time: 1.348167 seconds, start time: 1763363453.809656 seconds, end time: 1763363455.157823 seconds
+send message: 31620 33860  area as we implement our cloud
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'"\x06\xf9\x06\xef\x07\xd9\x08\xda\t'
+[19]: received audio
+[19]: processing time: 1.479417 seconds, start time: 1763363455.161153 seconds, end time: 1763363456.640570 seconds
+send message: 33860 35640 -based Thor staffing and scheduling
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xdd\xf8\x86\xfb\xc2\xfd\x9d\xff\xb0\x01'
+[20]: received audio
+[20]: processing time: 1.702254 seconds, start time: 1763363456.643890 seconds, end time: 1763363458.346143 seconds
+send message: 35640 37960  model towards the end of this fiscal
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x9a\xf0\x9c\xf0^\xf1\xf7\xf2\x85\xf5'
+[21]: received audio
+[21]: processing time: 1.850042 seconds, start time: 1763363458.349499 seconds, end time: 1763363460.199541 seconds
+send message: 37960 39780  year, which will be critical for
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x94\xfc\x9b\xfc\xb1\xfc\xa8\xfc\xa4\xfc'
+[22]: received audio
+[22]: processing time: 1.919517 seconds, start time: 1763363460.202767 seconds, end time: 1763363462.122284 seconds
+send message: 39780 41540  us to seamlessly adjust the
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x8f\xf6X\xf8\xca\xfa*\xfe\x1f\x02'
+[23]: received audio
+[23]: processing time: 0.994438 seconds, start time: 1763363462.125429 seconds, end time: 1763363463.119867 seconds
+send message: 41540 42620  changes in demand
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xff\xff\xfe\xff\xfc\xff\xfb\xff\xfc\xff'
+[24]: received audio
+[24]: processing time: 1.207290 seconds, start time: 1763363463.123522 seconds, end time: 1763363464.330812 seconds
+send message: 42620 45400  dynamics without sacrificing sales.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x05\x00\x04\x00\x08\x00\x04\x00\x03\x00'
+[25]: received audio
+[25]: processing time: 1.465869 seconds, start time: 1763363464.334399 seconds, end time: 1763363465.800269 seconds
+send message: 46420 47460  I'd now like to
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x1a\xf9\x9d\xf8\xd8\xf8\xa3\xf9\xcc\xfa'
+[26]: received audio
+[26]: processing time: 1.652718 seconds, start time: 1763363465.803694 seconds, end time: 1763363467.456413 seconds
+send message: 47460 49660  turn to the progress we've made in our Monroe
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x9a\xf1\x82\xfd\x18\t\xe4\x11A\x16'
+[27]: received audio
+[27]: processing time: 1.869417 seconds, start time: 1763363467.459774 seconds, end time: 1763363469.329191 seconds
+send message: 49660 51720  Forward strategy, beginning with our
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x1f\xf7v\xf7\x83\xf7\x90\xf7\xe6\xf7'
+[28]: received audio
+[28]: processing time: 2.409642 seconds, start time: 1763363469.332498 seconds, end time: 1763363471.742140 seconds
+send message: 51720 53440  store rebrand and re-image
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'q\t\xf3\t\xe5\t\x01\ny\n'
+[29]: received audio
+[29]: processing time: 1.230176 seconds, start time: 1763363471.744939 seconds, end time: 1763363472.975115 seconds
+send message: 53440 56020  initiative on slide four. This
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x19\xf7Z\xf6\xd3\xf5u\xf5A\xf5'
+[30]: received audio
+[30]: processing time: 1.455245 seconds, start time: 1763363472.978424 seconds, end time: 1763363474.433669 seconds
+send message: 56020 58160  initiative focuses on creating a more
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfe\xff\xff\xff\x03\x00\xfc\xff\x00\x00'
+[31]: received audio
+[31]: processing time: 6.069588 seconds, start time: 1763363474.436407 seconds, end time: 1763363480.505996 seconds
+send message: 58160 59220  consistent store
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xff\xff\xfa\xff\xff\xff\x00\x00\x00\x00'
+[32]: received audio
+[32]: processing time: 4.051739 seconds, start time: 1763363480.509404 seconds, end time: 1763363484.561143 seconds
+send message: 59220 61680  appearance while also implementing
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b"\xe6\xfc'\xfd\x85\xfd&\xfe\xf3\xfe"
+[33]: received audio
+[33]: processing time: 2.350258 seconds, start time: 1763363484.564562 seconds, end time: 1763363486.914819 seconds
+send message: 61680 63640  standardized in-store operating
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfa\x07z\x07\xb7\x06\x9c\x051\x04'
+[34]: received audio
+[34]: processing time: 1.941950 seconds, start time: 1763363486.918304 seconds, end time: 1763363488.860254 seconds
+send message: 63640 65920  procedures, which we call our Monroe
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'{\xe5\xdc\xe9\xc4\xec.\xef\xd3\xf2'
+[35]: received audio
+[35]: processing time: 2.154418 seconds, start time: 1763363488.863489 seconds, end time: 1763363491.017908 seconds
+send message: 65920 67880  Playbook. Additionally, we are
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xb9\xe5\xfd\xe9\x96\xef\xce\xf5\xc4\xfb'
+[36]: received audio
+[36]: processing time: 1.153276 seconds, start time: 1763363491.020642 seconds, end time: 1763363492.173918 seconds
+send message: 67880 69620  rebranding select stores to
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'P\x11\xdd\x08\xf4\x01\xe9\xfc\x0c\xfa'
+[37]: received audio
+[37]: processing time: 1.337709 seconds, start time: 1763363492.177221 seconds, end time: 1763363493.514930 seconds
+send message: 69620 70500  a tire-oriented
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xec\xff\xdc\xff\xc7\xff\xd6\xff\xf0\xff'
+[38]: received audio
+[38]: processing time: 1.539328 seconds, start time: 1763363493.518131 seconds, end time: 1763363495.057459 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xc7\xf9G\xfbs\xfd)\x00\x0b\x03'
+[39]: received audio
+[39]: processing time: 1.550999 seconds, start time: 1763363495.060891 seconds, end time: 1763363496.611890 seconds
+send message: 70520 75660  spanner where targeted demographics favor this type of store format in order to
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf7\x02\x05\x02\xbf\x00 \xff$\xfd'
+[40]: received audio
+[40]: processing time: 1.603056 seconds, start time: 1763363496.615643 seconds, end time: 1763363498.218699 seconds
+send message: 75660 76900  increase tire sales
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xff\xff\xfb\xff\xfc\xff\x00\x00\x00\x00'
+[41]: received audio
+[41]: processing time: 1.856861 seconds, start time: 1763363498.222291 seconds, end time: 1763363500.079152 seconds
+send message: 76900 79480  without sacrificing service revenue.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'W\x00Q\x00]\x00a\x00<\x00'
+[42]: received audio
+[42]: processing time: 1.028124 seconds, start time: 1763363500.082313 seconds, end time: 1763363501.110437 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xaa\xef\xd5\xf3R\xfa\xf6\xffp\x02'
+[43]: received audio
+[43]: processing time: 1.194200 seconds, start time: 1763363501.113889 seconds, end time: 1763363502.308089 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf2\xfbj\xfd\xfd\xfe\xa6\x00\x87\x02'
+[44]: received audio
+[44]: processing time: 1.278839 seconds, start time: 1763363502.311444 seconds, end time: 1763363503.590283 seconds
+send message: 80520 86020  during the first half of fiscal 2020 we finalized the transformations of our first group of stores
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf0\x08\x1b\x0b\xf8\x0bU\x0c\xaa\r'
+[45]: received audio
+[45]: processing time: 1.518689 seconds, start time: 1763363503.593346 seconds, end time: 1763363505.112035 seconds
+send message: 86240 88120  which includes 44 locations
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'X\x00\x04\x00r\x00f\x01E\x02'
+[46]: received audio
+[46]: processing time: 1.887152 seconds, start time: 1763363505.115247 seconds, end time: 1763363507.002400 seconds
+send message: 88120 89120  in Rochester, New
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'_\x01K\x01;\x015\x011\x01'
+[47]: received audio
+[47]: processing time: 3.143167 seconds, start time: 1763363507.004996 seconds, end time: 1763363510.148163 seconds
+send message: 89120 91620  York, and the Mid-Atlantic, as well as the
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'(\x17f\x14\xe4\x10\x81\x0c8\x07'
+[48]: received audio
+[48]: processing time: 2.424103 seconds, start time: 1763363510.151675 seconds, end time: 1763363512.575778 seconds
+send message: 91620 93660  second group, which includes 43
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfe\xff\xfc\xff\xf8\xff\xfc\xff\xfa\xff'
+[49]: received audio
+[49]: processing time: 2.428920 seconds, start time: 1763363512.579151 seconds, end time: 1763363515.008070 seconds
+send message: 93660 95080  stores in our southern market.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x05\xff2\x02\xea\x06\xef\x0b\xd2\x0f'
+[50]: received audio
+[50]: processing time: 1.164573 seconds, start time: 1763363515.011139 seconds, end time: 1763363516.175712 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'$\x11\x13\x10h\x0eK\x0c+\n'
+[51]: received audio
+[51]: processing time: 1.316221 seconds, start time: 1763363516.179364 seconds, end time: 1763363517.495586 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xab\x08C\x03\xb8\xfe\xac\xfb\xef\xf8'
+[52]: received audio
+[52]: processing time: 1.436132 seconds, start time: 1763363517.498921 seconds, end time: 1763363518.935054 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x06\x00\t\x00\x0c\x00\x08\x00\x08\x00'
+[53]: received audio
+[53]: processing time: 1.597569 seconds, start time: 1763363518.938515 seconds, end time: 1763363520.536084 seconds
+send message: 95080 103180  market. During the third quarter, we continue to scale this initiative across our base and move forward with the transformation of 74 stores in four
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'D\x073\x00\xee\xf9t\xf5v\xf2'
+[54]: received audio
+[54]: processing time: 1.572984 seconds, start time: 1763363520.539201 seconds, end time: 1763363522.112185 seconds
+send message: 103180 106180  markets and 42 of our recently acquired
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x04\x00\x01\x00\x06\x00\x06\x00\x05\x00'
+[55]: received audio
+[55]: processing time: 1.797006 seconds, start time: 1763363522.115343 seconds, end time: 1763363523.912349 seconds
+send message: 106180 107120  California stores.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x01\xfbX\xfa\x90\xfa\xd7\xfb\xec\xfc'
+[56]: received audio
+[56]: processing time: 2.008902 seconds, start time: 1763363523.915640 seconds, end time: 1763363525.924541 seconds
+send message: 107760 109920  We have completed the transformation of
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'%\x0b\xd7\nG\x0b\x9e\x0b\n\x0b'
+[57]: received audio
+[57]: processing time: 1.117184 seconds, start time: 1763363525.927895 seconds, end time: 1763363527.045079 seconds
+send message: 109920 111580  the 74 stores and
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x8b\xf5\xc9\xf4\x89\xf3s\xf1\x13\xef'
+[58]: received audio
+[58]: processing time: 1.286417 seconds, start time: 1763363527.048384 seconds, end time: 1763363528.334801 seconds
+send message: 111580 113580  have substantially completed our California
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x86\n\\\t\x12\x08\xe2\x06\xd8\x05'
+[59]: received audio
+[59]: processing time: 1.410537 seconds, start time: 1763363528.338070 seconds, end time: 1763363529.748607 seconds
+send message: 113580 115460  stores, which are being
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'5\x009\x002\x00%\x00\x18\x00'
+[60]: received audio
+[60]: processing time: 2.250101 seconds, start time: 1763363529.751922 seconds, end time: 1763363532.002024 seconds
+send message: 115460 116960  rebranded under our
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xc9\x1b\xe0\x1c\xaa\x1cc\x1c\xdb\x1b'
+[61]: received audio
+[61]: processing time: 2.032585 seconds, start time: 1763363532.005348 seconds, end time: 1763363534.037933 seconds
+send message: 116980 118920  Tire Choice Auto Service Centers
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfd\xff\x00\x00\xff\xff\x02\x00\x03\x00'
+[62]: received audio
+[62]: processing time: 2.115911 seconds, start time: 1763363534.042382 seconds, end time: 1763363536.158294 seconds
+send message: 118920 121540  banner to drive higher awareness for tires.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf0\xed\x0f\xecf\xeb\x12\xed\x1d\xf1'
+[63]: received audio
+[63]: processing time: 1.119532 seconds, start time: 1763363536.161539 seconds, end time: 1763363537.281072 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x15\xf0\xff\xee"\xee\x89\xed;\xed'
+[64]: received audio
+[64]: processing time: 1.218573 seconds, start time: 1763363537.284559 seconds, end time: 1763363538.503132 seconds
+send message: 121540 125720  years. Turning to slide five, I'd like to provide some additional context
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xae\x03,\x04l\x04\x01\x05\xf5\x05'
+[65]: received audio
+[65]: processing time: 1.280394 seconds, start time: 1763363538.506417 seconds, end time: 1763363539.786811 seconds
+send message: 125720 127440  regarding our strategic
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfd\xff\xfc\xff\xfd\xff\xfe\xff\xfc\xff'
+[66]: received audio
+[66]: processing time: 1.521430 seconds, start time: 1763363539.790237 seconds, end time: 1763363541.311667 seconds
+send message: 127440 129840  rationale as we transform our store base.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'=\xf0F\xef\xc2\xee{\xeet\xee'
+[67]: received audio
+[67]: processing time: 1.708654 seconds, start time: 1763363541.315164 seconds, end time: 1763363543.023818 seconds
+send message: 130760 131880  As many of you know,
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xd9\xff\xe3\xff\xfb\xff\x05\x00\xf9\xff'
+[68]: received audio
+[68]: processing time: 1.935656 seconds, start time: 1763363543.027175 seconds, end time: 1763363544.962831 seconds
+send message: 132020 133340  we operate in two-store
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xb5\xff\x9a\xff\x80\x00\x06\x01\x81\x00'
+[69]: received audio
+[69]: processing time: 2.064534 seconds, start time: 1763363544.965936 seconds, end time: 1763363547.030471 seconds
+send message: 133340 136020  formats. Our service brand stores, which
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf9\x05[\x06f\x06\xc9\x06o\x07'
+[70]: received audio
+[70]: processing time: 1.156614 seconds, start time: 1763363547.033833 seconds, end time: 1763363548.190446 seconds
+send message: 136020 137700  generate approximately $600
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x9d\xf1\xee\xf4\xf4\xf90\x00\xe2\x06'
+[71]: received audio
+[71]: processing time: 1.314798 seconds, start time: 1763363548.194219 seconds, end time: 1763363549.509017 seconds
+send message: 137700 139800 ,000 per store in annualized
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'[\x04`\x03\n\x02\xbf\x00\xa2\xff'
+[72]: received audio
+[72]: processing time: 1.545592 seconds, start time: 1763363549.512348 seconds, end time: 1763363551.057940 seconds
+send message: 139800 141420  sales, and our tire brand
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'O\x05\x1c\x07|\x08\x83\t)\n'
+[73]: received audio
+[73]: processing time: 1.722726 seconds, start time: 1763363551.061029 seconds, end time: 1763363552.783755 seconds
+send message: 141420 143560  stores, which generate approximately $1
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xb5\x00\x8a\x00P\x00\x06\x00\xb9\xff'
+[74]: received audio
+[74]: processing time: 1.918967 seconds, start time: 1763363552.787004 seconds, end time: 1763363554.705971 seconds
+send message: 143560 146020 .2 million per store in annualized sales.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'S\xf50\xf5\x9f\xf5N\xf6\xb2\xf6'
+[75]: received audio
+[75]: processing time: 5.729468 seconds, start time: 1763363554.709471 seconds, end time: 1763363560.438939 seconds
+send message: 146440 147520  Prior to any
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x1d\xff\x99\xfe\xf9\xfdV\xfd\xcd\xfc'
+[76]: received audio
+[76]: processing time: 5.755413 seconds, start time: 1763363560.442414 seconds, end time: 1763363566.197826 seconds
+send message: 147520 149240  rebrand activity, we operated
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xa7"\x0f#\x9d!\x8b\x1eA\x1a'
+[77]: received audio
+[77]: processing time: 2.261595 seconds, start time: 1763363566.201266 seconds, end time: 1763363568.462862 seconds
+send message: 149240 151040  555 service brand
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x02\x00\x00\x00\x02\x00\x03\x00\xfb\xff'
+[78]: received audio
+[78]: processing time: 3.680904 seconds, start time: 1763363568.466226 seconds, end time: 1763363572.147130 seconds
+send message: 151040 153720  stores and 734 tire brand stores.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x93\xfeo\xff\x8c\x01|\x02\xe5\x00'
+[79]: received audio
+[79]: processing time: 1.087191 seconds, start time: 1763363572.151279 seconds, end time: 1763363573.238470 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xbb\x07\x05\x07=\x06R\x05U\x04'
+[80]: received audio
+[80]: processing time: 1.386592 seconds, start time: 1763363573.241898 seconds, end time: 1763363574.628489 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x8b\x03\xc8\x00\xe5\xf9\xd6\xef\xee\xe4'
+[81]: received audio
+[81]: processing time: 1.347356 seconds, start time: 1763363574.632370 seconds, end time: 1763363575.979726 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x06\x00\xf9\xff\xfb\xff\x00\x00\n\x00'
+[82]: received audio
+[82]: processing time: 1.456585 seconds, start time: 1763363575.983109 seconds, end time: 1763363577.439694 seconds
+send message: 153720 161900  and as we work to create a nationwide chain of consistently operated stores, we are prioritizing the higher volume tire brand.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf1\xff\xf5\xff\xf7\xff\xf8\xff\xfa\xff'
+[83]: received audio
+[83]: processing time: 1.703286 seconds, start time: 1763363577.443066 seconds, end time: 1763363579.146352 seconds
+send message: 162360 163800  Throughout this process,
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x1f\x00\x06\x00\xf8\xff\xeb\xff\xd9\xff'
+[84]: received audio
+[84]: processing time: 1.806073 seconds, start time: 1763363579.149493 seconds, end time: 1763363580.955566 seconds
+send message: 163820 165600  we will be consolidating our
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x7f\xfcj\xfd\xe3\xfe\xa2\x00.\x02'
+[85]: received audio
+[85]: processing time: 1.943871 seconds, start time: 1763363580.958903 seconds, end time: 1763363582.902774 seconds
+send message: 165600 167520  regional brands, focusing on
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfc\xff\x01\x00\x04\x00\x02\x00\xfc\xff'
+[86]: received audio
+[86]: processing time: 2.212764 seconds, start time: 1763363582.906077 seconds, end time: 1763363585.118841 seconds
+send message: 167520 169880  shifting our service brands over to tire brands.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x84\x0ba\t\xdb\x06\x11\x04D\x01'
+[87]: received audio
+[87]: processing time: 1.029665 seconds, start time: 1763363585.122097 seconds, end time: 1763363586.151762 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b"[\xfb'\xfdY\xfe\xfb\xfe\xeb\xfe"
+[88]: received audio
+[88]: processing time: 1.878479 seconds, start time: 1763363586.155021 seconds, end time: 1763363588.033500 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xcc\xfe\xa9\xfd\xc7\xfd\\\xff\xa9\x00'
+[89]: received audio
+[89]: processing time: 1.725333 seconds, start time: 1763363588.036948 seconds, end time: 1763363589.762281 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x11\xfc\t\xfd\xf8\xfes\x00\x97\x00'
+[90]: received audio
+[90]: processing time: 1.431937 seconds, start time: 1763363589.765544 seconds, end time: 1763363591.197482 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'H\x18;\x1b\xd2\x1a\x9d\x19\xbc\x19'
+[91]: received audio
+[91]: processing time: 1.659662 seconds, start time: 1763363591.201157 seconds, end time: 1763363592.860819 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xb3\x02\x91\x01\xfb\xffJ\xfe\xa2\xfc'
+[92]: received audio
+[92]: processing time: 1.741931 seconds, start time: 1763363592.864289 seconds, end time: 1763363594.606220 seconds
+send message: 169880 181740  the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'1\xfe\x17\xff[\x00\x01\x02\xc5\x03'
+[93]: received audio
+[93]: processing time: 2.013071 seconds, start time: 1763363594.609565 seconds, end time: 1763363596.622637 seconds
+send message: 181740 183080  associated brand change.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xba\x01\x04\xfe\x88\xf8\x06\xf2\xa8\xeb'
+[94]: received audio
+[94]: processing time: 2.039672 seconds, start time: 1763363596.625964 seconds, end time: 1763363598.665636 seconds
+send message: 183380 185500  As we are making decisions regarding
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'|\x00{\x00p\x00c\x00b\x00'
+[95]: received audio
+[95]: processing time: 2.306623 seconds, start time: 1763363598.668954 seconds, end time: 1763363600.975577 seconds
+send message: 185500 186760  rebranding versus
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfb\x00z\xfc3\xf7:\xf2O\xee'
+[96]: received audio
+[96]: processing time: 2.512534 seconds, start time: 1763363600.978838 seconds, end time: 1763363603.491373 seconds
+send message: 186760 189720  re-imaging stores, we are leveraging our analytical
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'j\x02\x9c\x00:\xfe\x91\xfb*\xf9'
+[97]: received audio
+[97]: processing time: 2.689791 seconds, start time: 1763363603.494461 seconds, end time: 1763363606.184253 seconds
+send message: 189740 191600  model as well as taking into
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x0b\xfaU\xfa\xe7\xfa\x7f\xfb\xf7\xfb'
+[98]: received audio
+[98]: processing time: 5.105802 seconds, start time: 1763363606.188122 seconds, end time: 1763363611.293924 seconds
+send message: 191600 194020  account our brand equity in that market.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'J\xfc\x92\xf5\xcf\xefR\xec\xc5\xeb'
+[99]: received audio
+[99]: processing time: 2.282406 seconds, start time: 1763363611.297024 seconds, end time: 1763363613.579429 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xa9\xf6\xe4\xf5\xc2\xf7/\xfb\x11\xff'
+[100]: received audio
+[100]: processing time: 2.154394 seconds, start time: 1763363613.582850 seconds, end time: 1763363615.737244 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf0\xff\xf6\xff\xfd\xff\xfa\xff\xff\xff'
+[101]: received audio
+[101]: processing time: 4.959741 seconds, start time: 1763363615.740429 seconds, end time: 1763363620.700171 seconds
+send message: 194020 199560  market. Looking at the bottom left of the slide, you can see here the progress we have made so far.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'Q\x05\xe6\x06\x15\x08\x1c\tV\n'
+[102]: received audio
+[102]: processing time: 1.639541 seconds, start time: 1763363620.703324 seconds, end time: 1763363622.342865 seconds
+send message: 199880 202060  We are very much in the early innings of
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x05\x00\x05\x00\x01\x00\x00\x00\x01\x00'
+[103]: received audio
+[103]: processing time: 1.746653 seconds, start time: 1763363622.345282 seconds, end time: 1763363624.091935 seconds
+send message: 202060 203400  this transformation with
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xcb\xeb\xd9\xe7\xf5\xe5J\xe5\xde\xe4'
+[104]: received audio
+[104]: processing time: 1.850037 seconds, start time: 1763363624.095622 seconds, end time: 1763363625.945659 seconds
+send message: 203400 205340  203 stores substantially
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x01\x00\xfd\xff\x03\x00\x02\x00\x00\x00'
+[105]: received audio
+[105]: processing time: 2.088131 seconds, start time: 1763363625.948946 seconds, end time: 1763363628.037076 seconds
+send message: 205340 207220  completed out of our portfolio.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf3\x05o\x05M\x04\xd2\x025\x01'
+[106]: received audio
+[106]: processing time: 2.279972 seconds, start time: 1763363628.040336 seconds, end time: 1763363630.320307 seconds
+send message: 207760 209380  We've separated these stores out
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xc0\x04\xac\x00c\xfd\x01\xfdY\xff'
+[107]: received audio
+[107]: processing time: 2.443399 seconds, start time: 1763363630.323448 seconds, end time: 1763363632.766847 seconds
+send message: 209380 211360  between comp stores and non-comp stores,
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xb5\x1a\x88\x16o\x10\x1c\t.\x01'
+[108]: received audio
+[108]: processing time: 2.635617 seconds, start time: 1763363632.770183 seconds, end time: 1763363635.405800 seconds
+send message: 211380 213660  which helps us to evaluate their
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf8\xff\xf9\xff\xf6\xff\xf8\xff\xf8\xff'
+[109]: received audio
+[109]: processing time: 2.813045 seconds, start time: 1763363635.409515 seconds, end time: 1763363638.222559 seconds
+send message: 213660 215560  performance post-refresh.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b"f\n\xd7\x05'\x03.\x02\xf0\x01"
+[110]: received audio
+[110]: processing time: 2.069556 seconds, start time: 1763363638.225972 seconds, end time: 1763363640.295528 seconds
+send message: 216360 217180  Of our
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xe6\xff\xaf\xff\x8c\xff\xab\xff\xf0\xff'
+[111]: received audio
+[111]: processing time: 1.832819 seconds, start time: 1763363640.298895 seconds, end time: 1763363642.131714 seconds
+send message: 217180 219780  approximately 900 comp stores that we set out
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfe\xff\x00\x00\xfc\xff\xfe\xff\xfb\xff'
+[112]: received audio
+[112]: processing time: 1.923097 seconds, start time: 1763363642.134971 seconds, end time: 1763363644.058069 seconds
+send message: 219780 221160  to transform, we've
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xe3\x00\xda\xff\xe0\xff\x8f\x00\xab\x01'
+[113]: received audio
+[113]: processing time: 1.473485 seconds, start time: 1763363644.061297 seconds, end time: 1763363645.534783 seconds
+send message: 221160 222860  completed 134
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xb1\xff\xbd\xff\xbe\xff\xbd\xff\xc2\xff'
+[114]: received audio
+[114]: processing time: 1.619669 seconds, start time: 1763363645.538150 seconds, end time: 1763363647.157818 seconds
+send message: 222860 226160  stores, and of our approximately 150 non-comp stores,
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xa4\x00\xa8\x00\x94\x00b\x00,\x00'
+[115]: received audio
+[115]: processing time: 1.796082 seconds, start time: 1763363647.161023 seconds, end time: 1763363648.957105 seconds
+send message: 226420 227400  we've substantially
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x0eAr4e$\xb6\x12%\x01'
+[116]: received audio
+[116]: processing time: 1.929051 seconds, start time: 1763363648.960266 seconds, end time: 1763363650.889317 seconds
+send message: 227400 229660  completed 69. As we move
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'x\xffw\xff\x8d\xff\x81\xffm\xff'
+[117]: received audio
+[117]: processing time: 2.113684 seconds, start time: 1763363650.892500 seconds, end time: 1763363653.006184 seconds
+send message: 229660 231720  forward with expanding this program across
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x8d\xffN\xfeJ\xfd\xf1\xfcV\xfd'
+[118]: received audio
+[118]: processing time: 1.334063 seconds, start time: 1763363653.009668 seconds, end time: 1763363654.343732 seconds
+send message: 231720 233460  our base, we will continue to
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xef\x12\xb1\x12\xd2\x11[\x10\xc5\x0e'
+[119]: received audio
+[119]: processing time: 1.469734 seconds, start time: 1763363654.346939 seconds, end time: 1763363655.816673 seconds
+send message: 233460 235860  prioritize markets that we expect will
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x08\x04h\x05\xb8\x06\x02\x08n\t'
+[120]: received audio
+[120]: processing time: 1.587244 seconds, start time: 1763363655.820163 seconds, end time: 1763363657.407407 seconds
+send message: 235880 237880  drive the largest benefit to
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xe5\x00Z\x00\xa8\xff\xf2\xfe0\xfe'
+[121]: received audio
+[121]: processing time: 2.387411 seconds, start time: 1763363657.410615 seconds, end time: 1763363659.798026 seconds
+send message: 237880 239420  our sales performance and our
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x97\xff\xbd\xff\xb1\xff\x9f\xff\xcf\xff'
+[122]: received audio
+[122]: processing time: 2.130007 seconds, start time: 1763363659.801258 seconds, end time: 1763363661.931266 seconds
+send message: 239420 241560  approach will be measured in order to keep
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfe\xff\x01\x00\x02\x00\xff\xff\x00\x00'
+[123]: received audio
+[123]: processing time: 2.013017 seconds, start time: 1763363661.934572 seconds, end time: 1763363663.947590 seconds
+send message: 241560 243340  sales disruption to a minimum.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x84\x02\xcd\xfcg\xf6\xa3\xefO\xe9'
+[124]: received audio
+[124]: processing time: 0.677715 seconds, start time: 1763363663.950881 seconds, end time: 1763363664.628595 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'|\xf0\xf5\xf4\xa3\xfa\xa1\xff\x04\x03'
+[125]: received audio
+[125]: processing time: 0.738551 seconds, start time: 1763363664.632046 seconds, end time: 1763363665.370597 seconds
+send message: 244180 245780  through the end of this fiscal year
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x1c\xf7\xe7\xf3\xdf\xf0 \xefh\xee'
+[126]: received audio
+[126]: processing time: 0.942108 seconds, start time: 1763363665.373826 seconds, end time: 1763363666.315934 seconds
+send message: 245880 249760  we are focusing on finalizing the transformation of our recently acquired
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x8e\x0f%\x08*\x00\x92\xfav\xf9'
+[127]: received audio
+[127]: processing time: 0.909648 seconds, start time: 1763363666.319347 seconds, end time: 1763363667.228995 seconds
+send message: 249780 250280  California
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xe4\xff\xe8\xff\xe7\xff\xe0\xff\xd2\xff'
+[128]: received audio
+[128]: processing time: 1.003378 seconds, start time: 1763363667.232378 seconds, end time: 1763363668.235755 seconds
+send message: 250300 253080  stores while starting the transformation of
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xd7\xff\xf2\xff!\x00H\x00[\x00'
+[129]: received audio
+[129]: processing time: 1.102410 seconds, start time: 1763363668.239562 seconds, end time: 1763363669.341971 seconds
+send message: 253080 255360  approximately 80 more stores that will be
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'+\x08\xbb\x071\x07\xa6\x06\xf4\x05'
+[130]: received audio
+[130]: processing time: 1.203224 seconds, start time: 1763363669.345285 seconds, end time: 1763363670.548509 seconds
+send message: 255360 257460  completed in Q1 of
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'=\xffi\xff}\xff~\xff\x80\xff'
+[131]: received audio
+[131]: processing time: 1.314781 seconds, start time: 1763363670.551679 seconds, end time: 1763363671.866460 seconds
+send message: 257460 259880  FY21. Moving on to
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xa4\x0bF\x12\n\x17\xf0\x18\x8e\x18'
+[132]: received audio
+[132]: processing time: 0.745562 seconds, start time: 1763363671.869947 seconds, end time: 1763363672.615510 seconds
+send message: 259880 261820  the performance of the stores we've completed so
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x9b\x01_\x003\xff6\xfec\xfd'
+[133]: received audio
+[133]: processing time: 0.831725 seconds, start time: 1763363672.618763 seconds, end time: 1763363673.450488 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xf4\x00\\\xff3\xff\xc9\x02P\t'
+[134]: received audio
+[134]: processing time: 0.809669 seconds, start time: 1763363673.453962 seconds, end time: 1763363674.263632 seconds
+send message: 261820 265820  far, to help provide some additional granularity, we separated
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xa6\x00\x84\x00U\x00+\x00\xf6\xff'
+[135]: received audio
+[135]: processing time: 1.050952 seconds, start time: 1763363674.266081 seconds, end time: 1763363675.317033 seconds
+send message: 265820 267820  out how rebranded stores have
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'R\xffP\x00\xa6\x01\xcf\x02=\x03'
+[136]: received audio
+[136]: processing time: 1.153011 seconds, start time: 1763363675.320197 seconds, end time: 1763363676.473208 seconds
+send message: 267820 269820  performed versus the stores that have just
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xb4\x08\x17\t\xac\t\xba\n\xff\x0b'
+[137]: received audio
+[137]: processing time: 1.240032 seconds, start time: 1763363676.476764 seconds, end time: 1763363677.716796 seconds
+send message: 269820 271960  been re-imaged. Importantly,
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'_\xf8\x0b\xf6\x12\xf4~\xf2&\xf1'
+[138]: received audio
+[138]: processing time: 1.364821 seconds, start time: 1763363677.719855 seconds, end time: 1763363679.084676 seconds
+send message: 272280 273620  this data only
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x9b\xf3\x1f\xf2\x88\xf0(\xef\xfb\xed'
+[139]: received audio
+[139]: processing time: 0.791665 seconds, start time: 1763363679.087800 seconds, end time: 1763363679.879465 seconds
+send message: 273620 275680  includes comp stores that have had a full
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'`\x06\x84\x08\x81\t\xb1\t\xf7\t'
+[140]: received audio
+[140]: processing time: 0.791398 seconds, start time: 1763363679.882734 seconds, end time: 1763363680.674132 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xfd\xff\xfb\xff\xff\xff\x01\x00\xfe\xff'
+[141]: received audio
+[141]: processing time: 0.934433 seconds, start time: 1763363680.677419 seconds, end time: 1763363681.611852 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x00\x00\xfb\xff\xfc\xff\xfd\xff\xfe\xff'
+[142]: received audio
+[142]: processing time: 0.994177 seconds, start time: 1763363681.615200 seconds, end time: 1763363682.609377 seconds
+send message: 275680 281020  quarter of performance following the completion of their transformation. This is how we will
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\xea\xfc\xf7\xfd\x00\x02\x83\x08\xb0\x0e'
+[143]: received audio
+[143]: processing time: 1.033958 seconds, start time: 1763363682.612773 seconds, end time: 1763363683.646731 seconds
+send message: 281020 282620  speak to this
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'g\xff\xf0\xff\xa5\x00C\x004\xff'
+[144]: received audio
+[144]: processing time: 0.701938 seconds, start time: 1763363683.649971 seconds, end time: 1763363684.351909 seconds
+send message: 282620 285640  performance of our
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x06\x00\x01\x00\x03\x00\x03\x00\xfd\xff'
+[145]: received audio
+[145]: processing time: 0.891498 seconds, start time: 1763363684.355006 seconds, end time: 1763363685.246504 seconds
+send message: 285640 287520  transformed stores moving forward.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x03\xf7=\xf8\xc7\xf9;\xfb\xd7\xfb'
+[146]: received audio
+[146]: processing time: 0.575003 seconds, start time: 1763363685.249740 seconds, end time: 1763363685.824743 seconds
+send message: No input
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x87\xfe\xaa\xf9r\xf4c\xf0&\xee'
+[147]: received audio
+[147]: processing time: 1.065130 seconds, start time: 1763363685.828335 seconds, end time: 1763363686.893465 seconds
+send message: 288440 291840  As you can see, and in line with our expectations, we
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'>\x02\x00\x054\x08\x7f\x0b\xa1\x0e'
+[148]: received audio
+[148]: processing time: 1.040782 seconds, start time: 1763363686.896633 seconds, end time: 1763363687.937415 seconds
+send message: 291840 293120  see a significant sales
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b"\xe9\x01R\x00'\xfe\x1c\xfe0\x00"
+[149]: received audio
+[149]: processing time: 1.162630 seconds, start time: 1763363687.939870 seconds, end time: 1763363689.102500 seconds
+send message: 293120 294920  lift when we rebrand stores.
+Received fragment: 64000 bytes, total so far: 64000/64000
+Completed full audio chunk: 64000 bytes
+received audio: 64000 bytes b'\x14\xde.\xe0\xc9\xe3\r\xe8\x85\xec'
+[150]: received audio
+[150]: processing time: 1.245445 seconds, start time: 1763363689.160937 seconds, end time: 1763363690.406382 seconds
+send message: 295360 297800  This shift optimizes our brand
+Connection to client closed

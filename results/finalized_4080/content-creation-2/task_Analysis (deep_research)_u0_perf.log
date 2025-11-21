@@ -1,0 +1,19 @@
+app_type: DeepResearch
+task_id: Analysis (deep_research)_u0
+start_time: 5.921851
+end_time: 101.351085
+Task Analysis (deep_research)_u0 execution time: 95.4265 seconds
+
+Execution times for each node:
+Node Analysis (deep_research)_u0_0:
+  Execution time: 36.1668 seconds
+  Success: True
+Node Analysis (deep_research)_u0_1:
+  Execution time: 58.1968 seconds
+  Success: True
+Node Analysis (deep_research)_u0_2:
+  Execution time: 1.0629 seconds
+  Success: True
+
+Task Analysis (deep_research)_u0 results:
+[{'status': 'setup_complete', 'config': {'server_model': '/mnt/e/rohan/ConsumerBench/models/Qwen3-VL-2B-Instruct-GGUF/Qwen3-VL-2B-Instruct-BF16.gguf', 'device': 'gpu', 'mps': 100, 'api_port': 8080, 'llamacpp_path': '/mnt/e/rohan/ConsumerBench/inference_backends/llama.cpp', 'client_model': 'openai/meta-llama/Llama-3.2-3B-Instruct', 'num_requests': 1}}, {'status': 'deep_research_complete', 'total time': 58.19653844833374}, {'status': 'cleanup_complete'}]

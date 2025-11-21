@@ -1,0 +1,46 @@
+app_type: ImageGen
+task_id: Creating Cover Art (imagegen)_u0
+start_time: 168.533735
+end_time: 288.172243
+Task Creating Cover Art (imagegen)_u0 execution time: 119.6287 seconds
+
+Execution times for each node:
+Node Creating Cover Art (imagegen)_u0_0:
+  Execution time: 7.4350 seconds
+  Success: False
+Node Creating Cover Art (imagegen)_u0_1:
+  Execution time: 10.7427 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_2:
+  Execution time: 11.4285 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_3:
+  Execution time: 11.0488 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_4:
+  Execution time: 11.9535 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_5:
+  Execution time: 11.5835 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_6:
+  Execution time: 12.1969 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_7:
+  Execution time: 11.9454 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_8:
+  Execution time: 11.8614 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_9:
+  Execution time: 10.6577 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_10:
+  Execution time: 8.7751 seconds
+  Success: True
+Node Creating Cover Art (imagegen)_u0_11:
+  Execution time: 0.0000 seconds
+  Success: True
+
+Task Creating Cover Art (imagegen)_u0 results:
+[None, {'status': 'image_gen_complete', 'total time': 10.742618799209595}, {'status': 'image_gen_complete', 'total time': 11.428520679473877}, {'status': 'image_gen_complete', 'total time': 11.048823118209839}, {'status': 'image_gen_complete', 'total time': 11.953470945358276}, {'status': 'image_gen_complete', 'total time': 11.583523988723755}, {'status': 'image_gen_complete', 'total time': 12.196922779083252}, {'status': 'image_gen_complete', 'total time': 11.945432901382446}, {'status': 'image_gen_complete', 'total time': 11.861355543136597}, {'status': 'image_gen_complete', 'total time': 10.657729148864746}, {'status': 'image_gen_complete', 'total time': 8.775063037872314}, {'status': 'cleanup_complete'}]

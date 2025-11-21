@@ -1,0 +1,159 @@
++ source /home/rohan/anaconda3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/home/rohan/anaconda3/bin/conda
+++ CONDA_EXE=/home/rohan/anaconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/home/rohan/anaconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/rohan/anaconda3/bin/python
+++ '[' -z x ']'
++ conda activate deepresearch
++ '[' 2 -lt 1 ']'
++ local cmd=activate
++ shift
++ case "$cmd" in
++ __conda_activate activate deepresearch
++ '[' -n '' ']'
++ local cmd=activate
++ shift
++ local ask_conda
++ CONDA_INTERNAL_OLDPATH='/usr/local/cuda/bin:/home/rohan/anaconda3/envs/consumerbench/bin:/home/rohan/anaconda3/condabin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/SoundSwitch:/mnt/c/Program Files (x86)/MATLAB/MATLAB Runtime/v90/runtime/win32:/mnt/c/Program Files/Calibre2:/mnt/c/Users/rohan/AppData/Local/Microsoft/WindowsApps:/snap/bin'
++ __add_sys_prefix_to_path
++ '[' -n '' ']'
+++ dirname /home/rohan/anaconda3/bin/conda
++ SYSP=/home/rohan/anaconda3/bin
+++ dirname /home/rohan/anaconda3/bin
++ SYSP=/home/rohan/anaconda3
++ '[' -n '' ']'
++ PATH='/home/rohan/anaconda3/bin:/usr/local/cuda/bin:/home/rohan/anaconda3/envs/consumerbench/bin:/home/rohan/anaconda3/condabin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/SoundSwitch:/mnt/c/Program Files (x86)/MATLAB/MATLAB Runtime/v90/runtime/win32:/mnt/c/Program Files/Calibre2:/mnt/c/Users/rohan/AppData/Local/Microsoft/WindowsApps:/snap/bin'
++ export PATH
+++ PS1=
+++ /home/rohan/anaconda3/bin/conda shell.posix activate deepresearch
++ ask_conda='PS1='\''(deepresearch) '\''
+export PATH='\''/usr/local/cuda/bin:/home/rohan/anaconda3/envs/deepresearch/bin:/home/rohan/anaconda3/condabin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/SoundSwitch:/mnt/c/Program Files (x86)/MATLAB/MATLAB Runtime/v90/runtime/win32:/mnt/c/Program Files/Calibre2:/mnt/c/Users/rohan/AppData/Local/Microsoft/WindowsApps:/snap/bin'\''
+export CONDA_PREFIX='\''/home/rohan/anaconda3/envs/deepresearch'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''deepresearch'\''
+export CONDA_PROMPT_MODIFIER='\''(deepresearch) '\''
+export CONDA_EXE='\''/home/rohan/anaconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/rohan/anaconda3/bin/python'\''
+export CONDA_PREFIX_2='\''/home/rohan/anaconda3/envs/consumerbench'\'''
++ rc=0
++ PATH='/usr/local/cuda/bin:/home/rohan/anaconda3/envs/consumerbench/bin:/home/rohan/anaconda3/condabin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/SoundSwitch:/mnt/c/Program Files (x86)/MATLAB/MATLAB Runtime/v90/runtime/win32:/mnt/c/Program Files/Calibre2:/mnt/c/Users/rohan/AppData/Local/Microsoft/WindowsApps:/snap/bin'
++ eval 'PS1='\''(deepresearch) '\''
+export PATH='\''/usr/local/cuda/bin:/home/rohan/anaconda3/envs/deepresearch/bin:/home/rohan/anaconda3/condabin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/SoundSwitch:/mnt/c/Program Files (x86)/MATLAB/MATLAB Runtime/v90/runtime/win32:/mnt/c/Program Files/Calibre2:/mnt/c/Users/rohan/AppData/Local/Microsoft/WindowsApps:/snap/bin'\''
+export CONDA_PREFIX='\''/home/rohan/anaconda3/envs/deepresearch'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''deepresearch'\''
+export CONDA_PROMPT_MODIFIER='\''(deepresearch) '\''
+export CONDA_EXE='\''/home/rohan/anaconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/rohan/anaconda3/bin/python'\''
+export CONDA_PREFIX_2='\''/home/rohan/anaconda3/envs/consumerbench'\'''
+++ PS1='(deepresearch) '
+++ export 'PATH=/usr/local/cuda/bin:/home/rohan/anaconda3/envs/deepresearch/bin:/home/rohan/anaconda3/condabin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/SoundSwitch:/mnt/c/Program Files (x86)/MATLAB/MATLAB Runtime/v90/runtime/win32:/mnt/c/Program Files/Calibre2:/mnt/c/Users/rohan/AppData/Local/Microsoft/WindowsApps:/snap/bin'
+++ PATH='/usr/local/cuda/bin:/home/rohan/anaconda3/envs/deepresearch/bin:/home/rohan/anaconda3/condabin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/SoundSwitch:/mnt/c/Program Files (x86)/MATLAB/MATLAB Runtime/v90/runtime/win32:/mnt/c/Program Files/Calibre2:/mnt/c/Users/rohan/AppData/Local/Microsoft/WindowsApps:/snap/bin'
+++ export CONDA_PREFIX=/home/rohan/anaconda3/envs/deepresearch
+++ CONDA_PREFIX=/home/rohan/anaconda3/envs/deepresearch
+++ export CONDA_SHLVL=3
+++ CONDA_SHLVL=3
+++ export CONDA_DEFAULT_ENV=deepresearch
+++ CONDA_DEFAULT_ENV=deepresearch
+++ export 'CONDA_PROMPT_MODIFIER=(deepresearch) '
+++ CONDA_PROMPT_MODIFIER='(deepresearch) '
+++ export CONDA_EXE=/home/rohan/anaconda3/bin/conda
+++ CONDA_EXE=/home/rohan/anaconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/home/rohan/anaconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/rohan/anaconda3/bin/python
+++ export CONDA_PREFIX_2=/home/rohan/anaconda3/envs/consumerbench
+++ CONDA_PREFIX_2=/home/rohan/anaconda3/envs/consumerbench
++ '[' 0 '!=' 0 ']'
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/examples/open_deep_research
++ python3 run.py --port 8080 --model-id openai/meta-llama/Llama-3.2-3B-Instruct 'What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?'
+/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+Traceback (most recent call last):
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 745, in completion
+    raise e
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 673, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/litellm_core_utils/logging_utils.py", line 237, in sync_wrapper
+    result = func(*args, **kwargs)
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 489, in make_sync_openai_chat_completion_request
+    raise e
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 471, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/openai/_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py", line 1189, in create
+    return self._post(
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 400, 'message': 'the request exceeds the available context size, try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 8457, 'n_ctx': 8192}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/main.py", line 2158, in completion
+    raise e
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/main.py", line 2130, in completion
+    response = openai_chat_completions.completion(
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 756, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'error': {'code': 400, 'message': 'the request exceeds the available context size, try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 8457, 'n_ctx': 8192}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/src/smolagents/agents.py", line 1186, in step
+    chat_message: ChatMessage = self.model(
+  File "/mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/src/smolagents/models.py", line 904, in __call__
+    response = litellm.completion(**completion_kwargs)
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/utils.py", line 1381, in wrapper
+    raise e
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/utils.py", line 1250, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/main.py", line 3772, in completion
+    raise exception_type(
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2328, in exception_type
+    raise e
+  File "/home/rohan/anaconda3/envs/deepresearch/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 473, in exception_type
+    raise BadRequestError(
+litellm.exceptions.BadRequestError: litellm.BadRequestError: OpenAIException - the request exceeds the available context size, try increasing it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/examples/open_deep_research/run.py", line 227, in <module>
+    main()
+  File "/mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/examples/open_deep_research/run.py", line 221, in main
+    answer = agent.run(args.question)
+  File "/mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/src/smolagents/agents.py", line 323, in run
+    return deque(self._run(task=self.task, max_steps=max_steps, images=images), maxlen=1)[0]
+  File "/mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/src/smolagents/agents.py", line 337, in _run
+    raise e
+  File "/mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/src/smolagents/agents.py", line 334, in _run
+    final_answer = self._execute_step(task, memory_step)
+  File "/mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/src/smolagents/agents.py", line 358, in _execute_step
+    final_answer = self.step(memory_step)
+  File "/mnt/e/rohan/ConsumerBench/applications/DeepResearch/smolagents/src/smolagents/agents.py", line 1202, in step
+    raise AgentGenerationError(f"Error in generating model output:\n{e}", self.logger) from e
+smolagents.utils.AgentGenerationError: Error in generating model output:
+litellm.BadRequestError: OpenAIException - the request exceeds the available context size, try increasing it
