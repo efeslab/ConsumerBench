@@ -1,0 +1,35 @@
+{
+    "imagegen1": {
+        "model": "models/kandinsky-2-2-decoder",
+        "num_requests": 20,
+        "device": "gpu",
+        "type": "ImageGen",
+        "mps": 100
+    },
+    "lv": {
+        "num_requests": 1,
+        "device": "gpu",
+        "model": "medium",
+        "mps": 100,
+        "client_command_file": "/home/cc/ConsumerBench/applications/LiveCaptions/whisper-earnings21/audio_file_0_chunk_001.wav",
+        "type": "LiveCaptions"
+    },
+    "chat1": {
+        "model": "models/Qwen/Qwen2.5-7B-GGUF/qwen2.5-7b-instruct.gguf",
+        "num_requests": 50,
+        "device": "gpu",
+        "type": "Chatbot",
+        "mps": 100
+    },
+    "workflows": {
+        "generate_image": {
+            "uses": "imagegen1"
+        },
+        "transcript": {
+            "uses": "lv"
+        },
+        "chat_summary": {
+            "uses": "chat1"
+        }
+    }
+}

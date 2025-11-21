@@ -1,0 +1,245 @@
+Audio duration: 60.00 seconds
+Connected to localhost:5000
+Sent chunk 1: 64000 bytes (2.00 seconds) at 1763631662.850184
+Sent chunk 2: 64000 bytes (2.00 seconds) at 1763631664.853285
+Sent chunk 3: 64000 bytes (2.00 seconds) at 1763631666.857743
+Sent chunk 4: 64000 bytes (2.00 seconds) at 1763631668.862577
+Received 9 bytes of response data
+
+Response for chunk 1:
+  Processing time: 6.212943 seconds
+  Content: No input
+  Received at: 1763631669.063127
+  Sent at: 1763631662.850184
+Received 9 bytes of response data
+
+Response for chunk 2:
+  Processing time: 5.211776 seconds
+  Content: No input
+  Received at: 1763631670.065061
+  Sent at: 1763631664.853285
+Sent chunk 5: 64000 bytes (2.00 seconds) at 1763631670.867460
+Received 36 bytes of response data
+
+Response for chunk 3:
+  Processing time: 4.110127 seconds
+  Content: 2960 4000  Good morning, ladies and
+  Received at: 1763631670.967870
+  Sent at: 1763631666.857743
+Sent chunk 6: 64000 bytes (2.00 seconds) at 1763631672.871728
+Received 48 bytes of response data
+
+Response for chunk 4:
+  Processing time: 4.009290 seconds
+  Content: 4000 5260  gentlemen, and welcome to the Monroe
+  Received at: 1763631672.871867
+  Sent at: 1763631668.862577
+Received 62 bytes of response data
+
+Response for chunk 5:
+  Processing time: 3.607440 seconds
+  Content: 5260 7760  Inc earnings conference call for the third quarter
+  Received at: 1763631674.474900
+  Sent at: 1763631670.867460
+Sent chunk 7: 64000 bytes (2.00 seconds) at 1763631674.876552
+Received 24 bytes of response data
+
+Response for chunk 6:
+  Processing time: 3.307616 seconds
+  Content: 7780 8560  fiscal 2020.
+  Received at: 1763631676.179344
+  Sent at: 1763631672.871728
+Sent chunk 8: 64000 bytes (2.00 seconds) at 1763631676.881468
+Received 70 bytes of response data
+
+Response for chunk 7:
+  Processing time: 3.107345 seconds
+  Content: 9100 11800  At this time, all participants are in a listen-only mode.
+  Received at: 1763631677.983897
+  Sent at: 1763631674.876552
+Sent chunk 9: 64000 bytes (2.00 seconds) at 1763631678.886229
+Received 47 bytes of response data
+
+Response for chunk 8:
+  Processing time: 2.906857 seconds
+  Content: 12200 13760  Later, we will conduct a question
+  Received at: 1763631679.788325
+  Sent at: 1763631676.881468
+Sent chunk 10: 64000 bytes (2.00 seconds) at 1763631680.891271
+Received 76 bytes of response data
+
+Response for chunk 9:
+  Processing time: 2.005258 seconds
+  Content: 13760 16260 -and-answer session, and instructions will follow at that time.
+  Received at: 1763631680.891487
+  Sent at: 1763631678.886229
+Received 30 bytes of response data
+
+Response for chunk 10:
+  Processing time: 1.202472 seconds
+  Content: 16820 17640  If anyone should
+  Received at: 1763631682.093743
+  Sent at: 1763631680.891271
+Sent chunk 11: 64000 bytes (2.00 seconds) at 1763631682.895783
+Received 67 bytes of response data
+
+Response for chunk 11:
+  Processing time: 1.202399 seconds
+  Content: 17640 19780  require assistance during the call, please press star
+  Received at: 1763631684.098181
+  Sent at: 1763631682.895783
+Sent chunk 12: 64000 bytes (2.00 seconds) at 1763631684.900610
+Received 43 bytes of response data
+
+Response for chunk 12:
+  Processing time: 1.302762 seconds
+  Content: 19780 21220  zero on your touchtone phone.
+  Received at: 1763631686.203372
+  Sent at: 1763631684.900610
+Sent chunk 13: 64000 bytes (2.00 seconds) at 1763631686.905496
+Received 66 bytes of response data
+
+Response for chunk 13:
+  Processing time: 1.302868 seconds
+  Content: 21820 23800  As a reminder, ladies and gentlemen, this conference
+  Received at: 1763631688.208363
+  Sent at: 1763631686.905496
+Sent chunk 14: 64000 bytes (2.00 seconds) at 1763631688.910368
+Received 46 bytes of response data
+
+Response for chunk 14:
+  Processing time: 1.403102 seconds
+  Content: 23800 25420  is being recorded and may not be
+  Received at: 1763631690.313471
+  Sent at: 1763631688.910368
+Sent chunk 15: 64000 bytes (2.00 seconds) at 1763631690.915426
+Received 52 bytes of response data
+
+Response for chunk 15:
+  Processing time: 1.102206 seconds
+  Content: 25420 27740  reproduced in whole or in part without
+  Received at: 1763631692.017633
+  Sent at: 1763631690.915426
+Sent chunk 16: 64000 bytes (2.00 seconds) at 1763631692.920245
+Received 42 bytes of response data
+
+Response for chunk 16:
+  Processing time: 1.302872 seconds
+  Content: 27740 28860  permission from the company.
+  Received at: 1763631694.223117
+  Sent at: 1763631692.920245
+Sent chunk 17: 64000 bytes (2.00 seconds) at 1763631694.925070
+Received 55 bytes of response data
+
+Response for chunk 17:
+  Processing time: 1.302905 seconds
+  Content: 29420 31500  I would now like to introduce Ms. Maureen
+  Received at: 1763631696.227975
+  Sent at: 1763631694.925070
+Sent chunk 18: 64000 bytes (2.00 seconds) at 1763631696.930017
+Received 56 bytes of response data
+
+Response for chunk 18:
+  Processing time: 1.403054 seconds
+  Content: 31500 33480  Mulholland, Senior Vice President, General
+  Received at: 1763631698.333071
+  Sent at: 1763631696.930017
+Sent chunk 19: 64000 bytes (2.00 seconds) at 1763631698.935203
+Received 55 bytes of response data
+
+Response for chunk 19:
+  Processing time: 1.402991 seconds
+  Content: 33480 35740  Counsel, and Secretary Monroe. Thank you.
+  Received at: 1763631700.338194
+  Sent at: 1763631698.935203
+Sent chunk 20: 64000 bytes (2.00 seconds) at 1763631700.940248
+Received 30 bytes of response data
+
+Response for chunk 20:
+  Processing time: 1.102365 seconds
+  Content: 35920 36480  Please go ahead.
+  Received at: 1763631702.042613
+  Sent at: 1763631700.940248
+Sent chunk 21: 64000 bytes (2.00 seconds) at 1763631702.944992
+Received 31 bytes of response data
+
+Response for chunk 21:
+  Processing time: 1.102412 seconds
+  Content: 37940 39500  Thank you. Hello,
+  Received at: 1763631704.047404
+  Sent at: 1763631702.944992
+Sent chunk 22: 64000 bytes (2.00 seconds) at 1763631704.949684
+Received 60 bytes of response data
+
+Response for chunk 22:
+  Processing time: 1.302871 seconds
+  Content: 39540 41600  everyone, and thank you for joining us on this
+  Received at: 1763631706.252556
+  Sent at: 1763631704.949684
+Sent chunk 23: 64000 bytes (2.00 seconds) at 1763631706.954477
+Received 52 bytes of response data
+
+Response for chunk 23:
+  Processing time: 1.703497 seconds
+  Content: 41600 44060  morning's call. Before we get started,
+  Received at: 1763631708.657975
+  Sent at: 1763631706.954477
+Sent chunk 24: 64000 bytes (2.00 seconds) at 1763631708.959452
+Received 45 bytes of response data
+
+Response for chunk 24:
+  Processing time: 1.201743 seconds
+  Content: 44360 46060  please note that as part of the
+  Received at: 1763631710.161195
+  Sent at: 1763631708.959452
+Sent chunk 25: 64000 bytes (2.00 seconds) at 1763631710.963411
+Received 40 bytes of response data
+
+Response for chunk 25:
+  Processing time: 1.803359 seconds
+  Content: 46060 47620  call this morning, we will
+  Received at: 1763631712.766769
+  Sent at: 1763631710.963411
+Sent chunk 26: 64000 bytes (2.00 seconds) at 1763631712.968037
+Received 61 bytes of response data
+
+Response for chunk 26:
+  Processing time: 1.302618 seconds
+  Content: 47620 49940  be referencing a presentation that is available
+  Received at: 1763631714.270655
+  Sent at: 1763631712.968037
+Sent chunk 27: 64000 bytes (2.00 seconds) at 1763631714.972713
+Received 45 bytes of response data
+
+Response for chunk 27:
+  Processing time: 1.302732 seconds
+  Content: 49940 51900  on the Investors section of our
+  Received at: 1763631716.275445
+  Sent at: 1763631714.972713
+Sent chunk 28: 64000 bytes (2.00 seconds) at 1763631716.977560
+Received 34 bytes of response data
+
+Response for chunk 28:
+  Processing time: 1.403009 seconds
+  Content: 51900 53540  website at corporate
+  Received at: 1763631718.380569
+  Sent at: 1763631716.977560
+Sent chunk 29: 64000 bytes (2.00 seconds) at 1763631718.982345
+Received 20 bytes of response data
+
+Response for chunk 29:
+  Processing time: 1.402915 seconds
+  Content: 53540 54540 .monroe
+  Received at: 1763631720.385260
+  Sent at: 1763631718.982345
+Sent chunk 30: 64000 bytes (2.00 seconds) at 1763631720.987242
+Finished sending 30 chunks (1920000 bytes)
+Waiting up to 500000000 seconds for responses to 1 remaining chunks...
+Received 27 bytes of response data
+
+Response for chunk 30:
+  Processing time: 1.514048 seconds
+  Content: 54540 56580 .com backslash
+  Received at: 1763631722.501290
+  Sent at: 1763631720.987242
+Connection closed

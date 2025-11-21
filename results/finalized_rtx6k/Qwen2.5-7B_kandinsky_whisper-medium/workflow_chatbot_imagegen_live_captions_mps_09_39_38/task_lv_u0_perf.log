@@ -1,0 +1,19 @@
+app_type: LiveCaptions
+task_id: lv_u0
+start_time: 5.503032
+end_time: 135.152741
+Task lv_u0 execution time: 129.6419 seconds
+
+Execution times for each node:
+Node lv_u0_0:
+  Execution time: 67.2412 seconds
+  Success: True
+Node lv_u0_1:
+  Execution time: 60.6521 seconds
+  Success: True
+Node lv_u0_2:
+  Execution time: 1.7486 seconds
+  Success: True
+
+Task lv_u0 results:
+[{'status': 'setup_complete', 'config': {'device': 'gpu', 'mps': 33, 'api_port': 5000, 'model': 'large-v3-turbo', 'client_command_file': '/home/cc/ConsumerBench/applications/LiveCaptions/whisper-earnings21/audio_file_0_chunk_001.wav', 'num_requests': 1}}, {'processing time_chunk_0': 6.212943, 'processing time_chunk_1': 5.211776, 'processing time_chunk_2': 4.110127, 'processing time_chunk_3': 4.00929, 'processing time_chunk_4': 3.60744, 'processing time_chunk_5': 3.307616, 'processing time_chunk_6': 3.107345, 'processing time_chunk_7': 2.906857, 'processing time_chunk_8': 2.005258, 'processing time_chunk_9': 1.202472, 'processing time_chunk_10': 1.202399, 'processing time_chunk_11': 1.302762, 'processing time_chunk_12': 1.302868, 'processing time_chunk_13': 1.403102, 'processing time_chunk_14': 1.102206, 'processing time_chunk_15': 1.302872, 'processing time_chunk_16': 1.302905, 'processing time_chunk_17': 1.403054, 'processing time_chunk_18': 1.402991, 'processing time_chunk_19': 1.102365, 'processing time_chunk_20': 1.102412, 'processing time_chunk_21': 1.302871, 'processing time_chunk_22': 1.703497, 'processing time_chunk_23': 1.201743, 'processing time_chunk_24': 1.803359, 'processing time_chunk_25': 1.302618, 'processing time_chunk_26': 1.302732, 'processing time_chunk_27': 1.403009, 'processing time_chunk_28': 1.402915, 'processing time_chunk_29': 1.514048, 'total time': 60.64784026145935, 'status': 'live_captions_complete'}, {'status': 'cleanup_complete'}]

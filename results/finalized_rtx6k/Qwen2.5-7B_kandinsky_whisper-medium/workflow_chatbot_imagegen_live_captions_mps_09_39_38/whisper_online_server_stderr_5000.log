@@ -1,0 +1,232 @@
+INFO	Loading Whisper large-v3-turbo model for auto...
+INFO	done. It took 41.89 seconds.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 2.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(0.0), np.float64(1.98), ' ギギギギギギギギギギギ')
+DEBUG	len of buffer now: 2.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 4.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(3.0199999999999996), np.float64(3.98), ' Good morning, ladies and gentlemen.')
+DEBUG	len of buffer now: 4.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 6.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(2.9599999999999995), np.float64(4.0), ' Good morning, ladies and')
+DEBUG	INCOMPLETE: (np.float64(4.0), np.float64(5.58), ' gentlemen, and welcome to the Monroe Inc.')
+DEBUG	len of buffer now: 6.00
+2960 4000  Good morning, ladies and
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and
+DEBUG	transcribing 8.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(4.0), np.float64(5.26), ' gentlemen, and welcome to the Monroe')
+DEBUG	INCOMPLETE: (np.float64(5.26), np.float64(7.98), ' Inc earnings conference call for the third quarter Thank you')
+DEBUG	len of buffer now: 8.00
+4000 5260  gentlemen, and welcome to the Monroe
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and gentlemen, and welcome to the Monroe
+DEBUG	transcribing 10.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(5.26), np.float64(7.76), ' Inc earnings conference call for the third quarter')
+DEBUG	INCOMPLETE: (np.float64(7.76), np.float64(9.98), " fiscal 2020. This time, we'll be right back.")
+DEBUG	len of buffer now: 10.00
+5260 7760  Inc earnings conference call for the third quarter
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter
+DEBUG	transcribing 12.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(7.78), np.float64(8.56), ' fiscal 2020.')
+DEBUG	INCOMPLETE: (np.float64(9.08), np.float64(11.78), ' At this time, all participants are in a listen-only mode.')
+DEBUG	len of buffer now: 12.00
+7780 8560  fiscal 2020.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020.
+DEBUG	transcribing 14.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(9.1), np.float64(11.8), ' At this time, all participants are in a listen-only mode.')
+DEBUG	INCOMPLETE: (np.float64(12.24), np.float64(13.98), ' Later, we will conduct a question and answer.')
+DEBUG	len of buffer now: 14.00
+9100 11800  At this time, all participants are in a listen-only mode.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  Good morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	transcribing 16.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(12.2), np.float64(13.76), ' Later, we will conduct a question')
+DEBUG	INCOMPLETE: (np.float64(13.76), np.float64(15.98), '-and-answer session, and instructions will follow at that time.')
+DEBUG	--- segment chunked at 11.80
+DEBUG	chunking segment
+DEBUG	len of buffer now: 4.20
+12200 13760  Later, we will conduct a question
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question
+DEBUG	transcribing 6.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(13.74), np.float64(16.26), '-and-answer session, and instructions will follow at that time.')
+DEBUG	INCOMPLETE: (np.float64(16.82), np.float64(17.98), ' If anyone should require...')
+DEBUG	len of buffer now: 6.20
+13760 16260 -and-answer session, and instructions will follow at that time.
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time.
+DEBUG	transcribing 8.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(16.82), np.float64(17.64), ' If anyone should')
+DEBUG	INCOMPLETE: (np.float64(17.64), np.float64(19.98), ' require assistance during the call, please press star zero.')
+DEBUG	len of buffer now: 8.20
+16820 17640  If anyone should
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time. If anyone should
+DEBUG	transcribing 10.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(17.64), np.float64(19.78), ' require assistance during the call, please press star')
+DEBUG	INCOMPLETE: (np.float64(19.78), np.float64(21.200000000000003), ' zero on your touchtone phone.')
+DEBUG	len of buffer now: 10.20
+17640 19780  require assistance during the call, please press star
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star
+DEBUG	transcribing 12.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(19.78), np.float64(21.22), ' zero on your touchtone phone.')
+DEBUG	INCOMPLETE: (np.float64(21.82), np.float64(23.98), ' As a reminder, ladies and gentlemen, this conference is...')
+DEBUG	len of buffer now: 12.20
+19780 21220  zero on your touchtone phone.
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	transcribing 14.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(21.82), np.float64(23.8), ' As a reminder, ladies and gentlemen, this conference')
+DEBUG	INCOMPLETE: (np.float64(23.8), np.float64(25.98), ' is being recorded and may not be reproduced.')
+DEBUG	len of buffer now: 14.20
+21820 23800  As a reminder, ladies and gentlemen, this conference
+DEBUG	PROMPT:  morning, ladies and gentlemen, and welcome to the Monroe Inc earnings conference call for the third quarter fiscal 2020. At this time, all participants are in a listen-only mode.
+DEBUG	CONTEXT:  Later, we will conduct a question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone. As a reminder, ladies and gentlemen, this conference
+DEBUG	transcribing 16.20 seconds from 11.80
+DEBUG	>>>>COMPLETE NOW: (np.float64(23.8), np.float64(25.42), ' is being recorded and may not be')
+DEBUG	INCOMPLETE: (np.float64(25.42), np.float64(27.98), ' reproduced in whole or in part without permission.')
+DEBUG	--- segment chunked at 21.22
+DEBUG	chunking segment
+DEBUG	len of buffer now: 6.78
+23800 25420  is being recorded and may not be
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be
+DEBUG	transcribing 8.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(25.419999999999998), np.float64(27.74), ' reproduced in whole or in part without')
+DEBUG	INCOMPLETE: (np.float64(27.74), np.float64(28.88), ' permission from the company.')
+DEBUG	len of buffer now: 8.78
+25420 27740  reproduced in whole or in part without
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be reproduced in whole or in part without
+DEBUG	transcribing 10.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(27.74), np.float64(28.86), ' permission from the company.')
+DEBUG	INCOMPLETE: (np.float64(29.419999999999998), np.float64(31.919999999999998), ' I would now like to introduce Ms. Maureen Mulholland.')
+DEBUG	len of buffer now: 10.78
+27740 28860  permission from the company.
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be reproduced in whole or in part without permission from the company.
+DEBUG	transcribing 12.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(29.42), np.float64(31.5), ' I would now like to introduce Ms. Maureen')
+DEBUG	INCOMPLETE: (np.float64(31.5), np.float64(33.86), ' Mulholland, Senior Vice President, General Counsel.')
+DEBUG	len of buffer now: 12.78
+29420 31500  I would now like to introduce Ms. Maureen
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be reproduced in whole or in part without permission from the company. I would now like to introduce Ms. Maureen
+DEBUG	transcribing 14.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(31.5), np.float64(33.48), ' Mulholland, Senior Vice President, General')
+DEBUG	INCOMPLETE: (np.float64(33.48), np.float64(35.76), ' Counsel, and Secretary Monroe. Thank you.')
+DEBUG	len of buffer now: 14.78
+31500 33480  Mulholland, Senior Vice President, General
+DEBUG	PROMPT:  question-and-answer session, and instructions will follow at that time. If anyone should require assistance during the call, please press star zero on your touchtone phone.
+DEBUG	CONTEXT:  As a reminder, ladies and gentlemen, this conference is being recorded and may not be reproduced in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General
+DEBUG	transcribing 16.78 seconds from 21.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(33.48), np.float64(35.739999999999995), ' Counsel, and Secretary Monroe. Thank you.')
+DEBUG	INCOMPLETE: (np.float64(35.9), np.float64(36.5), ' Please go ahead.')
+DEBUG	--- segment chunked at 34.82
+DEBUG	chunking segment
+DEBUG	len of buffer now: 3.18
+33480 35740  Counsel, and Secretary Monroe. Thank you.
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you.
+DEBUG	transcribing 5.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(35.92), np.float64(36.48), ' Please go ahead.')
+DEBUG	INCOMPLETE: (np.float64(37.94), np.float64(39.8), ' Thank you. Hello, everyone.')
+DEBUG	len of buffer now: 5.18
+35920 36480  Please go ahead.
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead.
+DEBUG	transcribing 7.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(37.94), np.float64(39.5), ' Thank you. Hello,')
+DEBUG	INCOMPLETE: (np.float64(39.58), np.float64(41.84), ' everyone, and thank you for joining us on this morning.')
+DEBUG	len of buffer now: 7.18
+37940 39500  Thank you. Hello,
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello,
+DEBUG	transcribing 9.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(39.54), np.float64(41.6), ' everyone, and thank you for joining us on this')
+DEBUG	INCOMPLETE: (np.float64(41.6), np.float64(43.92), " morning's call. Before we get started,")
+DEBUG	len of buffer now: 9.18
+39540 41600  everyone, and thank you for joining us on this
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this
+DEBUG	transcribing 11.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(41.6), np.float64(44.06), " morning's call. Before we get started,")
+DEBUG	INCOMPLETE: (np.float64(44.38), np.float64(45.980000000000004), ' please note that as part of the')
+DEBUG	len of buffer now: 11.18
+41600 44060  morning's call. Before we get started,
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started,
+DEBUG	transcribing 13.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(44.36), np.float64(46.06), ' please note that as part of the')
+DEBUG	INCOMPLETE: (np.float64(46.06), np.float64(47.980000000000004), ' call this morning, we will be...')
+DEBUG	len of buffer now: 13.18
+44360 46060  please note that as part of the
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the
+DEBUG	transcribing 15.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(46.06), np.float64(47.620000000000005), ' call this morning, we will')
+DEBUG	INCOMPLETE: (np.float64(47.620000000000005), np.float64(49.980000000000004), ' be referencing a presentation that is available to you.')
+DEBUG	--- last segment not within commited area
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.18
+46060 47620  call this morning, we will
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will
+DEBUG	transcribing 17.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(47.620000000000005), np.float64(49.94), ' be referencing a presentation that is available')
+DEBUG	INCOMPLETE: (np.float64(49.94), np.float64(51.980000000000004), ' on the Investors section of our website.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.18
+47620 49940  be referencing a presentation that is available
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available
+DEBUG	transcribing 19.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(49.92), np.float64(51.9), ' on the Investors section of our')
+DEBUG	INCOMPLETE: (np.float64(51.9), np.float64(53.980000000000004), ' website at corporate.org.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.18
+49940 51900  on the Investors section of our
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available on the Investors section of our
+DEBUG	transcribing 21.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(51.9), np.float64(53.54), ' website at corporate')
+DEBUG	INCOMPLETE: (np.float64(53.54), np.float64(55.3), '.monroe.com.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.18
+51900 53540  website at corporate
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available on the Investors section of our website at corporate
+DEBUG	transcribing 23.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(53.54), np.float64(54.54), '.monroe')
+DEBUG	INCOMPLETE: (np.float64(54.54), np.float64(57.18), '.com backslash investors.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 23.18
+53540 54540 .monroe
+DEBUG	PROMPT:  in whole or in part without permission from the company. I would now like to introduce Ms. Maureen Mulholland, Senior Vice President, General Counsel, and Secretary Monroe.
+DEBUG	CONTEXT:  Thank you. Please go ahead. Thank you. Hello, everyone, and thank you for joining us on this morning's call. Before we get started, please note that as part of the call this morning, we will be referencing a presentation that is available on the Investors section of our website at corporate.monroe
+DEBUG	transcribing 25.18 seconds from 34.82
+DEBUG	>>>>COMPLETE NOW: (np.float64(54.54), np.float64(56.58), '.com backslash')
+DEBUG	INCOMPLETE: (np.float64(56.58), np.float64(59.980000000000004), ' investors backslash investor resources.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 25.18
+54540 56580 .com backslash
