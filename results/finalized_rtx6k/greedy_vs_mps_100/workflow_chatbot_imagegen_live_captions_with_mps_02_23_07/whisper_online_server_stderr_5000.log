@@ -1,0 +1,1198 @@
+INFO	Loading Whisper large-v3-turbo model for auto...
+INFO	done. It took 23.5 seconds.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 2.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(0.0), np.float64(0.82), ' percentage of sales.')
+DEBUG	len of buffer now: 2.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 4.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(0.0), np.float64(3.98), ' of sales. Our variable margin, on the other hand, is the average margin of sales.')
+DEBUG	len of buffer now: 4.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 6.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(0.0), np.float64(3.8), ' of sales. Our variable margin, on the other hand,')
+DEBUG	INCOMPLETE: (np.float64(4.14), np.float64(5.64), ' expanded due to lower')
+DEBUG	len of buffer now: 6.00
+0 3800  of sales. Our variable margin, on the other hand,
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  of sales. Our variable margin, on the other hand,
+DEBUG	transcribing 8.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(4.18), np.float64(5.66), ' expanded due to lower')
+DEBUG	INCOMPLETE: (np.float64(5.66), np.float64(7.98), ' year-over-year material cost as a percentage of sales.')
+DEBUG	len of buffer now: 8.00
+4180 5660  expanded due to lower
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  of sales. Our variable margin, on the other hand, expanded due to lower
+DEBUG	transcribing 10.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(5.68), np.float64(8.38), ' year-over-year material cost as a percentage of sales.')
+DEBUG	INCOMPLETE: (np.float64(8.62), np.float64(9.88), ' While slightly higher,')
+DEBUG	len of buffer now: 10.00
+5680 8380  year-over-year material cost as a percentage of sales.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	transcribing 12.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(8.64), np.float64(9.5), ' While slightly')
+DEBUG	INCOMPLETE: (np.float64(9.5), np.float64(11.84), ' higher than the prior year quarter, technicians')
+DEBUG	len of buffer now: 12.00
+8640 9500  While slightly
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales. While slightly
+DEBUG	transcribing 14.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (np.float64(9.5), np.float64(10.92), ' higher than the prior year quarter,')
+DEBUG	INCOMPLETE: (np.float64(11.52), np.float64(13.82), ' technician labor as a percentage of sales decreased.')
+DEBUG	len of buffer now: 14.00
+9500 10920  higher than the prior year quarter,
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales. While slightly higher than the prior year quarter,
+DEBUG	transcribing 16.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(15.44), np.float64(15.78), ' of sales. Thank you.')
+DEBUG	--- last segment not within commited area
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales. While slightly higher than the prior year quarter,
+DEBUG	transcribing 18.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(11.48), np.float64(17.98), ' technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of us...')
+DEBUG	--- segment chunked at 8.38
+DEBUG	chunking segment
+DEBUG	len of buffer now: 9.62
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter,
+DEBUG	transcribing 11.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(11.48), np.float64(17.48), ' technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of')
+DEBUG	INCOMPLETE: (np.float64(17.48), np.float64(19.98), ' us executing well against the areas within our control.')
+DEBUG	len of buffer now: 11.62
+11480 17480  technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter, technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of
+DEBUG	transcribing 13.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(17.48), np.float64(20.14), ' us executing well against the areas within our control.')
+DEBUG	INCOMPLETE: (np.float64(20.48), np.float64(21.98), ' We identified issues like')
+DEBUG	len of buffer now: 13.62
+17480 20140  us executing well against the areas within our control.
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter, technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of us executing well against the areas within our control.
+DEBUG	transcribing 15.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(20.48), np.float64(21.82), ' We identified issues')
+DEBUG	INCOMPLETE: (np.float64(21.82), np.float64(23.8), ' last quarter that arose from our transformation.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.62
+20480 21820  We identified issues
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter, technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of us executing well against the areas within our control. We identified issues
+DEBUG	transcribing 17.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(21.840000000000003), np.float64(23.380000000000003), ' last quarter that arose from our')
+DEBUG	INCOMPLETE: (np.float64(23.380000000000003), np.float64(25.9), ' transformation and took corrective action to drive')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.62
+21840 23380  last quarter that arose from our
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter, technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of us executing well against the areas within our control. We identified issues last quarter that arose from our
+DEBUG	transcribing 19.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(23.380000000000003), np.float64(26.020000000000003), ' transformation and took corrective action to drive')
+DEBUG	INCOMPLETE: (np.float64(26.020000000000003), np.float64(26.980000000000004), ' improved results.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.62
+23380 26020  transformation and took corrective action to drive
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter, technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of us executing well against the areas within our control. We identified issues last quarter that arose from our transformation and took corrective action to drive
+DEBUG	transcribing 21.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(26.04), np.float64(26.96), ' improved results.')
+DEBUG	INCOMPLETE: (np.float64(27.6), np.float64(29.980000000000004), ' We will have additional opportunities to continue.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.62
+26040 26960  improved results.
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter, technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of us executing well against the areas within our control. We identified issues last quarter that arose from our transformation and took corrective action to drive improved results.
+DEBUG	transcribing 23.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(27.6), np.float64(29.800000000000004), ' We will have additional opportunities to')
+DEBUG	INCOMPLETE: (np.float64(29.800000000000004), np.float64(31.880000000000003), ' continue to improve results in this area.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 23.62
+27600 29800  We will have additional opportunities to
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter, technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of us executing well against the areas within our control. We identified issues last quarter that arose from our transformation and took corrective action to drive improved results. We will have additional opportunities to
+DEBUG	transcribing 25.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(29.800000000000004), np.float64(31.6), ' continue to improve results in this')
+DEBUG	INCOMPLETE: (np.float64(31.6), np.float64(33.86), ' area as we implement our cloud.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 25.62
+29800 31600  continue to improve results in this
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter, technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of us executing well against the areas within our control. We identified issues last quarter that arose from our transformation and took corrective action to drive improved results. We will have additional opportunities to continue to improve results in this
+DEBUG	transcribing 27.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(31.6), np.float64(33.52), ' area as we implement our')
+DEBUG	INCOMPLETE: (np.float64(33.52), np.float64(35.980000000000004), ' cloud-based store staffing and scheduling model.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 27.62
+31600 33520  area as we implement our
+DEBUG	PROMPT:  of sales. Our variable margin, on the other hand, expanded due to lower year-over-year material cost as a percentage of sales.
+DEBUG	CONTEXT:  While slightly higher than the prior year quarter, technician labor as a percentage of sales decreased sequentially from last quarter. This is a good example of us executing well against the areas within our control. We identified issues last quarter that arose from our transformation and took corrective action to drive improved results. We will have additional opportunities to continue to improve results in this area as we implement our
+DEBUG	transcribing 29.62 seconds from 8.38
+DEBUG	>>>>COMPLETE NOW: (np.float64(33.52), np.float64(34.22), ' cloud-based')
+DEBUG	INCOMPLETE: (np.float64(34.22), np.float64(37.980000000000004), ' Thor staffing and scheduling model towards the end of this fiscal year.')
+DEBUG	--- segment chunked at 26.94
+DEBUG	chunking segment
+DEBUG	len of buffer now: 11.06
+33520 34220  cloud-based
+DEBUG	PROMPT:  of us executing well against the areas within our control. We identified issues last quarter that arose from our transformation and took corrective action to drive improved
+DEBUG	CONTEXT:  results. We will have additional opportunities to continue to improve results in this area as we implement our cloud-based
+DEBUG	transcribing 13.06 seconds from 26.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(34.22), np.float64(37.959999999999994), ' Thor staffing and scheduling model towards the end of this fiscal')
+DEBUG	INCOMPLETE: (np.float64(37.959999999999994), np.float64(39.98), ' year, which will be critical for us.')
+DEBUG	len of buffer now: 13.06
+34220 37960  Thor staffing and scheduling model towards the end of this fiscal
+DEBUG	PROMPT:  of us executing well against the areas within our control. We identified issues last quarter that arose from our transformation and took corrective action to drive improved
+DEBUG	CONTEXT:  results. We will have additional opportunities to continue to improve results in this area as we implement our cloud-based Thor staffing and scheduling model towards the end of this fiscal
+DEBUG	transcribing 15.06 seconds from 26.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(37.959999999999994), np.float64(39.78), ' year, which will be critical for')
+DEBUG	INCOMPLETE: (np.float64(39.78), np.float64(41.879999999999995), ' us to seamlessly adjust the changes.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.06
+37960 39780  year, which will be critical for
+DEBUG	PROMPT:  of us executing well against the areas within our control. We identified issues last quarter that arose from our transformation and took corrective action to drive improved
+DEBUG	CONTEXT:  results. We will have additional opportunities to continue to improve results in this area as we implement our cloud-based Thor staffing and scheduling model towards the end of this fiscal year, which will be critical for
+DEBUG	transcribing 17.06 seconds from 26.94
+DEBUG	>>>>COMPLETE NOW: (np.float64(39.78), np.float64(41.54), ' us to seamlessly adjust the')
+DEBUG	INCOMPLETE: (np.float64(41.54), np.float64(43.78), ' changes in demand dynamics.')
+DEBUG	--- segment chunked at 34.22
+DEBUG	chunking segment
+DEBUG	len of buffer now: 9.78
+39780 41540  us to seamlessly adjust the
+DEBUG	PROMPT:  transformation and took corrective action to drive improved results. We will have additional opportunities to continue to improve results in this area as we implement our cloud-based
+DEBUG	CONTEXT:  Thor staffing and scheduling model towards the end of this fiscal year, which will be critical for us to seamlessly adjust the
+DEBUG	transcribing 11.78 seconds from 34.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(41.519999999999996), np.float64(42.62), ' changes in demand')
+DEBUG	INCOMPLETE: (np.float64(42.62), np.float64(45.379999999999995), ' dynamics without sacrificing sales.')
+DEBUG	len of buffer now: 11.78
+41540 42620  changes in demand
+DEBUG	PROMPT:  transformation and took corrective action to drive improved results. We will have additional opportunities to continue to improve results in this area as we implement our cloud-based
+DEBUG	CONTEXT:  Thor staffing and scheduling model towards the end of this fiscal year, which will be critical for us to seamlessly adjust the changes in demand
+DEBUG	transcribing 13.78 seconds from 34.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(42.62), np.float64(44.12), ' dynamics without')
+DEBUG	INCOMPLETE: (np.float64(44.12), np.float64(47.98), " sacrifice and sales. I'd now like to turn...")
+DEBUG	len of buffer now: 13.78
+42620 44120  dynamics without
+DEBUG	PROMPT:  transformation and took corrective action to drive improved results. We will have additional opportunities to continue to improve results in this area as we implement our cloud-based
+DEBUG	CONTEXT:  Thor staffing and scheduling model towards the end of this fiscal year, which will be critical for us to seamlessly adjust the changes in demand dynamics without
+DEBUG	transcribing 15.78 seconds from 34.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(44.12), np.float64(47.46), " sacrifice and sales. I'd now like to")
+DEBUG	INCOMPLETE: (np.float64(47.46), np.float64(49.9), " turn to the progress we've made in our Monroe Forward.")
+DEBUG	--- segment chunked at 45.40
+DEBUG	chunking segment
+DEBUG	len of buffer now: 4.60
+44120 47460  sacrifice and sales. I'd now like to
+DEBUG	PROMPT:  staffing and scheduling model towards the end of this fiscal year, which will be critical for us to seamlessly adjust the changes in demand dynamics without sacrifice and sales.
+DEBUG	CONTEXT:  I'd now like to
+DEBUG	transcribing 6.60 seconds from 45.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(47.46), np.float64(49.64), " turn to the progress we've made in our Monroe")
+DEBUG	INCOMPLETE: (np.float64(49.64), np.float64(51.98), ' Forward Strategy, beginning with our story.')
+DEBUG	len of buffer now: 6.60
+47460 49640  turn to the progress we've made in our Monroe
+DEBUG	PROMPT:  staffing and scheduling model towards the end of this fiscal year, which will be critical for us to seamlessly adjust the changes in demand dynamics without sacrifice and sales.
+DEBUG	CONTEXT:  I'd now like to turn to the progress we've made in our Monroe
+DEBUG	transcribing 8.60 seconds from 45.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(49.64), np.float64(49.96), ' Forward')
+DEBUG	INCOMPLETE: (np.float64(49.96), np.float64(53.839999999999996), ' strategy, beginning with our store rebrand and re-image initiative.')
+DEBUG	len of buffer now: 8.60
+49640 49960  Forward
+DEBUG	PROMPT:  staffing and scheduling model towards the end of this fiscal year, which will be critical for us to seamlessly adjust the changes in demand dynamics without sacrifice and sales.
+DEBUG	CONTEXT:  I'd now like to turn to the progress we've made in our Monroe Forward
+DEBUG	transcribing 10.60 seconds from 45.40
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(49.96), np.float64(54.72), ' Strategy, beginning with our store rebrand and re-image initiative on slide four.')
+DEBUG	len of buffer now: 10.60
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  staffing and scheduling model towards the end of this fiscal year, which will be critical for us to seamlessly adjust the changes in demand dynamics without sacrifice and sales.
+DEBUG	CONTEXT:  I'd now like to turn to the progress we've made in our Monroe Forward
+DEBUG	transcribing 12.60 seconds from 45.40
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(49.96), np.float64(57.98), ' strategy, beginning with our store rebrand and re-image initiative on slide four. This initiative focuses on creating a more...')
+DEBUG	len of buffer now: 12.60
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  staffing and scheduling model towards the end of this fiscal year, which will be critical for us to seamlessly adjust the changes in demand dynamics without sacrifice and sales.
+DEBUG	CONTEXT:  I'd now like to turn to the progress we've made in our Monroe Forward
+DEBUG	transcribing 14.60 seconds from 45.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(49.96), np.float64(57.92), ' strategy, beginning with our store rebrand and re-image initiative on slide four. This initiative focuses on creating a')
+DEBUG	INCOMPLETE: (np.float64(57.92), np.float64(59.66), ' more consistent store appearance.')
+DEBUG	len of buffer now: 14.60
+49960 57920  strategy, beginning with our store rebrand and re-image initiative on slide four. This initiative focuses on creating a
+DEBUG	PROMPT:  staffing and scheduling model towards the end of this fiscal year, which will be critical for us to seamlessly adjust the changes in demand dynamics without sacrifice and sales.
+DEBUG	CONTEXT:  I'd now like to turn to the progress we've made in our Monroe Forward strategy, beginning with our store rebrand and re-image initiative on slide four. This initiative focuses on creating a
+DEBUG	transcribing 16.60 seconds from 45.40
+DEBUG	>>>>COMPLETE NOW: (np.float64(57.92), np.float64(59.2), ' more consistent store')
+DEBUG	INCOMPLETE: (np.float64(59.2), np.float64(61.72), " appearance while also implementing the end of the year. So, let's see.")
+DEBUG	--- segment chunked at 54.70
+DEBUG	chunking segment
+DEBUG	len of buffer now: 7.30
+57920 59200  more consistent store
+DEBUG	PROMPT:  sacrifice and sales. I'd now like to turn to the progress we've made in our Monroe Forward strategy, beginning with our store rebrand and re-image initiative on slide four.
+DEBUG	CONTEXT:  This initiative focuses on creating a more consistent store
+DEBUG	transcribing 9.30 seconds from 54.70
+DEBUG	>>>>COMPLETE NOW: (np.float64(59.2), np.float64(61.68000000000001), ' appearance while also implementing')
+DEBUG	INCOMPLETE: (np.float64(61.68000000000001), np.float64(63.980000000000004), ' standardized in-store operating procedures.')
+DEBUG	len of buffer now: 9.30
+59200 61680  appearance while also implementing
+DEBUG	PROMPT:  sacrifice and sales. I'd now like to turn to the progress we've made in our Monroe Forward strategy, beginning with our store rebrand and re-image initiative on slide four.
+DEBUG	CONTEXT:  This initiative focuses on creating a more consistent store appearance while also implementing
+DEBUG	transcribing 11.30 seconds from 54.70
+DEBUG	>>>>COMPLETE NOW: (np.float64(61.68000000000001), np.float64(63.64), ' standardized in-store operating')
+DEBUG	INCOMPLETE: (np.float64(63.64), np.float64(65.98), ' procedures, which we call our Monroe Forward strategy.')
+DEBUG	len of buffer now: 11.30
+61680 63640  standardized in-store operating
+DEBUG	PROMPT:  sacrifice and sales. I'd now like to turn to the progress we've made in our Monroe Forward strategy, beginning with our store rebrand and re-image initiative on slide four.
+DEBUG	CONTEXT:  This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating
+DEBUG	transcribing 13.30 seconds from 54.70
+DEBUG	>>>>COMPLETE NOW: (np.float64(63.64), np.float64(65.9), ' procedures, which we call our Monroe')
+DEBUG	INCOMPLETE: (np.float64(65.9), np.float64(67.98), ' Playbook. Additionally, we are re-')
+DEBUG	len of buffer now: 13.30
+63640 65900  procedures, which we call our Monroe
+DEBUG	PROMPT:  sacrifice and sales. I'd now like to turn to the progress we've made in our Monroe Forward strategy, beginning with our store rebrand and re-image initiative on slide four.
+DEBUG	CONTEXT:  This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	transcribing 15.30 seconds from 54.70
+DEBUG	>>>>COMPLETE NOW: (np.float64(65.9), np.float64(67.86), ' Playbook. Additionally, we are')
+DEBUG	INCOMPLETE: (np.float64(67.86), np.float64(69.9), ' rebranding select stores to entire')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.30
+65900 67860  Playbook. Additionally, we are
+DEBUG	PROMPT:  sacrifice and sales. I'd now like to turn to the progress we've made in our Monroe Forward strategy, beginning with our store rebrand and re-image initiative on slide four.
+DEBUG	CONTEXT:  This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe Playbook. Additionally, we are
+DEBUG	transcribing 17.30 seconds from 54.70
+DEBUG	>>>>COMPLETE NOW: (np.float64(67.86), np.float64(69.62), ' rebranding select stores to')
+DEBUG	INCOMPLETE: (np.float64(69.62), np.float64(71.98), ' a tire-oriented spanner, where target')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.30
+67860 69620  rebranding select stores to
+DEBUG	PROMPT:  sacrifice and sales. I'd now like to turn to the progress we've made in our Monroe Forward strategy, beginning with our store rebrand and re-image initiative on slide four.
+DEBUG	CONTEXT:  This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe Playbook. Additionally, we are rebranding select stores to
+DEBUG	transcribing 19.30 seconds from 54.70
+DEBUG	>>>>COMPLETE NOW: (np.float64(69.62), np.float64(70.5), ' a tire-oriented')
+DEBUG	INCOMPLETE: (np.float64(70.5), np.float64(73.98), ' banner where targeted demographics favor this type of store.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.30
+69620 70500  a tire-oriented
+DEBUG	PROMPT:  sacrifice and sales. I'd now like to turn to the progress we've made in our Monroe Forward strategy, beginning with our store rebrand and re-image initiative on slide four.
+DEBUG	CONTEXT:  This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe Playbook. Additionally, we are rebranding select stores to a tire-oriented
+DEBUG	transcribing 21.30 seconds from 54.70
+DEBUG	>>>>COMPLETE NOW: (np.float64(70.5), np.float64(73.94), ' banner where targeted demographics favor this type of')
+DEBUG	INCOMPLETE: (np.float64(73.94), np.float64(75.98), ' store format in order to increase.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.30
+70500 73940  banner where targeted demographics favor this type of
+DEBUG	PROMPT:  sacrifice and sales. I'd now like to turn to the progress we've made in our Monroe Forward strategy, beginning with our store rebrand and re-image initiative on slide four.
+DEBUG	CONTEXT:  This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of
+DEBUG	transcribing 23.30 seconds from 54.70
+DEBUG	>>>>COMPLETE NOW: (np.float64(73.94), np.float64(75.66), ' store format in order to')
+DEBUG	INCOMPLETE: (np.float64(75.66), np.float64(77.98), ' increase tire sales without sacrificing.')
+DEBUG	--- segment chunked at 66.46
+DEBUG	chunking segment
+DEBUG	len of buffer now: 11.54
+73940 75660  store format in order to
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to
+DEBUG	transcribing 13.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(75.66000000000001), np.float64(77.56), ' increase tire sales without')
+DEBUG	INCOMPLETE: (np.float64(77.56), np.float64(79.46000000000001), ' sacrificing service revenue.')
+DEBUG	len of buffer now: 13.54
+75660 77560  increase tire sales without
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to increase tire sales without
+DEBUG	transcribing 15.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(77.56), np.float64(79.5), ' sacrificing service revenue.')
+DEBUG	INCOMPLETE: (np.float64(80.38000000000001), np.float64(81.94000000000001), ' During the first half of')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.54
+77560 79500  sacrificing service revenue.
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to increase tire sales without sacrificing service revenue.
+DEBUG	transcribing 17.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(80.36000000000001), np.float64(81.94000000000001), ' During the first half of')
+DEBUG	INCOMPLETE: (np.float64(81.94000000000001), np.float64(83.98), ' fiscal 2020, we finalized')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.54
+80360 81940  During the first half of
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to increase tire sales without sacrificing service revenue. During the first half of
+DEBUG	transcribing 19.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(81.94000000000001), np.float64(84.06), ' fiscal 2020, we finalized')
+DEBUG	INCOMPLETE: (np.float64(84.06), np.float64(85.88000000000001), ' the transformations of our first group of stores.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.54
+81940 84060  fiscal 2020, we finalized
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to increase tire sales without sacrificing service revenue. During the first half of fiscal 2020, we finalized
+DEBUG	transcribing 21.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(84.06), np.float64(85.68), ' the transformations of our first group of')
+DEBUG	INCOMPLETE: (np.float64(85.68), np.float64(87.98), ' stores, which includes 44 locations.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 21.54
+84060 85680  the transformations of our first group of
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to increase tire sales without sacrificing service revenue. During the first half of fiscal 2020, we finalized the transformations of our first group of
+DEBUG	transcribing 23.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(85.72000000000001), np.float64(87.54), ' stores, which includes 44')
+DEBUG	INCOMPLETE: (np.float64(87.54), np.float64(89.98), ' locations in Rochester, New York, and')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 23.54
+85720 87540  stores, which includes 44
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to increase tire sales without sacrificing service revenue. During the first half of fiscal 2020, we finalized the transformations of our first group of stores, which includes 44
+DEBUG	transcribing 25.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(87.56), np.float64(89.98), ' locations in Rochester, New York, and')
+DEBUG	INCOMPLETE: (np.float64(89.98), np.float64(91.98), ' the Mid-Atlantic, as well as the second group of stores.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 25.54
+87560 89980  locations in Rochester, New York, and
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to increase tire sales without sacrificing service revenue. During the first half of fiscal 2020, we finalized the transformations of our first group of stores, which includes 44 locations in Rochester, New York, and
+DEBUG	transcribing 27.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(89.96000000000001), np.float64(91.88000000000001), ' the Mid-Atlantic, as well as the second')
+DEBUG	INCOMPLETE: (np.float64(91.88000000000001), np.float64(93.98), ' group, which includes 43 stores.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 27.54
+89980 91880  the Mid-Atlantic, as well as the second
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to increase tire sales without sacrificing service revenue. During the first half of fiscal 2020, we finalized the transformations of our first group of stores, which includes 44 locations in Rochester, New York, and the Mid-Atlantic, as well as the second
+DEBUG	transcribing 29.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(91.88000000000001), np.float64(93.64000000000001), ' group, which includes 43')
+DEBUG	INCOMPLETE: (np.float64(93.64000000000001), np.float64(95.06), ' stores in our southern market.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 29.54
+91880 93640  group, which includes 43
+DEBUG	PROMPT:  slide four. This initiative focuses on creating a more consistent store appearance while also implementing standardized in-store operating procedures, which we call our Monroe
+DEBUG	CONTEXT:  Playbook. Additionally, we are rebranding select stores to a tire-oriented banner where targeted demographics favor this type of store format in order to increase tire sales without sacrificing service revenue. During the first half of fiscal 2020, we finalized the transformations of our first group of stores, which includes 44 locations in Rochester, New York, and the Mid-Atlantic, as well as the second group, which includes 43
+DEBUG	transcribing 31.54 seconds from 66.46
+DEBUG	>>>>COMPLETE NOW: (np.float64(93.64000000000001), np.float64(95.06), ' stores in our southern market.')
+DEBUG	INCOMPLETE: (np.float64(95.86000000000001), np.float64(97.98), ' During the third quarter, we continue to scale the')
+DEBUG	--- segment chunked at 95.06
+DEBUG	chunking segment
+DEBUG	len of buffer now: 2.94
+93640 95060  stores in our southern market.
+DEBUG	PROMPT:  our first group of stores, which includes 44 locations in Rochester, New York, and the Mid-Atlantic, as well as the second group, which includes 43 stores in our southern
+DEBUG	CONTEXT:  market.
+DEBUG	transcribing 4.94 seconds from 95.06
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(95.06), np.float64(99.98), ' group. During the third quarter, we continue to scale this initiative across our base and move forward.')
+DEBUG	len of buffer now: 4.94
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  our first group of stores, which includes 44 locations in Rochester, New York, and the Mid-Atlantic, as well as the second group, which includes 43 stores in our southern
+DEBUG	CONTEXT:  market.
+DEBUG	transcribing 6.94 seconds from 95.06
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(95.06), np.float64(101.98), ' district. During the third quarter, we continue to scale this initiative across our base and move forward with a transformation of seven')
+DEBUG	len of buffer now: 6.94
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  our first group of stores, which includes 44 locations in Rochester, New York, and the Mid-Atlantic, as well as the second group, which includes 43 stores in our southern
+DEBUG	CONTEXT:  market.
+DEBUG	transcribing 8.94 seconds from 95.06
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(95.06), np.float64(103.6), ' market. During the third quarter, we continue to scale this initiative across our base and move forward with the transformation of 74 stores in four markets.')
+DEBUG	len of buffer now: 8.94
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  our first group of stores, which includes 44 locations in Rochester, New York, and the Mid-Atlantic, as well as the second group, which includes 43 stores in our southern
+DEBUG	CONTEXT:  market.
+DEBUG	transcribing 10.94 seconds from 95.06
+DEBUG	>>>>COMPLETE NOW: (np.float64(95.06), np.float64(100.82000000000001), ' market. During the third quarter, we continue to scale this initiative across our base and move forward with')
+DEBUG	INCOMPLETE: (np.float64(100.82000000000001), np.float64(105.98), ' a transformation of 74 stores in four markets and 42 of our recently acquired')
+DEBUG	len of buffer now: 10.94
+95060 100820  market. During the third quarter, we continue to scale this initiative across our base and move forward with
+DEBUG	PROMPT:  first group of stores, which includes 44 locations in Rochester, New York, and the Mid-Atlantic, as well as the second group, which includes 43 stores in our southern market.
+DEBUG	CONTEXT:  market. During the third quarter, we continue to scale this initiative across our base and move forward with
+DEBUG	transcribing 12.94 seconds from 95.06
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(100.82000000000001), np.float64(107.12), ' the transformation of 74 stores in four markets and 42 of our recently acquired California stores.')
+DEBUG	len of buffer now: 12.94
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  first group of stores, which includes 44 locations in Rochester, New York, and the Mid-Atlantic, as well as the second group, which includes 43 stores in our southern market.
+DEBUG	CONTEXT:  market. During the third quarter, we continue to scale this initiative across our base and move forward with
+DEBUG	transcribing 14.94 seconds from 95.06
+DEBUG	>>>>COMPLETE NOW: (np.float64(100.82000000000001), np.float64(107.12), ' the transformation of 74 stores in four markets and 42 of our recently acquired California stores.')
+DEBUG	INCOMPLETE: (np.float64(107.78), np.float64(109.98), ' We have completed the transformation of the...')
+DEBUG	len of buffer now: 14.94
+100820 107120  the transformation of 74 stores in four markets and 42 of our recently acquired California stores.
+DEBUG	PROMPT:  first group of stores, which includes 44 locations in Rochester, New York, and the Mid-Atlantic, as well as the second group, which includes 43 stores in our southern market.
+DEBUG	CONTEXT:  market. During the third quarter, we continue to scale this initiative across our base and move forward with the transformation of 74 stores in four markets and 42 of our recently acquired California stores.
+DEBUG	transcribing 16.94 seconds from 95.06
+DEBUG	>>>>COMPLETE NOW: (np.float64(107.76), np.float64(109.92), ' We have completed the transformation of')
+DEBUG	INCOMPLETE: (np.float64(109.92), np.float64(111.98), ' the 74 stores and assisted the market.')
+DEBUG	--- segment chunked at 107.12
+DEBUG	chunking segment
+DEBUG	len of buffer now: 4.88
+107760 109920  We have completed the transformation of
+DEBUG	PROMPT:  we continue to scale this initiative across our base and move forward with the transformation of 74 stores in four markets and 42 of our recently acquired California stores.
+DEBUG	CONTEXT:  We have completed the transformation of
+DEBUG	transcribing 6.88 seconds from 107.12
+DEBUG	>>>>COMPLETE NOW: (np.float64(109.92), np.float64(111.58), ' the 74 stores and')
+DEBUG	INCOMPLETE: (np.float64(111.58), np.float64(113.92), ' have substantially completed our California store.')
+DEBUG	len of buffer now: 6.88
+109920 111580  the 74 stores and
+DEBUG	PROMPT:  we continue to scale this initiative across our base and move forward with the transformation of 74 stores in four markets and 42 of our recently acquired California stores.
+DEBUG	CONTEXT:  We have completed the transformation of the 74 stores and
+DEBUG	transcribing 8.88 seconds from 107.12
+DEBUG	>>>>COMPLETE NOW: (np.float64(111.58), np.float64(113.58), ' have substantially completed our California')
+DEBUG	INCOMPLETE: (np.float64(113.58), np.float64(115.98), ' stores, which are being rebranded.')
+DEBUG	len of buffer now: 8.88
+111580 113580  have substantially completed our California
+DEBUG	PROMPT:  we continue to scale this initiative across our base and move forward with the transformation of 74 stores in four markets and 42 of our recently acquired California stores.
+DEBUG	CONTEXT:  We have completed the transformation of the 74 stores and have substantially completed our California
+DEBUG	transcribing 10.88 seconds from 107.12
+DEBUG	>>>>COMPLETE NOW: (np.float64(113.58), np.float64(115.46000000000001), ' stores, which are being')
+DEBUG	INCOMPLETE: (np.float64(115.46000000000001), np.float64(117.82000000000001), ' rebranded under our tire choice.')
+DEBUG	len of buffer now: 10.88
+113580 115460  stores, which are being
+DEBUG	PROMPT:  we continue to scale this initiative across our base and move forward with the transformation of 74 stores in four markets and 42 of our recently acquired California stores.
+DEBUG	CONTEXT:  We have completed the transformation of the 74 stores and have substantially completed our California stores, which are being
+DEBUG	transcribing 12.88 seconds from 107.12
+DEBUG	>>>>COMPLETE NOW: (np.float64(115.44), np.float64(116.96000000000001), ' rebranded under our')
+DEBUG	INCOMPLETE: (np.float64(116.96000000000001), np.float64(119.32000000000001), ' Tire Choice Auto Service Centers banner.')
+DEBUG	len of buffer now: 12.88
+115460 116960  rebranded under our
+DEBUG	PROMPT:  we continue to scale this initiative across our base and move forward with the transformation of 74 stores in four markets and 42 of our recently acquired California stores.
+DEBUG	CONTEXT:  We have completed the transformation of the 74 stores and have substantially completed our California stores, which are being rebranded under our
+DEBUG	transcribing 14.88 seconds from 107.12
+DEBUG	>>>>COMPLETE NOW: (np.float64(116.98), np.float64(118.92), ' Tire Choice Auto Service Centers')
+DEBUG	INCOMPLETE: (np.float64(118.92), np.float64(121.48), ' banner to drive higher awareness for tires.')
+DEBUG	len of buffer now: 14.88
+116980 118920  Tire Choice Auto Service Centers
+DEBUG	PROMPT:  we continue to scale this initiative across our base and move forward with the transformation of 74 stores in four markets and 42 of our recently acquired California stores.
+DEBUG	CONTEXT:  We have completed the transformation of the 74 stores and have substantially completed our California stores, which are being rebranded under our Tire Choice Auto Service Centers
+DEBUG	transcribing 16.88 seconds from 107.12
+DEBUG	>>>>COMPLETE NOW: (np.float64(118.92), np.float64(121.54), ' banner to drive higher awareness for tires.')
+DEBUG	INCOMPLETE: (np.float64(122.54), np.float64(123.80000000000001), ' Turning to slide five,')
+DEBUG	--- segment chunked at 121.54
+DEBUG	chunking segment
+DEBUG	len of buffer now: 2.46
+118920 121540  banner to drive higher awareness for tires.
+DEBUG	PROMPT:  the 74 stores and have substantially completed our California stores, which are being rebranded under our Tire Choice Auto Service Centers banner to drive higher awareness for
+DEBUG	CONTEXT:  tires.
+DEBUG	transcribing 4.46 seconds from 121.54
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(121.54), np.float64(125.76), " this. Turning to slide five, I'd like to provide some additional context.")
+DEBUG	len of buffer now: 4.46
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  the 74 stores and have substantially completed our California stores, which are being rebranded under our Tire Choice Auto Service Centers banner to drive higher awareness for
+DEBUG	CONTEXT:  tires.
+DEBUG	transcribing 6.46 seconds from 121.54
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(121.54), np.float64(127.9), " years. Turning to slide 5, I'd like to provide some additional context regarding our strategic rationale.")
+DEBUG	len of buffer now: 6.46
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  the 74 stores and have substantially completed our California stores, which are being rebranded under our Tire Choice Auto Service Centers banner to drive higher awareness for
+DEBUG	CONTEXT:  tires.
+DEBUG	transcribing 8.46 seconds from 121.54
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(121.54), np.float64(129.8), " customers. Turning to slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base.")
+DEBUG	len of buffer now: 8.46
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  the 74 stores and have substantially completed our California stores, which are being rebranded under our Tire Choice Auto Service Centers banner to drive higher awareness for
+DEBUG	CONTEXT:  tires.
+DEBUG	transcribing 10.46 seconds from 121.54
+DEBUG	>>>>COMPLETE NOW: (np.float64(121.54), np.float64(129.84), " customers. Turning to slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base.")
+DEBUG	INCOMPLETE: (np.float64(130.76000000000002), np.float64(131.88), ' As many of you know,')
+DEBUG	len of buffer now: 10.46
+121540 129840  customers. Turning to slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base.
+DEBUG	PROMPT:  stores and have substantially completed our California stores, which are being rebranded under our Tire Choice Auto Service Centers banner to drive higher awareness for tires.
+DEBUG	CONTEXT:  customers. Turning to slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base.
+DEBUG	transcribing 12.46 seconds from 121.54
+DEBUG	>>>>COMPLETE NOW: (np.float64(130.76000000000002), np.float64(131.88), ' As many of you know,')
+DEBUG	INCOMPLETE: (np.float64(132.02), np.float64(133.82), ' we operate in two-store format.')
+DEBUG	len of buffer now: 12.46
+130760 131880  As many of you know,
+DEBUG	PROMPT:  stores and have substantially completed our California stores, which are being rebranded under our Tire Choice Auto Service Centers banner to drive higher awareness for tires.
+DEBUG	CONTEXT:  customers. Turning to slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know,
+DEBUG	transcribing 14.46 seconds from 121.54
+DEBUG	>>>>COMPLETE NOW: (np.float64(132.02), np.float64(133.34), ' we operate in two-store')
+DEBUG	INCOMPLETE: (np.float64(133.34), np.float64(135.98000000000002), ' formats. Our service brand stores, which are...')
+DEBUG	len of buffer now: 14.46
+132020 133340  we operate in two-store
+DEBUG	PROMPT:  stores and have substantially completed our California stores, which are being rebranded under our Tire Choice Auto Service Centers banner to drive higher awareness for tires.
+DEBUG	CONTEXT:  customers. Turning to slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store
+DEBUG	transcribing 16.46 seconds from 121.54
+DEBUG	>>>>COMPLETE NOW: (np.float64(133.34), np.float64(136.02), ' formats. Our service brand stores, which')
+DEBUG	INCOMPLETE: (np.float64(136.02), np.float64(137.98000000000002), ' generate approximately 600,000...')
+DEBUG	--- segment chunked at 133.84
+DEBUG	chunking segment
+DEBUG	len of buffer now: 4.16
+133340 136020  formats. Our service brand stores, which
+DEBUG	PROMPT:  slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store formats.
+DEBUG	CONTEXT:  Our service brand stores, which
+DEBUG	transcribing 6.16 seconds from 133.84
+DEBUG	>>>>COMPLETE NOW: (np.float64(136.02), np.float64(137.12), ' generate approximately')
+DEBUG	INCOMPLETE: (np.float64(137.12), np.float64(139.98), ' $600,000 per store in annualized sales.')
+DEBUG	len of buffer now: 6.16
+136020 137120  generate approximately
+DEBUG	PROMPT:  slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store formats.
+DEBUG	CONTEXT:  Our service brand stores, which generate approximately
+DEBUG	transcribing 8.16 seconds from 133.84
+DEBUG	>>>>COMPLETE NOW: (np.float64(137.12), np.float64(139.8), ' $600,000 per store in annualized')
+DEBUG	INCOMPLETE: (np.float64(139.8), np.float64(141.8), ' sales, and our tire brand stores.')
+DEBUG	len of buffer now: 8.16
+137120 139800  $600,000 per store in annualized
+DEBUG	PROMPT:  slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store formats.
+DEBUG	CONTEXT:  Our service brand stores, which generate approximately $600,000 per store in annualized
+DEBUG	transcribing 10.16 seconds from 133.84
+DEBUG	>>>>COMPLETE NOW: (np.float64(139.8), np.float64(141.42000000000002), ' sales, and our tire brand')
+DEBUG	INCOMPLETE: (np.float64(141.42000000000002), np.float64(143.98000000000002), ' stores, which generate approximately $1.2.')
+DEBUG	len of buffer now: 10.16
+139800 141420  sales, and our tire brand
+DEBUG	PROMPT:  slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store formats.
+DEBUG	CONTEXT:  Our service brand stores, which generate approximately $600,000 per store in annualized sales, and our tire brand
+DEBUG	transcribing 12.16 seconds from 133.84
+DEBUG	>>>>COMPLETE NOW: (np.float64(141.42000000000002), np.float64(143.56), ' stores, which generate approximately $1')
+DEBUG	INCOMPLETE: (np.float64(143.56), np.float64(145.98000000000002), '.2 million per store in annualized sales.')
+DEBUG	len of buffer now: 12.16
+141420 143560  stores, which generate approximately $1
+DEBUG	PROMPT:  slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store formats.
+DEBUG	CONTEXT:  Our service brand stores, which generate approximately $600,000 per store in annualized sales, and our tire brand stores, which generate approximately $1
+DEBUG	transcribing 14.16 seconds from 133.84
+DEBUG	>>>>COMPLETE NOW: (np.float64(143.56), np.float64(146.02), '.2 million per store in annualized sales.')
+DEBUG	INCOMPLETE: (np.float64(146.48000000000002), np.float64(147.98000000000002), ' Prior to any rebranding,')
+DEBUG	len of buffer now: 14.16
+143560 146020 .2 million per store in annualized sales.
+DEBUG	PROMPT:  slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store formats.
+DEBUG	CONTEXT:  Our service brand stores, which generate approximately $600,000 per store in annualized sales, and our tire brand stores, which generate approximately $1.2 million per store in annualized sales.
+DEBUG	transcribing 16.16 seconds from 133.84
+DEBUG	>>>>COMPLETE NOW: (np.float64(146.44), np.float64(147.52), ' Prior to any')
+DEBUG	INCOMPLETE: (np.float64(147.52), np.float64(149.74), ' rebrand activity, we operated 550.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.16
+146440 147520  Prior to any
+DEBUG	PROMPT:  slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store formats.
+DEBUG	CONTEXT:  Our service brand stores, which generate approximately $600,000 per store in annualized sales, and our tire brand stores, which generate approximately $1.2 million per store in annualized sales. Prior to any
+DEBUG	transcribing 18.16 seconds from 133.84
+DEBUG	>>>>COMPLETE NOW: (np.float64(147.52), np.float64(149.24), ' rebrand activity, we operated')
+DEBUG	INCOMPLETE: (np.float64(149.24), np.float64(151.5), ' 555 service brand stores.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 18.16
+147520 149240  rebrand activity, we operated
+DEBUG	PROMPT:  slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store formats.
+DEBUG	CONTEXT:  Our service brand stores, which generate approximately $600,000 per store in annualized sales, and our tire brand stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated
+DEBUG	transcribing 20.16 seconds from 133.84
+DEBUG	>>>>COMPLETE NOW: (np.float64(149.24), np.float64(151.04), ' 555 service brand')
+DEBUG	INCOMPLETE: (np.float64(151.04), np.float64(153.68), ' stores and 734 tire brand stores.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 20.16
+149240 151040  555 service brand
+DEBUG	PROMPT:  slide five, I'd like to provide some additional context regarding our strategic rationale as we transform our store base. As many of you know, we operate in two-store formats.
+DEBUG	CONTEXT:  Our service brand stores, which generate approximately $600,000 per store in annualized sales, and our tire brand stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated 555 service brand
+DEBUG	transcribing 22.16 seconds from 133.84
+DEBUG	>>>>COMPLETE NOW: (np.float64(151.04), np.float64(153.72), ' stores and 734 tire brand stores.')
+DEBUG	INCOMPLETE: (np.float64(154.32), np.float64(155.9), ' And as we work to create a nation.')
+DEBUG	--- segment chunked at 153.72
+DEBUG	chunking segment
+DEBUG	len of buffer now: 2.28
+151040 153720  stores and 734 tire brand stores.
+DEBUG	PROMPT:  brand stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated 555 service brand stores and 734 tire brand
+DEBUG	CONTEXT:  stores.
+DEBUG	transcribing 4.28 seconds from 153.72
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(153.72), np.float64(157.98), ' stores, and as we work to create a nationwide chain of consistently operated')
+DEBUG	len of buffer now: 4.28
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  brand stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated 555 service brand stores and 734 tire brand
+DEBUG	CONTEXT:  stores.
+DEBUG	transcribing 6.28 seconds from 153.72
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(153.72), np.float64(159.98), ' stores. As we work to create a nationwide chain of consistently operated stores, we are prioritizing')
+DEBUG	len of buffer now: 6.28
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  brand stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated 555 service brand stores and 734 tire brand
+DEBUG	CONTEXT:  stores.
+DEBUG	transcribing 8.28 seconds from 153.72
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(153.72), np.float64(161.86), ' and as we work to create a nationwide chain of consistently operated stores, we are prioritizing the higher volume tire brand.')
+DEBUG	len of buffer now: 8.28
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  brand stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated 555 service brand stores and 734 tire brand
+DEBUG	CONTEXT:  stores.
+DEBUG	transcribing 10.28 seconds from 153.72
+DEBUG	>>>>COMPLETE NOW: (np.float64(153.72), np.float64(161.9), ' and as we work to create a nationwide chain of consistently operated stores, we are prioritizing the higher volume tire brand.')
+DEBUG	INCOMPLETE: (np.float64(162.36), np.float64(163.8), ' Throughout this process,')
+DEBUG	len of buffer now: 10.28
+153720 161900  and as we work to create a nationwide chain of consistently operated stores, we are prioritizing the higher volume tire brand.
+DEBUG	PROMPT:  stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated 555 service brand stores and 734 tire brand stores.
+DEBUG	CONTEXT:  and as we work to create a nationwide chain of consistently operated stores, we are prioritizing the higher volume tire brand.
+DEBUG	transcribing 12.28 seconds from 153.72
+DEBUG	>>>>COMPLETE NOW: (np.float64(162.36), np.float64(163.78), ' Throughout this process,')
+DEBUG	INCOMPLETE: (np.float64(163.9), np.float64(165.88), ' we will be consolidating our regional.')
+DEBUG	len of buffer now: 12.28
+162360 163780  Throughout this process,
+DEBUG	PROMPT:  stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated 555 service brand stores and 734 tire brand stores.
+DEBUG	CONTEXT:  and as we work to create a nationwide chain of consistently operated stores, we are prioritizing the higher volume tire brand. Throughout this process,
+DEBUG	transcribing 14.28 seconds from 153.72
+DEBUG	>>>>COMPLETE NOW: (np.float64(163.82), np.float64(165.6), ' we will be consolidating our')
+DEBUG	INCOMPLETE: (np.float64(165.6), np.float64(167.92), ' regional brands, focusing on shifting.')
+DEBUG	len of buffer now: 14.28
+163820 165600  we will be consolidating our
+DEBUG	PROMPT:  stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated 555 service brand stores and 734 tire brand stores.
+DEBUG	CONTEXT:  and as we work to create a nationwide chain of consistently operated stores, we are prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our
+DEBUG	transcribing 16.28 seconds from 153.72
+DEBUG	>>>>COMPLETE NOW: (np.float64(165.6), np.float64(167.52), ' regional brands, focusing on')
+DEBUG	INCOMPLETE: (np.float64(167.52), np.float64(169.84), ' shifting our service brands over to tire brands.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.28
+165600 167520  regional brands, focusing on
+DEBUG	PROMPT:  stores, which generate approximately $1.2 million per store in annualized sales. Prior to any rebrand activity, we operated 555 service brand stores and 734 tire brand stores.
+DEBUG	CONTEXT:  and as we work to create a nationwide chain of consistently operated stores, we are prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on
+DEBUG	transcribing 18.28 seconds from 153.72
+DEBUG	>>>>COMPLETE NOW: (np.float64(167.52), np.float64(169.88), ' shifting our service brands over to tire brands.')
+DEBUG	INCOMPLETE: (np.float64(170.14), np.float64(171.98), ' The lower number of brands will...')
+DEBUG	--- segment chunked at 169.88
+DEBUG	chunking segment
+DEBUG	len of buffer now: 2.12
+167520 169880  shifting our service brands over to tire brands.
+DEBUG	PROMPT:  we are prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire
+DEBUG	CONTEXT:  brands.
+DEBUG	transcribing 4.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(169.88), np.float64(173.98), ' the lower number of brands will also allow us to improve our market.')
+DEBUG	len of buffer now: 4.12
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  we are prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire
+DEBUG	CONTEXT:  brands.
+DEBUG	transcribing 6.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(169.88), np.float64(174.85999999999999), ' The lower number of brands will also allow us to improve our marketing productivity.')
+DEBUG	len of buffer now: 6.12
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  we are prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire
+DEBUG	CONTEXT:  brands.
+DEBUG	transcribing 8.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(169.88), np.float64(177.98), ' the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this is a great example of what we need to do with our brand.')
+DEBUG	len of buffer now: 8.12
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  we are prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire
+DEBUG	CONTEXT:  brands.
+DEBUG	transcribing 10.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(169.88), np.float64(179.98), ' The lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing')
+DEBUG	len of buffer now: 10.12
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  we are prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire
+DEBUG	CONTEXT:  brands.
+DEBUG	transcribing 12.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(169.88), np.float64(181.98), ' the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no association.')
+DEBUG	len of buffer now: 12.12
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  we are prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire
+DEBUG	CONTEXT:  brands.
+DEBUG	transcribing 14.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(169.88), np.float64(181.74), ' the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no')
+DEBUG	INCOMPLETE: (np.float64(181.74), np.float64(183.1), ' associated brand change.')
+DEBUG	len of buffer now: 14.12
+169880 181740  the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no
+DEBUG	PROMPT:  prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire brands.
+DEBUG	CONTEXT:  the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no
+DEBUG	transcribing 16.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(181.74), np.float64(183.07999999999998), ' associated brand change.')
+DEBUG	INCOMPLETE: (np.float64(183.38), np.float64(185.98), ' As we are making decisions regarding rebranding,')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.12
+181740 183080  associated brand change.
+DEBUG	PROMPT:  prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire brands.
+DEBUG	CONTEXT:  the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no associated brand change.
+DEBUG	transcribing 18.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(183.38), np.float64(185.5), ' As we are making decisions regarding')
+DEBUG	INCOMPLETE: (np.float64(185.5), np.float64(187.82), ' rebranding versus reimaging stores,')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 18.12
+183380 185500  As we are making decisions regarding
+DEBUG	PROMPT:  prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire brands.
+DEBUG	CONTEXT:  the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no associated brand change. As we are making decisions regarding
+DEBUG	transcribing 20.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(185.5), np.float64(186.76), ' rebranding versus')
+DEBUG	INCOMPLETE: (np.float64(186.76), np.float64(189.98), ' re-imaging stores, we are leveraging our analytical model.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 20.12
+185500 186760  rebranding versus
+DEBUG	PROMPT:  prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire brands.
+DEBUG	CONTEXT:  the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no associated brand change. As we are making decisions regarding rebranding versus
+DEBUG	transcribing 22.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(186.76), np.float64(189.72), ' re-imaging stores, we are leveraging our analytical')
+DEBUG	INCOMPLETE: (np.float64(189.72), np.float64(191.92), ' model as well as taking into account.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 22.12
+186760 189720  re-imaging stores, we are leveraging our analytical
+DEBUG	PROMPT:  prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire brands.
+DEBUG	CONTEXT:  the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no associated brand change. As we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical
+DEBUG	transcribing 24.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(189.74), np.float64(191.6), ' model as well as taking into')
+DEBUG	INCOMPLETE: (np.float64(191.6), np.float64(193.94), ' account our brand equity in that market.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 24.12
+189740 191600  model as well as taking into
+DEBUG	PROMPT:  prioritizing the higher volume tire brand. Throughout this process, we will be consolidating our regional brands, focusing on shifting our service brands over to tire brands.
+DEBUG	CONTEXT:  the lower number of brands will also allow us to improve our marketing productivity. When we speak to re-imaging stores, this primarily means modernizing the appearance of our stores with no associated brand change. As we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into
+DEBUG	transcribing 26.12 seconds from 169.88
+DEBUG	>>>>COMPLETE NOW: (np.float64(191.6), np.float64(194.01999999999998), ' account our brand equity in that market.')
+DEBUG	INCOMPLETE: (np.float64(195.06), np.float64(195.98), ' Looking at the bottom...')
+DEBUG	--- segment chunked at 194.02
+DEBUG	chunking segment
+DEBUG	len of buffer now: 1.98
+191600 194020  account our brand equity in that market.
+DEBUG	PROMPT:  change. As we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that
+DEBUG	CONTEXT:  market.
+DEBUG	transcribing 3.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(194.01999999999998), np.float64(197.88), ' process. Looking at the bottom left of the slide, you can see here the progress.')
+DEBUG	len of buffer now: 3.98
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  change. As we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that
+DEBUG	CONTEXT:  market.
+DEBUG	transcribing 5.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(194.01999999999998), np.float64(199.49999999999997), ' market. Looking at the bottom left of the slide, you can see here the progress we have made so far.')
+DEBUG	len of buffer now: 5.98
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  change. As we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that
+DEBUG	CONTEXT:  market.
+DEBUG	transcribing 7.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (np.float64(194.01999999999998), np.float64(199.55999999999997), ' market. Looking at the bottom left of the slide, you can see here the progress we have made so far.')
+DEBUG	INCOMPLETE: (np.float64(199.89999999999998), np.float64(201.98), ' We are very much in the early innings of the')
+DEBUG	len of buffer now: 7.98
+194020 199560  market. Looking at the bottom left of the slide, you can see here the progress we have made so far.
+DEBUG	PROMPT:  we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that market.
+DEBUG	CONTEXT:  market. Looking at the bottom left of the slide, you can see here the progress we have made so far.
+DEBUG	transcribing 9.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (np.float64(199.88), np.float64(202.05999999999997), ' We are very much in the early innings of')
+DEBUG	INCOMPLETE: (np.float64(202.05999999999997), np.float64(203.98), ' this transformation with 200...')
+DEBUG	len of buffer now: 9.98
+199880 202060  We are very much in the early innings of
+DEBUG	PROMPT:  we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that market.
+DEBUG	CONTEXT:  market. Looking at the bottom left of the slide, you can see here the progress we have made so far. We are very much in the early innings of
+DEBUG	transcribing 11.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (np.float64(202.05999999999997), np.float64(203.39999999999998), ' this transformation with')
+DEBUG	INCOMPLETE: (np.float64(203.39999999999998), np.float64(205.98), ' 203 stores substantially completed.')
+DEBUG	len of buffer now: 11.98
+202060 203400  this transformation with
+DEBUG	PROMPT:  we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that market.
+DEBUG	CONTEXT:  market. Looking at the bottom left of the slide, you can see here the progress we have made so far. We are very much in the early innings of this transformation with
+DEBUG	transcribing 13.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (np.float64(203.39999999999998), np.float64(205.33999999999997), ' 203 stores substantially')
+DEBUG	INCOMPLETE: (np.float64(205.33999999999997), np.float64(207.2), ' completed out of our portfolio.')
+DEBUG	len of buffer now: 13.98
+203400 205340  203 stores substantially
+DEBUG	PROMPT:  we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that market.
+DEBUG	CONTEXT:  market. Looking at the bottom left of the slide, you can see here the progress we have made so far. We are very much in the early innings of this transformation with 203 stores substantially
+DEBUG	transcribing 15.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (np.float64(205.33999999999997), np.float64(207.21999999999997), ' completed out of our portfolio.')
+DEBUG	INCOMPLETE: (np.float64(207.77999999999997), np.float64(209.98), " We've separated these stores out between...")
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.98
+205340 207220  completed out of our portfolio.
+DEBUG	PROMPT:  we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that market.
+DEBUG	CONTEXT:  market. Looking at the bottom left of the slide, you can see here the progress we have made so far. We are very much in the early innings of this transformation with 203 stores substantially completed out of our portfolio.
+DEBUG	transcribing 17.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (np.float64(207.76), np.float64(209.38), " We've separated these stores out")
+DEBUG	INCOMPLETE: (np.float64(209.38), np.float64(211.98), ' between comp stores and non-comp stores, which...')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.98
+207760 209380  We've separated these stores out
+DEBUG	PROMPT:  we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that market.
+DEBUG	CONTEXT:  market. Looking at the bottom left of the slide, you can see here the progress we have made so far. We are very much in the early innings of this transformation with 203 stores substantially completed out of our portfolio. We've separated these stores out
+DEBUG	transcribing 19.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (np.float64(209.38), np.float64(211.35999999999999), ' between comp stores and non-comp stores,')
+DEBUG	INCOMPLETE: (np.float64(211.38), np.float64(213.98), ' which helps us to evaluate their performance.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.98
+209380 211360  between comp stores and non-comp stores,
+DEBUG	PROMPT:  we are making decisions regarding rebranding versus re-imaging stores, we are leveraging our analytical model as well as taking into account our brand equity in that market.
+DEBUG	CONTEXT:  market. Looking at the bottom left of the slide, you can see here the progress we have made so far. We are very much in the early innings of this transformation with 203 stores substantially completed out of our portfolio. We've separated these stores out between comp stores and non-comp stores,
+DEBUG	transcribing 21.98 seconds from 194.02
+DEBUG	>>>>COMPLETE NOW: (np.float64(211.38), np.float64(213.65999999999997), ' which helps us to evaluate their')
+DEBUG	INCOMPLETE: (np.float64(213.65999999999997), np.float64(215.54), ' performance post-refresh.')
+DEBUG	--- segment chunked at 207.22
+DEBUG	chunking segment
+DEBUG	len of buffer now: 8.78
+211380 213660  which helps us to evaluate their
+DEBUG	PROMPT:  can see here the progress we have made so far. We are very much in the early innings of this transformation with 203 stores substantially completed out of our portfolio.
+DEBUG	CONTEXT:  We've separated these stores out between comp stores and non-comp stores, which helps us to evaluate their
+DEBUG	transcribing 10.78 seconds from 207.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(213.65999999999997), np.float64(215.55999999999997), ' performance post-refresh.')
+DEBUG	INCOMPLETE: (np.float64(216.35999999999996), np.float64(217.97999999999996), ' Of our approximately...')
+DEBUG	len of buffer now: 10.78
+213660 215560  performance post-refresh.
+DEBUG	PROMPT:  can see here the progress we have made so far. We are very much in the early innings of this transformation with 203 stores substantially completed out of our portfolio.
+DEBUG	CONTEXT:  We've separated these stores out between comp stores and non-comp stores, which helps us to evaluate their performance post-refresh.
+DEBUG	transcribing 12.78 seconds from 207.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(216.35999999999996), np.float64(217.17999999999998), ' Of our')
+DEBUG	INCOMPLETE: (np.float64(217.17999999999998), np.float64(219.97999999999996), ' approximately 900 comp stores that we set out to...')
+DEBUG	len of buffer now: 12.78
+216360 217180  Of our
+DEBUG	PROMPT:  can see here the progress we have made so far. We are very much in the early innings of this transformation with 203 stores substantially completed out of our portfolio.
+DEBUG	CONTEXT:  We've separated these stores out between comp stores and non-comp stores, which helps us to evaluate their performance post-refresh. Of our
+DEBUG	transcribing 14.78 seconds from 207.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(217.17999999999998), np.float64(219.77999999999997), ' approximately 900 comp stores that we set out')
+DEBUG	INCOMPLETE: (np.float64(219.77999999999997), np.float64(221.79999999999998), " to transform, we've completed...")
+DEBUG	len of buffer now: 14.78
+217180 219780  approximately 900 comp stores that we set out
+DEBUG	PROMPT:  can see here the progress we have made so far. We are very much in the early innings of this transformation with 203 stores substantially completed out of our portfolio.
+DEBUG	CONTEXT:  We've separated these stores out between comp stores and non-comp stores, which helps us to evaluate their performance post-refresh. Of our approximately 900 comp stores that we set out
+DEBUG	transcribing 16.78 seconds from 207.22
+DEBUG	>>>>COMPLETE NOW: (np.float64(219.77999999999997), np.float64(221.15999999999997), " to transform, we've")
+DEBUG	INCOMPLETE: (np.float64(221.15999999999997), np.float64(223.37999999999997), ' completed 134 stores.')
+DEBUG	--- segment chunked at 215.56
+DEBUG	chunking segment
+DEBUG	len of buffer now: 8.44
+219780 221160  to transform, we've
+DEBUG	PROMPT:  substantially completed out of our portfolio. We've separated these stores out between comp stores and non-comp stores, which helps us to evaluate their performance post-refresh.
+DEBUG	CONTEXT:  Of our approximately 900 comp stores that we set out to transform, we've
+DEBUG	transcribing 10.44 seconds from 215.56
+DEBUG	>>>>COMPLETE NOW: (np.float64(221.15999999999997), np.float64(222.85999999999999), ' completed 134')
+DEBUG	INCOMPLETE: (np.float64(222.85999999999999), np.float64(225.97999999999996), ' stores, and of our approximately 150 non-comp stores,')
+DEBUG	len of buffer now: 10.44
+221160 222860  completed 134
+DEBUG	PROMPT:  substantially completed out of our portfolio. We've separated these stores out between comp stores and non-comp stores, which helps us to evaluate their performance post-refresh.
+DEBUG	CONTEXT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134
+DEBUG	transcribing 12.44 seconds from 215.56
+DEBUG	>>>>COMPLETE NOW: (np.float64(222.85999999999999), np.float64(226.15999999999997), ' stores, and of our approximately 150 non-comp stores,')
+DEBUG	INCOMPLETE: (np.float64(226.41999999999996), np.float64(227.87999999999997), " we've substantially completed.")
+DEBUG	len of buffer now: 12.44
+222860 226160  stores, and of our approximately 150 non-comp stores,
+DEBUG	PROMPT:  substantially completed out of our portfolio. We've separated these stores out between comp stores and non-comp stores, which helps us to evaluate their performance post-refresh.
+DEBUG	CONTEXT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134 stores, and of our approximately 150 non-comp stores,
+DEBUG	transcribing 14.44 seconds from 215.56
+DEBUG	>>>>COMPLETE NOW: (np.float64(226.41999999999996), np.float64(227.39999999999998), " we've substantially")
+DEBUG	INCOMPLETE: (np.float64(227.39999999999998), np.float64(229.97999999999996), ' completed 69. As we move forward...')
+DEBUG	len of buffer now: 14.44
+226420 227400  we've substantially
+DEBUG	PROMPT:  substantially completed out of our portfolio. We've separated these stores out between comp stores and non-comp stores, which helps us to evaluate their performance post-refresh.
+DEBUG	CONTEXT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134 stores, and of our approximately 150 non-comp stores, we've substantially
+DEBUG	transcribing 16.44 seconds from 215.56
+DEBUG	>>>>COMPLETE NOW: (np.float64(227.39999999999998), np.float64(229.65999999999997), ' completed 69. As we move')
+DEBUG	INCOMPLETE: (np.float64(229.65999999999997), np.float64(231.97999999999996), ' forward with expanding this program across our...')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.44
+227400 229660  completed 69. As we move
+DEBUG	PROMPT:  substantially completed out of our portfolio. We've separated these stores out between comp stores and non-comp stores, which helps us to evaluate their performance post-refresh.
+DEBUG	CONTEXT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134 stores, and of our approximately 150 non-comp stores, we've substantially completed 69. As we move
+DEBUG	transcribing 18.44 seconds from 215.56
+DEBUG	>>>>COMPLETE NOW: (np.float64(229.65999999999997), np.float64(231.71999999999997), ' forward with expanding this program across')
+DEBUG	INCOMPLETE: (np.float64(231.71999999999997), np.float64(233.97999999999996), ' our base, we will continue to prioritize...')
+DEBUG	--- segment chunked at 228.36
+DEBUG	chunking segment
+DEBUG	len of buffer now: 5.64
+229660 231720  forward with expanding this program across
+DEBUG	PROMPT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134 stores, and of our approximately 150 non-comp stores, we've substantially completed 69.
+DEBUG	CONTEXT:  As we move forward with expanding this program across
+DEBUG	transcribing 7.64 seconds from 228.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(231.7), np.float64(233.45999999999998), ' our base, we will continue to')
+DEBUG	INCOMPLETE: (np.float64(233.45999999999998), np.float64(235.98), ' prioritize markets that we expect will drop.')
+DEBUG	len of buffer now: 7.64
+231720 233460  our base, we will continue to
+DEBUG	PROMPT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134 stores, and of our approximately 150 non-comp stores, we've substantially completed 69.
+DEBUG	CONTEXT:  As we move forward with expanding this program across our base, we will continue to
+DEBUG	transcribing 9.64 seconds from 228.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(233.45999999999998), np.float64(235.85999999999999), ' prioritize markets that we expect will')
+DEBUG	INCOMPLETE: (np.float64(235.85999999999999), np.float64(237.98), ' drive the largest benefit to our...')
+DEBUG	len of buffer now: 9.64
+233460 235860  prioritize markets that we expect will
+DEBUG	PROMPT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134 stores, and of our approximately 150 non-comp stores, we've substantially completed 69.
+DEBUG	CONTEXT:  As we move forward with expanding this program across our base, we will continue to prioritize markets that we expect will
+DEBUG	transcribing 11.64 seconds from 228.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(235.88), np.float64(237.88), ' drive the largest benefit to')
+DEBUG	INCOMPLETE: (np.float64(237.88), np.float64(239.79999999999998), ' our sales performance and our approach.')
+DEBUG	len of buffer now: 11.64
+235880 237880  drive the largest benefit to
+DEBUG	PROMPT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134 stores, and of our approximately 150 non-comp stores, we've substantially completed 69.
+DEBUG	CONTEXT:  As we move forward with expanding this program across our base, we will continue to prioritize markets that we expect will drive the largest benefit to
+DEBUG	transcribing 13.64 seconds from 228.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(237.88), np.float64(239.42), ' our sales performance and our')
+DEBUG	INCOMPLETE: (np.float64(239.42), np.float64(241.88), ' approach will be measured in order to keep sales.')
+DEBUG	len of buffer now: 13.64
+237880 239420  our sales performance and our
+DEBUG	PROMPT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134 stores, and of our approximately 150 non-comp stores, we've substantially completed 69.
+DEBUG	CONTEXT:  As we move forward with expanding this program across our base, we will continue to prioritize markets that we expect will drive the largest benefit to our sales performance and our
+DEBUG	transcribing 15.64 seconds from 228.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(239.42), np.float64(241.55999999999997), ' approach will be measured in order to keep')
+DEBUG	INCOMPLETE: (np.float64(241.55999999999997), np.float64(243.32), ' sales disruption to a minimum.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.64
+239420 241560  approach will be measured in order to keep
+DEBUG	PROMPT:  Of our approximately 900 comp stores that we set out to transform, we've completed 134 stores, and of our approximately 150 non-comp stores, we've substantially completed 69.
+DEBUG	CONTEXT:  As we move forward with expanding this program across our base, we will continue to prioritize markets that we expect will drive the largest benefit to our sales performance and our approach will be measured in order to keep
+DEBUG	transcribing 17.64 seconds from 228.36
+DEBUG	>>>>COMPLETE NOW: (np.float64(241.55999999999997), np.float64(243.33999999999997), ' sales disruption to a minimum.')
+DEBUG	INCOMPLETE: (np.float64(244.44), np.float64(245.98), " Through the end of this fiscal year, we're...")
+DEBUG	--- segment chunked at 243.34
+DEBUG	chunking segment
+DEBUG	len of buffer now: 2.66
+241560 243340  sales disruption to a minimum.
+DEBUG	PROMPT:  continue to prioritize markets that we expect will drive the largest benefit to our sales performance and our approach will be measured in order to keep sales disruption to a
+DEBUG	CONTEXT:  minimum.
+DEBUG	transcribing 4.66 seconds from 243.34
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(244.2), np.float64(247.87999999999997), " through the end of this fiscal year we're focusing on finalizing the transfer")
+DEBUG	len of buffer now: 4.66
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  continue to prioritize markets that we expect will drive the largest benefit to our sales performance and our approach will be measured in order to keep sales disruption to a
+DEBUG	CONTEXT:  minimum.
+DEBUG	transcribing 6.66 seconds from 243.34
+DEBUG	>>>>COMPLETE NOW: (np.float64(244.21999999999997), np.float64(245.77999999999997), ' through the end of this fiscal year')
+DEBUG	INCOMPLETE: (np.float64(245.77999999999997), np.float64(249.77999999999997), ' we are focusing on finalizing the transformation of our recently acquired')
+DEBUG	len of buffer now: 6.66
+244220 245780  through the end of this fiscal year
+DEBUG	PROMPT:  prioritize markets that we expect will drive the largest benefit to our sales performance and our approach will be measured in order to keep sales disruption to a minimum.
+DEBUG	CONTEXT:  through the end of this fiscal year
+DEBUG	transcribing 8.66 seconds from 243.34
+DEBUG	>>>>COMPLETE NOW: (np.float64(245.87999999999997), np.float64(249.75999999999996), ' we are focusing on finalizing the transformation of our recently acquired')
+DEBUG	INCOMPLETE: (np.float64(249.75999999999996), np.float64(250.81999999999996), ' California stores.')
+DEBUG	len of buffer now: 8.66
+245880 249760  we are focusing on finalizing the transformation of our recently acquired
+DEBUG	PROMPT:  prioritize markets that we expect will drive the largest benefit to our sales performance and our approach will be measured in order to keep sales disruption to a minimum.
+DEBUG	CONTEXT:  through the end of this fiscal year we are focusing on finalizing the transformation of our recently acquired
+DEBUG	transcribing 10.66 seconds from 243.34
+DEBUG	>>>>COMPLETE NOW: (np.float64(249.77999999999997), np.float64(250.27999999999997), ' California')
+DEBUG	INCOMPLETE: (np.float64(250.27999999999997), np.float64(253.49999999999997), ' stores while starting the transformation of approximately...')
+DEBUG	len of buffer now: 10.66
+249780 250280  California
+DEBUG	PROMPT:  prioritize markets that we expect will drive the largest benefit to our sales performance and our approach will be measured in order to keep sales disruption to a minimum.
+DEBUG	CONTEXT:  through the end of this fiscal year we are focusing on finalizing the transformation of our recently acquired California
+DEBUG	transcribing 12.66 seconds from 243.34
+DEBUG	>>>>COMPLETE NOW: (np.float64(250.29999999999998), np.float64(253.07999999999998), ' stores while starting the transformation of')
+DEBUG	INCOMPLETE: (np.float64(253.07999999999998), np.float64(255.83999999999997), ' approximately 80 more stores that will be completed.')
+DEBUG	len of buffer now: 12.66
+250300 253080  stores while starting the transformation of
+DEBUG	PROMPT:  prioritize markets that we expect will drive the largest benefit to our sales performance and our approach will be measured in order to keep sales disruption to a minimum.
+DEBUG	CONTEXT:  through the end of this fiscal year we are focusing on finalizing the transformation of our recently acquired California stores while starting the transformation of
+DEBUG	transcribing 14.66 seconds from 243.34
+DEBUG	>>>>COMPLETE NOW: (np.float64(253.07999999999998), np.float64(255.35999999999999), ' approximately 80 more stores that will be')
+DEBUG	INCOMPLETE: (np.float64(255.35999999999999), np.float64(257.97999999999996), ' completed in Q1 of FY20.')
+DEBUG	len of buffer now: 14.66
+253080 255360  approximately 80 more stores that will be
+DEBUG	PROMPT:  prioritize markets that we expect will drive the largest benefit to our sales performance and our approach will be measured in order to keep sales disruption to a minimum.
+DEBUG	CONTEXT:  through the end of this fiscal year we are focusing on finalizing the transformation of our recently acquired California stores while starting the transformation of approximately 80 more stores that will be
+DEBUG	transcribing 16.66 seconds from 243.34
+DEBUG	>>>>COMPLETE NOW: (np.float64(255.35999999999999), np.float64(257.46), ' completed in Q1 of')
+DEBUG	INCOMPLETE: (np.float64(257.46), np.float64(259.97999999999996), ' FY21. Moving on to the...')
+DEBUG	--- last segment not within commited area
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.66
+255360 257460  completed in Q1 of
+DEBUG	PROMPT:  prioritize markets that we expect will drive the largest benefit to our sales performance and our approach will be measured in order to keep sales disruption to a minimum.
+DEBUG	CONTEXT:  through the end of this fiscal year we are focusing on finalizing the transformation of our recently acquired California stores while starting the transformation of approximately 80 more stores that will be completed in Q1 of
+DEBUG	transcribing 18.66 seconds from 243.34
+DEBUG	>>>>COMPLETE NOW: (np.float64(257.46), np.float64(259.88), ' FY21. Moving on to')
+DEBUG	INCOMPLETE: (np.float64(259.88), np.float64(261.97999999999996), " the performance of the stores we've completed so far.")
+DEBUG	--- segment chunked at 258.26
+DEBUG	chunking segment
+DEBUG	len of buffer now: 3.74
+257460 259880  FY21. Moving on to
+DEBUG	PROMPT:  finalizing the transformation of our recently acquired California stores while starting the transformation of approximately 80 more stores that will be completed in Q1 of FY21.
+DEBUG	CONTEXT:  Moving on to
+DEBUG	transcribing 5.74 seconds from 258.26
+DEBUG	>>>>COMPLETE NOW: (np.float64(259.88), np.float64(261.82), " the performance of the stores we've completed so")
+DEBUG	INCOMPLETE: (np.float64(261.82), np.float64(263.98), ' far to help provide some additional...')
+DEBUG	len of buffer now: 5.74
+259880 261820  the performance of the stores we've completed so
+DEBUG	PROMPT:  finalizing the transformation of our recently acquired California stores while starting the transformation of approximately 80 more stores that will be completed in Q1 of FY21.
+DEBUG	CONTEXT:  Moving on to the performance of the stores we've completed so
+DEBUG	transcribing 7.74 seconds from 258.26
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(261.8), np.float64(265.98), ' far, to help provide some additional granularity, we separated out...')
+DEBUG	len of buffer now: 7.74
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  finalizing the transformation of our recently acquired California stores while starting the transformation of approximately 80 more stores that will be completed in Q1 of FY21.
+DEBUG	CONTEXT:  Moving on to the performance of the stores we've completed so
+DEBUG	transcribing 9.74 seconds from 258.26
+DEBUG	>>>>COMPLETE NOW: (np.float64(261.8), np.float64(265.82), ' far, to help provide some additional granularity, we separated')
+DEBUG	INCOMPLETE: (np.float64(265.82), np.float64(267.98), ' out how rebranded stores have performed.')
+DEBUG	len of buffer now: 9.74
+261820 265820  far, to help provide some additional granularity, we separated
+DEBUG	PROMPT:  finalizing the transformation of our recently acquired California stores while starting the transformation of approximately 80 more stores that will be completed in Q1 of FY21.
+DEBUG	CONTEXT:  Moving on to the performance of the stores we've completed so far, to help provide some additional granularity, we separated
+DEBUG	transcribing 11.74 seconds from 258.26
+DEBUG	>>>>COMPLETE NOW: (np.float64(265.82), np.float64(267.82), ' out how rebranded stores have')
+DEBUG	INCOMPLETE: (np.float64(267.82), np.float64(269.98), ' performed versus the stores that have just been.')
+DEBUG	len of buffer now: 11.74
+265820 267820  out how rebranded stores have
+DEBUG	PROMPT:  finalizing the transformation of our recently acquired California stores while starting the transformation of approximately 80 more stores that will be completed in Q1 of FY21.
+DEBUG	CONTEXT:  Moving on to the performance of the stores we've completed so far, to help provide some additional granularity, we separated out how rebranded stores have
+DEBUG	transcribing 13.74 seconds from 258.26
+DEBUG	>>>>COMPLETE NOW: (np.float64(267.82), np.float64(269.82), ' performed versus the stores that have just')
+DEBUG	INCOMPLETE: (np.float64(269.82), np.float64(271.94), ' been re-imaged. Importantly,')
+DEBUG	len of buffer now: 13.74
+267820 269820  performed versus the stores that have just
+DEBUG	PROMPT:  finalizing the transformation of our recently acquired California stores while starting the transformation of approximately 80 more stores that will be completed in Q1 of FY21.
+DEBUG	CONTEXT:  Moving on to the performance of the stores we've completed so far, to help provide some additional granularity, we separated out how rebranded stores have performed versus the stores that have just
+DEBUG	transcribing 15.74 seconds from 258.26
+DEBUG	>>>>COMPLETE NOW: (np.float64(269.82), np.float64(271.96), ' been re-imaged. Importantly,')
+DEBUG	INCOMPLETE: (np.float64(272.32), np.float64(273.98), ' this data only includes...')
+DEBUG	--- segment chunked at 270.78
+DEBUG	chunking segment
+DEBUG	len of buffer now: 3.22
+269820 271960  been re-imaged. Importantly,
+DEBUG	PROMPT:  stores we've completed so far, to help provide some additional granularity, we separated out how rebranded stores have performed versus the stores that have just been re-imaged.
+DEBUG	CONTEXT:  Importantly,
+DEBUG	transcribing 5.22 seconds from 270.78
+DEBUG	>>>>COMPLETE NOW: (np.float64(272.28), np.float64(273.64), ' this data only')
+DEBUG	INCOMPLETE: (np.float64(273.64), np.float64(275.97999999999996), ' includes comp stores that have had a full portfolio.')
+DEBUG	len of buffer now: 5.22
+272280 273640  this data only
+DEBUG	PROMPT:  stores we've completed so far, to help provide some additional granularity, we separated out how rebranded stores have performed versus the stores that have just been re-imaged.
+DEBUG	CONTEXT:  Importantly, this data only
+DEBUG	transcribing 7.22 seconds from 270.78
+DEBUG	>>>>COMPLETE NOW: (np.float64(273.61999999999995), np.float64(275.67999999999995), ' includes comp stores that have had a full')
+DEBUG	INCOMPLETE: (np.float64(275.67999999999995), np.float64(277.97999999999996), ' quarter of performance following the completion of the year.')
+DEBUG	len of buffer now: 7.22
+273640 275680  includes comp stores that have had a full
+DEBUG	PROMPT:  stores we've completed so far, to help provide some additional granularity, we separated out how rebranded stores have performed versus the stores that have just been re-imaged.
+DEBUG	CONTEXT:  Importantly, this data only includes comp stores that have had a full
+DEBUG	transcribing 9.22 seconds from 270.78
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(275.67999999999995), np.float64(279.26), ' order of performance following the completion of their transformation.')
+DEBUG	len of buffer now: 9.22
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  stores we've completed so far, to help provide some additional granularity, we separated out how rebranded stores have performed versus the stores that have just been re-imaged.
+DEBUG	CONTEXT:  Importantly, this data only includes comp stores that have had a full
+DEBUG	transcribing 11.22 seconds from 270.78
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(275.67999999999995), np.float64(281.32), ' quarter of performance following the completion of their transformation. This is how we will speak.')
+DEBUG	len of buffer now: 11.22
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  stores we've completed so far, to help provide some additional granularity, we separated out how rebranded stores have performed versus the stores that have just been re-imaged.
+DEBUG	CONTEXT:  Importantly, this data only includes comp stores that have had a full
+DEBUG	transcribing 13.22 seconds from 270.78
+DEBUG	>>>>COMPLETE NOW: (np.float64(275.65999999999997), np.float64(281.02), ' quarter of performance following the completion of their transformation. This is how we will')
+DEBUG	INCOMPLETE: (np.float64(281.02), np.float64(283.11999999999995), ' speak to this performance.')
+DEBUG	len of buffer now: 13.22
+275680 281020  quarter of performance following the completion of their transformation. This is how we will
+DEBUG	PROMPT:  stores we've completed so far, to help provide some additional granularity, we separated out how rebranded stores have performed versus the stores that have just been re-imaged.
+DEBUG	CONTEXT:  Importantly, this data only includes comp stores that have had a full quarter of performance following the completion of their transformation. This is how we will
+DEBUG	transcribing 15.22 seconds from 270.78
+DEBUG	>>>>COMPLETE NOW: (np.float64(281.02), np.float64(282.61999999999995), ' speak to this')
+DEBUG	INCOMPLETE: (np.float64(282.61999999999995), np.float64(285.97999999999996), ' performance of our transformation.')
+DEBUG	--- segment chunked at 279.28
+DEBUG	chunking segment
+DEBUG	len of buffer now: 6.72
+281020 282620  speak to this
+DEBUG	PROMPT:  that have just been re-imaged. Importantly, this data only includes comp stores that have had a full quarter of performance following the completion of their transformation.
+DEBUG	CONTEXT:  This is how we will speak to this
+DEBUG	transcribing 8.72 seconds from 279.28
+DEBUG	>>>>COMPLETE NOW: (np.float64(282.59999999999997), np.float64(285.64), ' performance of our')
+DEBUG	INCOMPLETE: (np.float64(285.64), np.float64(287.52), ' transformed stores moving forward.')
+DEBUG	len of buffer now: 8.72
+282620 285640  performance of our
+DEBUG	PROMPT:  that have just been re-imaged. Importantly, this data only includes comp stores that have had a full quarter of performance following the completion of their transformation.
+DEBUG	CONTEXT:  This is how we will speak to this performance of our
+DEBUG	transcribing 10.72 seconds from 279.28
+DEBUG	>>>>COMPLETE NOW: (np.float64(285.64), np.float64(287.52), ' transformed stores moving forward.')
+DEBUG	INCOMPLETE: (None, None, '')
+DEBUG	len of buffer now: 10.72
+285640 287520  transformed stores moving forward.
+DEBUG	PROMPT:  that have just been re-imaged. Importantly, this data only includes comp stores that have had a full quarter of performance following the completion of their transformation.
+DEBUG	CONTEXT:  This is how we will speak to this performance of our transformed stores moving forward.
+DEBUG	transcribing 12.72 seconds from 279.28
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (np.float64(288.46), np.float64(291.97999999999996), ' As you can see, and in line with our expectations, we see...')
+DEBUG	len of buffer now: 12.72
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  that have just been re-imaged. Importantly, this data only includes comp stores that have had a full quarter of performance following the completion of their transformation.
+DEBUG	CONTEXT:  This is how we will speak to this performance of our transformed stores moving forward.
+DEBUG	transcribing 14.72 seconds from 279.28
+DEBUG	>>>>COMPLETE NOW: (np.float64(288.44), np.float64(291.84), ' As you can see, and in line with our expectations, we')
+DEBUG	INCOMPLETE: (np.float64(291.84), np.float64(293.44), ' see a significant sales lift.')
+DEBUG	len of buffer now: 14.72
+288440 291840  As you can see, and in line with our expectations, we
+DEBUG	PROMPT:  that have just been re-imaged. Importantly, this data only includes comp stores that have had a full quarter of performance following the completion of their transformation.
+DEBUG	CONTEXT:  This is how we will speak to this performance of our transformed stores moving forward. As you can see, and in line with our expectations, we
+DEBUG	transcribing 16.72 seconds from 279.28
+DEBUG	>>>>COMPLETE NOW: (np.float64(291.84), np.float64(293.11999999999995), ' see a significant sales')
+DEBUG	INCOMPLETE: (np.float64(293.11999999999995), np.float64(294.94), ' lift when we rebrand stores.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.72
+291840 293120  see a significant sales
+DEBUG	PROMPT:  that have just been re-imaged. Importantly, this data only includes comp stores that have had a full quarter of performance following the completion of their transformation.
+DEBUG	CONTEXT:  This is how we will speak to this performance of our transformed stores moving forward. As you can see, and in line with our expectations, we see a significant sales
+DEBUG	transcribing 18.72 seconds from 279.28
+DEBUG	>>>>COMPLETE NOW: (np.float64(293.11999999999995), np.float64(294.91999999999996), ' lift when we rebrand stores.')
+DEBUG	INCOMPLETE: (np.float64(295.28), np.float64(297.97999999999996), ' This shift optimizes our brand awareness.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 18.72
+293120 294920  lift when we rebrand stores.
+DEBUG	PROMPT:  that have just been re-imaged. Importantly, this data only includes comp stores that have had a full quarter of performance following the completion of their transformation.
+DEBUG	CONTEXT:  This is how we will speak to this performance of our transformed stores moving forward. As you can see, and in line with our expectations, we see a significant sales lift when we rebrand stores.
+DEBUG	transcribing 20.72 seconds from 279.28
+DEBUG	>>>>COMPLETE NOW: (np.float64(295.35999999999996), np.float64(297.79999999999995), ' This shift optimizes our brand')
+DEBUG	INCOMPLETE: (np.float64(297.79999999999995), np.float64(299.96), ' awareness and increases our tire sales.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 20.72
+295360 297800  This shift optimizes our brand

@@ -1,0 +1,76 @@
+app_type: ImageGen
+task_id: imagegen1_u0
+start_time: 5.122585
+end_time: 442.893235
+Task imagegen1_u0 execution time: 437.7534 seconds
+
+Execution times for each node:
+Node imagegen1_u0_0:
+  Execution time: 41.2047 seconds
+  Success: False
+Node imagegen1_u0_1:
+  Execution time: 19.7276 seconds
+  Success: True
+Node imagegen1_u0_2:
+  Execution time: 18.5217 seconds
+  Success: True
+Node imagegen1_u0_3:
+  Execution time: 18.3198 seconds
+  Success: True
+Node imagegen1_u0_4:
+  Execution time: 18.3585 seconds
+  Success: True
+Node imagegen1_u0_5:
+  Execution time: 19.6816 seconds
+  Success: True
+Node imagegen1_u0_6:
+  Execution time: 19.6006 seconds
+  Success: True
+Node imagegen1_u0_7:
+  Execution time: 20.2058 seconds
+  Success: True
+Node imagegen1_u0_8:
+  Execution time: 20.1630 seconds
+  Success: True
+Node imagegen1_u0_9:
+  Execution time: 19.7776 seconds
+  Success: True
+Node imagegen1_u0_10:
+  Execution time: 20.0010 seconds
+  Success: True
+Node imagegen1_u0_11:
+  Execution time: 20.4707 seconds
+  Success: True
+Node imagegen1_u0_12:
+  Execution time: 20.3581 seconds
+  Success: True
+Node imagegen1_u0_13:
+  Execution time: 20.1156 seconds
+  Success: True
+Node imagegen1_u0_14:
+  Execution time: 20.2893 seconds
+  Success: True
+Node imagegen1_u0_15:
+  Execution time: 19.6648 seconds
+  Success: True
+Node imagegen1_u0_16:
+  Execution time: 20.2080 seconds
+  Success: True
+Node imagegen1_u0_17:
+  Execution time: 19.9815 seconds
+  Success: True
+Node imagegen1_u0_18:
+  Execution time: 20.1907 seconds
+  Success: True
+Node imagegen1_u0_19:
+  Execution time: 20.4962 seconds
+  Success: True
+Node imagegen1_u0_20:
+  Execution time: 20.4164 seconds
+  Success: True
+Node imagegen1_u0_21:
+  Execution time: 0.0001 seconds
+  Success: True
+
+Task imagegen1_u0 results:
+[None, {'status': 'image_gen_complete', 'total time': 19.72745680809021}, {'status': 'image_gen_complete', 'total time': 18.521506547927856}, {'status': 'image_gen_complete', 'total time': 18.31942844390869}, {'status': 'image_gen_complete', 'total time': 18.35838007926941}, {'status': 'image_gen_complete', 'total time': 19.681430339813232}, {'status': 'image_gen_complete', 'total time': 19.600521564483643}, {'status': 'image_gen_complete', 'total time': 20.20570206642151}, {'status': 'image_gen_complete', 'total time': 20.16291379928589}, {'status': 'image_gen_complete', 'total time': 19.77750253677368}, {'status': 'image_gen_complete', 'total time': 20.000842571258545}, {'status': 'image_gen_complete', 'total time': 20.470611333847046}, {'status': 'image_gen_complete', 'total time': 20.358007192611694}, {'status': 'image_gen_complete', 'total time': 20.115456104278564}, {'status': 'image_gen_complete', 'total time': 20.289164543151855}, {'status': 'image_gen_complete', 'total time': 19.66469669342041}, {'status': 'image_gen_complete', 'total time': 20.207967042922974}, {'status': 'image_gen_complete', 'total time': 19.981423139572144}, {'status': 'image_gen_complete', 'total time': 20.190635442733765}, {'status': 'image_gen_complete', 'total time': 20.49612832069397}, {'status': 'image_gen_complete', 'total time': 20.416290521621704}, {'status': 'cleanup_complete'}]

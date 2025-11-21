@@ -1,0 +1,166 @@
+app_type: Chatbot
+task_id: chat1_u0
+start_time: 5.55465
+end_time: 474.592396
+Task chat1_u0 execution time: 468.9769 seconds
+
+Execution times for each node:
+Node chat1_u0_0:
+  Execution time: 40.1608 seconds
+  Success: True
+Node chat1_u0_1:
+  Execution time: 2.6697 seconds
+  Success: True
+Node chat1_u0_2:
+  Execution time: 7.3552 seconds
+  Success: True
+Node chat1_u0_3:
+  Execution time: 8.5596 seconds
+  Success: True
+Node chat1_u0_4:
+  Execution time: 8.9259 seconds
+  Success: True
+Node chat1_u0_5:
+  Execution time: 9.0249 seconds
+  Success: True
+Node chat1_u0_6:
+  Execution time: 8.7198 seconds
+  Success: True
+Node chat1_u0_7:
+  Execution time: 8.6054 seconds
+  Success: True
+Node chat1_u0_8:
+  Execution time: 9.4195 seconds
+  Success: True
+Node chat1_u0_9:
+  Execution time: 8.4803 seconds
+  Success: True
+Node chat1_u0_10:
+  Execution time: 8.7550 seconds
+  Success: True
+Node chat1_u0_11:
+  Execution time: 8.7467 seconds
+  Success: True
+Node chat1_u0_12:
+  Execution time: 8.6122 seconds
+  Success: True
+Node chat1_u0_13:
+  Execution time: 9.1469 seconds
+  Success: True
+Node chat1_u0_14:
+  Execution time: 9.2359 seconds
+  Success: True
+Node chat1_u0_15:
+  Execution time: 9.0431 seconds
+  Success: True
+Node chat1_u0_16:
+  Execution time: 8.7417 seconds
+  Success: True
+Node chat1_u0_17:
+  Execution time: 1.0718 seconds
+  Success: True
+Node chat1_u0_18:
+  Execution time: 9.1080 seconds
+  Success: True
+Node chat1_u0_19:
+  Execution time: 8.9421 seconds
+  Success: True
+Node chat1_u0_20:
+  Execution time: 9.3425 seconds
+  Success: True
+Node chat1_u0_21:
+  Execution time: 6.7200 seconds
+  Success: True
+Node chat1_u0_22:
+  Execution time: 9.0767 seconds
+  Success: True
+Node chat1_u0_23:
+  Execution time: 9.2411 seconds
+  Success: True
+Node chat1_u0_24:
+  Execution time: 9.0312 seconds
+  Success: True
+Node chat1_u0_25:
+  Execution time: 8.8579 seconds
+  Success: True
+Node chat1_u0_26:
+  Execution time: 8.9755 seconds
+  Success: True
+Node chat1_u0_27:
+  Execution time: 8.7328 seconds
+  Success: True
+Node chat1_u0_28:
+  Execution time: 9.2973 seconds
+  Success: True
+Node chat1_u0_29:
+  Execution time: 9.2825 seconds
+  Success: True
+Node chat1_u0_30:
+  Execution time: 9.0856 seconds
+  Success: True
+Node chat1_u0_31:
+  Execution time: 8.9657 seconds
+  Success: True
+Node chat1_u0_32:
+  Execution time: 9.2366 seconds
+  Success: True
+Node chat1_u0_33:
+  Execution time: 5.7463 seconds
+  Success: True
+Node chat1_u0_34:
+  Execution time: 9.0518 seconds
+  Success: True
+Node chat1_u0_35:
+  Execution time: 8.6258 seconds
+  Success: True
+Node chat1_u0_36:
+  Execution time: 5.7700 seconds
+  Success: True
+Node chat1_u0_37:
+  Execution time: 8.8847 seconds
+  Success: True
+Node chat1_u0_38:
+  Execution time: 9.4295 seconds
+  Success: True
+Node chat1_u0_39:
+  Execution time: 9.1619 seconds
+  Success: True
+Node chat1_u0_40:
+  Execution time: 9.3605 seconds
+  Success: True
+Node chat1_u0_41:
+  Execution time: 9.2665 seconds
+  Success: True
+Node chat1_u0_42:
+  Execution time: 9.3912 seconds
+  Success: True
+Node chat1_u0_43:
+  Execution time: 9.2733 seconds
+  Success: True
+Node chat1_u0_44:
+  Execution time: 9.3039 seconds
+  Success: True
+Node chat1_u0_45:
+  Execution time: 9.2806 seconds
+  Success: True
+Node chat1_u0_46:
+  Execution time: 8.9441 seconds
+  Success: True
+Node chat1_u0_47:
+  Execution time: 9.0377 seconds
+  Success: True
+Node chat1_u0_48:
+  Execution time: 9.1564 seconds
+  Success: True
+Node chat1_u0_49:
+  Execution time: 9.1353 seconds
+  Success: True
+Node chat1_u0_50:
+  Execution time: 9.2676 seconds
+  Success: True
+Node chat1_u0_51:
+  Execution time: 1.7198 seconds
+  Success: True
+
+Task chat1_u0 results:
+[{'status': 'setup_complete', 'config': {'model': '/home/cc/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf', 'device': 'gpu', 'mps': 100, 'api_port': 8080, 'llamacpp_path': '/home/cc/ConsumerBench/inference_backends/llama.cpp', 'dataset': 'lmsys/lmsys-chat-1m', 'num_requests': 50}}, {'status': 'chatbot_complete', 'ttft': 0.04356026649475098, 'tpot': 0.0159140225612756, 'itl': 0.0161780241763953}, {'status': 'chatbot_complete', 'ttft': 0.08855175971984863, 'tpot': 0.033793765445088234, 'itl': 0.03420563409494799}, {'status': 'chatbot_complete', 'ttft': 0.0608065128326416, 'tpot': 0.039525374700856764, 'itl': 0.039808195690776024}, {'status': 'chatbot_complete', 'ttft': 0.05443716049194336, 'tpot': 0.04125932094662688, 'itl': 0.04151251704193825}, {'status': 'chatbot_complete', 'ttft': 0.06963586807250977, 'tpot': 0.04165081645167151, 'itl': 0.0419747042101483}, {'status': 'chatbot_complete', 'ttft': 0.06013798713684082, 'tpot': 0.04027488952459291, 'itl': 0.04055460109267124}, {'status': 'chatbot_complete', 'ttft': 0.06682300567626953, 'tpot': 0.03971166610717773, 'itl': 0.040022470784741776}, {'status': 'chatbot_complete', 'ttft': 0.04857921600341797, 'tpot': 0.04358264457347781, 'itl': 0.043808594415354174}, {'status': 'chatbot_complete', 'ttft': 0.07733416557312012, 'tpot': 0.039079006328139196, 'itl': 0.039438700121502544}, {'status': 'chatbot_complete', 'ttft': 0.04967093467712402, 'tpot': 0.040485571706017784, 'itl': 0.0407165993091672}, {'status': 'chatbot_complete', 'ttft': 0.05258369445800781, 'tpot': 0.040434328345365304, 'itl': 0.0406789036684258}, {'status': 'chatbot_complete', 'ttft': 0.05489516258239746, 'tpot': 0.03979762653971827, 'itl': 0.04005295287731082}, {'status': 'chatbot_complete', 'ttft': 0.05024313926696777, 'tpot': 0.04230723048365393, 'itl': 0.042540919503500293}, {'status': 'chatbot_complete', 'ttft': 0.047698259353637695, 'tpot': 0.04273250047550645, 'itl': 0.04295435284459314}, {'status': 'chatbot_complete', 'ttft': 0.05353379249572754, 'tpot': 0.0418085353319035, 'itl': 0.04205752971560456}, {'status': 'chatbot_complete', 'ttft': 0.06285500526428223, 'tpot': 0.04036379525827807, 'itl': 0.040656144119972405}, {'status': 'chatbot_complete', 'ttft': 0.06218290328979492, 'tpot': 0.04805544444492885, 'itl': 0.051016535077776225}, {'status': 'chatbot_complete', 'ttft': 0.3233795166015625, 'tpot': 0.040854995195255726, 'itl': 0.04235908597014671}, {'status': 'chatbot_complete', 'ttft': 0.05620980262756348, 'tpot': 0.04132655942162802, 'itl': 0.041588000364081806}, {'status': 'chatbot_complete', 'ttft': 0.19762110710144043, 'tpot': 0.04253020730129508, 'itl': 0.04344937524130178}, {'status': 'chatbot_complete', 'ttft': 0.13054251670837402, 'tpot': 0.04250746850044496, 'itl': 0.04334967828566028}, {'status': 'chatbot_complete', 'ttft': 0.07856059074401855, 'tpot': 0.04184867725815884, 'itl': 0.042214075354642645}, {'status': 'chatbot_complete', 'ttft': 0.06644654273986816, 'tpot': 0.04266913990641749, 'itl': 0.04297819359357967}, {'status': 'chatbot_complete', 'ttft': 0.11232447624206543, 'tpot': 0.04148017084875772, 'itl': 0.042002610273139424}, {'status': 'chatbot_complete', 'ttft': 0.07121634483337402, 'tpot': 0.04086584712183753, 'itl': 0.04119708593501601}, {'status': 'chatbot_complete', 'ttft': 0.07222294807434082, 'tpot': 0.04140643297239791, 'itl': 0.041742353661115776}, {'status': 'chatbot_complete', 'ttft': 0.052890777587890625, 'tpot': 0.04036884529646053, 'itl': 0.04061484891314839}, {'status': 'chatbot_complete', 'ttft': 0.05109691619873047, 'tpot': 0.04300260765607967, 'itl': 0.0432402677314226}, {'status': 'chatbot_complete', 'ttft': 0.07037186622619629, 'tpot': 0.042844873250916946, 'itl': 0.043172184256620186}, {'status': 'chatbot_complete', 'ttft': 0.08913421630859375, 'tpot': 0.041841541334640145, 'itl': 0.042256119084912676}, {'status': 'chatbot_complete', 'ttft': 0.06655573844909668, 'tpot': 0.04138859926268112, 'itl': 0.041698160836862966}, {'status': 'chatbot_complete', 'ttft': 0.06489205360412598, 'tpot': 0.042655818406925644, 'itl': 0.04295764191206111}, {'status': 'chatbot_complete', 'ttft': 0.13268637657165527, 'tpot': 0.041269837056889254, 'itl': 0.04224547217873966}, {'status': 'chatbot_complete', 'ttft': 0.04949784278869629, 'tpot': 0.041867578861325284, 'itl': 0.04209780138592387}, {'status': 'chatbot_complete', 'ttft': 0.054314613342285156, 'tpot': 0.03986478295437125, 'itl': 0.04011740906294002}, {'status': 'chatbot_complete', 'ttft': 0.05096101760864258, 'tpot': 0.04144006708393926, 'itl': 0.04180934982023377}, {'status': 'chatbot_complete', 'ttft': 0.06969738006591797, 'tpot': 0.04099807517473088, 'itl': 0.04132224903550259}, {'status': 'chatbot_complete', 'ttft': 0.08212423324584961, 'tpot': 0.043472725846046625, 'itl': 0.043854699023934296}, {'status': 'chatbot_complete', 'ttft': 0.049958229064941406, 'tpot': 0.042379072100617164, 'itl': 0.04261143595673317}, {'status': 'chatbot_complete', 'ttft': 0.13702726364135742, 'tpot': 0.04289775892745617, 'itl': 0.04353509503741597}, {'status': 'chatbot_complete', 'ttft': 0.04869389533996582, 'tpot': 0.042869943796202195, 'itl': 0.04309642703034157}, {'status': 'chatbot_complete', 'ttft': 0.06660652160644531, 'tpot': 0.04336591654045637, 'itl': 0.043675714315370075}, {'status': 'chatbot_complete', 'ttft': 0.05379438400268555, 'tpot': 0.04287845700286155, 'itl': 0.04312866344008335}, {'status': 'chatbot_complete', 'ttft': 0.0806419849395752, 'tpot': 0.04289537141489428, 'itl': 0.043270450414613235}, {'status': 'chatbot_complete', 'ttft': 0.0623621940612793, 'tpot': 0.04287265622338583, 'itl': 0.04316271293994992}, {'status': 'chatbot_complete', 'ttft': 0.06444144248962402, 'tpot': 0.04129746348358864, 'itl': 0.041597191123075264}, {'status': 'chatbot_complete', 'ttft': 0.05333971977233887, 'tpot': 0.04178400594134663, 'itl': 0.04203209766121798}, {'status': 'chatbot_complete', 'ttft': 0.045412302017211914, 'tpot': 0.042373091675514396, 'itl': 0.04258431168489678}, {'status': 'chatbot_complete', 'ttft': 0.05402493476867676, 'tpot': 0.04223694468653479, 'itl': 0.04248822345290073}, {'status': 'chatbot_complete', 'ttft': 0.05691170692443848, 'tpot': 0.042838002360144324, 'itl': 0.043102707973746365}, {'status': 'cleanup_complete'}]

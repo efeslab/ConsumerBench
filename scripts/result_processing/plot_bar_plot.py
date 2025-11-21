@@ -48,6 +48,7 @@ def plot_performance(gpu_folder_path, cpu_folder_path, save_path="scripts/plots/
     livecaption_slo_cpu = 100 * (1 - (live_caption_cpu_data['time'] > SLOs['livecaption']).sum() / len(live_caption_cpu_data))
 
     gpu_latency_values = [chatbot_ttft_gpu, chatbot_tpot_gpu, imagegen_latency_gpu, livecaption_latency_gpu]
+    print("gpu_latency_values: ", gpu_latency_values)
     gpu_latency_stds = [chat_bot_gpu_data['ttft'].std() / SLOs['chatbot-ttft'],
                         chat_bot_gpu_data['tpot'].std() / SLOs['chatbot-tpot'],
                         image_gen_gpu_data['total time'].std() / SLOs['imagegen'],
@@ -56,6 +57,8 @@ def plot_performance(gpu_folder_path, cpu_folder_path, save_path="scripts/plots/
     gpu_latency_hatch = '//'
 
     cpu_latency_values = [chatbot_ttft_cpu, chatbot_tpot_cpu, imagegen_latency_cpu, livecaption_latency_cpu]
+    print("cpu_latency_values: ", cpu_latency_values)
+    
     cpu_latency_stds = [chat_bot_cpu_data['ttft'].std() / SLOs['chatbot-ttft'],
                         chat_bot_cpu_data['tpot'].std() / SLOs['chatbot-tpot'],
                         image_gen_cpu_data['total time'].std() / SLOs['imagegen'],
