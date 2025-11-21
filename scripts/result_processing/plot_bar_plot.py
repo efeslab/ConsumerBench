@@ -2,6 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 import numpy as np
+import argparse
+
 
 # Global font size
 plt.rcParams.update({'font.size': 24})
@@ -280,8 +282,10 @@ def plot_performance_bar_plots(folder_path):
     # plt.show()
     print(f"Plot saved to {plot_path}")
 
-# Example usage:
-plot_performance(
-    'scripts/plots/bar_plots_gpu_single_app_sampling',
-    'scripts/plots/bar_plots_cpu_single_app_sampling'
-    )
+if __name__ == "__main__":
+    argparser = argparse.ArgumentParser()
+    argparser.add_argument('--gpu_folder_path', type=str, required=True)
+    argparser.add_argument('--cpu_folder_path', type=str, required=True)
+    argparser.add_argument('--save_path', type=str, required=True)
+    args = argparser.parse_args()
+    plot_performance(args.gpu_folder_path, args.cpu_folder_path, args.save_path)
