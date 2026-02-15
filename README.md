@@ -1,8 +1,14 @@
-# ConsumerBench
+# ConsumerBench: Benchmarking Generative AI Applications on End-User Devices
 
-## 📑 Overview
+<div align="center">
 
-ConsumerBench is a comprehensive benchmarking framework that evaluates the runtime performance of user-defined GenAI applications under realistic conditions on end-user devices.
+**ConsumerBench is a comprehensive benchmarking framework that evaluates the runtime performance of user-defined GenAI applications under realistic conditions on end-user devices.**
+  
+[![Website](https://img.shields.io/badge/Website-consumerbench.github.io-blue?logo=google-chrome)](https://consumerbench.github.io/)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.17538-red?logo=arxiv)](https://arxiv.org/abs/2506.17538)
+[![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
+  
+</div>
 
 ## 🚀 Benchmark Setup
 
@@ -121,3 +127,16 @@ To modify Service Level Objectives (SLOs):
 ### End-to-End User Workflow
 - **Greedy allocation:** [`configs/workflow_content_creation.yml`](configs/workflow_content_creation.yml)
 - **GPU partitioning:** [`configs/workflow_content_creation_mps.yml`](configs/workflow_content_creation_mps.yml)
+
+## 🌟 Citation
+
+If you use ConsumerBench in your research, please cite:
+
+```bibtex
+@article{gu2025consumerbench,
+  title={ConsumerBench: Benchmarking Generative AI Applications on End-User Devices},
+  author={Gu, Yile and Kadekodi, Rohan and Nguyen, Hoang and Nguyen, Keisuke and Liu, Yiyu and Kasikci, Baris,
+  journal={arXiv preprint arXiv:2506.17538},
+  year={2025}
+}
+```
