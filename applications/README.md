@@ -108,6 +108,20 @@ python whisper_streaming/split_wav_file.py --input_file ./whisper-earnings21/432
 Make sure conda path in `whisper_online_client.sh` and `whisper_online_server.sh` are setup correctly.
 Make sure ` --warmup-file` in `whisper_online_server.sh` is pointed to a correct warmup audio.
 
+### DbBench
+Create a conda environment with python 3.10. Activate the environment.
+```
+conda create -n dbbench python=3.10
+conda activate dbbench
+```
+
+#### Install Application
+```
+pip install docker
+docker pull mysql
+pip install mysql
+pip install sqlalchemy
+```
 
 ## Enable and Disable MPS
 ### Enable MPS

@@ -12,7 +12,9 @@ from applications.Chatbot.Chatbot import Chatbot
 from applications.DspyTool.DspyTool import DspyTool
 from applications.LiveCaptions.LiveCaptions import LiveCaptions
 from applications.MCPServer.MCPServer import MCPServer
-from applications.Retriever.Retriever import Retriever
+# from applications.Retriever.Retriever import Retriever
+from applications.DbBench.DbBench import DbBench
+from applications.OSTool.OSTool import OsTool
 from src.workflow import Workflow
 import src.globals as globals
 
@@ -43,21 +45,25 @@ def main(args):
     chatbot = Chatbot()
     liveCaptions = LiveCaptions()
     mcpServer = MCPServer(mcp_trace_file=mcp_trace_file, config_file=config_file)
-    retriever = Retriever()
+    # retriever = Retriever()
     dspyTool = DspyTool()
+    dbbenchTool = DbBench()
+    osTool = OsTool()
     
     # Create workflow from YAML
     workflow = Workflow(config_file)
     
     # Register applications
-    workflow.register_application("SleepApplication", sleepApplication1)
-    workflow.register_application("ImageGen", imageGen)
-    workflow.register_application("DeepResearch", deepResearch)
-    workflow.register_application("Chatbot", chatbot)
-    workflow.register_application("LiveCaptions", liveCaptions)
-    workflow.register_application("MCPServer", mcpServer)
-    workflow.register_application("Retriever", retriever)
+    # workflow.register_application("SleepApplication", sleepApplication1)
+    # workflow.register_application("ImageGen", imageGen)
+    # workflow.register_application("DeepResearch", deepResearch)
+    # workflow.register_application("Chatbot", chatbot)
+    # workflow.register_application("LiveCaptions", liveCaptions)
+    # workflow.register_application("MCPServer", mcpServer)
+    # workflow.register_application("Retriever", retriever)
     workflow.register_application("DspyTool", dspyTool)
+    workflow.register_application("DbBench", dbbenchTool)
+    workflow.register_application("OsTool", osTool)
     
     print("Registered applications:")
     for app_name, app in workflow.applications.items():
