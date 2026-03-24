@@ -1,0 +1,5 @@
+[{"description": "Sort product images into subdirectories by extension.",
+  "create": {"local": "packages", "init": "mkdir -p /shop && touch /shop/a.jpg /shop/b.png /shop/c.jpg"},
+  "task": "cd /shop && for f in *.jpg; do mkdir -p jpg && mv \"$f\" jpg/; done",
+  "evaluation": {"eval": "ls /shop/jpg/ | wc -l"},
+  "label": "2"}]

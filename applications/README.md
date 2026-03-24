@@ -123,6 +123,22 @@ pip install mysql
 pip install sqlalchemy
 ```
 
+### OSTool
+#### Build Docker Images 
+```
+docker build -t local-os/default \
+  -f applications/OSTool/res/dockerfiles/default \
+  applications/OSTool/res/dockerfiles
+
+docker build -t local-os/packages \
+  -f applications/OSTool/res/dockerfiles/packages \
+  applications/OSTool/res/dockerfiles
+
+docker build -t local-os/ubuntu \
+  -f applications/OSTool/res/dockerfiles/ubuntu \
+  applications/OSTool/res/dockerfiles
+```
+
 ## Enable and Disable MPS
 ### Enable MPS
 
