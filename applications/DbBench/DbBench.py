@@ -14,14 +14,6 @@ sys.path.append(repo_dir)
 from applications.application import Application
 
 class DbBench(Application):
-    """
-    Application to benchmark database query performance.
-    Config should include:
-      - db_connection_string: str, connection string for the database
-      - query: str, the SQL query to execute
-      - num_runs: int, how many times to run the query for benchmarking
-    """
-
     def __init__(self):
         super().__init__()
         self.tool = None
@@ -30,13 +22,6 @@ class DbBench(Application):
         self.container = None
         self.dataset = []
     
-    # def _call_tool(self, tool: Any, tool_args: List[Any], tool_kwargs: Dict[str, Any]):
-    #     if callable(tool):
-    #         return tool(*tool_args, **tool_kwargs)
-    #     if hasattr(tool, "forward") and callable(tool.forward):
-    #         return tool.forward(*tool_args, **tool_kwargs)
-    #     raise TypeError("Resolved tool is not callable and has no forward(...) method.")
-
     def run_setup(self, *args, **kwargs):
         print("DbBench setup")
         tool_kwargs = self.config.get("tool_kwargs", self.config)
@@ -61,7 +46,6 @@ class DbBench(Application):
             self.dataset.append((inp, ans))
 
         self.container = Container()
-
         return {"status": "setup_complete", "config": self.config}
 
     def run_cleanup(self, *args, **kwargs):
@@ -70,18 +54,6 @@ class DbBench(Application):
 
         # remove the database 
         container = self.container
-        # if entry["type"][0] in ("INSERT", "DELETE", "UPDATE"):
-        #     columns = ",".join(
-        #         [
-        #             f"`{column['name']}`"
-        #             for column in entry["table"]["table_info"]["columns"]
-        #         ]
-        #     )
-        #     md5_query = (
-        #         f"select md5(group_concat(rowhash order by rowhash)) as hash "
-        #         f"from( SELECT substring(MD5(CONCAT_WS(',', {columns})), 1, 5) AS rowhash FROM `{db}`) as sub;"
-        #     )
-        #     answer = container.execute(md5_query, db)
         if not self.dataset:
             raise RuntimeError("Dataset not loaded")
         entry = self.dataset[0][0]
@@ -94,7 +66,6 @@ class DbBench(Application):
         if not self.dataset:
             self.run_setup(*args, **kwargs)
 
-        # set up the db
         entry = self.dataset[0][0]
         container = self.container
         print(entry)
@@ -112,7 +83,10 @@ class DbBench(Application):
         print(f"Response is: {response} ----------" )
         # avg_time = sum(times) / len(times)
         # print(f"Average execution time over {self.num_runs} runs: {avg_time:.4f} seconds")
-    
+
+        self.config["db_result"] = response
+        return {"status": "tool_complete", "result": response}
+
     def load_dataset(self, *args, **kwargs):
         print("DbBench tool loading dataset")
         return {"status": "dataset_loaded"}
@@ -141,8 +115,39 @@ class DbBench(Application):
         items = ",".join(items)
         sql = f"""CREATE DATABASE IF NOT EXISTS `{db}`;
             USE `{db}`;
-            CREATE TABLE IF NOT EXISTS `{table}` ({columns});
+            DROP TABLE IF EXISTS `{table}`;
+            CREATE TABLE `{table}` ({columns});
             INSERT INTO `{table}` ({column_names}) VALUES {items}; 
             COMMIT;
             """
         return sql, items_data
+    
+    def eval(self):
+        if query_type in ("INSERT", "DELETE", "UPDATE"):
+            columns = ",".join(
+                f"`{col['name']}`"
+                for col in entry["table"]["table_info"]["columns"]
+            )
+            md5_query = (
+                f"SELECT md5(group_concat(rowhash ORDER BY rowhash)) AS hash "
+                f"FROM ("
+                f"  SELECT SUBSTRING(MD5(CONCAT_WS(',', {columns})), 1, 5) AS rowhash "
+                f"  FROM `{table}`"
+                f") AS sub;"
+            )
+            actual = container.execute(md5_query, db)
+            correct = (actual.strip() == str(expected_answer).strip())
+            print(f"Expected MD5 : {expected_answer}")
+            print(f"Actual MD5   : {actual}")
+            print(f"Correct      : {correct}")
+            result_value = actual
+
+        else:  # SELECT
+            actual = response
+            correct = (actual.strip() == str(expected_answer).strip())
+            print(f"Expected : {expected_answer}")
+            print(f"Actual   : {actual}")
+            print(f"Correct  : {correct}")
+            result_value = actual
+
+        self.config["db_result"] = result_value

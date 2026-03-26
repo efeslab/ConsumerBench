@@ -1,0 +1,11 @@
+tool1:
+    num_requests: 3
+    type: OsTool
+    tool_kwargs:
+        tool: bash
+        num_runs: 1
+        data_file: "applications/OSTool/data/data_dental.json"
+
+workflows:
+    osbench_tool:
+        uses: tool1
