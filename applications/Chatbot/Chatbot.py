@@ -32,14 +32,19 @@ class Chatbot(Application):
 
         self.backend.launch_backend(api_port=api_port, model=model, device=device, mps=mps, llamacpp_path=llamacpp_path)
         print(f"Chatbot setup complete")
+        
+        
+        ## HF model
+        # self.model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-3B-Instruct")
 
         return {"status": "setup_complete", "config": self.config}
 
     def run_cleanup(self, *args, **kwargs):
         print("Chatbot cleanup")
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
+        force_keep_alive = kwargs.get('force_keep_alive', False)
 
-        self.backend.cleanup_backend(api_port=api_port)
+        self.backend.cleanup_backend(api_port=api_port, force_keep_alive=force_keep_alive)
         return {"status": "cleanup_complete"}
 
     def run_application(self, *args, **kwargs):

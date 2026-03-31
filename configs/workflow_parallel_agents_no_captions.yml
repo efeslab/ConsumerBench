@@ -1,0 +1,65 @@
+# Parallel Coding Agents Workflow (All-Parallel Fan-Out, No LiveCaptions)
+# After planning, three agents fan out simultaneously:
+#   - Frontend Code (Chatbot, latency-sensitive)
+#   - Backend Analysis (DeepResearch, throughput-oriented)
+#   - UI Mockups (ImageGen, GPU-intensive)
+# All three compete for GPU resources concurrently.
+# Integration review depends on frontend and backend completing.
+
+Planning (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Frontend Code (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 15
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Backend Analysis (deep_research):
+    server_model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+UI Mockups (imagegen):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/stable-diffusion-3.5-medium-turbo
+    num_requests: 3
+    device: gpu
+    type: ImageGen
+    mps: 100
+
+Integration Review (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+workflows:
+    planning:
+        uses: Planning (chatbot)
+
+    # All three agents fan out in parallel after planning
+    frontend:
+        uses: Frontend Code (chatbot)
+        depend_on: ["planning"]
+
+    backend:
+        uses: Backend Analysis (deep_research)
+        depend_on: ["planning"]
+
+    mockups:
+        uses: UI Mockups (imagegen)
+        depend_on: ["planning"]
+
+    # Integration depends on both code agents completing
+    integration:
+        uses: Integration Review (chatbot)
+        depend_on: ["frontend", "backend"]

@@ -85,10 +85,19 @@ class Workflow:
 
     def generate_task_queue(self):
         """Generate a task queue based on the workflow unit map."""
+        # Collect keep_model_loaded flags from workflow entries
+        workflows = self.workflow_config.get("workflows", {})
+        keep_model_loaded_map = {}  # maps unit name -> list of keep_model_loaded flags
+        for k, v in workflows.items():
+            unit_id = v["uses"]
+            if unit_id not in keep_model_loaded_map:
+                keep_model_loaded_map[unit_id] = []
+            keep_model_loaded_map[unit_id].append(v.get("keep_model_loaded", False))
+
         for k, v in self.workflow_unit_map.items():
             if v["count"] == 0:
                 continue
-                
+
             count = v["count"]
             app_type = v["type"]
             node_config = v["node_config"]
@@ -98,28 +107,31 @@ class Workflow:
                 raise ValueError(f"Application type '{app_type}' not registered. Please register it using register_application()")
 
             self.tasks_map_queue[k] = deque()
+            kml_flags = keep_model_loaded_map.get(k, [False] * count)
             for i in range(count):
                 task_id = f"{k}_u{i}"
+                keep_model_loaded = kml_flags[i] if i < len(kml_flags) else False
                 task, start_node, end_node = self._generate_application_task_group(
                     task_id=task_id,
                     app_type=app_type,
-                    node_config=node_config
+                    node_config=node_config,
+                    keep_model_loaded=keep_model_loaded
                 )
                 self.tasks_map_queue[k].append(WorkflowUnit(app_type, task, start_node, end_node))
 
-    def _generate_application_task_group(self, task_id: str, app_type: str, node_config: dict):
+    def _generate_application_task_group(self, task_id: str, app_type: str, node_config: dict, keep_model_loaded: bool = False):
         """Generate a task group using an Application instance"""
         task = Task(task_id=task_id, task_type="ephemeral", app_type=app_type)
-        
+
         # Get the registered application
         application = self.applications[app_type]
-        
+
         # Update application config with YAML config
         application.add_config(node_config)
-        
+
         # Get number of requests (default to 1)
         num_requests = node_config.get("num_requests", 1)
-        
+
         start_node = f"{task_id}_0"
         end_node = f"{task_id}_{num_requests + 1}"
 
@@ -132,9 +144,12 @@ class Workflow:
             run_wrapper = create_run_wrapper(application)
             task.add_node(f"{task_id}_{i}", run_wrapper, node_config)
 
-        # Create cleanup node
+        # Create cleanup node - inject force_keep_alive if model should be kept loaded
+        cleanup_config = dict(node_config)
+        if keep_model_loaded:
+            cleanup_config['force_keep_alive'] = True
         cleanup_wrapper = create_cleanup_wrapper(application)
-        task.add_node(f"{task_id}_{num_requests+1}", cleanup_wrapper, node_config)
+        task.add_node(f"{task_id}_{num_requests+1}", cleanup_wrapper, cleanup_config)
 
         # Add edges: setup -> run_1 -> run_2 -> ... -> run_n -> cleanup
         for i in range(num_requests + 1):

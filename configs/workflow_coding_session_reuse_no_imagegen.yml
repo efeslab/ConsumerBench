@@ -1,0 +1,51 @@
+# Coding Session Workflow (With Model Reuse, No ImageGen)
+# Same workflow but with keep_model_loaded enabled.
+# The llama.cpp server stays alive through all 4 stages - loaded only ONCE.
+
+Code Generation (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 20
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Code Review (deep_research):
+    server_model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+Bug Fix (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 15
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Documentation (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+workflows:
+    code_gen:
+        uses: Code Generation (chatbot)
+        keep_model_loaded: true
+
+    code_review:
+        uses: Code Review (deep_research)
+        depend_on: ["code_gen"]
+        keep_model_loaded: true
+
+    bug_fix:
+        uses: Bug Fix (chatbot)
+        depend_on: ["code_review"]
+        keep_model_loaded: true
+
+    documentation:
+        uses: Documentation (chatbot)
+        depend_on: ["bug_fix"]

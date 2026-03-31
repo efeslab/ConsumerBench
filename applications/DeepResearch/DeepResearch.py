@@ -36,8 +36,9 @@ class DeepResearch(Application):
     def run_cleanup(self, *args, **kwargs):
         print("DeepResearch cleanup")
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
+        force_keep_alive = kwargs.get('force_keep_alive', False)
 
-        self.backend.cleanup_backend(api_port=api_port)
+        self.backend.cleanup_backend(api_port=api_port, force_keep_alive=force_keep_alive)
         return {"status": "cleanup_complete"}
 
     def run_application(self, *args, **kwargs):

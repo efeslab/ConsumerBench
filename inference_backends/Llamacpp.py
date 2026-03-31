@@ -28,6 +28,7 @@ class LlamaCpp:
 
         self.refcount = 0
         self.lock = threading.Lock()
+        self.server_kept_alive = False  # True when server was kept alive after refcount hit 0
         self.__initialized = True
 
     def launch_backend(self, *args, **kwargs):
@@ -44,11 +45,17 @@ class LlamaCpp:
                 print("LlamaCpp backend already running")
                 return {"status": "backend_already_running"}
 
+            # Server was kept alive from a previous stage for model reuse
+            if self.server_kept_alive:
+                print("LlamaCpp backend reused from previous stage (model kept alive)")
+                self.server_kept_alive = False
+                return {"status": "backend_reused"}
+
             utils.util_run_server_script_check_log(
                 script_path=f"{repo_dir}/inference_backends/llamacpp_server.sh",
                 server_dir=f"{llama_cpp_path}",
-                stdout_log_path=f"{globals.get_results_dir()}/llamacpp_server_stdout",
-                stderr_log_path=f"{globals.get_results_dir()}/llamacpp_server_stderr",
+                stdout_log_path=f"llamacpp_server_stdout",
+                stderr_log_path=f"llamacpp_server_stderr",
                 stderr_ready_patterns=["update_slots: all slots are idle"],
                 stdout_ready_patterns=[],
                 listen_port=api_port,
@@ -64,10 +71,16 @@ class LlamaCpp:
     def cleanup_backend(self, *args, **kwargs):
         print("Cleaning up LlamaCpp backend")
         api_port = kwargs.get('api_port', 8080)
+        force_keep_alive = kwargs.get('force_keep_alive', False)
         with self.lock:
             self.refcount -= 1
             if self.refcount == 0:
+                if force_keep_alive:
+                    print("LlamaCpp backend kept alive for model reuse (skipping shutdown)")
+                    self.server_kept_alive = True
+                    return {"status": "backend_kept_alive"}
                 print("Cleaning up LlamaCpp backend")
+                self.server_kept_alive = False
                 process = subprocess.Popen(
                     [f"{repo_dir}/scripts/cleanup.sh", str(api_port)],
                     stdout=subprocess.PIPE,

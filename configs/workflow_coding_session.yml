@@ -1,0 +1,60 @@
+# Coding Session Workflow (No Model Reuse)
+# Simulates a developer using AI for code generation, review, bug fixing, and documentation.
+# The same llama.cpp model is loaded/unloaded 4 times (3x Chatbot + 1x DeepResearch).
+# This demonstrates the overhead of redundant model loading in multi-stage workflows.
+
+Code Generation (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 20
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Code Review (deep_research):
+    server_model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+Bug Fix (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 15
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Documentation (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Architecture Diagrams (imagegen):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/stable-diffusion-3.5-medium-turbo
+    num_requests: 5
+    device: gpu
+    type: ImageGen
+    mps: 100
+
+workflows:
+    code_gen:
+        uses: Code Generation (chatbot)
+
+    code_review:
+        uses: Code Review (deep_research)
+        depend_on: ["code_gen"]
+
+    bug_fix:
+        uses: Bug Fix (chatbot)
+        depend_on: ["code_review"]
+
+    documentation:
+        uses: Documentation (chatbot)
+        depend_on: ["bug_fix"]
+
+    diagrams:
+        uses: Architecture Diagrams (imagegen)
+        depend_on: ["documentation"]

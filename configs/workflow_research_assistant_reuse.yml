@@ -1,0 +1,78 @@
+# Research Assistant Workflow (Phased + Model Reuse)
+# Best-of-both-worlds: serialized LLM stages to avoid contention AND model
+# reuse to eliminate redundant loading/unloading.
+# The llama.cpp server is loaded ONCE and stays alive through all 4 LLM stages
+# (brainstorm, summarize, deep_analysis, write_report).
+#
+# This is the workflow-aware optimal: only achievable when the system knows the
+# full DAG and can reason about model lifecycle across stages.
+
+Literature Search (retriever):
+    num_requests: 5
+    device: cpu
+    type: Retriever
+
+Brainstorm Ideas (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Summarize Findings (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Deep Analysis (deep_research):
+    server_model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+Write Report (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 15
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Generate Figures (imagegen):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/stable-diffusion-3.5-medium-turbo
+    num_requests: 5
+    device: gpu
+    type: ImageGen
+    mps: 100
+
+workflows:
+    # Phase 1: Parallel info gathering (Retriever on CPU overlaps with Chatbot on GPU)
+    search:
+        uses: Literature Search (retriever)
+
+    brainstorm:
+        uses: Brainstorm Ideas (chatbot)
+        keep_model_loaded: true
+
+    # Phase 2-4: Serialized LLM stages with model reuse
+    summarize:
+        uses: Summarize Findings (chatbot)
+        depend_on: ["search", "brainstorm"]
+        keep_model_loaded: true
+
+    deep_analysis:
+        uses: Deep Analysis (deep_research)
+        depend_on: ["summarize"]
+        keep_model_loaded: true
+
+    write_report:
+        uses: Write Report (chatbot)
+        depend_on: ["deep_analysis"]
+
+    # Phase 5: Figure generation (different model, different pipeline)
+    figures:
+        uses: Generate Figures (imagegen)
+        depend_on: ["write_report"]

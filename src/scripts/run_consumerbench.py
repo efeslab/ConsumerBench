@@ -11,8 +11,16 @@ from applications.DeepResearch.DeepResearch import DeepResearch
 from applications.Chatbot.Chatbot import Chatbot
 from applications.DspyTool.DspyTool import DspyTool
 from applications.LiveCaptions.LiveCaptions import LiveCaptions
-from applications.MCPServer.MCPServer import MCPServer
-from applications.Retriever.Retriever import Retriever
+try:
+    from applications.MCPServer.MCPServer import MCPServer
+except (ImportError, Exception):
+    MCPServer = None
+    print("Warning: MCPServer not available (missing mcp dependencies), skipping registration")
+try:
+    from applications.Retriever.Retriever import Retriever
+except (ImportError, Exception) as e:
+    Retriever = None
+    print(f"Warning: Retriever not available ({e}), skipping registration")
 from src.workflow import Workflow
 import src.globals as globals
 
@@ -42,8 +50,8 @@ def main(args):
     deepResearch = DeepResearch()
     chatbot = Chatbot()
     liveCaptions = LiveCaptions()
-    mcpServer = MCPServer(mcp_trace_file=mcp_trace_file, config_file=config_file)
-    retriever = Retriever()
+    mcpServer = MCPServer(mcp_trace_file=mcp_trace_file, config_file=config_file) if MCPServer is not None else None
+    retriever = Retriever() if Retriever is not None else None
     dspyTool = DspyTool()
     
     # Create workflow from YAML
@@ -55,8 +63,10 @@ def main(args):
     workflow.register_application("DeepResearch", deepResearch)
     workflow.register_application("Chatbot", chatbot)
     workflow.register_application("LiveCaptions", liveCaptions)
-    workflow.register_application("MCPServer", mcpServer)
-    workflow.register_application("Retriever", retriever)
+    if mcpServer is not None:
+        workflow.register_application("MCPServer", mcpServer)
+    if retriever is not None:
+        workflow.register_application("Retriever", retriever)
     workflow.register_application("DspyTool", dspyTool)
     
     print("Registered applications:")
