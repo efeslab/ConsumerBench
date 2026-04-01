@@ -1,0 +1,45 @@
+lv:
+    num_requests: 10
+    device: gpu
+    mps: 33
+    client_command_file: applications/LiveCaptions/whisper-earnings21/5-min-chunks/4320211_chunk_002.wav
+    type: live_captions
+ 
+imagegen1:
+    server_model: /mnt/tmpfs/models/stable-diffusion-3.5-medium-turbo
+    num_requests: 10
+    device: gpu
+    mps: 33
+    type: imagegen
+ 
+chatbot1:
+    num_requests: 10
+    device: gpu
+    mps: 33
+    type: Chatbot
+ 
+db1:
+    num_requests: 5
+    type: DbBench
+    tool_kwargs:
+        tool: sql
+        query: "INSERT INTO grades (student_id, course, score) VALUES ('s001', 'CS101', 92);"
+        num_runs: 1
+        data_file: "applications/DbBench/data_grades.jsonl"
+ 
+workflows:
+    live_captions:
+        uses: lv
+        depend_on: ["sleep1"]
+ 
+    generate_slide_figure:
+        uses: imagegen1
+        depend_on: ["sleep1"]
+ 
+    answer_student_question:
+        uses: chatbot1
+        depend_on: ["sleep1"]
+ 
+    record_grade:
+        uses: db1
+        depend_on: ["sleep1"]

@@ -1,0 +1,90 @@
+# Scenario 1: Parallel Agentic Coding Workflow (Full Parallel, Naive/FCFS scheduling)
+# Default greedy GPU resource allocation - kernels compete in first-come-first-serve.
+
+scheduler: naive
+
+Planning (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 5
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+    priority: 1
+
+Code Generation (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 15
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+    priority: 1
+
+Design Mockups (imagegen):
+    model: /home/cc/tally-bench/ConsumerBench/models/sdxl-turbo
+    num_requests: 5
+    device: gpu
+    type: ImageGen
+    mps: 100
+    priority: 1
+
+Test Data Setup (dbbench):
+    type: DbBench
+    num_requests: 5
+    tool_kwargs:
+        tool: sql
+        query: "INSERT INTO grades (student_id, course, score) VALUES ('s001', 'CS101', 92);"
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/DbBench/data_grades.jsonl
+
+Environment Setup (ostool):
+    type: OsTool
+    num_requests: 3
+    tool_kwargs:
+        tool: bash
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/OSTool/data/data_coding.json
+
+RAG Documentation Search (retriever):
+    type: RetrieverServer
+    num_requests: 10
+    device: cpu
+    api_port: 8031
+
+Integration Review (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+    priority: 1
+
+workflows:
+    planning:
+        uses: Planning (chatbot)
+
+    code_gen:
+        uses: Code Generation (chatbot)
+        depend_on: ["planning"]
+
+    design_mockups:
+        uses: Design Mockups (imagegen)
+        depend_on: ["planning"]
+
+    test_data_setup:
+        uses: Test Data Setup (dbbench)
+        depend_on: ["planning"]
+
+    env_setup:
+        uses: Environment Setup (ostool)
+        depend_on: ["planning"]
+
+    rag_search:
+        uses: RAG Documentation Search (retriever)
+        depend_on: ["planning"]
+
+    integration:
+        uses: Integration Review (chatbot)
+        depend_on: ["code_gen", "design_mockups", "test_data_setup", "env_setup", "rag_search"]

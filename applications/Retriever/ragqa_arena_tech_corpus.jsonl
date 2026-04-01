@@ -1,0 +1,15 @@
+{"contents": "Machine learning is a subset of artificial intelligence that enables systems to learn from data."}
+{"contents": "Neural networks are computing systems inspired by biological neural networks in the brain."}
+{"contents": "Deep learning uses multiple layers of neural networks to progressively extract features."}
+{"contents": "Natural language processing is a field focused on the interaction between computers and human language."}
+{"contents": "Computer vision is a field of AI that trains computers to interpret and understand visual information."}
+{"contents": "Reinforcement learning is a type of machine learning where agents learn by interacting with an environment."}
+{"contents": "Transfer learning allows a model trained on one task to be fine-tuned for a different but related task."}
+{"contents": "Generative adversarial networks consist of a generator and discriminator competing against each other."}
+{"contents": "Transformer architectures use self-attention mechanisms to process sequential data in parallel."}
+{"contents": "Retrieval augmented generation combines search with language models for more factual responses."}
+{"contents": "Stable diffusion is a latent text-to-image diffusion model capable of generating photo-realistic images."}
+{"contents": "Large language models are trained on massive text corpora to predict and generate human-like text."}
+{"contents": "Federated learning trains models across decentralized devices while keeping data on each device."}
+{"contents": "Quantization reduces model size by representing weights with fewer bits without significant accuracy loss."}
+{"contents": "GPU scheduling algorithms like MPS and Tally manage how multiple applications share GPU resources."}

@@ -7,7 +7,7 @@ imagegen1:
   device: gpu
   api_port: 8021
   priority: 1
-  mps: 80
+  mps: 75
 
 lv1:
   type: LiveCaptionsHF
@@ -17,7 +17,7 @@ lv1:
   api_port: 5011
   client_command_file: applications/LiveCaptions/whisper-earnings21/4320211_chunk_002.wav
   priority: 2 
-  mps: 40
+  mps: 35
 
 chat1:
   type: ChatbotHF

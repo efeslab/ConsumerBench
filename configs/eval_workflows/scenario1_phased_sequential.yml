@@ -1,0 +1,110 @@
+# Scenario 1: Parallel Agentic Coding Workflow (Phased / Partially Sequential)
+# =============================================================================
+# Same tasks as scenario1_parallel_agentic.yml, but restructured to reduce contention.
+#
+# Key changes:
+# 1. CPU tools (DB, OS) run sequentially with GPU tasks (code_gen) since they
+#    have slack SLO and don't need to rush.
+# 2. ImageGen is serialized after code_gen to avoid GPU contention.
+# 3. RAG retrieval (CPU-only) still runs in parallel since it doesn't contend
+#    with GPU tasks.
+#
+# DAG:
+#   planning --> code_gen (GPU) --> design_mockups (GPU) --> integration
+#           \                                              /
+#            --> rag_search (CPU) ......................../
+#           \                                           /
+#            --> test_data_setup (CPU) --> env_setup (CPU)
+#
+# Insight: By making slack-SLO tasks sequential, we:
+# - Eliminate GPU contention between Chatbot and ImageGen
+# - Reduce CPU contention by serializing Docker-based tools
+# - CPU-only RAG still overlaps with GPU work (no contention)
+# - Total time may increase slightly, but SLO attainment improves for
+#   latency-sensitive tasks.
+
+Planning (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 5
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+Code Generation (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 15
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+Design Mockups (imagegen):
+    model: /home/cc/tally-bench/ConsumerBench/models/sdxl-turbo
+    num_requests: 5
+    device: gpu
+    type: ImageGen
+    mps: 100
+
+Test Data Setup (dbbench):
+    type: DbBench
+    num_requests: 5
+    tool_kwargs:
+        tool: sql
+        query: "INSERT INTO grades (student_id, course, score) VALUES ('s001', 'CS101', 92);"
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/DbBench/data_grades.jsonl
+
+Environment Setup (ostool):
+    type: OsTool
+    num_requests: 3
+    tool_kwargs:
+        tool: bash
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/OSTool/data/data_coding.json
+
+RAG Documentation Search (retriever):
+    type: RetrieverServer
+    num_requests: 10
+    device: cpu
+    api_port: 8031
+
+Integration Review (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+workflows:
+    planning:
+        uses: Planning (chatbot)
+
+    # GPU tasks serialized: code_gen first, then design_mockups
+    code_gen:
+        uses: Code Generation (chatbot)
+        depend_on: ["planning"]
+
+    design_mockups:
+        uses: Design Mockups (imagegen)
+        depend_on: ["code_gen"]
+
+    # CPU tools serialized (slack SLO)
+    test_data_setup:
+        uses: Test Data Setup (dbbench)
+        depend_on: ["planning"]
+
+    env_setup:
+        uses: Environment Setup (ostool)
+        depend_on: ["test_data_setup"]
+
+    # RAG runs in parallel (CPU-only, no GPU contention)
+    rag_search:
+        uses: RAG Documentation Search (retriever)
+        depend_on: ["planning"]
+
+    # Integration depends on all completing
+    integration:
+        uses: Integration Review (chatbot)
+        depend_on: ["design_mockups", "env_setup", "rag_search"]

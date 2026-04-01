@@ -22,6 +22,20 @@ class Chatbot(Application):
         self.chatbot_prompts = []
         self.backend = LlamaCpp()
 
+    def __deepcopy__(self, memo):
+        import copy
+        cls = self.__class__
+        result = cls.__new__(cls)
+        memo[id(self)] = result
+        # Copy all attributes except the singleton backend
+        for k, v in self.__dict__.items():
+            if k == 'backend':
+                # Share the same singleton backend across copies
+                setattr(result, k, self.backend)
+            else:
+                setattr(result, k, copy.deepcopy(v, memo))
+        return result
+
     def run_setup(self, *args, **kwargs):
         print("Chatbot setup")
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
@@ -52,6 +66,8 @@ class Chatbot(Application):
         api_url = f"http://127.0.0.1:{api_port}/v1/completions"
 
         ttft = None
+        token_count = 0
+        first_token_time = None
 
         start_time = time.time()
 
@@ -67,46 +83,51 @@ class Chatbot(Application):
             headers = {
                 "Content-Type": "application/json"
             }
-            
-            try:
-                with requests.post(api_url, json=payload, headers=headers, stream=True) as response:
-                    if response.status_code != 200:
-                        print("HTTP Error:", response.status_code, response.text)
-                        return
 
-                    for line in response.iter_lines(decode_unicode=True):
-                        if line:
-                            # print(f"Script output: {line.strip()}")
-                            current_time = time.time()
-                            if ttft is None:
-                                ttft = current_time - start_time
-                                first_token_time = current_time
-                                print(f"Time to first token: {ttft:.4f} seconds")
+            # Retry loop for server readiness
+            max_retries = 30
+            for attempt in range(max_retries):
+                try:
+                    with requests.post(api_url, json=payload, headers=headers, stream=True, timeout=60) as response:
+                        if response.status_code != 200:
+                            print("HTTP Error:", response.status_code, response.text)
+                            return
 
-                            try:
-                                # Clean and parse the JSON
-                                clean_line = line.strip().replace("data: ", "")
-                                if clean_line == "[DONE]":
-                                    break
+                        for line in response.iter_lines(decode_unicode=True):
+                            if line:
+                                current_time = time.time()
+                                if ttft is None:
+                                    ttft = current_time - start_time
+                                    first_token_time = current_time
+                                    print(f"Time to first token: {ttft:.4f} seconds")
 
-                                data = json.loads(clean_line)
+                                try:
+                                    clean_line = line.strip().replace("data: ", "")
+                                    if clean_line == "[DONE]":
+                                        break
 
-                                # Exit if finish_reason appears
-                                if data.get("choices") and data["choices"][0].get("finish_reason"):
-                                    token_count = data.get("usage", {}).get("completion_tokens")
-                                    break
-                            except json.JSONDecodeError:
-                                continue
+                                    data = json.loads(clean_line)
 
-            except Exception as e:
-                print("Request failed:", e)
+                                    if data.get("choices") and data["choices"][0].get("finish_reason"):
+                                        token_count = data.get("usage", {}).get("completion_tokens", 0)
+                                        break
+                                except json.JSONDecodeError:
+                                    continue
+                    break  # Success, exit retry loop
+
+                except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+                    if attempt < max_retries - 1:
+                        time.sleep(1)
+                    else:
+                        print(f"Request failed after {max_retries} retries:", e)
 
         end_time = time.time()
         print(f"Total time: {end_time - start_time:.4f} seconds")
         print(f"Completion tokens: {token_count}")
 
-        print(f"{end_time-first_token_time}, token counts: {token_count}")
-        tpot = (end_time - first_token_time) / token_count if token_count > 0 else None    
+        if first_token_time is not None:
+            print(f"{end_time-first_token_time}, token counts: {token_count}")
+        tpot = (end_time - first_token_time) / token_count if (first_token_time and token_count > 0) else None
         itl = (end_time - start_time) / token_count if token_count > 0 else None
 
         return {"status": "chatbot_complete", "ttft": ttft, "tpot": tpot, "itl": itl}
@@ -123,12 +144,28 @@ class Chatbot(Application):
                         if prompt is not None:
                             self.chatbot_prompts.append(prompt)
         else:
-            ds_textgen = load_dataset("lmsys/lmsys-chat-1m")
-            ds_textgen = ds_textgen["train"]
-            ds_textgen = ds_textgen.shuffle(seed=42)
-            ds_textgen = ds_textgen.select(range(0, 100))
-            for item in ds_textgen:
-                self.chatbot_prompts.append(item['conversation'][0]['content'])
+            try:
+                ds_textgen = load_dataset("lmsys/lmsys-chat-1m")
+                ds_textgen = ds_textgen["train"]
+                ds_textgen = ds_textgen.shuffle(seed=42)
+                ds_textgen = ds_textgen.select(range(0, 100))
+                for item in ds_textgen:
+                    self.chatbot_prompts.append(item['conversation'][0]['content'])
+            except Exception:
+                # Fallback prompts when dataset is gated/unavailable
+                fallback = [
+                    "Explain the concept of machine learning in simple terms.",
+                    "Write a Python function to sort a list of numbers.",
+                    "What are the main differences between TCP and UDP?",
+                    "Describe the architecture of a transformer neural network.",
+                    "How does garbage collection work in Java?",
+                    "Explain the CAP theorem in distributed systems.",
+                    "Write a SQL query to find duplicate rows in a table.",
+                    "What is the difference between a process and a thread?",
+                    "Explain how HTTPS encryption works step by step.",
+                    "Describe the benefits and drawbacks of microservices architecture.",
+                ]
+                self.chatbot_prompts = fallback * 10  # 100 prompts
 
     def get_default_config(self) -> Dict[str, Any]:
         return {

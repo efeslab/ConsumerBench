@@ -1,0 +1,5 @@
+[{"description": "Run the test suite and report passing tests.",
+  "create": {"local": "ubuntu", "init": "mkdir -p /project && echo 'def add(a,b): return a+b' > /project/utils.py && echo 'from utils import add\ndef test_add(): assert add(2,3)==5' > /project/test_utils.py"},
+  "task": "cd /project && python3 -m pytest test_utils.py -q",
+  "evaluation": {"eval": "cd /project && python3 -m pytest test_utils.py -q 2>&1 | tail -1"},
+  "label": "1 passed"}]

@@ -1,0 +1,86 @@
+# Scenario 2: Model Reuse Pipeline (WITHOUT model reuse)
+# =======================================================
+# A sequential content creation pipeline where the same LLM model is used
+# across multiple stages. Without model reuse, the model is loaded/unloaded
+# at each stage, incurring significant overhead.
+#
+# DAG (fully sequential):
+#   research (Chatbot) --> outline (Chatbot) --> draft (Chatbot) -->
+#   edit_review (Chatbot) --> generate_images (ImageGen) --> final_summary (Chatbot)
+#
+# The LLM model (Llama-3.2-3B) is loaded 5 times and unloaded 5 times.
+# ImageGen uses a different model (Stable Diffusion).
+#
+# Insight: Without model reuse, each LLM stage pays ~10-20s model loading overhead.
+# For a 5-stage LLM pipeline, this adds 50-100s of pure overhead.
+
+Research Topic (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+Create Outline (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 8
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+Write Draft (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 15
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+Edit and Review (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+Generate Illustrations (imagegen):
+    model: /home/cc/tally-bench/ConsumerBench/models/sdxl-turbo
+    num_requests: 5
+    device: gpu
+    type: ImageGen
+    mps: 100
+
+Final Summary (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 5
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+workflows:
+    research:
+        uses: Research Topic (chatbot)
+
+    outline:
+        uses: Create Outline (chatbot)
+        depend_on: ["research"]
+
+    draft:
+        uses: Write Draft (chatbot)
+        depend_on: ["outline"]
+
+    edit:
+        uses: Edit and Review (chatbot)
+        depend_on: ["draft"]
+
+    illustrations:
+        uses: Generate Illustrations (imagegen)
+        depend_on: ["edit"]
+
+    summary:
+        uses: Final Summary (chatbot)
+        depend_on: ["illustrations"]

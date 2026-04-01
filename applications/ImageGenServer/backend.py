@@ -5,7 +5,7 @@ import os
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from diffusers import StableDiffusion3Pipeline
+from diffusers import StableDiffusion3Pipeline, AutoPipelineForText2Image
 import torch
 
 
@@ -21,12 +21,19 @@ class ImageGenServer:
             if self.mps and int(self.mps) > 0:
                 os.environ["CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"] = str(self.mps)
 
-            self.pipeline = StableDiffusion3Pipeline.from_pretrained(
-                model,
-                text_encoder_3=None,
-                tokenizer_3=None,
-                torch_dtype=torch.float16
-            )
+            try:
+                self.pipeline = StableDiffusion3Pipeline.from_pretrained(
+                    model,
+                    text_encoder_3=None,
+                    tokenizer_3=None,
+                    torch_dtype=torch.float16
+                )
+            except (ValueError, OSError):
+                self.pipeline = AutoPipelineForText2Image.from_pretrained(
+                    model,
+                    torch_dtype=torch.float16,
+                    variant="fp16" if os.path.isdir(model) else None,
+                )
 
             # Reduce runtime VRAM spikes when co-running with other GPU apps.
             if hasattr(self.pipeline, "enable_attention_slicing"):
@@ -45,11 +52,14 @@ class ImageGenServer:
                 logging.warning("Failed to enable model CPU offload, falling back to .to('cuda'): %s", e)
                 self.pipeline = self.pipeline.to("cuda")
         else:
-            self.pipeline = StableDiffusion3Pipeline.from_pretrained(
-                model,
-                text_encoder_3=None,
-                tokenizer_3=None
-            )
+            try:
+                self.pipeline = StableDiffusion3Pipeline.from_pretrained(
+                    model,
+                    text_encoder_3=None,
+                    tokenizer_3=None
+                )
+            except (ValueError, OSError):
+                self.pipeline = AutoPipelineForText2Image.from_pretrained(model)
             self.pipeline = self.pipeline.to("cpu")
 
     def _resolve_device(self, device):

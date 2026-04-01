@@ -1,0 +1,95 @@
+# Scenario 3: CPU-GPU Interleave (Naive - No Overlap)
+# =====================================================
+# A data analysis workflow where CPU-bound tools (DB queries, OS file processing)
+# and GPU-bound tasks (LLM analysis, image generation) are scheduled sequentially,
+# missing the opportunity to overlap CPU and GPU work.
+#
+# DAG (fully sequential):
+#   db_query (CPU) --> os_process (CPU) --> rag_search (CPU) -->
+#   llm_analysis (GPU) --> generate_viz (GPU) --> db_write_results (CPU) --> summary (GPU)
+#
+# Insight: Without interleaving, CPU sits idle during GPU work and vice versa.
+# This is the baseline showing worst-case utilization.
+
+Database Query (dbbench):
+    type: DbBench
+    num_requests: 5
+    tool_kwargs:
+        tool: sql
+        query: "SELECT * FROM grades WHERE score > 80;"
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/DbBench/data_grades.jsonl
+
+File Processing (ostool):
+    type: OsTool
+    num_requests: 3
+    tool_kwargs:
+        tool: bash
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/OSTool/data/data_coding.json
+
+RAG Search (retriever):
+    type: RetrieverServer
+    num_requests: 10
+    device: cpu
+    api_port: 8031
+
+LLM Analysis (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 15
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+Generate Visualizations (imagegen):
+    model: /home/cc/tally-bench/ConsumerBench/models/sdxl-turbo
+    num_requests: 5
+    device: gpu
+    type: ImageGen
+    mps: 100
+
+Write Results to DB (dbbench):
+    type: DbBench
+    num_requests: 3
+    tool_kwargs:
+        tool: sql
+        query: "INSERT INTO grades (student_id, course, score) VALUES ('s099', 'CS201', 88);"
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/DbBench/data_grades.jsonl
+
+Final Summary (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 5
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+workflows:
+    db_query:
+        uses: Database Query (dbbench)
+
+    file_process:
+        uses: File Processing (ostool)
+        depend_on: ["db_query"]
+
+    rag_search:
+        uses: RAG Search (retriever)
+        depend_on: ["file_process"]
+
+    analysis:
+        uses: LLM Analysis (chatbot)
+        depend_on: ["rag_search"]
+
+    visualize:
+        uses: Generate Visualizations (imagegen)
+        depend_on: ["analysis"]
+
+    write_results:
+        uses: Write Results to DB (dbbench)
+        depend_on: ["visualize"]
+
+    summary:
+        uses: Final Summary (chatbot)
+        depend_on: ["write_results"]

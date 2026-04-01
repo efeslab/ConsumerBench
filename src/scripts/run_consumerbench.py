@@ -18,6 +18,8 @@ from applications.LiveCaptionsHF.LiveCaptionsHF import LiveCaptionsHF
 from applications.MCPServer.MCPServer import MCPServer
 from applications.Retriever.Retriever import Retriever
 from applications.RetrieverServer.RetrieverServer import RetrieverServer
+from applications.DbBench.DbBench import DbBench
+from applications.OSTool.OSTool import OsTool
 from src.workflow import Workflow
 import src.globals as globals
 from src.tally import ensure_tally_runtime, release_tally_runtime, detect_tally_root
@@ -102,7 +104,9 @@ def main(args):
     retriever = Retriever()
     retrieverServer = RetrieverServer()
     dspyTool = DspyTool()
-    
+    dbBench = DbBench()
+    osTool = OsTool()
+
     # Create workflow from YAML
     workflow = Workflow(config_file)
     
@@ -119,7 +123,9 @@ def main(args):
     workflow.register_application("Retriever", retriever)
     workflow.register_application("RetrieverServer", retrieverServer)
     workflow.register_application("DspyTool", dspyTool)
-    
+    workflow.register_application("DbBench", dbBench)
+    workflow.register_application("OsTool", osTool)
+
     print("Registered applications:")
     for app_name, app in workflow.applications.items():
         print(f"  - {app_name}: {type(app).__name__}")
@@ -160,22 +166,23 @@ def main(args):
     monitor_thread.start()
 
     valid_tally = workflow.scheduler is not None and workflow.scheduler.lower() in {"tally", "tgs", "naive"}
+    tally_sched_name = workflow.scheduler.lower() if workflow.scheduler else None
     if valid_tally and os.environ.get("TALLY_RUNTIME_UP") != "1":
-        print(f"Setting up tally scheduler={tally_scheduler.upper()} before benchmark start")
-        ensure_tally_runtime(tally_scheduler, repo_dir)
+        print(f"Setting up tally scheduler={tally_sched_name.upper()} before benchmark start")
+        ensure_tally_runtime(tally_sched_name, repo_dir)
 
     # Run the benchmark
     try:
         print("\n=== Running Benchmark ===")
         total_time = bm.run_concurrent()
         print(f"Total execution time: {total_time:.4f} seconds")
-        
+
         # Display results
         print("\n=== Results ===")
         bm.display_results()
     finally:
         if valid_tally and os.environ.get("TALLY_RUNTIME_UP") != "1":
-            release_tally_runtime(tally_scheduler, repo_dir)
+            release_tally_runtime(tally_sched_name, repo_dir)
 
         # Stop GPU memory monitoring
         gpu_monitor.running = False

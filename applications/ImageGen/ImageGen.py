@@ -3,7 +3,7 @@ import time
 from typing import Any, Dict
 import sys
 import os
-from diffusers import StableDiffusion3Pipeline
+from diffusers import StableDiffusion3Pipeline, AutoPipelineForText2Image
 import torch
 from datasets import load_dataset
 
@@ -28,19 +28,29 @@ class ImageGen(Application):
         if device == "gpu":
             # Set environment variable for MPS
             os.environ["CUDA_MPS_ACTIVE_THREAD_PERCENTAGE"] = str(mps)
-            self.imagegen_pipeline = StableDiffusion3Pipeline.from_pretrained(
-                model,
-                text_encoder_3=None,
-                tokenizer_3=None,
-                torch_dtype=torch.float16
-            )
+            try:
+                self.imagegen_pipeline = StableDiffusion3Pipeline.from_pretrained(
+                    model,
+                    text_encoder_3=None,
+                    tokenizer_3=None,
+                    torch_dtype=torch.float16
+                )
+            except (ValueError, OSError):
+                self.imagegen_pipeline = AutoPipelineForText2Image.from_pretrained(
+                    model,
+                    torch_dtype=torch.float16,
+                    variant="fp16" if os.path.isdir(model) else None,
+                )
             self.imagegen_pipeline = self.imagegen_pipeline.to("cuda")
         else:
-            self.imagegen_pipeline = StableDiffusion3Pipeline.from_pretrained(
-                model,
-                text_encoder_3=None,
-                tokenizer_3=None
-            )
+            try:
+                self.imagegen_pipeline = StableDiffusion3Pipeline.from_pretrained(
+                    model,
+                    text_encoder_3=None,
+                    tokenizer_3=None
+                )
+            except (ValueError, OSError):
+                self.imagegen_pipeline = AutoPipelineForText2Image.from_pretrained(model)
             self.imagegen_pipeline = self.imagegen_pipeline.to("cpu")
             return {"status": "setup_complete", "config": self.config}
 

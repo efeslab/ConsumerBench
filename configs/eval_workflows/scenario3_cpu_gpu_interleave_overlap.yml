@@ -1,0 +1,104 @@
+# Scenario 3: CPU-GPU Interleave (Optimized - With Overlap)
+# ===========================================================
+# Same tasks as scenario3_cpu_gpu_interleave_naive.yml, but restructured to
+# overlap CPU-bound and GPU-bound work wherever dependencies allow.
+#
+# DAG:
+#   db_query (CPU) ---------> llm_analysis (GPU) --> generate_viz (GPU) --> summary (GPU)
+#   file_process (CPU) ---/                      \
+#   rag_search (CPU) ----/                        --> write_results (CPU)
+#
+# Phase 1 (parallel): db_query + file_process + rag_search (all CPU, no GPU contention)
+# Phase 2: llm_analysis (GPU) -- CPU idle but could overlap with more CPU work
+# Phase 3 (parallel): generate_viz (GPU) + write_results (CPU) -- true CPU-GPU overlap!
+# Phase 4: summary (GPU)
+#
+# Insight: By restructuring the DAG to overlap CPU tools with GPU tasks,
+# we achieve higher hardware utilization. write_results (CPU/Docker) runs
+# concurrently with generate_viz (GPU/ImageGen) without contention.
+# All CPU tools in phase 1 run concurrently since Docker containers are isolated.
+
+Database Query (dbbench):
+    type: DbBench
+    num_requests: 5
+    tool_kwargs:
+        tool: sql
+        query: "SELECT * FROM grades WHERE score > 80;"
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/DbBench/data_grades.jsonl
+
+File Processing (ostool):
+    type: OsTool
+    num_requests: 3
+    tool_kwargs:
+        tool: bash
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/OSTool/data/data_coding.json
+
+RAG Search (retriever):
+    type: RetrieverServer
+    num_requests: 10
+    device: cpu
+    api_port: 8031
+
+LLM Analysis (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 15
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+Generate Visualizations (imagegen):
+    model: /home/cc/tally-bench/ConsumerBench/models/sdxl-turbo
+    num_requests: 5
+    device: gpu
+    type: ImageGen
+    mps: 100
+
+Write Results to DB (dbbench):
+    type: DbBench
+    num_requests: 3
+    tool_kwargs:
+        tool: sql
+        query: "INSERT INTO grades (student_id, course, score) VALUES ('s099', 'CS201', 88);"
+        num_runs: 1
+        data_file: /home/cc/tally-bench/ConsumerBench/applications/DbBench/data_grades.jsonl
+
+Final Summary (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 5
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+workflows:
+    # Phase 1: All CPU tools fan out in parallel (no GPU contention)
+    db_query:
+        uses: Database Query (dbbench)
+
+    file_process:
+        uses: File Processing (ostool)
+
+    rag_search:
+        uses: RAG Search (retriever)
+
+    # Phase 2: LLM analysis after all data is ready
+    analysis:
+        uses: LLM Analysis (chatbot)
+        depend_on: ["db_query", "file_process", "rag_search"]
+
+    # Phase 3: GPU viz + CPU DB write in parallel (CPU-GPU overlap!)
+    visualize:
+        uses: Generate Visualizations (imagegen)
+        depend_on: ["analysis"]
+
+    write_results:
+        uses: Write Results to DB (dbbench)
+        depend_on: ["analysis"]
+
+    # Phase 4: Final summary after both complete
+    summary:
+        uses: Final Summary (chatbot)
+        depend_on: ["visualize", "write_results"]

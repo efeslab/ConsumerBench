@@ -19,6 +19,18 @@ class DeepResearch(Application):
         self.deep_research_prompts = []
         self.backend = LlamaCpp()
 
+    def __deepcopy__(self, memo):
+        import copy
+        cls = self.__class__
+        result = cls.__new__(cls)
+        memo[id(self)] = result
+        for k, v in self.__dict__.items():
+            if k == 'backend':
+                setattr(result, k, self.backend)
+            else:
+                setattr(result, k, copy.deepcopy(v, memo))
+        return result
+
     def run_setup(self, *args, **kwargs):
         print("DeepResearch setup")
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])

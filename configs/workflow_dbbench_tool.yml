@@ -1,0 +1,25 @@
+# tool1:
+#     num_requests: 3
+#     type: DbBench
+#     tool_kwargs:
+#         tool: sql
+#         query: "UPDATE unknown SET Pos = 'FW', Name = 'Yuji Senuma' WHERE No = '20';"
+#         num_runs: 1
+#         data_file: "applications/DbBench/data_dbbench.jsonl"
+
+# workflows:
+#       dbbench_tool:
+#       uses: tool1
+tool1:
+    num_requests: 3
+    type: DbBench
+    # tool_string: applications.DspyTool.example_tools.add
+    tool_kwargs:
+        tool: sql
+        query: "UPDATE unknown SET Pos = 'FW', Name = 'Yuji Senuma' WHERE No = '20';"
+        num_runs: 1
+        data_file: "applications/DbBench/data_dbbench.jsonl"
+
+workflows:
+    dbbench_tool:
+        uses: tool1

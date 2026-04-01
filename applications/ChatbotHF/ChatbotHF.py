@@ -249,12 +249,27 @@ class ChatbotHF(Application):
                         if prompt is not None:
                             self.chatbot_prompts.append(prompt)
         else:
-            ds_textgen = load_dataset("lmsys/lmsys-chat-1m")
-            ds_textgen = ds_textgen["train"]
-            ds_textgen = ds_textgen.shuffle(seed=42)
-            ds_textgen = ds_textgen.select(range(0, 100))
-            for item in ds_textgen:
-                self.chatbot_prompts.append(item["conversation"][0]["content"])
+            try:
+                ds_textgen = load_dataset("lmsys/lmsys-chat-1m")
+                ds_textgen = ds_textgen["train"]
+                ds_textgen = ds_textgen.shuffle(seed=42)
+                ds_textgen = ds_textgen.select(range(0, 100))
+                for item in ds_textgen:
+                    self.chatbot_prompts.append(item["conversation"][0]["content"])
+            except Exception:
+                fallback = [
+                    "Explain the concept of machine learning in simple terms.",
+                    "Write a Python function to sort a list of numbers.",
+                    "What are the main differences between TCP and UDP?",
+                    "Describe the architecture of a transformer neural network.",
+                    "How does garbage collection work in Java?",
+                    "Explain the CAP theorem in distributed systems.",
+                    "Write a SQL query to find duplicate rows in a table.",
+                    "What is the difference between a process and a thread?",
+                    "Explain how HTTPS encryption works step by step.",
+                    "Describe the benefits and drawbacks of microservices architecture.",
+                ]
+                self.chatbot_prompts = fallback * 10
 
     def get_default_config(self) -> Dict[str, Any]:
         return {
