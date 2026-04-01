@@ -77,7 +77,7 @@ def create_plot(metrics_dicts, base_filename):
     
     # Define SLO values
     ttft_slo = 1.0  # 1 second for ttft
-    tpot_slo = 0.2  # 0.2 seconds for tpot
+    tpot_slo = 0.25  # 0.2 seconds for tpot
     
     # Set style and colors
     import seaborn as sns
