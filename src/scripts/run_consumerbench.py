@@ -15,9 +15,20 @@ from applications.ChatbotHF.ChatbotHF import ChatbotHF
 from applications.DspyTool.DspyTool import DspyTool
 from applications.LiveCaptions.LiveCaptions import LiveCaptions
 from applications.LiveCaptionsHF.LiveCaptionsHF import LiveCaptionsHF
-from applications.MCPServer.MCPServer import MCPServer
-from applications.Retriever.Retriever import Retriever
-from applications.RetrieverServer.RetrieverServer import RetrieverServer
+try:
+    from applications.MCPServer.MCPServer import MCPServer
+except (ImportError, Exception):
+    MCPServer = None
+
+try:
+    from applications.Retriever.Retriever import Retriever
+except (ImportError, Exception):
+    Retriever = None
+
+try:
+    from applications.RetrieverServer.RetrieverServer import RetrieverServer
+except (ImportError, Exception):
+    RetrieverServer = None
 from applications.DbBench.DbBench import DbBench
 from applications.OSTool.OSTool import OsTool
 from src.workflow import Workflow
@@ -100,9 +111,9 @@ def main(args):
     chatbotHF = ChatbotHF()
     liveCaptions = LiveCaptions()
     liveCaptionsHF = LiveCaptionsHF()
-    mcpServer = MCPServer(mcp_trace_file=mcp_trace_file, config_file=config_file)
-    retriever = Retriever()
-    retrieverServer = RetrieverServer()
+    mcpServer = MCPServer(mcp_trace_file=mcp_trace_file, config_file=config_file) if MCPServer is not None else None
+    retriever = Retriever() if Retriever is not None else None
+    retrieverServer = RetrieverServer() if RetrieverServer is not None else None
     dspyTool = DspyTool()
     dbBench = DbBench()
     osTool = OsTool()
@@ -119,9 +130,12 @@ def main(args):
     workflow.register_application("ChatbotHF", chatbotHF)
     workflow.register_application("LiveCaptions", liveCaptions)
     workflow.register_application("LiveCaptionsHF", liveCaptionsHF)
-    workflow.register_application("MCPServer", mcpServer)
-    workflow.register_application("Retriever", retriever)
-    workflow.register_application("RetrieverServer", retrieverServer)
+    if mcpServer is not None:
+        workflow.register_application("MCPServer", mcpServer)
+    if retriever is not None:
+        workflow.register_application("Retriever", retriever)
+    if retrieverServer is not None:
+        workflow.register_application("RetrieverServer", retrieverServer)
     workflow.register_application("DspyTool", dspyTool)
     workflow.register_application("DbBench", dbBench)
     workflow.register_application("OsTool", osTool)

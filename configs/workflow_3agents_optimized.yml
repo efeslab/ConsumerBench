@@ -1,0 +1,100 @@
+# 3 Parallel Coding Agents — DAG-Optimized (Interleaved)
+#
+# Same three agents (DB, OS, RAG), same work per agent.
+# But cross-agent dependencies serialize LLM steps so only ONE agent
+# uses the GPU at any time. Tool calls overlap with other agents' LLM.
+#
+# Round-robin GPU access:  DB_LLM → OS_LLM → RAG_LLM → DB_LLM → OS_LLM → RAG_LLM
+# While one agent does LLM, the others do their tool calls (or wait).
+#
+# Expected behavior:
+#   - GPU is always occupied by exactly one agent → steady utilization
+#   - No contention → each request gets full GPU bandwidth → better TPOT
+#   - Tool calls overlap with other agents' LLM phases → efficient pipelining
+
+# ---- Application unit definitions (identical to naive) ----
+
+DB Agent LLM (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+DB Agent Tool (sleep):
+    sleep_time: 10
+    num_requests: 1
+    type: SleepApplication
+
+OS Agent LLM (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+OS Agent Tool (sleep):
+    sleep_time: 10
+    num_requests: 1
+    type: SleepApplication
+
+RAG Agent LLM (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+RAG Agent Tool (sleep):
+    sleep_time: 10
+    num_requests: 1
+    type: SleepApplication
+
+# ---- Workflow DAG (interleaved) ----
+# Cross-agent deps ensure round-robin LLM access:
+#   Round 1: db_llm_1 → os_llm_1 → rag_llm_1
+#   Round 2: db_llm_2 → os_llm_2 → rag_llm_2
+# Tool calls depend only on own agent's previous LLM (can overlap with other LLMs).
+
+workflows:
+    # === Round 1 ===
+    # DB goes first
+    db_llm_1:
+        uses: DB Agent LLM (chatbot)
+
+    # OS waits for DB's LLM to finish (GPU serialization)
+    os_llm_1:
+        uses: OS Agent LLM (chatbot)
+        depend_on: ["db_llm_1"]
+
+    # RAG waits for OS's LLM to finish
+    rag_llm_1:
+        uses: RAG Agent LLM (chatbot)
+        depend_on: ["os_llm_1"]
+
+    # Tool calls start as soon as own LLM finishes (overlap with next agent's LLM)
+    db_tool_1:
+        uses: DB Agent Tool (sleep)
+        depend_on: ["db_llm_1"]
+    os_tool_1:
+        uses: OS Agent Tool (sleep)
+        depend_on: ["os_llm_1"]
+    rag_tool_1:
+        uses: RAG Agent Tool (sleep)
+        depend_on: ["rag_llm_1"]
+
+    # === Round 2 ===
+    # DB's LLM2 waits for: own tool done AND RAG's LLM1 done (so GPU is free)
+    db_llm_2:
+        uses: DB Agent LLM (chatbot)
+        depend_on: ["db_tool_1", "rag_llm_1"]
+
+    # OS's LLM2 waits for: own tool done AND DB's LLM2 done
+    os_llm_2:
+        uses: OS Agent LLM (chatbot)
+        depend_on: ["os_tool_1", "db_llm_2"]
+
+    # RAG's LLM2 waits for: own tool done AND OS's LLM2 done
+    rag_llm_2:
+        uses: RAG Agent LLM (chatbot)
+        depend_on: ["rag_tool_1", "os_llm_2"]

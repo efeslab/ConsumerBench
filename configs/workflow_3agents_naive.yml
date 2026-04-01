@@ -1,0 +1,82 @@
+# 3 Parallel Coding Agents — Naive (Uncoordinated)
+#
+# Three agents (DB, OS, RAG) each alternate between LLM inference (GPU)
+# and tool calls (CPU). All three run fully independently in parallel.
+#
+# Expected behavior:
+#   - All 3 agents hit GPU simultaneously during LLM phases → contention
+#   - All 3 agents idle on GPU during tool phases → wasted GPU cycles
+#   - GPU utilization shows "zigzag" pattern (high → low → high → low)
+
+# ---- Application unit definitions ----
+
+DB Agent LLM (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+DB Agent Tool (sleep):
+    sleep_time: 10
+    num_requests: 1
+    type: SleepApplication
+
+OS Agent LLM (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+OS Agent Tool (sleep):
+    sleep_time: 10
+    num_requests: 1
+    type: SleepApplication
+
+RAG Agent LLM (chatbot):
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+RAG Agent Tool (sleep):
+    sleep_time: 10
+    num_requests: 1
+    type: SleepApplication
+
+# ---- Workflow DAG ----
+# All three agent chains start in parallel (no cross-agent deps).
+# Pattern per agent: LLM_1 → Tool_1 → LLM_2
+
+workflows:
+    # DB Agent chain
+    db_llm_1:
+        uses: DB Agent LLM (chatbot)
+    db_tool_1:
+        uses: DB Agent Tool (sleep)
+        depend_on: ["db_llm_1"]
+    db_llm_2:
+        uses: DB Agent LLM (chatbot)
+        depend_on: ["db_tool_1"]
+
+    # OS Agent chain
+    os_llm_1:
+        uses: OS Agent LLM (chatbot)
+    os_tool_1:
+        uses: OS Agent Tool (sleep)
+        depend_on: ["os_llm_1"]
+    os_llm_2:
+        uses: OS Agent LLM (chatbot)
+        depend_on: ["os_tool_1"]
+
+    # RAG Agent chain
+    rag_llm_1:
+        uses: RAG Agent LLM (chatbot)
+    rag_tool_1:
+        uses: RAG Agent Tool (sleep)
+        depend_on: ["rag_llm_1"]
+    rag_llm_2:
+        uses: RAG Agent LLM (chatbot)
+        depend_on: ["rag_tool_1"]

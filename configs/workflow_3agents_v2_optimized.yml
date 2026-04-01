@@ -1,0 +1,105 @@
+# 3 Parallel Agents — DAG-Optimized (Interleaved) — Different Models + Real Tools
+#
+# Same three agents and work as naive, but cross-agent dependencies serialize
+# LLM access so only ONE model uses the GPU at any time.
+# Tool calls overlap with other agents' LLM phases.
+#
+# Round-robin GPU access:  DB_LLM -> OS_LLM -> Chat_LLM -> DB_LLM -> OS_LLM -> Chat_LLM
+# While one agent does LLM, the previous agent's tool call runs in parallel (CPU/Docker).
+#
+# Expected: better TPOT (no contention) AND shorter e2e (tool latency hidden).
+
+# ---- Application unit definitions (identical to naive) ----
+
+DB Agent LLM:
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 5
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8080
+
+DB Agent Tool:
+    type: DbBench
+    num_requests: 5
+    tool_kwargs:
+        tool: mysql
+        num_runs: 1
+        data_file: /home/yilegu/ConsumerBench/ConsumerBench/applications/DbBench/data_dbbench.jsonl
+        query: "SELECT * FROM unknown WHERE Pos = 'FW'"
+
+OS Agent LLM:
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Qwen2.5-3B-Instruct-GGUF/qwen2.5-3b-instruct-q8_0.gguf
+    num_requests: 5
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8081
+
+OS Agent Tool:
+    type: OsTool
+    num_requests: 5
+    tool_kwargs:
+        tool: bash
+        num_runs: 1
+        data_file: /home/yilegu/ConsumerBench/ConsumerBench/applications/OSTool/data/data_dental.json
+
+Chat Agent LLM:
+    model: /home/yilegu/ConsumerBench/ConsumerBench/models/Phi-3.5-mini-instruct-GGUF/Phi-3.5-mini-instruct-Q8_0.gguf
+    num_requests: 5
+    device: gpu
+    type: Chatbot
+    mps: 100
+    api_port: 8082
+
+Chat Agent Tool:
+    type: OsTool
+    num_requests: 5
+    tool_kwargs:
+        tool: bash
+        num_runs: 1
+        data_file: /home/yilegu/ConsumerBench/ConsumerBench/applications/OSTool/data/data_amazon.json
+
+# ---- Workflow DAG (interleaved) ----
+# Cross-agent deps ensure round-robin LLM access:
+#   Round 1: db_llm_1 -> os_llm_1 -> chat_llm_1
+#   Round 2: db_llm_2 -> os_llm_2 -> chat_llm_2
+# Tool calls depend only on own agent's previous LLM (can overlap with other LLMs).
+
+workflows:
+    # === Round 1 ===
+    db_llm_1:
+        uses: DB Agent LLM
+
+    os_llm_1:
+        uses: OS Agent LLM
+        depend_on: ["db_llm_1"]
+
+    chat_llm_1:
+        uses: Chat Agent LLM
+        depend_on: ["os_llm_1"]
+
+    # Tool calls start as soon as own LLM finishes (overlap with next agent's LLM)
+    db_tool_1:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_1"]
+    os_tool_1:
+        uses: OS Agent Tool
+        depend_on: ["os_llm_1"]
+    chat_tool_1:
+        uses: Chat Agent Tool
+        depend_on: ["chat_llm_1"]
+
+    # === Round 2 ===
+    # Each agent's LLM2 waits for: own tool done AND previous agent's LLM2 done (GPU serialization)
+    db_llm_2:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_1", "chat_llm_1"]
+
+    os_llm_2:
+        uses: OS Agent LLM
+        depend_on: ["os_tool_1", "db_llm_2"]
+
+    chat_llm_2:
+        uses: Chat Agent LLM
+        depend_on: ["chat_tool_1", "os_llm_2"]
