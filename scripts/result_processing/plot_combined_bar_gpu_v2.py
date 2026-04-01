@@ -12,7 +12,7 @@ from dcgm_plotter_gpu_compute import parse_dcgm_output
 # ══════════════════════════════════════════════════════════════════════════════
 # GLOBAL FONT SIZE — change this single value to resize all text
 # ══════════════════════════════════════════════════════════════════════════════
-GLOBAL_FONT_SIZE = 30
+GLOBAL_FONT_SIZE = 28
 
 # ── SLO definitions ──────────────────────────────────────────────────────────
 SLOs = {
@@ -23,13 +23,13 @@ SLOs = {
 }
 
 # ── Data directories ─────────────────────────────────────────────────────────
-BASE = '/home/yilegu/ConsumerBench/ConsumerBench-Results/Whisper_Base_Results'
+BASE = '/home/yilegu/ConsumerBench/ConsumerBench-Results/New_Results'
 DIRS = {
-    'Time Slicing':  os.path.join(BASE, 'GreedyWhisperBase'),
-    'Static Partitioning':    os.path.join(BASE, 'EvenMPSWhisperBase'),
-    'TGS':    os.path.join(BASE, 'TGSWhisperBase'),
-    'Tally':  os.path.join(BASE, 'TallyWhisperBase'),
-    'Offline Profiling':     os.path.join(BASE, 'IdealMPSWhisperBase'),
+    'Greedy':  os.path.join(BASE, 'GreedyNew'),
+    'Even MPS':    os.path.join(BASE, 'EvenMPSNew'),
+    'TGS':    os.path.join(BASE, 'TGSBestNew'),
+    'Tally':  os.path.join(BASE, 'TallyBestNew'),
+    'Ideal MPS':     os.path.join(BASE, 'OptimalMPSNew'),
 }
 
 SAVE_DIR = '/home/yilegu/ConsumerBench/ConsumerBench/scripts/plots'
@@ -100,7 +100,7 @@ def plot_combined():
         # Annotate percentages on top of each bar
         for pos, val in zip(positions, vals):
             ax_slo.text(pos, val + 1.5, f'{val:.0f}%', ha='center', va='bottom',
-                        fontsize=GLOBAL_FONT_SIZE * 0.7, color=metric_colors[j])
+                        fontsize=GLOBAL_FONT_SIZE * 0.55, color=metric_colors[j])
 
     ax_slo.set_ylabel('SLO Attainment (%)')
     ax_slo.set_xticks(group_positions)
