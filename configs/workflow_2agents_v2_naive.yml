@@ -1,0 +1,186 @@
+# 2 Agents — Naive (Concurrent LLM Phases) — Coding + DB
+#
+# Two agents with different models and sleep-based tool phases:
+#   Coding Agent: Qwen2.5-3B + SleepApplication
+#   DB Agent:     Llama-3.2-3B + SleepApplication
+#
+# Naive schedule: both agent chains run independently in parallel.
+# This allows Coding/DB LLM calls to overlap in time (GPU contention).
+
+# ---- Application unit definitions ----
+
+Coding Agent LLM:
+    model: Qwen/Qwen2.5-3B-Instruct
+    #model: models/qwen2.5-3b-instruct-q5_k_m.gguf
+    num_requests: 1
+    device: gpu
+    #type: Chatbot
+    type: ChatbotHF
+    mps: 100
+    api_port: 8081
+
+Coding Agent Tool:
+    sleep_time: 10
+    num_requests: 1
+    type: SleepApplication
+
+DB Agent LLM:
+    model: meta-llama/Llama-3.2-3B-Instruct
+    #model: models/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 1
+    device: gpu
+    #type: Chatbot
+    type: ChatbotHF
+    mps: 100
+    api_port: 8080
+
+DB Agent Tool:
+    sleep_time: 10.5
+    num_requests: 1
+    type: SleepApplication
+
+# ---- Workflow DAG ----
+# Both chains start together and remain independent across agents.
+# Each agent is explicitly unrolled per request for 10 rounds:
+#   LLM_r1 -> Tool_r1 -> LLM_r2 -> Tool_r2 -> ... -> LLM_r10 -> Tool_r10
+
+workflows:
+    # DB Agent chain (10 rounds)
+    db_llm_r1:
+        uses: DB Agent LLM
+    db_tool_r1:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r1"]
+
+    db_llm_r2:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_r1"]
+    db_tool_r2:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r2"]
+
+    db_llm_r3:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_r2"]
+    db_tool_r3:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r3"]
+
+    db_llm_r4:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_r3"]
+    db_tool_r4:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r4"]
+
+    db_llm_r5:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_r4"]
+    db_tool_r5:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r5"]
+
+    db_llm_r6:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_r5"]
+    db_tool_r6:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r6"]
+
+    db_llm_r7:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_r6"]
+    db_tool_r7:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r7"]
+
+    db_llm_r8:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_r7"]
+    db_tool_r8:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r8"]
+
+    db_llm_r9:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_r8"]
+    db_tool_r9:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r9"]
+
+    db_llm_r10:
+        uses: DB Agent LLM
+        depend_on: ["db_tool_r9"]
+    db_tool_r10:
+        uses: DB Agent Tool
+        depend_on: ["db_llm_r10"]
+
+    # Coding Agent chain (10 rounds)
+    coding_llm_r1:
+        uses: Coding Agent LLM
+    coding_tool_r1:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r1"]
+
+    coding_llm_r2:
+        uses: Coding Agent LLM
+        depend_on: ["coding_tool_r1"]
+    coding_tool_r2:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r2"]
+
+    coding_llm_r3:
+        uses: Coding Agent LLM
+        depend_on: ["coding_tool_r2"]
+    coding_tool_r3:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r3"]
+
+    coding_llm_r4:
+        uses: Coding Agent LLM
+        depend_on: ["coding_tool_r3"]
+    coding_tool_r4:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r4"]
+
+    coding_llm_r5:
+        uses: Coding Agent LLM
+        depend_on: ["coding_tool_r4"]
+    coding_tool_r5:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r5"]
+
+    coding_llm_r6:
+        uses: Coding Agent LLM
+        depend_on: ["coding_tool_r5"]
+    coding_tool_r6:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r6"]
+
+    coding_llm_r7:
+        uses: Coding Agent LLM
+        depend_on: ["coding_tool_r6"]
+    coding_tool_r7:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r7"]
+
+    coding_llm_r8:
+        uses: Coding Agent LLM
+        depend_on: ["coding_tool_r7"]
+    coding_tool_r8:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r8"]
+
+    coding_llm_r9:
+        uses: Coding Agent LLM
+        depend_on: ["coding_tool_r8"]
+    coding_tool_r9:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r9"]
+
+    coding_llm_r10:
+        uses: Coding Agent LLM
+        depend_on: ["coding_tool_r9"]
+    coding_tool_r10:
+        uses: Coding Agent Tool
+        depend_on: ["coding_llm_r10"]
