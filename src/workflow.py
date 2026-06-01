@@ -77,7 +77,7 @@ class Workflow:
             self.workflow_unit_map[k] = {
                 "type": app_type,
                 "node_config": node_config,
-                "count": 0
+                "count": 0,
             }
 
         # Count how many times each unit is used in workflows
@@ -102,14 +102,24 @@ class Workflow:
                 raise ValueError(f"Application type '{app_type}' not registered. Please register it using register_application()")
 
             self.tasks_map_queue[k] = deque()
-            for i in range(count):
-                task_id = f"{k}_u{i}"
-                task, start_node, end_node = self._generate_application_task_group(
-                    task_id=task_id,
+            if count > 1:
+                task, workflow_node_bounds = self._generate_shared_application_task_group(
+                    task_id=k,
                     app_type=app_type,
-                    node_config=node_config
+                    node_config=node_config,
+                    count=count,
                 )
-                self.tasks_map_queue[k].append(WorkflowUnit(app_type, task, start_node, end_node))
+                for run_node_start, run_node_end in workflow_node_bounds:
+                    self.tasks_map_queue[k].append(WorkflowUnit(app_type, task, run_node_start, run_node_end))
+            else:
+                for i in range(count):
+                    task_id = f"{k}_u{i}"
+                    task, start_node, end_node = self._generate_application_task_group(
+                        task_id=task_id,
+                        app_type=app_type,
+                        node_config=node_config
+                    )
+                    self.tasks_map_queue[k].append(WorkflowUnit(app_type, task, start_node, end_node))
 
     def _generate_application_task_group(self, task_id: str, app_type: str, node_config: dict):
         """Generate a task group using an Application instance"""
@@ -147,6 +157,48 @@ class Workflow:
             task.add_edge(f"{task_id}_{i}", f"{task_id}_{i+1}")
 
         return (task, start_node, end_node)
+
+    def _generate_shared_application_task_group(self, task_id: str, app_type: str, node_config: dict, count: int):
+        """Generate a single setup/run/cleanup task shared by multiple workflow nodes."""
+        num_requests = int(node_config.get("num_requests", 1))
+        if num_requests < 1:
+            raise ValueError(f"Workflow unit '{task_id}' must have num_requests >= 1")
+        task = Task(task_id=task_id, task_type="ephemeral", app_type=app_type)
+
+        application = copy.deepcopy(self.applications[app_type])
+        application.add_config(node_config)
+
+        setup_node = f"{task_id}_0"
+        setup_wrapper = create_setup_wrapper(application)
+        task.add_node(setup_node, setup_wrapper, node_config)
+
+        workflow_node_bounds = []
+        previous_tail = setup_node
+        next_node_idx = 1
+
+        for _ in range(count):
+            block_start = None
+            block_tail = previous_tail
+            for _request_idx in range(num_requests):
+                run_node = f"{task_id}_{next_node_idx}"
+                next_node_idx += 1
+                if block_start is None:
+                    block_start = run_node
+
+                run_wrapper = create_run_wrapper(application)
+                task.add_node(run_node, run_wrapper, node_config)
+                task.add_edge(block_tail, run_node)
+                block_tail = run_node
+
+            workflow_node_bounds.append((block_start, block_tail))
+            previous_tail = block_tail
+
+        cleanup_node = f"{task_id}_{next_node_idx}"
+        cleanup_wrapper = create_cleanup_wrapper(application)
+        task.add_node(cleanup_node, cleanup_wrapper, node_config)
+        task.add_edge(previous_tail, cleanup_node)
+
+        return task, workflow_node_bounds
         
     def _remove_config_comments(self, file_path) -> str:
         with open(file_path, 'r') as file:
@@ -178,8 +230,9 @@ class Workflow:
                 raise ValueError(f"Task group '{uses}' not found in queue.")
             wf_unit: WorkflowUnit = self.tasks_map_queue[uses].popleft()
 
-            dag_list.append(wf_unit.task.get_dag())
-            task_sets[wf_unit.task.task_id] = wf_unit.task
+            if wf_unit.task.task_id not in task_sets:
+                dag_list.append(wf_unit.task.get_dag())
+                task_sets[wf_unit.task.task_id] = wf_unit.task
 
             units[unit_id] = {
                 "unit":        wf_unit,
