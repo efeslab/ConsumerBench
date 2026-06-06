@@ -1,0 +1,69 @@
+# Content Creation — Greedy GPU allocation (reproduction of the paper baseline)
+#
+# This is the ORIGINAL content-creation workflow (workflow_content_creation.yml)
+# with its dependency DAG intact:
+#   outline depends on brainstorm + analysis
+#   cover_art and generate_captions depend on outline
+#
+# "Greedy GPU allocation" = every node uses mps: 100 with no central scheduler,
+# so overlapping work contends for the full GPU. This reproduces the
+# "(a) Greedy GPU allocation" figure (content_creation.png).
+#
+# Paths corrected for this machine (the original referenced /mnt/tmpfs and
+# datasets/ which do not exist here).
+
+Brainstorm (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Analysis (deep_research):
+    server_model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+Preparing Outline (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 20
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Creating Cover Art (imagegen):
+    model: /home/cc/tally-bench/ConsumerBench/models/stable-diffusion-3.5-medium-turbo
+    num_requests: 10
+    device: gpu
+    type: ImageGen
+    mps: 100
+
+Generating Captions (live_captions):
+    num_requests: 1
+    device: gpu
+    client_command_file: /home/cc/tally-bench/ConsumerBench/applications/LiveCaptions/whisper-earnings21/4320211_chunk_002.wav
+    mps: 100
+    type: LiveCaptions
+
+workflows:
+    analysis:
+        uses: Analysis (deep_research)
+        background: true
+
+    brainstorm:
+        uses: Brainstorm (chatbot)
+
+    outline:
+        uses: Preparing Outline (chatbot)
+        depend_on: ["brainstorm", "analysis"]
+
+    cover_art:
+        uses: Creating Cover Art (imagegen)
+        depend_on: ["outline"]
+
+    generate_captions:
+        uses: Generating Captions (live_captions)
+        depend_on: ["outline"]

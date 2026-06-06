@@ -1,0 +1,66 @@
+# Content Creation — Parallel under Greedy GPU Scheduling
+#
+# Same application setup as workflow_content_creation.yml (chatbot, image
+# generation, live caption, deep research), but instead of the dependency DAG
+# (outline depends on brainstorm+analysis; cover_art/captions depend on outline)
+# all nodes are launched independently with NO depend_on edges, so they run
+# fully in parallel.
+#
+# Greedy GPU scheduling: no central scheduler field is set, and every node
+# requests mps: 100 (no MPS partitioning), so each application greedily
+# contends for the full GPU.
+#
+# The two chatbots (Brainstorm, Preparing Outline) and the deep research server
+# share the same llama.cpp server (identical Llama-3.2-3B model path).
+
+Brainstorm (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 10
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Analysis (deep_research):
+    server_model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    client_model: openai/meta-llama/Llama-3.2-3B-Instruct
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+Preparing Outline (chatbot):
+    model: /home/cc/tally-bench/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 20
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+Creating Cover Art (imagegen):
+    model: /home/cc/tally-bench/ConsumerBench/models/stable-diffusion-3.5-medium-turbo
+    num_requests: 10
+    device: gpu
+    type: ImageGen
+    mps: 100
+
+Generating Captions (live_captions):
+    num_requests: 1
+    device: gpu
+    client_command_file: /home/cc/tally-bench/ConsumerBench/applications/LiveCaptions/whisper-earnings21/4320211_chunk_002.wav
+    mps: 100
+    type: LiveCaptions
+
+workflows:
+    analysis:
+        uses: Analysis (deep_research)
+
+    brainstorm:
+        uses: Brainstorm (chatbot)
+
+    outline:
+        uses: Preparing Outline (chatbot)
+
+    cover_art:
+        uses: Creating Cover Art (imagegen)
+
+    generate_captions:
+        uses: Generating Captions (live_captions)

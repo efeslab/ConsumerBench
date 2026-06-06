@@ -43,6 +43,8 @@ class ExecutionNode:
         self.func_args = func_args or {}
         
         # Timing metrics for this specific execution
+        self.start_time = None
+        self.end_time = None
         self.execution_time = 0
         self.result = None
         self.success = False
@@ -55,6 +57,7 @@ class ExecutionNode:
             Tuple of (execution_time, result, success)
         """
         start_time = time.time()
+        self.start_time = (datetime.now() - globals.start_time).total_seconds()
         try:
             self.result = self.func(**self.func_args)
             self.success = True if self.result is not None else False
@@ -64,6 +67,7 @@ class ExecutionNode:
             self.result = None
         
         self.execution_time = time.time() - start_time
+        self.end_time = (datetime.now() - globals.start_time).total_seconds()
         return self.execution_time, self.result, self.success
 
 
@@ -172,6 +176,8 @@ class Task:
     def reset_nodes(self):
         """Reset timing metrics for all nodes"""
         for node in self.node_map.values():
+            node.start_time = None
+            node.end_time = None
             node.execution_time = 0
             node.result = None
             node.success = False
@@ -196,6 +202,8 @@ class Task:
         for node_id in ordered_nodes:
             node = self.node_map[node_id]
             print(f"Node {node.node_id}:")
+            print(f"  Start time: {node.start_time}")
+            print(f"  End time: {node.end_time}")
             print(f"  Execution time: {node.execution_time:.4f} seconds")
             print(f"  Success: {node.success}")
             
@@ -226,6 +234,8 @@ class Task:
             for node_id in ordered_nodes:
                 node = self.node_map[node_id]
                 f.write(f"Node {node.node_id}:\n")
+                f.write(f"  Start time: {node.start_time}\n")
+                f.write(f"  End time: {node.end_time}\n")
                 f.write(f"  Execution time: {node.execution_time:.4f} seconds\n")
                 f.write(f"  Success: {node.success}\n")
                 
@@ -685,3 +695,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args)
+
