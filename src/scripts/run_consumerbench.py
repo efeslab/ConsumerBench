@@ -94,6 +94,22 @@ def main(args):
     globals.set_start_time()
     globals.set_results_dir(f"{args.results}")
 
+    # Write the benchmark timeline ("Task <id>: start - end") emitted by
+    # display_results() to results/overall_perf.log. This entry point never
+    # configured file logging, so those lines were previously dropped and the
+    # SLO plotter had no timeline to read. Attach an explicit FileHandler.
+    import logging
+    os.makedirs(args.results, exist_ok=True)
+    _overall_perf_handler = logging.FileHandler(
+        os.path.join(args.results, "overall_perf.log"), mode="w")
+    _overall_perf_handler.setLevel(logging.INFO)
+    # The SLO plotter (overall_benchmark_output_slo.py) parses lines of the form
+    # "INFO:root:Task <id>: <start> - <end>", so emit that exact prefix.
+    _overall_perf_handler.setFormatter(logging.Formatter("%(levelname)s:%(name)s:%(message)s"))
+    _root_logger = logging.getLogger()
+    _root_logger.setLevel(logging.INFO)
+    _root_logger.addHandler(_overall_perf_handler)
+
     if ensure_tally_client(config_file):
         return
 

@@ -1,8 +1,8 @@
-scheduler: naive
+scheduler: tally
 
 imagegen1:
     model: models/stable-diffusion-3.5-medium-turbo
-    num_requests: 20
+    num_requests: 10
     device: gpu
     type: ImageGenServer
     api_port: 8082

@@ -13,7 +13,12 @@ model=$4
 device=$5
 mps=$6
 
-source ~/anaconda3/etc/profile.d/conda.sh
+# Activate the Python environment. Prefer the conda "whisper" env if conda is
+# available; otherwise fall back to the repo-local .cb virtualenv (which has
+# faster-whisper installed).
+if [ -f ~/anaconda3/etc/profile.d/conda.sh ]; then
+    source ~/anaconda3/etc/profile.d/conda.sh
+fi
 
 # Wrapper script for diffusion model application to use NVIDIA MPS
 
@@ -29,10 +34,14 @@ export CUDA_MPS_ACTIVE_THREAD_PERCENTAGE=${mps}
 # The actual GPU device number should be set to match your configuration
 export CUDA_VISIBLE_DEVICES=0
 
-conda activate whisper
+if command -v conda >/dev/null 2>&1 && conda env list 2>/dev/null | grep -q '^whisper\s'; then
+    conda activate whisper
+fi
 cd ${server_dir}/whisper_streaming
 
-python3 -u whisper_online_server.py --host 127.0.0.1 --port ${api_port} --device ${device} -l DEBUG --min-chunk-size 2.0 --warmup-file ${server_dir}/whisper-earnings21/10-sec-chunks/4320211_chunk_001.wav --model ${model} &
+# --buffer_trimming_sec 8 keeps the rolling audio buffer (and thus the encoder's
+# peak GPU memory) bounded so it doesn't OOM when sharing the GPU with other apps.
+python3 -u whisper_online_server.py --host 127.0.0.1 --port ${api_port} --device ${device} -l DEBUG --min-chunk-size 2.0 --buffer_trimming_sec 8 --warmup-file ${server_dir}/whisper-earnings21/4320211_chunk_001.wav --model ${model} &
 
 
 

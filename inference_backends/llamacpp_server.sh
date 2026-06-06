@@ -46,8 +46,13 @@ if [ "$device" == "gpu" ]; then
     # nsys profile --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true --python-backtrace=cuda --cudabacktrace=true build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 &
     # nsys profile --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true --python-backtrace=cuda
     # build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 128000 -nkvo &
-    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 &
-    # stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 -c 64000 --parallel 8 &
+    # Paper config: near-max model context (128000) with KV cache offloaded to CPU
+    # RAM (-nkvo / --no-kv-offload). Offloading KV to host makes every token slower
+    # (PCIe transfers), which is what drives the chatbot TTFT/TPOT SLO misses and the
+    # long deep-research time in the "Greedy GPU allocation" figure.
+    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 128000 -nkvo &
+    # GPU-resident KV variant (faster, but does not reproduce the paper's contention):
+    # stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 131072 &
 else
     export CUDA_VISIBLE_DEVICES=""
     stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 0 --parallel 8 -c 4096 &

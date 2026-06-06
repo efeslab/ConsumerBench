@@ -1,4 +1,4 @@
-#scheduler: naive
+scheduler: tally
 
 lv:
     num_requests: 1
