@@ -178,6 +178,69 @@ def get_amd_gpu_power():
     except:
         return 0
 
+# --- Frequency / throttling instrumentation -------------------------------
+# Added to answer reviewer gVNR: "to what extent does frequency throttling under
+# increased loads from multiple tasks affect results?". We sample the achieved SM
+# clock, its hardware max, and the NVML clock-throttle-reason bitmask alongside power.
+# Comparing the achieved clock under concurrency vs. in isolation isolates how much
+# of the slowdown comes from the GPU down-clocking (DVFS / power cap / thermal) as
+# opposed to scheduling/kernel contention.
+
+# Map throttle-reason bitmask bits to short labels. Constants are resolved from the
+# installed pynvml at runtime because names vary across versions (this environment
+# exposes SwPowerCap / HwSlowdown but NOT HwThermalSlowdown). Missing constants are
+# skipped rather than crashing the monitor.
+def _build_throttle_reason_map():
+    candidates = [
+        ('GpuIdle', 'nvmlClocksThrottleReasonGpuIdle'),
+        ('AppClock', 'nvmlClocksThrottleReasonApplicationsClocksSetting'),
+        ('SwPowerCap', 'nvmlClocksThrottleReasonSwPowerCap'),
+        ('HwSlowdown', 'nvmlClocksThrottleReasonHwSlowdown'),
+        ('SwThermal', 'nvmlClocksThrottleReasonSwThermalSlowdown'),
+        ('HwThermal', 'nvmlClocksThrottleReasonHwThermalSlowdown'),
+        ('HwPowerBrake', 'nvmlClocksThrottleReasonHwPowerBrakeSlowdown'),
+        ('SyncBoost', 'nvmlClocksThrottleReasonSyncBoost'),
+        ('UserClock', 'nvmlClocksThrottleReasonUserDefinedClocks'),
+    ]
+    mapping = {}
+    if NVIDIA_GPU_AVAILABLE:
+        for label, attr in candidates:
+            bit = getattr(pynvml, attr, None)
+            if bit:
+                mapping[label] = bit
+    return mapping
+
+THROTTLE_REASON_MAP = _build_throttle_reason_map()
+
+def get_nvidia_gpu_clocks():
+    """Return (sm_clock_mhz, max_sm_clock_mhz, throttle_bitmask, throttle_labels).
+
+    throttle_labels is a '|'-separated string of active *performance-limiting*
+    throttle reasons (or 'None'). Returns zeros / '' when monitoring is unavailable
+    so the CSV stays well-formed.
+    """
+    if not NVIDIA_GPU_AVAILABLE:
+        return 0, 0, 0, ''
+    try:
+        handle = pynvml.nvmlDeviceGetHandleByIndex(0)
+        sm_clock = pynvml.nvmlDeviceGetClockInfo(handle, pynvml.NVML_CLOCK_SM)
+        try:
+            max_clock = pynvml.nvmlDeviceGetMaxClockInfo(handle, pynvml.NVML_CLOCK_SM)
+        except Exception:
+            max_clock = 0
+        try:
+            bitmask = pynvml.nvmlDeviceGetCurrentClocksThrottleReasons(handle)
+        except Exception:
+            bitmask = 0
+        active = [label for label, bit in THROTTLE_REASON_MAP.items() if bitmask & bit]
+        # GpuIdle / AppClock are not performance-limiting throttles under load; drop
+        # them so the label flags only genuine power/thermal/hw throttling.
+        active = [a for a in active if a not in ('GpuIdle', 'AppClock')]
+        labels = '|'.join(active) if active else 'None'
+        return sm_clock, max_clock, bitmask, labels
+    except Exception:
+        return 0, 0, 0, ''
+
 def signal_handler(sig, frame):
     """Handle Ctrl+C to stop monitoring gracefully."""
     global stop_monitoring
@@ -191,7 +254,8 @@ def monitor_power_thread(output_file, interval=0.05, stop_event=None, start_time
         start_time = time.time()
     
     with open(output_file, 'w', newline='') as csvfile:
-        fieldnames = ['timestamp', 'elapsed_time', 'cpu_power', 'gpu_power', 'total_power']
+        fieldnames = ['timestamp', 'elapsed_time', 'cpu_power', 'gpu_power', 'total_power',
+                      'sm_clock_mhz', 'max_sm_clock_mhz', 'throttle_bitmask', 'throttle_reasons']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         
@@ -206,15 +270,21 @@ def monitor_power_thread(output_file, interval=0.05, stop_event=None, start_time
                 cpu_power = get_cpu_power()
                 gpu_power = get_nvidia_gpu_power()
                 total_power = cpu_power + gpu_power
-                # print(f"Elapsed: {elapsed:.3f}s, CPU Power: {cpu_power:.2f}W, GPU Power: {gpu_power:.2f}W, Total Power: {total_power:.2f}W")
-                
+                # Get clock / throttle readings (frequency-throttling instrumentation)
+                sm_clock, max_sm_clock, throttle_bitmask, throttle_reasons = get_nvidia_gpu_clocks()
+                # print(f"Elapsed: {elapsed:.3f}s, CPU Power: {cpu_power:.2f}W, GPU Power: {gpu_power:.2f}W, Total Power: {total_power:.2f}W, SM Clock: {sm_clock}MHz, Throttle: {throttle_reasons}")
+
                 # Write to CSV
                 writer.writerow({
                     'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'),
                     'elapsed_time': f"{elapsed:.3f}",
                     'cpu_power': f"{cpu_power:.2f}",
                     'gpu_power': f"{gpu_power:.2f}",
-                    'total_power': f"{total_power:.2f}"
+                    'total_power': f"{total_power:.2f}",
+                    'sm_clock_mhz': sm_clock,
+                    'max_sm_clock_mhz': max_sm_clock,
+                    'throttle_bitmask': throttle_bitmask,
+                    'throttle_reasons': throttle_reasons
                 })
                 
                 # Flush to ensure data is written immediately

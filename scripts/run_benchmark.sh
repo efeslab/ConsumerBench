@@ -131,6 +131,7 @@ python3 ${PLOT_SCRIPTS_DIR}/plot_cpu_compute_usage.py --input_file_cpu ${RESULTS
 python3 ${PLOT_SCRIPTS_DIR}/plot_cpu_mem_usage.py --input_file_cpu ${RESULTS_DIR}/cpu_usage.log --input_file_mem ${RESULTS_DIR}/memory-bw.csv -o ${RESULTS_DIR}/cpu_mem_usage.png -s $start_time
 python3 ${PLOT_SCRIPTS_DIR}/dcgm_plotter_gpu_compute.py ${RESULTS_DIR}/gpu_utilization.log -o ${RESULTS_DIR}/gpu_compute_usage.png -s $start_time
 python3 ${PLOT_SCRIPTS_DIR}/dcgm_plotter_gpu_mem.py ${RESULTS_DIR}/gpu_utilization.log -o ${RESULTS_DIR}/gpu_mem_usage.png -s $start_time
+python3 ${PLOT_SCRIPTS_DIR}/plot_gpu_clock_throttle.py ${RESULTS_DIR}/gpu_utilization.log -o ${RESULTS_DIR}/gpu_clock_throttle.png -s $start_time | tee ${RESULTS_DIR}/gpu_clock_throttle_summary.txt
 python3 ${PLOT_SCRIPTS_DIR}/plot_power_usage.py --input ${RESULTS_DIR}/power_data.csv -o ${RESULTS_DIR}/power_usage.png
 
 
