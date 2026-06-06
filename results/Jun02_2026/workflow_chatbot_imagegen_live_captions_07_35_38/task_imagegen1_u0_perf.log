@@ -1,0 +1,70 @@
+app_type: ImageGen
+task_id: imagegen1_u0
+start_time: 5.604653
+end_time: 255.15598
+Task imagegen1_u0 execution time: 249.5379 seconds
+
+Execution times for each node:
+Node imagegen1_u0_0:
+  Start time: 5.604782
+  End time: 48.640726
+  Execution time: 43.0359 seconds
+  Success: False
+Node imagegen1_u0_1:
+  Start time: 48.641726
+  End time: 67.962048
+  Execution time: 19.3203 seconds
+  Success: True
+Node imagegen1_u0_2:
+  Start time: 67.963221
+  End time: 89.83506
+  Execution time: 21.8718 seconds
+  Success: True
+Node imagegen1_u0_3:
+  Start time: 89.835901
+  End time: 112.122016
+  Execution time: 22.2861 seconds
+  Success: True
+Node imagegen1_u0_4:
+  Start time: 112.122878
+  End time: 132.400738
+  Execution time: 20.2778 seconds
+  Success: True
+Node imagegen1_u0_5:
+  Start time: 132.401429
+  End time: 152.787282
+  Execution time: 20.3858 seconds
+  Success: True
+Node imagegen1_u0_6:
+  Start time: 152.788489
+  End time: 173.245489
+  Execution time: 20.4570 seconds
+  Success: True
+Node imagegen1_u0_7:
+  Start time: 173.246677
+  End time: 193.711337
+  Execution time: 20.4647 seconds
+  Success: True
+Node imagegen1_u0_8:
+  Start time: 193.712526
+  End time: 214.177593
+  Execution time: 20.4651 seconds
+  Success: True
+Node imagegen1_u0_9:
+  Start time: 214.178736
+  End time: 234.686397
+  Execution time: 20.5077 seconds
+  Success: True
+Node imagegen1_u0_10:
+  Start time: 234.687323
+  End time: 255.153033
+  Execution time: 20.4657 seconds
+  Success: True
+Node imagegen1_u0_11:
+  Start time: 255.155442
+  End time: 255.155486
+  Execution time: 0.0000 seconds
+  Success: True
+
+Task imagegen1_u0 results:
+[None, {'status': 'image_gen_complete', 'total time': 19.320207357406616}, {'status': 'image_gen_complete', 'total time': 21.871737718582153}, {'status': 'image_gen_complete', 'total time': 22.285964012145996}, {'status': 'image_gen_complete', 'total time': 20.277708292007446}, {'status': 'image_gen_complete', 'total time': 20.385724306106567}, {'status': 'image_gen_complete', 'total time': 20.456894159317017}, {'status': 'image_gen_complete', 'total time': 20.46454882621765}, {'status': 'image_gen_complete', 'total time': 20.464938640594482}, {'status': 'image_gen_complete', 'total time': 20.5075466632843}, {'status': 'image_gen_complete', 'total time': 20.465596437454224}, {'status': 'cleanup_complete'}]

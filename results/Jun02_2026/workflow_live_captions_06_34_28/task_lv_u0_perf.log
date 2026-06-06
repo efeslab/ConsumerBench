@@ -1,0 +1,25 @@
+app_type: LiveCaptions
+task_id: lv_u0
+start_time: 6.123517
+end_time: 79.726649
+Task lv_u0 execution time: 73.6011 seconds
+
+Execution times for each node:
+Node lv_u0_0:
+  Start time: 6.123736
+  End time: 19.144613
+  Execution time: 13.0209 seconds
+  Success: True
+Node lv_u0_1:
+  Start time: 19.145131
+  End time: 77.980263
+  Execution time: 58.8351 seconds
+  Success: True
+Node lv_u0_2:
+  Start time: 77.980988
+  End time: 79.726132
+  Execution time: 1.7451 seconds
+  Success: True
+
+Task lv_u0 results:
+[{'status': 'setup_complete', 'config': {'device': 'gpu', 'mps': 50, 'api_port': 5000, 'model': 'large-v3-turbo', 'client_command_file': 'applications/LiveCaptions/whisper-earnings21/4320211_chunk_002.wav', 'num_requests': 1}}, {'processing time_chunk_0': 0.401235, 'processing time_chunk_1': 0.501208, 'processing time_chunk_2': 0.401118, 'processing time_chunk_3': 0.601597, 'processing time_chunk_4': 0.501403, 'processing time_chunk_5': 1.002447, 'processing time_chunk_6': 0.501364, 'processing time_chunk_7': 0.401147, 'processing time_chunk_8': 0.70182, 'processing time_chunk_9': 0.801623, 'processing time_chunk_10': 0.701627, 'processing time_chunk_11': 1.303131, 'processing time_chunk_12': 0.40111, 'processing time_chunk_13': 0.401107, 'processing time_chunk_14': 0.401173, 'processing time_chunk_15': 0.40114, 'processing time_chunk_16': 0.401166, 'processing time_chunk_17': 0.401204, 'processing time_chunk_18': 0.501381, 'processing time_chunk_19': 0.50142, 'processing time_chunk_20': 0.401253, 'processing time_chunk_21': 0.300992, 'processing time_chunk_22': 0.401159, 'processing time_chunk_23': 0.401076, 'processing time_chunk_24': 0.501366, 'processing time_chunk_25': 0.40116, 'processing time_chunk_26': 0.501387, 'processing time_chunk_27': 0.401224, 'processing time_chunk_28': 0.601604, 'processing time_chunk_29': 0.318264, 'total time': 58.82966470718384, 'status': 'live_captions_complete'}, {'status': 'cleanup_complete'}]

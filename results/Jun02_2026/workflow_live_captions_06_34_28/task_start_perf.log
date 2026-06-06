@@ -1,0 +1,20 @@
+app_type: dummy
+task_id: start
+start_time: 6.120815
+end_time: 6.124674
+Task start execution time: 0.0000 seconds
+
+Execution times for each node:
+Node start_0:
+  Start time: 6.121708
+  End time: 6.121718
+  Execution time: 0.0000 seconds
+  Success: True
+Node start_1:
+  Start time: 6.123687
+  End time: 6.123701
+  Execution time: 0.0000 seconds
+  Success: True
+
+Task start results:
+[{'status': 'dummy_complete'}, {'status': 'dummy_complete'}]

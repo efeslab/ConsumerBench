@@ -1,0 +1,70 @@
+app_type: ImageGen
+task_id: imagegen1_u0
+start_time: 4.966704
+end_time: 184.700565
+Task imagegen1_u0 execution time: 179.7190 seconds
+
+Execution times for each node:
+Node imagegen1_u0_0:
+  Start time: 4.966733
+  End time: 28.856724
+  Execution time: 23.8899 seconds
+  Success: False
+Node imagegen1_u0_1:
+  Start time: 28.857901
+  End time: 44.50118
+  Execution time: 15.6433 seconds
+  Success: True
+Node imagegen1_u0_2:
+  Start time: 44.502606
+  End time: 59.678697
+  Execution time: 15.1761 seconds
+  Success: True
+Node imagegen1_u0_3:
+  Start time: 59.679708
+  End time: 75.010272
+  Execution time: 15.3306 seconds
+  Success: True
+Node imagegen1_u0_4:
+  Start time: 75.011028
+  End time: 90.472894
+  Execution time: 15.4619 seconds
+  Success: True
+Node imagegen1_u0_5:
+  Start time: 90.473756
+  End time: 106.033004
+  Execution time: 15.5592 seconds
+  Success: True
+Node imagegen1_u0_6:
+  Start time: 106.033921
+  End time: 121.665086
+  Execution time: 15.6312 seconds
+  Success: True
+Node imagegen1_u0_7:
+  Start time: 121.665727
+  End time: 137.383368
+  Execution time: 15.7176 seconds
+  Success: True
+Node imagegen1_u0_8:
+  Start time: 137.384282
+  End time: 153.125176
+  Execution time: 15.7409 seconds
+  Success: True
+Node imagegen1_u0_9:
+  Start time: 153.126084
+  End time: 168.903889
+  Execution time: 15.7778 seconds
+  Success: True
+Node imagegen1_u0_10:
+  Start time: 168.904671
+  End time: 184.695223
+  Execution time: 15.7905 seconds
+  Success: True
+Node imagegen1_u0_11:
+  Start time: 184.695963
+  End time: 184.696022
+  Execution time: 0.0001 seconds
+  Success: True
+
+Task imagegen1_u0 results:
+[None, {'status': 'image_gen_complete', 'total time': 15.642721891403198}, {'status': 'image_gen_complete', 'total time': 15.175965785980225}, {'status': 'image_gen_complete', 'total time': 15.330452680587769}, {'status': 'image_gen_complete', 'total time': 15.461753129959106}, {'status': 'image_gen_complete', 'total time': 15.559119939804077}, {'status': 'image_gen_complete', 'total time': 15.6310396194458}, {'status': 'image_gen_complete', 'total time': 15.717510223388672}, {'status': 'image_gen_complete', 'total time': 15.740776538848877}, {'status': 'image_gen_complete', 'total time': 15.777687072753906}, {'status': 'image_gen_complete', 'total time': 15.790436029434204}, {'status': 'cleanup_complete'}]

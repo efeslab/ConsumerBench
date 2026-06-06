@@ -1,0 +1,14 @@
+{
+    "lv": {
+        "num_requests": 1,
+        "device": "gpu",
+        "mps": 50,
+        "client_command_file": "applications/LiveCaptions/whisper-earnings21/4320211_chunk_002.wav",
+        "type": "LiveCaptions"
+    },
+    "workflows": {
+        "start_captions": {
+            "uses": "lv"
+        }
+    }
+}

@@ -1,0 +1,133 @@
+Audio duration: 60.00 seconds
+Connected to localhost:5000
+Sent chunk 1: 64000 bytes (2.00 seconds) at 1780385781.910624
+Received 9 bytes of response data
+
+Response for chunk 1:
+  Processing time: 0.601151 seconds
+  Content: No input
+  Received at: 1780385782.511775
+  Sent at: 1780385781.910624
+Sent chunk 2: 64000 bytes (2.00 seconds) at 1780385783.915056
+Received 9 bytes of response data
+
+Response for chunk 2:
+  Processing time: 0.501294 seconds
+  Content: No input
+  Received at: 1780385784.416350
+  Sent at: 1780385783.915056
+Sent chunk 3: 64000 bytes (2.00 seconds) at 1780385785.919370
+Received 49 bytes of response data
+
+Response for chunk 3:
+  Processing time: 0.401091 seconds
+  Content: 1640 3780  If I could draw your attention to the
+  Received at: 1780385786.320462
+  Sent at: 1780385785.919370
+Sent chunk 4: 64000 bytes (2.00 seconds) at 1780385787.923690
+Received 36 bytes of response data
+
+Response for chunk 4:
+  Processing time: 0.501084 seconds
+  Content: 3800 5180  Safe Harbor Statement on
+  Received at: 1780385788.424774
+  Sent at: 1780385787.923690
+Sent chunk 5: 64000 bytes (2.00 seconds) at 1780385789.927865
+Received 52 bytes of response data
+
+Response for chunk 5:
+  Processing time: 0.401022 seconds
+  Content: 5180 7880  Slide 2 of the presentation, I'd like to
+  Received at: 1780385790.328887
+  Sent at: 1780385789.927865
+Sent chunk 6: 64000 bytes (2.00 seconds) at 1780385791.932717
+Received 49 bytes of response data
+
+Response for chunk 6:
+  Processing time: 1.102470 seconds
+  Content: 7880 9620  remind participants on this morning's
+  Received at: 1780385793.035187
+  Sent at: 1780385791.932717
+Sent chunk 7: 64000 bytes (2.00 seconds) at 1780385793.937572
+Received 53 bytes of response data
+
+Response for chunk 7:
+  Processing time: 0.601539 seconds
+  Content: 9620 11840  call that our presentation includes some
+  Received at: 1780385794.539111
+  Sent at: 1780385793.937572
+Sent chunk 8: 64000 bytes (2.00 seconds) at 1780385795.942223
+Received 55 bytes of response data
+
+Response for chunk 8:
+  Processing time: 0.401094 seconds
+  Content: 11840 14080  forward-looking statements about Monroe's
+  Received at: 1780385796.343317
+  Sent at: 1780385795.942223
+Sent chunk 9: 64000 bytes (2.00 seconds) at 1780385797.947136
+Sent chunk 10: 64000 bytes (2.00 seconds) at 1780385799.952259
+Sent chunk 11: 64000 bytes (2.00 seconds) at 1780385801.957371
+Sent chunk 12: 64000 bytes (2.00 seconds) at 1780385803.962230
+Sent chunk 13: 64000 bytes (2.00 seconds) at 1780385805.967196
+Received 33 bytes of response data
+
+Response for chunk 9:
+  Processing time: 9.422993 seconds
+  Content: 14080 15040  future performance.
+  Received at: 1780385807.370129
+  Sent at: 1780385797.947136
+Sent chunk 14: 64000 bytes (2.00 seconds) at 1780385807.972002
+Sent chunk 15: 64000 bytes (2.00 seconds) at 1780385809.976482
+Sent chunk 16: 64000 bytes (2.00 seconds) at 1780385811.980593
+Sent chunk 17: 64000 bytes (2.00 seconds) at 1780385813.985007
+Sent chunk 18: 64000 bytes (2.00 seconds) at 1780385815.989381
+Sent chunk 19: 64000 bytes (2.00 seconds) at 1780385817.994292
+Received 9 bytes of response data
+
+Response for chunk 10:
+  Processing time: 18.342895 seconds
+  Content: No input
+  Received at: 1780385818.295154
+  Sent at: 1780385799.952259
+Sent chunk 20: 64000 bytes (2.00 seconds) at 1780385819.999418
+Sent chunk 21: 64000 bytes (2.00 seconds) at 1780385822.004543
+Sent chunk 22: 64000 bytes (2.00 seconds) at 1780385824.009483
+Sent chunk 23: 64000 bytes (2.00 seconds) at 1780385826.014445
+Sent chunk 24: 64000 bytes (2.00 seconds) at 1780385828.019455
+Received 9 bytes of response data
+
+Response for chunk 11:
+  Processing time: 26.062314 seconds
+  Content: No input
+  Received at: 1780385828.019684
+  Sent at: 1780385801.957371
+Sent chunk 25: 64000 bytes (2.00 seconds) at 1780385830.024498
+Sent chunk 26: 64000 bytes (2.00 seconds) at 1780385832.029498
+Sent chunk 27: 64000 bytes (2.00 seconds) at 1780385834.034389
+Sent chunk 28: 64000 bytes (2.00 seconds) at 1780385836.039336
+Sent chunk 29: 64000 bytes (2.00 seconds) at 1780385838.044128
+Sent chunk 30: 64000 bytes (2.00 seconds) at 1780385840.049286
+Finished sending 30 chunks (1920000 bytes)
+Waiting up to 500000000 seconds for responses to 19 remaining chunks...
+Received 115 bytes of response data
+
+Response for chunk 12:
+  Processing time: 52.129328 seconds
+  Content: 15640 22000  Actual results may differ materially from those suggested by our comments today. The most significant
+  Received at: 1780385856.091559
+  Sent at: 1780385803.962230
+Received 58 bytes of response data
+
+Response for chunk 13:
+  Processing time: 52.428895 seconds
+  Content: 22000 24420  factors that could affect future results are
+  Received at: 1780385858.396092
+  Sent at: 1780385805.967196
+Received 34 bytes of response data
+
+Response for chunk 14:
+  Processing time: 52.728797 seconds
+  Content: 24420 25580  outlined in Monroe's
+  Received at: 1780385860.700799
+  Sent at: 1780385807.972002
+Error receiving data: [Errno 104] Connection reset by peer

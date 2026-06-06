@@ -1,0 +1,14 @@
+{
+    "imagegen1": {
+        "model": "models/stable-diffusion-3.5-medium-turbo",
+        "num_requests": 10,
+        "device": "gpu",
+        "type": "ImageGen",
+        "mps": 100
+    },
+    "workflows": {
+        "generate_image": {
+            "uses": "imagegen1"
+        }
+    }
+}

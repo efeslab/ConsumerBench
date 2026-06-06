@@ -1,0 +1,145 @@
+INFO	Loading Whisper large-v3-turbo model for auto...
+/home/cc/tally-bench/ConsumerBench/.cb/lib/python3.10/site-packages/transformers/utils/generic.py:484: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+INFO	done. It took 15.21 seconds.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 2.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (0.0, 1.94, ' Thank you very much. Thank you very much.')
+DEBUG	len of buffer now: 2.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 4.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (1.7199999999999998, 3.98, ' If I could draw your attention to the same')
+DEBUG	len of buffer now: 4.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 6.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (1.6399999999999997, 3.78, ' If I could draw your attention to the')
+DEBUG	INCOMPLETE: (3.78, 5.98, ' Safe Harbor Statement on slide 2 of the')
+DEBUG	len of buffer now: 6.00
+1640 3780  If I could draw your attention to the
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the
+DEBUG	transcribing 8.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (3.8, 5.18, ' Safe Harbor Statement on')
+DEBUG	INCOMPLETE: (5.18, 7.92, " Slide 2 of the presentation, I'd like to see you next time.")
+DEBUG	len of buffer now: 8.00
+3800 5180  Safe Harbor Statement on
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on
+DEBUG	transcribing 10.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (5.18, 7.88, " Slide 2 of the presentation, I'd like to")
+DEBUG	INCOMPLETE: (7.88, 9.88, " remind participants on this morning's call.")
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 10.00
+5180 7880  Slide 2 of the presentation, I'd like to
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to
+DEBUG	transcribing 12.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (7.86, 9.62, " remind participants on this morning's")
+DEBUG	INCOMPLETE: (9.62, 11.86, ' call that our presentation includes some')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 12.00
+7880 9620  remind participants on this morning's
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's
+DEBUG	transcribing 14.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (9.62, 11.84, ' call that our presentation includes some')
+DEBUG	INCOMPLETE: (11.84, 13.98, " forward-looking statements about Monroe's")
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 14.00
+9620 11840  call that our presentation includes some
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some
+DEBUG	transcribing 16.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (11.84, 14.08, " forward-looking statements about Monroe's")
+DEBUG	INCOMPLETE: (14.08, 15.04, ' future performance.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.00
+11840 14080  forward-looking statements about Monroe's
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's
+DEBUG	transcribing 18.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (14.08, 15.04, ' future performance.')
+DEBUG	INCOMPLETE: (None, None, '')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 18.00
+14080 15040  future performance.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's future performance.
+DEBUG	transcribing 20.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (None, None, '')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 20.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's future performance.
+DEBUG	transcribing 22.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (15.64, 21.82, ' Actual results may differ materially from those suggested by our comments today. The most significant')
+DEBUG	--- segment chunked at 14.00
+DEBUG	chunking segment
+DEBUG	len of buffer now: 8.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about
+DEBUG	CONTEXT:  Monroe's future performance.
+DEBUG	transcribing 10.00 seconds from 14.00
+DEBUG	>>>>COMPLETE NOW: (15.64, 22.0, ' Actual results may differ materially from those suggested by our comments today. The most significant')
+DEBUG	INCOMPLETE: (22.0, 23.98, ' factors that could affect future results are')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 10.00
+15640 22000  Actual results may differ materially from those suggested by our comments today. The most significant
+DEBUG	PROMPT:  Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about
+DEBUG	CONTEXT:  Monroe's future performance. Actual results may differ materially from those suggested by our comments today. The most significant
+DEBUG	transcribing 12.00 seconds from 14.00
+DEBUG	>>>>COMPLETE NOW: (21.98, 24.42, ' factors that could affect future results are')
+DEBUG	INCOMPLETE: (24.42, 25.92, " outlined in Monroe's filing")
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 12.00
+22000 24420  factors that could affect future results are
+DEBUG	PROMPT:  Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about
+DEBUG	CONTEXT:  Monroe's future performance. Actual results may differ materially from those suggested by our comments today. The most significant factors that could affect future results are
+DEBUG	transcribing 14.00 seconds from 14.00
+DEBUG	>>>>COMPLETE NOW: (24.42, 25.58, " outlined in Monroe's")
+DEBUG	INCOMPLETE: (25.58, 27.98, ' filings with the SEC and in our')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 14.00
+24420 25580  outlined in Monroe's
+DEBUG	PROMPT:  Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about
+DEBUG	CONTEXT:  Monroe's future performance. Actual results may differ materially from those suggested by our comments today. The most significant factors that could affect future results are outlined in Monroe's
+DEBUG	transcribing 16.00 seconds from 14.00
+Traceback (most recent call last):
+  File "/home/cc/tally-bench/ConsumerBench/applications/LiveCaptions/whisper_streaming/whisper_online_server.py", line 246, in <module>
+    proc.process()
+  File "/home/cc/tally-bench/ConsumerBench/applications/LiveCaptions/whisper_streaming/whisper_online_server.py", line 221, in process
+    o = online.process_iter()
+  File "/home/cc/tally-bench/ConsumerBench/applications/LiveCaptions/whisper_streaming/whisper_online.py", line 492, in process_iter
+    res = self.asr.transcribe(self.audio_buffer, init_prompt=prompt)
+  File "/home/cc/tally-bench/ConsumerBench/applications/LiveCaptions/whisper_streaming/whisper_online.py", line 138, in transcribe
+    segments, info = self.model.transcribe(audio, language=self.original_language, initial_prompt=init_prompt, beam_size=5, word_timestamps=True, condition_on_previous_text=True, **self.transcribe_kargs)
+  File "/home/cc/tally-bench/ConsumerBench/.cb/lib/python3.10/site-packages/faster_whisper/transcribe.py", line 942, in transcribe
+    ) = self.detect_language(
+  File "/home/cc/tally-bench/ConsumerBench/.cb/lib/python3.10/site-packages/faster_whisper/transcribe.py", line 1819, in detect_language
+    encoder_output = self.encode(
+  File "/home/cc/tally-bench/ConsumerBench/.cb/lib/python3.10/site-packages/faster_whisper/transcribe.py", line 1400, in encode
+    return self.model.encode(features, to_cpu=to_cpu)
+RuntimeError: CUDA failed with error out of memory

@@ -1,0 +1,8 @@
+=== GPU clock / throttle summary ===
+  samples                 : 14868
+  hardware max SM clock   : 2100 MHz
+  mean SM clock (active)  : 1278 MHz (60.8% of max)
+  min  SM clock (active)  : 825 MHz
+  time perf-throttled     : 26.8%
+  throttle reasons seen   : SwPowerCap
+Plot saved to /home/cc/tally-bench/ConsumerBench/results/Jun02_2026/workflow_chatbot_imagegen_live_captions_07_35_38/gpu_clock_throttle.png

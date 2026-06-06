@@ -1,0 +1,267 @@
+INFO	Loading Whisper large-v3-turbo model for auto...
+/home/cc/tally-bench/ConsumerBench/.cb/lib/python3.10/site-packages/transformers/utils/generic.py:484: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+INFO	done. It took 7.62 seconds.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 2.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (0.0, 1.94, ' Thank you very much. Thank you very much.')
+DEBUG	len of buffer now: 2.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 4.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (1.7199999999999998, 3.98, ' If I could draw your attention to the same')
+DEBUG	len of buffer now: 4.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT: 
+DEBUG	transcribing 6.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (1.6399999999999997, 3.78, ' If I could draw your attention to the')
+DEBUG	INCOMPLETE: (3.78, 5.98, ' Safe Harbor Statement on slide 2 of the')
+DEBUG	len of buffer now: 6.00
+1640 3780  If I could draw your attention to the
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the
+DEBUG	transcribing 8.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (3.8, 5.18, ' Safe Harbor Statement on')
+DEBUG	INCOMPLETE: (5.18, 7.92, " Slide 2 of the presentation, I'd like to see you next time.")
+DEBUG	len of buffer now: 8.00
+3800 5180  Safe Harbor Statement on
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on
+DEBUG	transcribing 10.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (5.18, 7.88, " Slide 2 of the presentation, I'd like to")
+DEBUG	INCOMPLETE: (7.88, 9.88, " remind participants on this morning's call.")
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 10.00
+5180 7880  Slide 2 of the presentation, I'd like to
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to
+DEBUG	transcribing 12.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (7.86, 9.62, " remind participants on this morning's")
+DEBUG	INCOMPLETE: (9.62, 11.98, ' call that our presentation includes some of the questions on slide 2 of the presentation.')
+DEBUG	--- last segment not within commited area
+DEBUG	chunking segment
+DEBUG	len of buffer now: 12.00
+7880 9620  remind participants on this morning's
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's
+DEBUG	transcribing 14.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (9.62, 11.84, ' call that our presentation includes some')
+DEBUG	INCOMPLETE: (11.84, 13.98, " forward-looking statements about Monroe's")
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 14.00
+9620 11840  call that our presentation includes some
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some
+DEBUG	transcribing 16.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (11.84, 14.08, " forward-looking statements about Monroe's")
+DEBUG	INCOMPLETE: (14.08, 15.04, ' future performance.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.00
+11840 14080  forward-looking statements about Monroe's
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's
+DEBUG	transcribing 18.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (14.08, 15.04, ' future performance.')
+DEBUG	INCOMPLETE: (None, None, '')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 18.00
+14080 15040  future performance.
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's future performance.
+DEBUG	transcribing 20.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (None, None, '')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 20.00
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT: 
+DEBUG	CONTEXT:  If I could draw your attention to the Safe Harbor Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's future performance.
+DEBUG	transcribing 22.00 seconds from 0.00
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (None, None, '')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	--- hard buffer cap hit, force chunking at 15.04
+DEBUG	len of buffer now: 6.96
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's future
+DEBUG	CONTEXT:  performance.
+DEBUG	transcribing 8.96 seconds from 15.04
+DEBUG	>>>>COMPLETE NOW: (None, None, '')
+DEBUG	INCOMPLETE: (15.04, 23.979999999999997, ' presentation. Actual results may differ materially from those suggested by our comments today. The most significant factors that could affect future results are')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 8.96
+DEBUG	No text in this segment
+No input
+DEBUG	PROMPT:  Statement on Slide 2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's future
+DEBUG	CONTEXT:  performance.
+DEBUG	transcribing 10.96 seconds from 15.04
+DEBUG	>>>>COMPLETE NOW: (15.04, 24.42, ' presentation. Actual results may differ materially from those suggested by our comments today. The most significant factors that could affect future results are')
+DEBUG	INCOMPLETE: (24.42, 25.92, " outlined in Monroe's filing")
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 10.96
+15040 24420  presentation. Actual results may differ materially from those suggested by our comments today. The most significant factors that could affect future results are
+DEBUG	PROMPT:  2 of the presentation, I'd like to remind participants on this morning's call that our presentation includes some forward-looking statements about Monroe's future performance.
+DEBUG	CONTEXT:  presentation. Actual results may differ materially from those suggested by our comments today. The most significant factors that could affect future results are
+DEBUG	transcribing 12.96 seconds from 15.04
+DEBUG	>>>>COMPLETE NOW: (24.42, 25.58, " outlined in Monroe's")
+DEBUG	INCOMPLETE: (25.58, 27.979999999999997, ' filings with the SEC and in our...')
+DEBUG	--- segment chunked at 20.18
+DEBUG	chunking segment
+DEBUG	len of buffer now: 7.82
+24420 25580  outlined in Monroe's
+DEBUG	PROMPT:  our presentation includes some forward-looking statements about Monroe's future performance. presentation. Actual results may differ materially from those suggested by our comments
+DEBUG	CONTEXT:  today. The most significant factors that could affect future results are outlined in Monroe's
+DEBUG	transcribing 9.82 seconds from 20.18
+DEBUG	>>>>COMPLETE NOW: (25.58, 27.9, ' filings with the SEC and in')
+DEBUG	INCOMPLETE: (27.9, 28.86, ' our earnings release.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 9.82
+25580 27900  filings with the SEC and in
+DEBUG	PROMPT:  our presentation includes some forward-looking statements about Monroe's future performance. presentation. Actual results may differ materially from those suggested by our comments
+DEBUG	CONTEXT:  today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in
+DEBUG	transcribing 11.82 seconds from 20.18
+DEBUG	>>>>COMPLETE NOW: (27.9, 28.82, ' our earnings release.')
+DEBUG	INCOMPLETE: (29.259999999999998, 31.98, ' The company disclaims any intention or')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 11.82
+27900 28820  our earnings release.
+DEBUG	PROMPT:  our presentation includes some forward-looking statements about Monroe's future performance. presentation. Actual results may differ materially from those suggested by our comments
+DEBUG	CONTEXT:  today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release.
+DEBUG	transcribing 13.82 seconds from 20.18
+DEBUG	>>>>COMPLETE NOW: (29.28, 31.96, ' The company disclaims any intention or')
+DEBUG	INCOMPLETE: (31.96, 33.9, ' obligation to update or revise')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 13.82
+29280 31960  The company disclaims any intention or
+DEBUG	PROMPT:  our presentation includes some forward-looking statements about Monroe's future performance. presentation. Actual results may differ materially from those suggested by our comments
+DEBUG	CONTEXT:  today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release. The company disclaims any intention or
+DEBUG	transcribing 15.82 seconds from 20.18
+DEBUG	>>>>COMPLETE NOW: (31.96, 34.06, ' obligation to update or revise')
+DEBUG	INCOMPLETE: (34.06, 35.62, ' any forward-looking statements.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 15.82
+31960 34060  obligation to update or revise
+DEBUG	PROMPT:  our presentation includes some forward-looking statements about Monroe's future performance. presentation. Actual results may differ materially from those suggested by our comments
+DEBUG	CONTEXT:  today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release. The company disclaims any intention or obligation to update or revise
+DEBUG	transcribing 17.82 seconds from 20.18
+DEBUG	>>>>COMPLETE NOW: (34.06, 35.18, ' any forward-looking')
+DEBUG	INCOMPLETE: (35.18, 37.92, ' statements, whether as a result of new information.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 17.82
+34060 35180  any forward-looking
+DEBUG	PROMPT:  our presentation includes some forward-looking statements about Monroe's future performance. presentation. Actual results may differ materially from those suggested by our comments
+DEBUG	CONTEXT:  today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release. The company disclaims any intention or obligation to update or revise any forward-looking
+DEBUG	transcribing 19.82 seconds from 20.18
+DEBUG	>>>>COMPLETE NOW: (35.18, 37.7, ' statements, whether as a result of new')
+DEBUG	INCOMPLETE: (37.7, 39.66, ' information, future events,')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 19.82
+35180 37700  statements, whether as a result of new
+DEBUG	PROMPT:  our presentation includes some forward-looking statements about Monroe's future performance. presentation. Actual results may differ materially from those suggested by our comments
+DEBUG	CONTEXT:  today. The most significant factors that could affect future results are outlined in Monroe's filings with the SEC and in our earnings release. The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new
+DEBUG	transcribing 21.82 seconds from 20.18
+DEBUG	>>>>COMPLETE NOW: (37.7, 39.66, ' information, future events,')
+DEBUG	INCOMPLETE: (39.879999999999995, 41.980000000000004, ' or otherwise, except as')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	--- hard buffer cap hit, force chunking at 39.66
+DEBUG	len of buffer now: 2.34
+37700 39660  information, future events,
+DEBUG	PROMPT:  in our earnings release. The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future
+DEBUG	CONTEXT:  events,
+DEBUG	transcribing 4.34 seconds from 39.66
+DEBUG	>>>>COMPLETE NOW: (39.66, 42.019999999999996, ' or otherwise, except as')
+DEBUG	INCOMPLETE: (42.019999999999996, 42.959999999999994, ' required by law.')
+DEBUG	len of buffer now: 4.34
+39660 42020  or otherwise, except as
+DEBUG	PROMPT:  earnings release. The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events,
+DEBUG	CONTEXT:  or otherwise, except as
+DEBUG	transcribing 6.34 seconds from 39.66
+DEBUG	>>>>COMPLETE NOW: (42.019999999999996, 42.98, ' required by law.')
+DEBUG	INCOMPLETE: (43.66, 45.67999999999999, " Additionally, on today's call,")
+DEBUG	len of buffer now: 6.34
+42020 42980  required by law.
+DEBUG	PROMPT:  earnings release. The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events,
+DEBUG	CONTEXT:  or otherwise, except as required by law.
+DEBUG	transcribing 8.34 seconds from 39.66
+DEBUG	>>>>COMPLETE NOW: (43.62, 45.66, " Additionally, on today's call,")
+DEBUG	INCOMPLETE: (46.019999999999996, 47.98, ' management statements include a discussion')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 8.34
+43620 45660  Additionally, on today's call,
+DEBUG	PROMPT:  earnings release. The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events,
+DEBUG	CONTEXT:  or otherwise, except as required by law. Additionally, on today's call,
+DEBUG	transcribing 10.34 seconds from 39.66
+DEBUG	>>>>COMPLETE NOW: (46.04, 48.08, ' management statements include a discussion')
+DEBUG	INCOMPLETE: (48.08, 49.98, ' of certain non-GAAP financial measures.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 10.34
+46040 48080  management statements include a discussion
+DEBUG	PROMPT:  earnings release. The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events,
+DEBUG	CONTEXT:  or otherwise, except as required by law. Additionally, on today's call, management statements include a discussion
+DEBUG	transcribing 12.34 seconds from 39.66
+DEBUG	>>>>COMPLETE NOW: (48.08, 49.81999999999999, ' of certain non-GAAP financial')
+DEBUG	INCOMPLETE: (49.81999999999999, 51.98, ' measures, which are intended to supplement.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 12.34
+48080 49820  of certain non-GAAP financial
+DEBUG	PROMPT:  earnings release. The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events,
+DEBUG	CONTEXT:  or otherwise, except as required by law. Additionally, on today's call, management statements include a discussion of certain non-GAAP financial
+DEBUG	transcribing 14.34 seconds from 39.66
+DEBUG	>>>>COMPLETE NOW: (49.81999999999999, 51.739999999999995, ' measures, which are intended to')
+DEBUG	INCOMPLETE: (51.739999999999995, 53.98, ' supplement and not be substitutes for.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 14.34
+49820 51740  measures, which are intended to
+DEBUG	PROMPT:  earnings release. The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events,
+DEBUG	CONTEXT:  or otherwise, except as required by law. Additionally, on today's call, management statements include a discussion of certain non-GAAP financial measures, which are intended to
+DEBUG	transcribing 16.34 seconds from 39.66
+DEBUG	>>>>COMPLETE NOW: (51.739999999999995, 53.839999999999996, ' supplement and not be substitutes')
+DEBUG	INCOMPLETE: (53.839999999999996, 55.8, ' for comparable GAAP measures.')
+DEBUG	--- not enough segments to chunk
+DEBUG	chunking segment
+DEBUG	len of buffer now: 16.34
+51740 53840  supplement and not be substitutes
+DEBUG	PROMPT:  earnings release. The company disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events,
+DEBUG	CONTEXT:  or otherwise, except as required by law. Additionally, on today's call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes
+DEBUG	transcribing 18.34 seconds from 39.66
+DEBUG	>>>>COMPLETE NOW: (53.839999999999996, 55.94, ' for comparable GAAP measures.')
+DEBUG	INCOMPLETE: (55.94, 57.98, ' Reconciliations are...')
+DEBUG	--- segment chunked at 55.94
+DEBUG	chunking segment
+DEBUG	len of buffer now: 2.06
+53840 55940  for comparable GAAP measures.
+DEBUG	PROMPT:  on today's call, management statements include a discussion of certain non-GAAP financial measures, which are intended to supplement and not be substitutes for comparable GAAP
+DEBUG	CONTEXT:  measures.
+DEBUG	transcribing 4.06 seconds from 55.94
+DEBUG	>>>>COMPLETE NOW: (57.32, 57.839999999999996, ' Reconciliations')
+DEBUG	INCOMPLETE: (57.839999999999996, 59.86, ' of such supplemental information to the')
+DEBUG	len of buffer now: 4.06
+57320 57840  Reconciliations

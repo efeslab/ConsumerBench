@@ -1,0 +1,45 @@
+app_type: Chatbot
+task_id: chat1_u0
+start_time: 4.883665
+end_time: 68.887946
+Task chat1_u0 execution time: 63.9986 seconds
+
+Execution times for each node:
+Node chat1_u0_0:
+  Start time: 4.885198
+  End time: 41.941233
+  Execution time: 37.0560 seconds
+  Success: True
+Node chat1_u0_1:
+  Start time: 41.942171
+  End time: 45.743704
+  Execution time: 3.8015 seconds
+  Success: True
+Node chat1_u0_2:
+  Start time: 45.744315
+  End time: 52.768632
+  Execution time: 7.0243 seconds
+  Success: True
+Node chat1_u0_3:
+  Start time: 52.769087
+  End time: 57.512735
+  Execution time: 4.7436 seconds
+  Success: True
+Node chat1_u0_4:
+  Start time: 57.513228
+  End time: 62.255126
+  Execution time: 4.7419 seconds
+  Success: True
+Node chat1_u0_5:
+  Start time: 62.255606
+  End time: 67.178562
+  Execution time: 4.9230 seconds
+  Success: True
+Node chat1_u0_6:
+  Start time: 67.179077
+  End time: 68.887336
+  Execution time: 1.7083 seconds
+  Success: True
+
+Task chat1_u0 results:
+[{'status': 'setup_complete', 'config': {'model': 'models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf', 'device': 'gpu', 'mps': 100, 'api_port': 8080, 'llamacpp_path': '/home/cc/tally-bench/ConsumerBench/inference_backends/llama.cpp', 'dataset': 'lmsys/lmsys-chat-1m', 'num_requests': 5}}, {'status': 'chatbot_complete', 'ttft': 0.19177746772766113, 'tpot': 0.021855159239335495, 'itl': 0.02301744692253344}, {'status': 'chatbot_complete', 'ttft': 0.10177040100097656, 'tpot': 0.032196984180184296, 'itl': 0.03267033488251442}, {'status': 'chatbot_complete', 'ttft': 0.04763340950012207, 'tpot': 0.021840918341348336, 'itl': 0.02206246908320937}, {'status': 'chatbot_complete', 'ttft': 0.045827627182006836, 'tpot': 0.021841355257256088, 'itl': 0.022054507011591003}, {'status': 'chatbot_complete', 'ttft': 0.0442967414855957, 'tpot': 0.02269063661264819, 'itl': 0.022896667968395144}, {'status': 'cleanup_complete'}]
