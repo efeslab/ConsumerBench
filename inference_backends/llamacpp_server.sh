@@ -13,6 +13,22 @@ model=$4
 device=$5
 mps=$6
 
+# Tunable server knobs (overridable from the environment so experiments can
+# switch regimes without editing this script):
+#   LLAMA_CTX        total context across all slots (-c). Per-slot = LLAMA_CTX/parallel.
+#   LLAMA_PARALLEL   number of server slots (--parallel).
+#   LLAMA_NKVO       if 1, pass -nkvo to keep the KV cache in CPU DRAM (offload).
+#   LLAMA_EXTRA_ARGS extra args appended verbatim, e.g. for reasoning models:
+#                    "--reasoning-budget 0 --chat-template-kwargs {\"enable_thinking\":false}"
+LLAMA_CTX=${LLAMA_CTX:-4096}
+LLAMA_PARALLEL=${LLAMA_PARALLEL:-8}
+LLAMA_EXTRA_ARGS=${LLAMA_EXTRA_ARGS:-}
+if [ "${LLAMA_NKVO:-0}" == "1" ]; then
+    NKVO_FLAG="-nkvo"
+else
+    NKVO_FLAG=""
+fi
+
 # source ~/anaconda3/etc/profile.d/conda.sh
 
 # if api port is been listening, do nothing
@@ -46,11 +62,11 @@ if [ "$device" == "gpu" ]; then
     # nsys profile --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true --python-backtrace=cuda --cudabacktrace=true build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 &
     # nsys profile --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true --python-backtrace=cuda
     # build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 128000 -nkvo &
-    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 &
+    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel ${LLAMA_PARALLEL} -c ${LLAMA_CTX} ${NKVO_FLAG} ${LLAMA_EXTRA_ARGS} &
     # stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 -c 64000 --parallel 8 &
 else
     export CUDA_VISIBLE_DEVICES=""
-    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 0 --parallel 8 -c 4096 &
+    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 0 --parallel ${LLAMA_PARALLEL} -c ${LLAMA_CTX} ${NKVO_FLAG} ${LLAMA_EXTRA_ARGS} &
 fi
 
 export CUDA_VISIBLE_DEVICES=0

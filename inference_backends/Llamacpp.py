@@ -37,6 +37,15 @@ class LlamaCpp:
     def launch_backend(self, *args, **kwargs):
         print("Launching LlamaCpp backend")
         api_port = kwargs.get('api_port', 8080)
+
+        # Opt-in: when the server is managed externally (e.g. launched as a fixture
+        # by an experiment runner with specific -c/--parallel/reasoning flags),
+        # applications should connect to it rather than spawn their own. Avoids
+        # duplicate servers fighting for the same port.
+        if os.environ.get("LLAMA_USE_EXTERNAL_SERVER") == "1":
+            print(f"LLAMA_USE_EXTERNAL_SERVER=1: using externally-managed server on port {api_port}")
+            return {"status": "external_server"}
+
         model = kwargs.get('model', f"{repo_dir}/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf")
         device = kwargs.get('device', "gpu")
         mps = kwargs.get('mps', 100)
@@ -73,6 +82,10 @@ class LlamaCpp:
     def cleanup_backend(self, *args, **kwargs):
         print("Cleaning up LlamaCpp backend")
         api_port = kwargs.get('api_port', 8080)
+        # External server is managed by the experiment runner, not the apps.
+        if os.environ.get("LLAMA_USE_EXTERNAL_SERVER") == "1":
+            print(f"LLAMA_USE_EXTERNAL_SERVER=1: leaving externally-managed server on port {api_port}")
+            return {"status": "external_server"}
         with self.lock:
             if api_port not in self.servers:
                 print(f"No LlamaCpp backend on port {api_port}")
