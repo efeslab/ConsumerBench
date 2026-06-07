@@ -1,0 +1,21 @@
+# Baseline: long-running coding agent (OpenClaw/SERA-style) running ALONE on a
+# shared Qwen3-8B llama.cpp server. Multi-step, stateful: each step resends the
+# growing conversation, so KV-cache footprint grows over the session. Establishes
+# the agent's isolated end-to-end latency (used to set its SLO and to measure
+# preemption slowdown under contention).
+coding_agent (dspy_tool):
+    type: DspyTool
+    num_requests: 1
+    tool_string: applications.DspyTool.coding_agent.CodingAgent
+    tool_kwargs:
+        api_port: 8080
+        model: Qwen3-8B
+        num_steps: 10
+        max_tokens: 512
+        slo_seconds: 0
+        results_dir: /home/cc/ConsumerBench/results_reb2_coding_iso
+
+workflows:
+    coding:
+        uses: coding_agent (dspy_tool)
+        background: true

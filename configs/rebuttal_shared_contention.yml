@@ -1,0 +1,35 @@
+# Asymmetric contention on a SINGLE shared Qwen3-8B server (reference-counted).
+#
+# One sustained, stateful consumer (DeepResearch agent, long multi-step context)
+# colocated with a bursty, latency-sensitive Chatbot. Both applications share the
+# same model and backend on the same port, so ConsumerBench's reference-counted
+# shared-server mode keeps one resident Qwen3-8B server for both. They have no
+# dependency edges, so the scheduler runs them concurrently.
+#
+# Expected: the agent's growing KV-cache footprint plus the 16.4GB Qwen3-8B
+# weights pressure the 24GB GPU; the bursty Chatbot's requests interleave with /
+# preempt the agent's decode. We measure (a) Chatbot TTFT/TPOT SLO attainment vs.
+# the isolated baseline and (b) agent end-to-end latency vs. its isolated baseline.
+Research (deep_research):
+    server_model: /home/cc/ConsumerBench/models/Qwen3-8B-GGUF/Qwen3-8B-BF16.gguf
+    client_model: openai/Qwen3-8B
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+Chat (chatbot):
+    model: /home/cc/ConsumerBench/models/Qwen3-8B-GGUF/Qwen3-8B-BF16.gguf
+    num_requests: 24
+    device: gpu
+    type: Chatbot
+    mps: 100
+    think_time: 1.0
+
+workflows:
+    research:
+        uses: Research (deep_research)
+        background: true
+
+    chat:
+        uses: Chat (chatbot)

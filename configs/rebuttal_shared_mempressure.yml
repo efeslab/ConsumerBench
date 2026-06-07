@@ -1,0 +1,32 @@
+# F2 / memory-pressure regime: same asymmetric shared-server scenario, but the
+# server is launched with a large context and KV-cache CPU offload (set via
+# LLAMA_CTX=65536 LLAMA_NKVO=1 in the environment). The long-running agent's
+# growing context plus the 16.4GB Qwen3-8B weights push past the 24GB GPU, so the
+# KV cache is offloaded to CPU DRAM. Attention then pays PCIe latency on every
+# token, degrading the bursty Chatbot's TPOT below its SLO.
+#
+# This reproduces the Appendix B.4 dynamic at 8B scale: the binding constraint is
+# KV-cache residency / memory pressure, not SM occupancy.
+Research (deep_research):
+    server_model: /home/cc/ConsumerBench/models/Qwen3-8B-GGUF/Qwen3-8B-BF16.gguf
+    client_model: openai/Qwen3-8B
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+Chat (chatbot):
+    model: /home/cc/ConsumerBench/models/Qwen3-8B-GGUF/Qwen3-8B-BF16.gguf
+    num_requests: 24
+    device: gpu
+    type: Chatbot
+    mps: 100
+    think_time: 1.0
+
+workflows:
+    research:
+        uses: Research (deep_research)
+        background: true
+
+    chat:
+        uses: Chat (chatbot)

@@ -1,0 +1,6 @@
+{
+  "text_generate": {
+    "call_1": {"prompt": "Explain what a benchmark is in one sentence."},
+    "call_2": {"prompt": "List three primary colors."}
+  }
+}

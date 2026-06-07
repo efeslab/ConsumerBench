@@ -1,0 +1,10 @@
+Chat (chatbot):
+    model: /home/cc/ConsumerBench/models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    num_requests: 2
+    device: gpu
+    type: Chatbot
+    mps: 100
+
+workflows:
+    chat:
+        uses: Chat (chatbot)

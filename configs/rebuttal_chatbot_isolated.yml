@@ -1,0 +1,13 @@
+# Baseline: bursty, latency-sensitive Chatbot running ALONE on Qwen3-8B.
+# Establishes the reference TTFT/TPOT SLO attainment with no contention.
+Chat (chatbot):
+    model: /home/cc/ConsumerBench/models/Qwen3-8B-GGUF/Qwen3-8B-BF16.gguf
+    num_requests: 24
+    device: gpu
+    type: Chatbot
+    mps: 100
+    think_time: 1.0
+
+workflows:
+    chat:
+        uses: Chat (chatbot)

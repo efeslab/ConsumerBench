@@ -1,0 +1,76 @@
+{
+  "text_generate": {
+    "call_1": {
+      "prompt": "What is the capital of Japan?"
+    },
+    "call_2": {
+      "prompt": "Explain photosynthesis in two sentences."
+    },
+    "call_3": {
+      "prompt": "Give me a synonym for 'happy'."
+    },
+    "call_4": {
+      "prompt": "What year did the first moon landing happen?"
+    },
+    "call_5": {
+      "prompt": "Convert 100 Fahrenheit to Celsius."
+    },
+    "call_6": {
+      "prompt": "Name three programming languages."
+    },
+    "call_7": {
+      "prompt": "What is the boiling point of water at sea level?"
+    },
+    "call_8": {
+      "prompt": "Summarize the plot of Romeo and Juliet in one line."
+    },
+    "call_9": {
+      "prompt": "What is 17 times 23?"
+    },
+    "call_10": {
+      "prompt": "Define 'machine learning' briefly."
+    },
+    "call_11": {
+      "prompt": "What is the largest planet in our solar system?"
+    },
+    "call_12": {
+      "prompt": "List two benefits of exercise."
+    },
+    "call_13": {
+      "prompt": "Who wrote 'Pride and Prejudice'?"
+    },
+    "call_14": {
+      "prompt": "What does HTTP stand for?"
+    },
+    "call_15": {
+      "prompt": "Translate 'good morning' to Spanish."
+    },
+    "call_16": {
+      "prompt": "What is the speed of light in km/s?"
+    },
+    "call_17": {
+      "prompt": "Give one tip for better sleep."
+    },
+    "call_18": {
+      "prompt": "What is the chemical symbol for gold?"
+    },
+    "call_19": {
+      "prompt": "Name a famous painting by Van Gogh."
+    },
+    "call_20": {
+      "prompt": "What is the square root of 144?"
+    },
+    "call_21": {
+      "prompt": "How many continents are there?"
+    },
+    "call_22": {
+      "prompt": "What is the freezing point of water in Celsius?"
+    },
+    "call_23": {
+      "prompt": "Spell the word 'necessary'."
+    },
+    "call_24": {
+      "prompt": "What is the currency of the United Kingdom?"
+    }
+  }
+}

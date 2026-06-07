@@ -1,0 +1,28 @@
+# Bounded F2 / memory-pressure run. Same offload regime (run with LLAMA_NKVO=1,
+# LLAMA_CTX=65536) but fewer Chatbot requests so the run completes in bounded time
+# while the agent provides the concurrent memory-pressure load. Under KV offload
+# the agent's decode is PCIe-bound (~1-3 tok/s) and monopolizes server slots, so
+# even a few bursty Chatbot requests show severe TPOT degradation / SLO misses.
+Research (deep_research):
+    server_model: /home/cc/ConsumerBench/models/Qwen3-8B-GGUF/Qwen3-8B-BF16.gguf
+    client_model: openai/Qwen3-8B
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+Chat (chatbot):
+    model: /home/cc/ConsumerBench/models/Qwen3-8B-GGUF/Qwen3-8B-BF16.gguf
+    num_requests: 6
+    device: gpu
+    type: Chatbot
+    mps: 100
+    think_time: 2.0
+
+workflows:
+    research:
+        uses: Research (deep_research)
+        background: true
+
+    chat:
+        uses: Chat (chatbot)

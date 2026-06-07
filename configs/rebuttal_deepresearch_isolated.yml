@@ -1,0 +1,14 @@
+# Baseline: long-running DeepResearch agent running ALONE on Qwen3-8B.
+# Establishes the reference end-to-end agent latency with no contention.
+Research (deep_research):
+    server_model: /home/cc/ConsumerBench/models/Qwen3-8B-GGUF/Qwen3-8B-BF16.gguf
+    client_model: openai/Qwen3-8B
+    num_requests: 1
+    device: gpu
+    type: DeepResearch
+    mps: 100
+
+workflows:
+    research:
+        uses: Research (deep_research)
+        background: true
