@@ -1,3 +1,17 @@
 __pycache__/
 rag_index/
 whisper-earnings21/
+
+# Secrets
+.env
+
+# Model weights
+models/
+
+# Experiment artifacts
+results_*/
+results_reb_RESULTS.md
+/*.png
+
+# Nested clones / vendored repos
+src/mcp-agent/
