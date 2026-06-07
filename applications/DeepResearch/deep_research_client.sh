@@ -8,14 +8,19 @@ export PYTHONIOENCODING=utf-8  # Ensure proper encoding
 
 set -x
 
-source ~/anaconda3/etc/profile.d/conda.sh
+# Resolve repo base (this script lives in <repo>/applications/DeepResearch/)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+
+source "$HOME/miniconda3/etc/profile.d/conda.sh"
 
 conda activate deepresearch
 cd $1
 
-export HF_TOKEN=<your-hf-token>
-export SERPAPI_API_KEY=<your-serpapi-api-key>
-export SERPER_API_KEY=<your-serper-api-key>
+# Load API keys (HF_TOKEN, SERPAPI_API_KEY, SERPER_API_KEY) from the repo .env
+set -a
+. "$REPO_DIR/.env"
+set +a
 
-# stdbuf -oL -eL 
+# stdbuf -oL -eL
 python3 run.py --port "$2" --model-id "$3" "$4"

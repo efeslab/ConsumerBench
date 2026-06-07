@@ -34,7 +34,10 @@ class DeepResearch(Application):
     def run_setup(self, *args, **kwargs):
         print("DeepResearch setup")
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
-        model = kwargs.get('model', self.get_default_config()['server_model'])
+        # The YAML key is 'server_model', not 'model'; read it directly so the
+        # configured model is actually launched (otherwise this always fell back
+        # to the default 3B model regardless of config).
+        model = kwargs.get('server_model', kwargs.get('model', self.get_default_config()['server_model']))
         device = kwargs.get('device', self.get_default_config()['device'])
         mps = kwargs.get('mps', self.get_default_config()['mps'])
         llamacpp_path = kwargs.get('llamacpp_path', self.get_default_config()['llamacpp_path'])
@@ -56,7 +59,8 @@ class DeepResearch(Application):
         print(f"DeepResearch application")
         deep_research_prompt = self.deep_research_prompts.pop(0)
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
-        model = kwargs.get('model', self.get_default_config()['client_model'])
+        # The YAML key is 'client_model', not 'model'.
+        model = kwargs.get('client_model', kwargs.get('model', self.get_default_config()['client_model']))
 
         stdout_log = os.path.join(globals.get_results_dir(), f"deep_research_client_stdout_{api_port}.log")
         stderr_log = os.path.join(globals.get_results_dir(), f"deep_research_client_stderr_{api_port}.log")
