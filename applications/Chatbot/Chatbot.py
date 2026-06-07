@@ -60,6 +60,15 @@ class Chatbot(Application):
         print(f"Chatbot application")
         api_port = kwargs.get('api_port', self.get_default_config()['api_port'])
 
+        # Inter-arrival "think time": model a bursty latency-sensitive client that
+        # issues a request, waits, then issues the next, rather than a saturating
+        # stream. The sleep is outside the timed region below so it does not affect
+        # TTFT/TPOT. Set via the `think_time` (seconds) YAML key; 0 = original
+        # back-to-back behavior.
+        think_time = kwargs.get('think_time', self.get_default_config().get('think_time', 0))
+        if think_time and think_time > 0:
+            time.sleep(think_time)
+
         chatbot_prompt = self.chatbot_prompts.pop(0)
         chatbot_prompts = [chatbot_prompt]
 
@@ -174,6 +183,7 @@ class Chatbot(Application):
             "mps": 100,
             "api_port": 8080,
             "llamacpp_path": f"{repo_dir}/inference_backends/llama.cpp",
-            "dataset": f"lmsys/lmsys-chat-1m"
+            "dataset": f"lmsys/lmsys-chat-1m",
+            "think_time": 0
         }
     
