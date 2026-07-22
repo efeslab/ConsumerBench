@@ -46,11 +46,14 @@ if [ "$device" == "gpu" ]; then
     # nsys profile --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true --python-backtrace=cuda --cudabacktrace=true build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 &
     # nsys profile --trace=cuda,nvtx,osrt --cuda-memory-usage=true --gpu-metrics-devices=all --stats=true --force-overwrite=true --python-backtrace=cuda
     # build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 128000 -nkvo &
-    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 &
+    # --jinja renders the GGUF's own chat template, which is what enables
+    # OpenAI tool calling. Applications that send tools (e.g. VSS) fail without
+    # it; those that don't are unaffected.
+    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 --jinja &
     # stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 -c 64000 --parallel 8 &
 else
     export CUDA_VISIBLE_DEVICES=""
-    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 0 --parallel 8 -c 4096 &
+    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 0 --parallel 8 -c 4096 --jinja &
 fi
 
 export CUDA_VISIBLE_DEVICES=0

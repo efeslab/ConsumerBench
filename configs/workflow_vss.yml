@@ -1,0 +1,13 @@
+vss1:
+    type: VSS
+    num_requests: 1
+    llm_model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    vlm_model: nvidia/cosmos-reason2-8b
+    llm_port: 8081
+    mps: 100
+    video_path: applications/VSS/my_video.mp4
+    prompt: "Summarize what happens in this video."
+
+workflows:
+    summarize_video:
+        uses: vss1

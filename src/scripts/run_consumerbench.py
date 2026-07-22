@@ -13,6 +13,7 @@ from applications.DspyTool.DspyTool import DspyTool
 from applications.LiveCaptions.LiveCaptions import LiveCaptions
 from applications.MCPServer.MCPServer import MCPServer
 from applications.Retriever.Retriever import Retriever
+from applications.VSS.VSS import VSS
 from src.workflow import Workflow
 import src.globals as globals
 
@@ -45,7 +46,8 @@ def main(args):
     mcpServer = MCPServer(mcp_trace_file=mcp_trace_file, config_file=config_file)
     retriever = Retriever()
     dspyTool = DspyTool()
-    
+    vss = VSS()
+
     # Create workflow from YAML
     workflow = Workflow(config_file)
     
@@ -58,6 +60,7 @@ def main(args):
     workflow.register_application("MCPServer", mcpServer)
     workflow.register_application("Retriever", retriever)
     workflow.register_application("DspyTool", dspyTool)
+    workflow.register_application("VSS", vss)
     
     print("Registered applications:")
     for app_name, app in workflow.applications.items():
