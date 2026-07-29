@@ -91,17 +91,22 @@ class GpuMemoryMonitor:
     def get_gpu_memory_usage(self):
         """Get GPU memory usage using nvidia-smi"""
         try:
-            output = subprocess.check_output(
-                [
-                    'nvidia-smi',
-                    f'--id={self.gpu_id}',
-                    '--query-gpu=memory.used,memory.total',
-                    '--format=csv,nounits,noheader'
-                ], 
-                encoding='utf-8'
-            )
-            memory_used, memory_total = map(int, output.strip().split(','))
-            return memory_used, memory_total
+            # output = subprocess.check_output(
+            #     [
+            #         'nvidia-smi',
+            #         f'--id={self.gpu_id}',
+            #         '--query-gpu=memory.used,memory.total',
+            #         '--format=csv,nounits,noheader'
+            #     ], 
+            #     encoding='utf-8'
+            # )
+            # memory_used, memory_total = map(int, output.strip().split(','))
+            # return memory_used, memory_total
+            out = subprocess.check_output(['free', '-m']).decode()
+            line = [l for l in out.splitlines() if l.startswith('Mem:')][0]
+            parts = line.split()
+            total, used, avail = int(parts[1]), int(parts[2]), int(parts[6])
+            return used, total
         except Exception as e:
             print(f"Error getting GPU memory: {e}")
             return 0, 0
