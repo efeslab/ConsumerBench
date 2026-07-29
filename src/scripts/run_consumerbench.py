@@ -12,7 +12,7 @@ from applications.Chatbot.Chatbot import Chatbot
 from applications.DspyTool.DspyTool import DspyTool
 from applications.LiveCaptions.LiveCaptions import LiveCaptions
 from applications.MCPServer.MCPServer import MCPServer
-from applications.Retriever.Retriever import Retriever
+# from applications.Retriever.Retriever import Retriever
 from applications.VSS.VSS import VSS
 from src.workflow import Workflow
 import src.globals as globals
@@ -44,7 +44,7 @@ def main(args):
     chatbot = Chatbot()
     liveCaptions = LiveCaptions()
     mcpServer = MCPServer(mcp_trace_file=mcp_trace_file, config_file=config_file)
-    retriever = Retriever()
+    # retriever = Retriever()
     dspyTool = DspyTool()
     vss = VSS()
 
@@ -58,7 +58,7 @@ def main(args):
     workflow.register_application("Chatbot", chatbot)
     workflow.register_application("LiveCaptions", liveCaptions)
     workflow.register_application("MCPServer", mcpServer)
-    workflow.register_application("Retriever", retriever)
+    # workflow.register_application("Retriever", retriever)
     workflow.register_application("DspyTool", dspyTool)
     workflow.register_application("VSS", vss)
     

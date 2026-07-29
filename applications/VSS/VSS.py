@@ -6,9 +6,9 @@
 ## managed here. Implements README step 5 (launch VSS), step 6 (VLM readiness),
 ## step 7 (upload a video) and step 8 (summarize).
 ##
-## Assumes it is running on the DGX Spark itself: the hardware profile is fixed
-## and the host IP that VSS's containers use to reach llama-server is detected
-## automatically.
+## Assumes it is running on the DGX Spark itself: the hardware profile is fixed,
+## and VSS's agent container shares the host network namespace, so it reaches
+## llama-server over loopback.
 import time
 from typing import Any, Dict
 import sys
@@ -33,10 +33,10 @@ VLM_ENV_FILE = os.path.expanduser("~/vlm-shared.env")
 VLM_KVCACHE_PERCENT = 0.3
 # Cosmos-Reason2-8B compiles a TensorRT-LLM engine on first boot (~8-9 min).
 READINESS_MAX_WAIT = 900
-# Summarize request shape.
-CHUNK_DURATION = 60
-MAX_TOKENS = 512
-TEMPERATURE = 0.2
+# Request timeouts. Summarizing runs the VLM over every chunk and then loops
+# through the agent's plan/tool cycle, so it is minutes, not seconds.
+UPLOAD_TIMEOUT = 600
+SUMMARIZE_TIMEOUT = 1800
 
 
 class VSS(Application):
@@ -56,12 +56,12 @@ class VSS(Application):
         cfg = self.get_default_config()
 
         llm_port = kwargs.get('llm_port', cfg['llm_port'])
-        llm_model = kwargs.get('llm_model', cfg['llm_model'])
+        llm_model = self._abspath(kwargs.get('llm_model', cfg['llm_model']))
         vlm_model = kwargs.get('vlm_model', cfg['vlm_model'])
         vlm_port = kwargs.get('vlm_port', cfg['vlm_port'])
         mps = kwargs.get('mps', cfg['mps'])
-        llamacpp_path = kwargs.get('llamacpp_path', cfg['llamacpp_path'])
-        vss_repo_dir = kwargs.get('vss_repo_dir', cfg['vss_repo_dir'])
+        llamacpp_path = self._abspath(kwargs.get('llamacpp_path', cfg['llamacpp_path']))
+        vss_repo_dir = self._abspath(kwargs.get('vss_repo_dir', cfg['vss_repo_dir']))
 
         # ---- LLM: llama.cpp server via the shared backend ---------------
         # VSS's agent sends OpenAI tool_choice: "auto", which llama.cpp only
@@ -82,9 +82,11 @@ class VSS(Application):
             f.write(f"NIM_KVCACHE_PERCENT={VLM_KVCACHE_PERCENT}\n")
 
         env = os.environ.copy()
-        # llama-server runs on the host, so VSS's containers need the Spark's
-        # real IP — localhost inside a container is the container itself.
-        env["LLM_ENDPOINT_URL"] = f"http://{self._host_ip()}:{llm_port}"
+        # The agent container runs with network_mode: host, so it shares the
+        # host's loopback and reaches llama-server at 127.0.0.1. The Spark's
+        # routable IP does *not* work here: llama-server binds loopback only
+        # unless started with --host, and the shared launcher doesn't pass it.
+        env["LLM_ENDPOINT_URL"] = f"http://127.0.0.1:{llm_port}"
         vss_cmd = [
             "bash", os.path.join(vss_repo_dir, "deploy/docker/scripts/dev-profile.sh"),
             "up", "-p", VSS_PROFILE, "-H", VSS_HARDWARE,
@@ -105,13 +107,14 @@ class VSS(Application):
         return {"status": "setup_complete", "config": self.config}
 
     @staticmethod
-    def _host_ip():
-        """The Spark's own IP, which VSS's containers use to reach llama-server."""
-        out = subprocess.run(["hostname", "-I"], capture_output=True, text=True, check=True)
-        ips = out.stdout.split()
-        if not ips:
-            raise RuntimeError("Could not determine the host IP from 'hostname -I'.")
-        return ips[0]
+    def _abspath(path):
+        """Resolve a config path against the repo root.
+
+        Workflow configs write paths relative to the repo (e.g.
+        models/.../model.gguf), but llamacpp_server.sh cds into the llama.cpp
+        checkout before loading the model, so a relative path never resolves.
+        """
+        return path if os.path.isabs(path) else os.path.join(repo_dir, path)
 
     def _discover_model_name(self, llm_port):
         """Read the model name llama.cpp advertises, for VSS's --llm / requests."""
@@ -159,37 +162,57 @@ class VSS(Application):
         vss_port = kwargs.get('vss_port', cfg['vss_port'])
         prompt = kwargs.get('prompt', cfg['prompt'])
 
-        video_path = self.videos.pop(0)
+        video_path = self._abspath(self.videos.pop(0))
         vss_base = f"http://localhost:{vss_port}"
+        filename = os.path.basename(video_path)
 
         start_time = time.time()
 
         # ---- Step 7: upload the video file ------------------------------
+        # Uploading is a three-part handshake: ask the agent where to put the
+        # video, POST the bytes to that VST endpoint, then tell the agent the
+        # upload finished so it registers the clip as a sensor.
+        url_resp = requests.post(
+            f"{vss_base}/api/v1/videos", json={"filename": filename}, timeout=60
+        )
+        url_resp.raise_for_status()
+        upload_url = url_resp.json()["url"]
+
         with open(video_path, "rb") as f:
-            upload = requests.post(
-                f"{vss_base}/files",
-                data={"purpose": "vision", "media_type": "video"},
-                files={"file": (os.path.basename(video_path), f, "video/mp4")},
+            vst_resp = requests.post(
+                upload_url,
+                files={"file": (filename, f, "video/mp4")},
+                timeout=UPLOAD_TIMEOUT,
             )
-        upload.raise_for_status()
-        file_id = upload.json()["id"]
+        vst_resp.raise_for_status()
+        vst_info = vst_resp.json()
+        sensor_id = vst_info["sensorId"]
+
+        complete = requests.post(
+            f"{vss_base}/api/v1/videos/{sensor_id}/complete",
+            json=vst_info,
+            timeout=UPLOAD_TIMEOUT,
+        )
+        complete.raise_for_status()
+        # VST strips the extension; this is the name the agent knows it by.
+        video_name = complete.json()["filename"]
         upload_time = time.time() - start_time
-        print(f"Uploaded {video_path} -> file_id={file_id} ({upload_time:.2f}s)")
+        print(f"Uploaded {video_path} -> {video_name} ({upload_time:.2f}s)")
 
         # ---- Step 8: summarize the uploaded video -----------------------
+        # The agent picks its own tools from a natural-language message, so the
+        # prompt has to name the clip — "this video" gives it nothing to resolve.
+        if "this video" in prompt:
+            input_message = prompt.replace("this video", f"the video {video_name}")
+        else:
+            input_message = f"{prompt} The video is {video_name}."
+
         summarize_start = time.time()
         summarize = requests.post(
-            f"{vss_base}/summarize",
+            f"{vss_base}/generate",
             headers={"Content-Type": "application/json"},
-            json={
-                "id": file_id,
-                "model": self.llm_model_name,
-                "prompt": prompt,
-                "stream": False,
-                "max_tokens": MAX_TOKENS,
-                "temperature": TEMPERATURE,
-                "chunk_duration": CHUNK_DURATION,
-            },
+            json={"input_message": input_message},
+            timeout=SUMMARIZE_TIMEOUT,
         )
         summarize.raise_for_status()
         result = summarize.json()
@@ -199,7 +222,8 @@ class VSS(Application):
 
         return {
             "status": "vss_complete",
-            "file_id": file_id,
+            "sensor_id": sensor_id,
+            "video_name": video_name,
             "upload_time": upload_time,
             "summarize_time": summarize_time,
             "total_time": total_time,
@@ -212,7 +236,7 @@ class VSS(Application):
     def run_cleanup(self, *args, **kwargs):
         print("VSS cleanup")
         cfg = self.get_default_config()
-        vss_repo_dir = kwargs.get('vss_repo_dir', cfg['vss_repo_dir'])
+        vss_repo_dir = self._abspath(kwargs.get('vss_repo_dir', cfg['vss_repo_dir']))
         llm_port = kwargs.get('llm_port', cfg['llm_port'])
 
         subprocess.run(

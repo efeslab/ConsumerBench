@@ -1,7 +1,7 @@
 vss1:
     type: VSS
     num_requests: 1
-    llm_model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    llm_model: models/Qwen2.5-7B-Instruct-GGUF/qwen2.5-7b-instruct-q5_k_m-00001-of-00002.gguf
     vlm_model: nvidia/cosmos-reason2-8b
     llm_port: 8081
     mps: 100

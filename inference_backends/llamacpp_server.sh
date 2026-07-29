@@ -49,7 +49,10 @@ if [ "$device" == "gpu" ]; then
     # --jinja renders the GGUF's own chat template, which is what enables
     # OpenAI tool calling. Applications that send tools (e.g. VSS) fail without
     # it; those that don't are unaffected.
-    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 4096 --jinja &
+    # -c is the total context shared across --parallel slots, so each slot gets
+    # c/8. VSS's agent prompts run past 1400 tokens, which 4096 (512/slot) could
+    # not fit; 131072 gives each slot 16K.
+    stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 --parallel 8 -c 131072 --jinja &
     # stdbuf -oL -eL build/bin/llama-server --port ${api_port} -m ${model} -ngl 99 -c 64000 --parallel 8 &
 else
     export CUDA_VISIBLE_DEVICES=""
