@@ -297,16 +297,35 @@ Save this as `wait_for_ready.sh`, `chmod +x wait_for_ready.sh`, and run it after
 
 ## 7. Upload a video file
 
-VSS's REST API runs on port `8000` by default (confirm your actual port via VSS startup logs /
-`dev-profile.sh` output).
+The `base` profile deployed in Step 5 runs the **agent** service (`vss-agent`), a different
+service from VSS's older "video-summarization" (VIA) REST API — the two expose different
+endpoints, and only the agent's are reachable here. The agent's port is `8000` by default (confirm
+your actual port via VSS startup logs / `dev-profile.sh` output). Uploading is a three-step
+handshake, mirroring what the Agent UI itself does:
+
+1. `POST /api/v1/videos` with the filename → returns a VST upload URL.
+2. `POST` the raw file bytes to that URL → returns VST's `sensorId` (and other metadata).
+3. `POST /api/v1/videos/{sensor_id}/complete` with that metadata → finalizes ingest and returns
+   the `filename` the agent will use to refer to the clip.
 
 ### curl
 
 ```bash
-curl -X POST http://localhost:8000/files \
-  -F "purpose=vision" \
-  -F "media_type=video" \
-  -F "file=@my_video.mp4"
+FILENAME="my_video.mp4"
+
+# 1. Get the upload URL
+UPLOAD_URL=$(curl -s -X POST http://localhost:8000/api/v1/videos \
+  -H "Content-Type: application/json" \
+  -d "{\"filename\": \"${FILENAME}\"}" | jq -r '.url')
+
+# 2. Upload the file bytes
+VST_RESPONSE=$(curl -s -X POST "$UPLOAD_URL" -F "file=@${FILENAME};type=video/mp4")
+SENSOR_ID=$(echo "$VST_RESPONSE" | jq -r '.sensorId')
+
+# 3. Complete the upload (forward VST's response verbatim)
+curl -s -X POST "http://localhost:8000/api/v1/videos/${SENSOR_ID}/complete" \
+  -H "Content-Type: application/json" \
+  -d "$VST_RESPONSE"
 ```
 
 ### Python
@@ -315,57 +334,58 @@ curl -X POST http://localhost:8000/files \
 import requests
 
 VSS_BASE = "http://localhost:8000"
+video_path = "my_video.mp4"
+filename = "my_video.mp4"
 
-with open("my_video.mp4", "rb") as f:
-    response = requests.post(
-        f"{VSS_BASE}/files",
-        data={"purpose": "vision", "media_type": "video"},
-        files={"file": ("my_video.mp4", f, "video/mp4")}
-    )
+# 1. Get the upload URL
+url_resp = requests.post(f"{VSS_BASE}/api/v1/videos", json={"filename": filename}, timeout=60)
+url_resp.raise_for_status()
+upload_url = url_resp.json()["url"]
 
-response.raise_for_status()
-file_info = response.json()
-file_id = file_info["id"]  # confirm exact key name against your actual response
-print(file_id)
+# 2. Upload the file bytes
+with open(video_path, "rb") as f:
+    vst_resp = requests.post(upload_url, files={"file": (filename, f, "video/mp4")}, timeout=600)
+vst_resp.raise_for_status()
+vst_info = vst_resp.json()
+sensor_id = vst_info["sensorId"]
+
+# 3. Complete the upload (forward VST's response verbatim)
+complete = requests.post(
+    f"{VSS_BASE}/api/v1/videos/{sensor_id}/complete", json=vst_info, timeout=600
+)
+complete.raise_for_status()
+video_name = complete.json()["filename"]
+print(sensor_id, video_name)
 ```
 
-Save the returned `id` — required for the summarize/chat calls below.
+Save the returned `filename` (what the agent calls the clip internally) — you'll refer to it by
+name, not by ID, in the chat message below.
 
 ---
 
 ## 8. Run an example request
 
-### Option A — Summarize (VSS REST API, curl)
+The agent doesn't expose separate `/summarize` and `/chat/completions` REST endpoints — it's a
+conversational agent (built on the NeMo Agent Toolkit) that picks its own tools from a natural-
+language message. Both summarization and Q&A go through the same chat endpoint; the only
+difference is what you ask for, and you must name the clip in the message since the agent has
+nothing else to resolve "this video" against.
+
+### Option A — Chat (agent REST API, curl)
 
 ```bash
-curl -X POST http://localhost:8000/summarize \
+curl -X POST http://localhost:8000/generate \
   -H "Content-Type: application/json" \
   -d '{
-    "id": "<file_id_from_step_7>",
-    "model": "<exact_model_name_from_/v1/models>",
-    "prompt": "Summarize what happens in this video.",
-    "stream": false,
-    "max_tokens": 512,
-    "temperature": 0.2,
-    "chunk_duration": 60
+    "input_message": "Summarize what happens in the video my_video.mp4."
   }'
 ```
 
-### Option B — Chat / Q&A (VSS REST API, curl)
+Swap the message for a question (`"What is happening in the video my_video.mp4?"`) to do Q&A
+instead of summarization — same endpoint. A streaming variant is available at
+`/generate/stream` (server-sent events).
 
-```bash
-curl -X POST http://localhost:8000/chat/completions \
-  -H "Content-Type: application/json" \
-  -d '{
-    "id": "<file_id_from_step_7>",
-    "model": "<exact_model_name_from_/v1/models>",
-    "messages": [{"role": "user", "content": "What is happening in this video?"}],
-    "max_tokens": 512,
-    "temperature": 0.2
-  }'
-```
-
-### Option C — Direct LLM sanity check (OpenAI SDK, bypasses VSS entirely)
+### Option B — Direct LLM sanity check (OpenAI SDK, bypasses VSS entirely)
 
 Useful for testing the raw llama.cpp server independent of VSS.
 
@@ -393,14 +413,14 @@ print(completion.choices[0].message.content)
 
 ### Getting exact request shapes for any endpoint
 
-VSS ships a reference Python CLI client inside its container (`/opt/nvidia/via/via_client_cli.py`)
-that can print the exact curl command for any operation:
+The agent service is a FastAPI app, so its live OpenAPI docs (generated from your running
+instance) are the source of truth for the full route list: `http://<VSS_API_ENDPOINT>/docs`.
 
-```bash
-python3 via_client_cli.py summarize --id <file_id> --model <model_name> --print-curl-command
-```
-
-Full live API docs (generated from your running instance): `http://<VSS_API_ENDPOINT>/docs`
+> Note: the repo also ships a `via_client_cli.py` (`services/video-summarization/src/`) with a
+> `summarize --print-curl-command` mode, but it targets the older `video-summarization` (VIA)
+> service's `/files` / `/summarize` API — a different service, run under a different profile
+> (`bp_developer_lvs_2d`), not the `base` profile used here. It won't produce working requests
+> against the agent deployed in Step 5.
 
 ---
 
@@ -411,9 +431,10 @@ its LLM through the shared `LlamaCpp` backend (`inference_backends/Llamacpp.py`)
 Chatbot and DeepResearch use, rather than managing a server itself. Its `llm_port` defaults to
 `8081` so the video agent runs its own model, separate from a chatbot's server on `8080`.
 
-It assumes it is running on the Spark: the hardware profile is fixed at `DGX-SPARK` and the host
-IP that VSS's containers use to reach `llama-server` is read from `hostname -I`, so there is no
-`host_ip` to configure.
+It assumes it is running on the Spark: the hardware profile is fixed at `DGX-SPARK`. There is no
+`hostname -I` / IP-discovery step and no `host_ip` to configure — `vss-agent`'s compose service
+runs with `network_mode: host`, so it shares the Spark's loopback interface directly, and
+`run_setup` points `LLM_ENDPOINT_URL` at `http://127.0.0.1:{llm_port}` unconditionally.
 
 ```bash
 # VSS alone
@@ -421,15 +442,36 @@ python src/scripts/run_consumerbench.py --config configs/workflow_vss.yml
 
 # VSS contending with a chatbot on the same GPU
 python src/scripts/run_consumerbench.py --config configs/workflow_chatbot_vss.yml
+
+# VSS with the VLM hosted by a second llama.cpp server instead of the Cosmos-Reason2-8B NIM
+python src/scripts/run_consumerbench.py --config configs/workflow_vss_remote_vlm.yml
 ```
+
+### Optional: host the VLM with llama.cpp instead of Cosmos-Reason2-8B
+
+By default `run_setup` deploys VSS's own Cosmos-Reason2-8B NIM as the VLM (Step 5's normal path,
+including its ~8–9 minute cold-start TensorRT-LLM compile). Setting `use_remote_vlm: true` in the
+workflow config switches to a second, ConsumerBench-managed llama.cpp server instead — the same
+pattern as the LLM, but with `--mmproj` for vision, launched via
+`inference_backends/llamacpp_vlm_server.sh` and passed to `dev-profile.sh up` as `--use-remote-vlm
+--vlm <name>` instead of `--vlm <name> --vlm-env-file <file>`. This skips the NIM's cold-start
+compile entirely, at the cost of running a second local model process.
+
+This changes several things silently if you're comparing against the manual walkthrough above:
+- `vlm_port` stops meaning the NIM's health port (`30082`) and instead means the llama.cpp VLM
+  server's port.
+- Readiness is checked at `/health` (llama.cpp) rather than `/v1/health/ready` (NIM).
+- `--vlm-env-file` / `NIM_KVCACHE_PERCENT` don't apply — `dev-profile.sh` rejects that flag when
+  the VLM is remote — so GPU-memory tuning for the VLM instead goes through the llama.cpp flags
+  below (`vlm_mps`, `vlm_ctx`).
 
 What each lifecycle method does:
 
 | Method | Work |
 |---|---|
-| `run_setup` | `LlamaCpp.launch_backend`, read the model name from `/v1/models`, `dev-profile.sh up`, wait for the VLM |
-| `run_application` | one upload + one summarize (repeated `num_requests` times) |
-| `run_cleanup` | `dev-profile.sh down`, `LlamaCpp.cleanup_backend` |
+| `run_setup` | `LlamaCpp.launch_backend`, read the model name from `/v1/models`, optionally launch a llama.cpp VLM server (`use_remote_vlm`), `dev-profile.sh up`, wait for the VLM |
+| `run_application` | one video upload (the `/api/v1/videos` handshake) + one `/generate` chat request (repeated `num_requests` times) |
+| `run_cleanup` | `dev-profile.sh down`, `LlamaCpp.cleanup_backend`, and (if `use_remote_vlm`) kill the VLM llama-server by port |
 
 Tool calling needs no configuration: `llamacpp_server.sh` passes `--jinja` for every application.
 
@@ -445,7 +487,7 @@ Tool calling needs no configuration: `llamacpp_server.sh` passes `--jinja` for e
 | Container stuck on "waiting..." | Normal cold-start compilation (esp. Cosmos-Reason2, ~8–9 min) | Check `docker logs -f` for active progress before assuming it's hung |
 | `ValueError: Free memory ... less than desired GPU memory utilization` (VLM) | Two models competing for Spark's shared unified memory | Lower `NIM_KVCACHE_PERCENT` for the VLM, and/or shrink the LLM's `-c` / use a smaller quant / drop `-ngl` |
 | llama.cpp CUDA OOM at load | GGUF + KV-cache don't fit alongside the VLM | Lower `-c`, use a smaller quantization, or run the LLM on CPU (`-ngl 0`) |
-| VSS can't reach `LLM_ENDPOINT_URL` | Used `localhost` from inside a container — llama-server runs on the host, not on VSS's Docker network | Use the Spark's actual IP (`hostname -I`), not `localhost` |
+| VSS can't reach `LLM_ENDPOINT_URL` (manual walkthrough, Step 5) | Used `localhost` from inside a container that isn't on the host network | Use the Spark's actual IP (`hostname -I`), not `localhost`. (Under ConsumerBench this is a non-issue: `vss-agent` runs with `network_mode: host`, and `VSS.py` points `LLM_ENDPOINT_URL` at `127.0.0.1` directly.) |
 | `--vlm-env-file` / `--llm-env-file` not applying settings | Passed inline `KEY=VALUE` instead of a file path | Write settings to an actual `.env` file and pass its path |
 | Server error to the effect that `tools` / `tool_choice` requires `--jinja` (often surfaces on video upload/summarize) | VSS's agent sends `tool_choice: "auto"`, but llama-server was started without `--jinja` | Restart `llama-server` with `--jinja` |
 | `--jinja` is set but tool calls still fail, or the model emits raw JSON instead of a parsed `tool_calls` field | The GGUF's embedded chat template has no tool support | Test with the tool-calling curl below; if it fails, pass a tool-capable template via `--chat-template-file`, or use a GGUF whose template renders tools |
@@ -494,30 +536,42 @@ curl -s http://localhost:8080/v1/chat/completions \
 | Key | Default | Meaning |
 |---|---|---|
 | `llm_model` | `models/Llama-3.2-3B-Instruct-GGUF/...f16.gguf` | GGUF path served by llama.cpp; its chat template must support tools |
-| `vlm_model` | `nvidia/cosmos-reason2-8b` | VLM deployed by VSS (`--vlm`) |
+| `vlm_model` | `nvidia/cosmos-reason2-8b` | VLM deployed by VSS (`--vlm`); ignored when `use_remote_vlm` is set |
 | `llm_port` | `8081` | llama-server port — not `8080`, so VSS runs its own model |
-| `vlm_port` | `30082` | VLM health endpoint |
-| `vss_port` | `8000` | VSS REST API |
+| `vlm_port` | `30082` | VLM's readiness-check port. Means the NIM's `/v1/health/ready` port by default; means the llama.cpp VLM server's port when `use_remote_vlm` is set |
+| `vss_port` | `8000` | VSS agent's REST API |
 | `mps` | `50` | LLM's share of GPU SMs; the rest is left for the VLM |
 | `llamacpp_path` | `inference_backends/llama.cpp` | llama.cpp checkout |
 | `vss_repo_dir` | `applications/VSS/video-search-and-summarization` | VSS repo checkout |
+| `use_remote_vlm` | `False` | if `true`, host the VLM with a second llama.cpp server instead of the Cosmos-Reason2-8B NIM — see "Optional: host the VLM with llama.cpp" above |
+| `vlm_llamacpp_model` | `models/Qwen3-VL-8B-Instruct-GGUF/...Q4_K_M.gguf` | GGUF path for the remote VLM (only used when `use_remote_vlm` is set) |
+| `vlm_mmproj` | `models/Qwen3-VL-8B-Instruct-GGUF/mmproj-...F16.gguf` | vision projector for the remote VLM |
+| `vlm_mps` | `50` | remote VLM's share of GPU SMs |
+| `vlm_ctx` | `131072` | total context across the remote VLM server's 2 parallel slots (`--parallel 2`), so each slot effectively gets half; a single `video_understanding` tool call can run to ~41K tokens of image tokens, so keep this well above 2× that |
 | `video_path`, `prompt`, `num_requests` | — | the workload |
 
 Everything else is fixed at the top of `VSS.py` — `DEVICE`, `VSS_PROFILE`, `VSS_HARDWARE`,
-`VLM_ENV_FILE`, `VLM_KVCACHE_PERCENT`, `READINESS_MAX_WAIT`, `CHUNK_DURATION`, `MAX_TOKENS`,
-`TEMPERATURE`. Edit those constants if you need to deviate from the DGX Spark deployment.
+`VLM_ENV_FILE`, `VLM_KVCACHE_PERCENT`, `READINESS_MAX_WAIT`, `UPLOAD_TIMEOUT`, `SUMMARIZE_TIMEOUT`,
+`UPLOAD_READY_MAX_WAIT`. Edit those constants if you need to deviate from the DGX Spark deployment.
 
-**Memory-tuning env vars (VLM, still a NIM container):**
+**Memory-tuning env vars (VLM, when it's still a NIM container — i.e. `use_remote_vlm` unset):**
 - `NIM_KVCACHE_PERCENT` — fraction of GPU memory reserved for KV cache (default 0.9, or 0.75 on DGX Spark). Passed via `--vlm-env-file`, since the VLM is managed by `dev-profile.sh` rather than being a container you launch directly.
 - `NIM_RELAX_MEM_CONSTRAINTS=1` — required if pushing memory settings below NIM's expected minimum
 
 **Passing settings to each model:**
 - **LLM** (llama.cpp, your own process): command-line flags, or the wrapper env vars above
-- **VLM** (managed by `dev-profile.sh`): must go in a real file passed via `--vlm-env-file /path/to/file.env` — inline `KEY=VALUE` strings are not accepted and will silently fail or error
+- **VLM, NIM mode** (managed by `dev-profile.sh`): must go in a real file passed via `--vlm-env-file /path/to/file.env` — inline `KEY=VALUE` strings are not accepted and will silently fail or error
+- **VLM, `use_remote_vlm` mode**: the same llama.cpp flags as the LLM (`vlm_mps`, `vlm_ctx`), since it's just another llama-server process
 
-**VSS `/summarize` and `/chat/completions` common params:**
-- `id` — file or live-stream ID (max 50 items)
-- `model` — must exactly match the backend's `/v1/models` name
-- `chunk_duration` / `chunk_overlap_duration` — for splitting long videos
-- `stream` — set `true` for server-sent-event streaming responses
-- `enable_chat_history` — persist conversational context across turns
+**Agent `/generate` and `/generate/stream` request body:**
+- `input_message` — the only field. A natural-language instruction; name the clip by its uploaded
+  `filename` so the agent's tool-selection has something to resolve (e.g. `"Summarize the video
+  my_video.mp4."`) — `VSS.run_application` does this substitution automatically for any prompt
+  containing the literal phrase `"this video"`.
+
+**`/api/v1/videos` upload-handshake params:**
+- `POST /api/v1/videos` — body: `{"filename": "..."}`; returns `{"url": "<VST upload URL>"}`
+- `POST <that url>` — multipart file upload; returns VST's response, including `sensorId`
+- `POST /api/v1/videos/{sensor_id}/complete` — body: VST's response forwarded verbatim; returns
+  `{"filename": "...", "sensor_id": "...", ...}` — the `filename` is what you reference in chat
+  messages
