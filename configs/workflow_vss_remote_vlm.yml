@@ -1,0 +1,20 @@
+vss1:
+    type: VSS
+    num_requests: 1
+    llm_model: models/Qwen2.5-7B-Instruct-GGUF/qwen2.5-7b-instruct-q5_k_m-00001-of-00002.gguf
+    llm_port: 8081
+    mps: 50
+    use_remote_vlm: true
+    vlm_llamacpp_model: models/Qwen3-VL-8B-Instruct-GGUF/Qwen3VL-8B-Instruct-Q4_K_M.gguf
+    vlm_mmproj: models/Qwen3-VL-8B-Instruct-GGUF/mmproj-Qwen3VL-8B-Instruct-F16.gguf
+    vlm_port: 8082
+    vlm_mps: 50
+    # Total ctx across the VLM server's 2 parallel slots (each gets vlm_ctx/2).
+    # video_understanding calls run to ~41K tokens of image tokens per chunk.
+    vlm_ctx: 131072
+    video_path: applications/VSS/my_video.mp4
+    prompt: "Summarize what happens in this video."
+
+workflows:
+    summarize_video:
+        uses: vss1

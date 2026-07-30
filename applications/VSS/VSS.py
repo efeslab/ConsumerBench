@@ -22,6 +22,8 @@ sys.path.append(repo_dir)
 
 from applications.application import Application
 from inference_backends.Llamacpp import LlamaCpp
+import src.utils as utils
+import src.globals as globals
 
 # Fixed setup — not part of the workflow config. Change these here if you need
 # to deviate from the DGX Spark deployment this application targets.
@@ -37,6 +39,11 @@ READINESS_MAX_WAIT = 900
 # through the agent's plan/tool cycle, so it is minutes, not seconds.
 UPLOAD_TIMEOUT = 600
 SUMMARIZE_TIMEOUT = 1800
+# `dev-profile.sh up` can return before VSS's internal storage routing
+# (agent -> VST) has finished wiring up, so the first upload attempt right
+# after setup can hit a transient 502. Retry within this window before
+# treating it as a real failure.
+UPLOAD_READY_MAX_WAIT = 120
 
 
 class VSS(Application):
@@ -63,6 +70,16 @@ class VSS(Application):
         llamacpp_path = self._abspath(kwargs.get('llamacpp_path', cfg['llamacpp_path']))
         vss_repo_dir = self._abspath(kwargs.get('vss_repo_dir', cfg['vss_repo_dir']))
 
+        # ---- Optional: VLM served by llama.cpp instead of VSS's own NIM ----
+        # Skips Cosmos-Reason's ~8-9min TensorRT-LLM compile on cold start by
+        # pointing VSS at a GGUF VLM (e.g. Qwen3-VL) via --use-remote-vlm,
+        # the same mechanism --use-remote-llm already uses for the LLM.
+        self.use_remote_vlm = kwargs.get('use_remote_vlm', cfg['use_remote_vlm'])
+        vlm_llamacpp_model = self._abspath(kwargs.get('vlm_llamacpp_model', cfg['vlm_llamacpp_model']))
+        vlm_mmproj = self._abspath(kwargs.get('vlm_mmproj', cfg['vlm_mmproj']))
+        vlm_mps = kwargs.get('vlm_mps', cfg['vlm_mps'])
+        vlm_ctx = kwargs.get('vlm_ctx', cfg['vlm_ctx'])
+
         # ---- LLM: llama.cpp server via the shared backend ---------------
         # VSS's agent sends OpenAI tool_choice: "auto", which llama.cpp only
         # supports on the Jinja chat-template path — llamacpp_server.sh passes
@@ -78,24 +95,58 @@ class VSS(Application):
         print(f"LLM reports model name: {self.llm_model_name}")
 
         # ---- Step 5: launch VSS via dev-profile.sh ----------------------
-        with open(VLM_ENV_FILE, 'w') as f:
-            f.write(f"NIM_KVCACHE_PERCENT={VLM_KVCACHE_PERCENT}\n")
-
         env = os.environ.copy()
         # The agent container runs with network_mode: host, so it shares the
         # host's loopback and reaches llama-server at 127.0.0.1. The Spark's
         # routable IP does *not* work here: llama-server binds loopback only
         # unless started with --host, and the shared launcher doesn't pass it.
         env["LLM_ENDPOINT_URL"] = f"http://127.0.0.1:{llm_port}"
-        vss_cmd = [
-            "bash", os.path.join(vss_repo_dir, "deploy/docker/scripts/dev-profile.sh"),
-            "up", "-p", VSS_PROFILE, "-H", VSS_HARDWARE,
-            "--use-remote-llm",
-            "--llm", self.llm_model_name,
-            "--vlm", vlm_model,
-            "--vlm-env-file", VLM_ENV_FILE,
-        ]
-        print(f"Launching VSS (vlm={vlm_model})")
+
+        if self.use_remote_vlm:
+            # Launch the VLM as a second llama.cpp server, same pattern as
+            # the LLM but with --mmproj for vision. --vlm-env-file is a NIM
+            # knob (NIM_KVCACHE_PERCENT) and dev-profile.sh rejects it when
+            # VLM_MODE=remote, so it's simply not passed in this branch.
+            utils.util_run_server_script_check_log(
+                script_path=f"{repo_dir}/inference_backends/llamacpp_vlm_server.sh",
+                server_dir=llamacpp_path,
+                stdout_log_path=f"{globals.get_results_dir()}/llamacpp_vlm_server_stdout",
+                stderr_log_path=f"{globals.get_results_dir()}/llamacpp_vlm_server_stderr",
+                stderr_ready_patterns=["update_slots: all slots are idle"],
+                stdout_ready_patterns=[],
+                listen_port=vlm_port,
+                api_port=vlm_port,
+                model=vlm_llamacpp_model,
+                device=DEVICE,
+                mps=vlm_mps,
+                extra_args=[vlm_mmproj, vlm_ctx],
+            )
+            vlm_model_name = self._discover_model_name(vlm_port)
+            print(f"VLM (llama.cpp) reports model name: {vlm_model_name}")
+
+            env["VLM_ENDPOINT_URL"] = f"http://127.0.0.1:{vlm_port}"
+            vss_cmd = [
+                "bash", os.path.join(vss_repo_dir, "deploy/docker/scripts/dev-profile.sh"),
+                "up", "-p", VSS_PROFILE, "-H", VSS_HARDWARE,
+                "--use-remote-llm",
+                "--llm", self.llm_model_name,
+                "--use-remote-vlm",
+                "--vlm", vlm_model_name,
+            ]
+        else:
+            with open(VLM_ENV_FILE, 'w') as f:
+                f.write(f"NIM_KVCACHE_PERCENT={VLM_KVCACHE_PERCENT}\n")
+
+            vss_cmd = [
+                "bash", os.path.join(vss_repo_dir, "deploy/docker/scripts/dev-profile.sh"),
+                "up", "-p", VSS_PROFILE, "-H", VSS_HARDWARE,
+                "--use-remote-llm",
+                "--llm", self.llm_model_name,
+                "--vlm", vlm_model,
+                "--vlm-env-file", VLM_ENV_FILE,
+            ]
+
+        print(f"Launching VSS (vlm={vlm_model_name if self.use_remote_vlm else vlm_model})")
         subprocess.run(vss_cmd, cwd=vss_repo_dir, env=env, check=True)
 
         # ---- Step 6: block until the VLM is ready -----------------------
@@ -123,12 +174,15 @@ class VSS(Application):
         return resp.json()["data"][0]["id"]
 
     def _wait_for_vlm(self, vlm_port, max_wait, interval=10):
-        """Poll the VLM's /v1/health/ready until it returns 200.
+        """Poll the VLM's readiness endpoint until it returns 200.
 
-        The VLM is a NIM container deployed by VSS itself, and Cosmos-Reason2-8B
-        can take 8-9 minutes to compile on cold start.
+        NIM containers (the default, Cosmos-Reason2-8B) serve /v1/health/ready
+        and can take 8-9 minutes to compile on cold start. A llama.cpp VLM
+        (--use-remote-vlm) serves /health instead, and is already up by the
+        time this runs since util_run_server_script_check_log blocked for it.
         """
-        vlm_url = f"http://localhost:{vlm_port}/v1/health/ready"
+        vlm_path = "/health" if self.use_remote_vlm else "/v1/health/ready"
+        vlm_url = f"http://localhost:{vlm_port}{vlm_path}"
         elapsed = 0
         print("Waiting for the VLM to become ready...")
         while True:
@@ -152,6 +206,51 @@ class VSS(Application):
         except requests.RequestException:
             return None
 
+    @staticmethod
+    def _upload_video(vss_base, video_path, filename, interval=5):
+        """Step 7 handshake: request an upload URL, POST the file, mark complete.
+
+        Ask the agent where to put the video, POST the bytes to that VST
+        endpoint, then tell the agent the upload finished so it registers the
+        clip as a sensor. Retries the whole handshake on 502/503/504 since
+        VSS's internal storage routing can still be wiring up right after
+        `dev-profile.sh up` returns.
+        """
+        elapsed = 0
+        while True:
+            try:
+                url_resp = requests.post(
+                    f"{vss_base}/api/v1/videos", json={"filename": filename}, timeout=60
+                )
+                url_resp.raise_for_status()
+                upload_url = url_resp.json()["url"]
+
+                with open(video_path, "rb") as f:
+                    vst_resp = requests.post(
+                        upload_url,
+                        files={"file": (filename, f, "video/mp4")},
+                        timeout=UPLOAD_TIMEOUT,
+                    )
+                vst_resp.raise_for_status()
+                vst_info = vst_resp.json()
+                sensor_id = vst_info["sensorId"]
+
+                complete = requests.post(
+                    f"{vss_base}/api/v1/videos/{sensor_id}/complete",
+                    json=vst_info,
+                    timeout=UPLOAD_TIMEOUT,
+                )
+                complete.raise_for_status()
+                # VST strips the extension; this is the name the agent knows it by.
+                return sensor_id, complete.json()["filename"]
+            except requests.HTTPError as e:
+                status = e.response.status_code if e.response is not None else None
+                if status not in (502, 503, 504) or elapsed >= UPLOAD_READY_MAX_WAIT:
+                    raise
+                print(f"  ...upload got {status}, VSS stack still wiring up (waited {elapsed}s)")
+                time.sleep(interval)
+                elapsed += interval
+
     # ------------------------------------------------------------------ #
     # Step 7 (upload) + Step 8 (summarize)
     # ------------------------------------------------------------------ #
@@ -169,33 +268,7 @@ class VSS(Application):
         start_time = time.time()
 
         # ---- Step 7: upload the video file ------------------------------
-        # Uploading is a three-part handshake: ask the agent where to put the
-        # video, POST the bytes to that VST endpoint, then tell the agent the
-        # upload finished so it registers the clip as a sensor.
-        url_resp = requests.post(
-            f"{vss_base}/api/v1/videos", json={"filename": filename}, timeout=60
-        )
-        url_resp.raise_for_status()
-        upload_url = url_resp.json()["url"]
-
-        with open(video_path, "rb") as f:
-            vst_resp = requests.post(
-                upload_url,
-                files={"file": (filename, f, "video/mp4")},
-                timeout=UPLOAD_TIMEOUT,
-            )
-        vst_resp.raise_for_status()
-        vst_info = vst_resp.json()
-        sensor_id = vst_info["sensorId"]
-
-        complete = requests.post(
-            f"{vss_base}/api/v1/videos/{sensor_id}/complete",
-            json=vst_info,
-            timeout=UPLOAD_TIMEOUT,
-        )
-        complete.raise_for_status()
-        # VST strips the extension; this is the name the agent knows it by.
-        video_name = complete.json()["filename"]
+        sensor_id, video_name = self._upload_video(vss_base, video_path, filename)
         upload_time = time.time() - start_time
         print(f"Uploaded {video_path} -> {video_name} ({upload_time:.2f}s)")
 
@@ -238,12 +311,22 @@ class VSS(Application):
         cfg = self.get_default_config()
         vss_repo_dir = self._abspath(kwargs.get('vss_repo_dir', cfg['vss_repo_dir']))
         llm_port = kwargs.get('llm_port', cfg['llm_port'])
+        use_remote_vlm = kwargs.get('use_remote_vlm', cfg['use_remote_vlm'])
+        vlm_port = kwargs.get('vlm_port', cfg['vlm_port'])
 
         subprocess.run(
             ["bash", os.path.join(vss_repo_dir, "deploy/docker/scripts/dev-profile.sh"), "down"],
             cwd=vss_repo_dir, check=False,
         )
         self.backend.cleanup_backend(api_port=llm_port)
+
+        if use_remote_vlm:
+            # Not a LlamaCpp() singleton instance like the LLM: this is a
+            # one-off llama-server process, so tear it down by port directly.
+            subprocess.run(
+                [f"{repo_dir}/scripts/cleanup.sh", str(vlm_port)],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=False,
+            )
 
         return {"status": "cleanup_complete"}
 
@@ -268,6 +351,19 @@ class VSS(Application):
             "vss_port": 8000,
             # Share of GPU SMs given to llama-server, leaving the rest for the VLM.
             "mps": 50,
+            # Set True to replace VSS's own Cosmos-Reason NIM with a second
+            # llama.cpp server (--use-remote-vlm), skipping its ~8-9min cold
+            # start. vlm_port then means the llama-server port, not the NIM's.
+            "use_remote_vlm": False,
+            "vlm_llamacpp_model": f"{repo_dir}/models/Qwen3-VL-8B-Instruct-GGUF/Qwen3VL-8B-Instruct-Q4_K_M.gguf",
+            "vlm_mmproj": f"{repo_dir}/models/Qwen3-VL-8B-Instruct-GGUF/mmproj-Qwen3VL-8B-Instruct-F16.gguf",
+            "vlm_mps": 50,
+            # Total context shared across the VLM server's --parallel 2 slots
+            # (llamacpp_vlm_server.sh), so each slot gets vlm_ctx/2. A single
+            # video_understanding call sends every sampled frame as image
+            # tokens and can run to ~41K tokens, so this needs to stay well
+            # above 2x that.
+            "vlm_ctx": 131072,
             # Repo directories.
             "llamacpp_path": f"{repo_dir}/inference_backends/llama.cpp",
             "vss_repo_dir": f"{repo_dir}/applications/VSS/video-search-and-summarization",
