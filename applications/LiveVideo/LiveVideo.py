@@ -559,7 +559,7 @@ class LiveVideo(Application):
             # Spend one untimed chunk on the vision encoder's cold start.
             "warmup": True,
             "request_timeout": 300,
-            "video_path": f"{repo_dir}/applications/VSS/sample_video_1.mp4",
+            "video_path": f"{repo_dir}/applications/VSS/my_video.mp4",
             "prompt": (
                 "Describe what happens in this clip in two or three sentences. "
                 "Mention any people, vehicles, or notable actions."

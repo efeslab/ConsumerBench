@@ -27,7 +27,7 @@ live1:
     # 5 minutes of feed, looping the file if it is shorter.
     session_duration: 300
     loop_video: true
-    video_path: applications/VSS/sample_video_1.mp4
+    video_path: applications/VSS/my_video.mp4
     prompt: "Describe what happens in this clip in two or three sentences. Mention any people, vehicles, or notable actions."
 
 workflows:
