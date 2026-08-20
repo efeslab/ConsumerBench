@@ -1,0 +1,44 @@
+# Chatbot and the real-time video stream contending for one GPU.
+#
+# LiveVideo is a steady, deadline-bound background load: it must describe a 10s
+# chunk in under 10s, every 10s, for the whole session. That makes it a better
+# contention partner than a single batch summarization -- the chatbot's latency
+# and the stream's ability to keep up degrade against each other visibly.
+#
+# The two run separate llama-server processes holding separate weights (8080 and
+# 8083), so size the models and the mps split against both footprints at once.
+
+chat1:
+    type: Chatbot
+    num_requests: 20
+    model: models/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-f16.gguf
+    device: gpu
+    api_port: 8080
+    mps: 50
+
+live1:
+    type: LiveVideo
+    num_requests: 1
+    model: models/Qwen3-VL-8B-Instruct-GGUF/Qwen3VL-8B-Instruct-Q4_K_M.gguf
+    mmproj: models/Qwen3-VL-8B-Instruct-GGUF/mmproj-Qwen3VL-8B-Instruct-F16.gguf
+    api_port: 8083
+    device: gpu
+    mps: 50
+    ctx: 131072
+    parallel: 1
+    chunk_duration: 10.0
+    frames_per_chunk: 8
+    frame_height: 448
+    max_tokens: 256
+    pacing: realtime
+    session_duration: 300
+    loop_video: true
+    video_path: applications/VSS/sample_video_1.mp4
+    prompt: "Describe what happens in this clip in two or three sentences. Mention any people, vehicles, or notable actions."
+
+workflows:
+    chat:
+        uses: chat1
+
+    live_video:
+        uses: live1

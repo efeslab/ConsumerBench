@@ -109,6 +109,15 @@ Make sure conda path in `whisper_online_client.sh` and `whisper_online_server.sh
 Make sure ` --warmup-file` in `whisper_online_server.sh` is pointed to a correct warmup audio.
 
 
+### LiveVideo
+Real-time video understanding: replays a video as if it were a live feed, sends each
+N-second chunk to a Qwen3-VL-8B VLM hosted by llama.cpp, and records whether each chunk was
+described in less than N seconds. Needs `ffmpeg`/`ffprobe` on `PATH` and the Qwen3-VL GGUF
+plus its `mmproj` projector.
+
+See [`LiveVideo/README.md`](LiveVideo/README.md) for setup, tuning and the metrics it emits.
+
+
 ## Enable and Disable MPS
 ### Enable MPS
 

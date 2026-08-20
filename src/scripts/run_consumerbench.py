@@ -11,6 +11,7 @@ from applications.DeepResearch.DeepResearch import DeepResearch
 from applications.Chatbot.Chatbot import Chatbot
 from applications.DspyTool.DspyTool import DspyTool
 from applications.LiveCaptions.LiveCaptions import LiveCaptions
+from applications.LiveVideo.LiveVideo import LiveVideo
 from applications.MCPServer.MCPServer import MCPServer
 # from applications.Retriever.Retriever import Retriever
 from applications.VSS.VSS import VSS
@@ -43,6 +44,7 @@ def main(args):
     deepResearch = DeepResearch()
     chatbot = Chatbot()
     liveCaptions = LiveCaptions()
+    liveVideo = LiveVideo()
     mcpServer = MCPServer(mcp_trace_file=mcp_trace_file, config_file=config_file)
     # retriever = Retriever()
     dspyTool = DspyTool()
@@ -57,6 +59,7 @@ def main(args):
     workflow.register_application("DeepResearch", deepResearch)
     workflow.register_application("Chatbot", chatbot)
     workflow.register_application("LiveCaptions", liveCaptions)
+    workflow.register_application("LiveVideo", liveVideo)
     workflow.register_application("MCPServer", mcpServer)
     # workflow.register_application("Retriever", retriever)
     workflow.register_application("DspyTool", dspyTool)

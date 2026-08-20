@@ -1,0 +1,35 @@
+# Real-time video understanding on a bare llama.cpp VLM server.
+#
+# Walks the video in 10s chunks, sends 8 frames per chunk to Qwen3-VL-8B, and
+# records whether each chunk was described in under 10s. Per-chunk timings land
+# in results/livevideo_8083_session0_chunks.csv.
+
+live1:
+    type: LiveVideo
+    num_requests: 1
+    model: models/Qwen3-VL-8B-Instruct-GGUF/Qwen3VL-8B-Instruct-Q4_K_M.gguf
+    mmproj: models/Qwen3-VL-8B-Instruct-GGUF/mmproj-Qwen3VL-8B-Instruct-F16.gguf
+    api_port: 8083
+    device: gpu
+    mps: 100
+    # Total context for the single slot. A chunk at the defaults below costs
+    # roughly 4K tokens, so this is deliberate headroom for raising
+    # frames_per_chunk or frame_height.
+    ctx: 131072
+    parallel: 1
+    chunk_duration: 10.0
+    frames_per_chunk: 8
+    frame_height: 448
+    max_tokens: 256
+    # Wait for each chunk to "arrive" before processing it, so falling behind
+    # the feed shows up as growing lag rather than just a slow run.
+    pacing: realtime
+    # 5 minutes of feed, looping the file if it is shorter.
+    session_duration: 300
+    loop_video: true
+    video_path: applications/VSS/sample_video_1.mp4
+    prompt: "Describe what happens in this clip in two or three sentences. Mention any people, vehicles, or notable actions."
+
+workflows:
+    live_video:
+        uses: live1
