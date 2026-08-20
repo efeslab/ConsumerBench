@@ -7,6 +7,10 @@
 #
 # The two run separate llama-server processes holding separate weights (8080 and
 # 8083), so size the models and the mps split against both footprints at once.
+#
+# LiveVideo's remaining knobs come from LiveVideo.get_default_config(); the
+# session runs one pass over video_path, so that file's length sets how long the
+# background load lasts.
 
 chat1:
     type: Chatbot
@@ -20,21 +24,10 @@ live1:
     type: LiveVideo
     num_requests: 1
     model: models/Qwen3-VL-8B-Instruct-GGUF/Qwen3VL-8B-Instruct-Q4_K_M.gguf
-    mmproj: models/Qwen3-VL-8B-Instruct-GGUF/mmproj-Qwen3VL-8B-Instruct-F16.gguf
     api_port: 8083
     device: gpu
     mps: 50
-    ctx: 131072
-    parallel: 1
-    chunk_duration: 10.0
-    frames_per_chunk: 8
-    frame_height: 448
-    max_tokens: 256
-    pacing: realtime
-    session_duration: 300
-    loop_video: true
     video_path: applications/VSS/sample_video_1.mp4
-    prompt: "Describe what happens in this clip in two or three sentences. Mention any people, vehicles, or notable actions."
 
 workflows:
     chat:
